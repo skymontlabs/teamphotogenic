@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--<link rel="icon" href="favicon.ico">-->
+    <title>TeamPhotogenic</title>
+  </head>
+  <body id="globl">
+    <div id="seggs">
+    </div>
+
+
+    <script src="node_modules/argon2-browser/dist/argon2-bundled.min.js"></script>
+    <script type="text/javascript">
+      const uint8 = new Uint8Array(16);
+      argon2.hash({ pass: 'ava', salt: uint8,
+        time: 64, // the number of iterations
+        mem: 32768, // used memory, in KiB
+        hashLen: 64, // desired hash length
+        type: argon2.ArgonType.Argon2d
+      })
+      .then(h => {seggs.innerText = h.hashHex})
+      .catch(e => console.error('sex'))
+
+    </script>
+  </body>
+</html>

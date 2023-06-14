@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--<link rel="icon" href="favicon.ico">-->
+    <title>TeamPhotogenic</title>
+  </head>
+  <body id="globl">
+    <div id="seggs">
+    </div>
+
+
+    <script type="text/javascript">
+      const exampleSocket = new WebSocket("wss://api.teamphotogenic.com/ws", "protocolOne");
+      exampleSocket.onmessage = (event) => {
+        const f = document.getElementById("chatbox").contentDocument;
+        const msg = Buffer(event.data);
+
+        switch (msg[0]) {
+          case 0: // GET ratings
+            break;
+          case 1: // GET tasks
+            break;
+          case 2: // GET user settings
+            break;
+          case 3: // GET 
+            break;
+        }
+      };
+
+
+
+      function getRatingIm(sk)
+      {
+        sk.send("Here's some text that the server is urgently awaiting!");
+      }
+
+    </script>
+  </body>
+</html>
