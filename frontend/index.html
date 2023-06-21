@@ -126,13 +126,18 @@
         </aside>
         <div class="admin-base">
           <div id="editProfilePanel" style="display: none;">
-            <h2>Edit Profile</h2>
+            <div>
+              <h2>Edit Profile</h2>
+              <button id="save">
+                Save changes
+              </button>
+            </div>
             <div>
               <h4>Email</h4>
               <div class="iS">
-                <p>Your profile is currently linked with your Google account, <span id="google"></span>. Please open a support ticket if you want this to be changed.</p>
+                <p id="accountLinked">Your profile is currently linked with your Google account, <span id="google"></span>. Please open a support ticket if you want this to be changed to a standard email or phone number.</p>
                 <div>
-                  <input class="" type="email">
+                  <input id="inputContact" class="" type="email">
                 </div>
               </div>
             </div>
@@ -170,13 +175,13 @@
               <h3>Login history</h3>
               <p>Change your password and activate two-factor authentication if you see something suspicious.</p>
               <div class="y z" style="border-top:1px solid rgba(0,0,0,0.1);padding: 1em 4px">
-                <div style="display:block">
-                  <span style="display: block">iPhone 13 Pro Max</span>
-                  <span style="display: block">Safari 11</span>
+                <div class="bl">
+                  <span class="bl">iPhone 13 Pro Max</span>
+                  <span class="bl">Safari 11</span>
                 </div>
-                <div style="display:block">
+                <div class="bl">
                   <span style="margin-left:auto;display: block;text-align: right;">69.215.210.45 (Pyongyang, North Korea)</span>
-                  <span style="display:block">January 29, 2017 11:30:50 PM</span>
+                  <span class="bl">January 29, 2017 11:30:50 PM</span>
                 </div>
               </div>
             </div>
@@ -562,7 +567,7 @@
             </div>
           </div>
         </div>
-        <div id="squareContent" class="y z tasklist" style="border-top: 1px solid rgba(0,0,0,0.05);padding-top: 1em;">
+        <div id="squareContent" class="y z tasklist">
           <div class="task-preview3" href="">
             <div class="y z" style="width:100%;box-sizing: border-box;padding: 0 0 8px 0;">
               <span style="display: block;font-weight: 500;font-family: 'Colfax Bold';color: #424652;">7.49</span>
@@ -585,7 +590,7 @@
             </div>
           </div>
         </div>
-        <div id="rectContent" class="y z tasklist" style="border-top: 1px solid rgba(0,0,0,0.05);padding-top: 1em;">
+        <div id="rectContent" class="y z tasklist">
           <div class="task-preview" href="">
             <div>
               <h2>7.48</h2>
@@ -598,7 +603,7 @@
             <img class="" src="laurie.jpg" style="display: block;">
           </div>
         </div>
-        <div id="hotdogContent" class="" style="border-top: 1px solid rgba(0,0,0,0.05);padding: 1em 0 2em;">
+        <div id="hotdogContent">
           <div class="task-">
             <div class="tasklist-sma" style="padding-bottom: 12px;">
               <img class="imgMat" src="laurie.jpg" style="display: block;margin: 0 ;width: calc(100%);">

@@ -1,3 +1,5 @@
+accountLinked.style.display="none";
+
 function routeData () {
     window.history.pushState({},'/avaa',window.location.origin+'/avaa')
 }
