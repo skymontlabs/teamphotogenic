@@ -1,5 +1,30 @@
 accountLinked.style.display="none";
 
+function fnBrowserDetect(){
+  let userAgent = navigator.userAgent;
+  let browserName;
+  
+  if(userAgent.match(/chrome|chromium|crios/i)){
+     browserName = "chrome";
+   }else if(userAgent.match(/firefox|fxios/i)){
+     browserName = "firefox";
+     preferBrowsers.style.display="block"
+   }  else if(userAgent.match(/safari/i)){
+     browserName = "safari";
+     preferBrowsers.style.display="block"
+   }else if(userAgent.match(/opr\//i)){
+     browserName = "opera";
+     preferBrowsers.style.display="block"
+   } else if(userAgent.match(/edg/i)){
+     browserName = "edge";
+   }else{
+     browserName="No browser detection";
+   }
+   
+   // also track versions
+ alert("You are using "+ browserName +" browser");         
+}
+
 function routeData () {
     window.history.pushState({},'/avaa',window.location.origin+'/avaa')
 }
