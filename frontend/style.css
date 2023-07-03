@@ -2402,11 +2402,16 @@ overflow: visible;
   transition: 0.3s ease-out opacity;
 }
 
-.panelSec {
-  margin: 24px 0;
+.panelSec16 {
+  padding: 16px 0;
 }
 
-.panelSec button {
+.panelSec24 {
+  padding: 24px 0;
+}
+
+.panelSec16 button,
+.panelSec24 button {
   padding: 5px 12px;
 }
 
