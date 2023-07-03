@@ -21,13 +21,10 @@
                 <li id="pkey" class="point">Paired</li>
               </ul>
             </div>
-            <button class="hbbrs C mLa rel" type="button" @click="open"></button>
           </div>
-          <!--
-            <button class="rel hamburger">
-              <input type="checkbox" class="checkbox">
-            </button>
-          -->
+          <button class="rel hamburger" style="display:none">
+            <input type="checkbox" class="checkbox">
+          </button>
           <div class=" nav-links y z w100 ">
             <ul class="y z" style="margin:0">
               <li><a href="/tasks">My tasks</a></li>
@@ -165,13 +162,13 @@
           <div id="securityPrivacyPanel">
             <!-- security privacy-->
             <h2>Security &amp; Privacy</h2>
-            <div>
+            <div class="panelSec">
               <h3>Two-Factor</h3>
               <p>TeamPhotogenic allows you to require a timed one-time password before logging in. Unlike SMS-based two-factor auth, this is safe from SIM-swapping attacks. This requires the use of Authy or Google Authenticator.</p>
               <button id="activate2f">Activate two-factor</button>
               <button id="reset2f">Reset two-factor</button>
             </div>
-            <div>
+            <div class="panelSec">
               <h3>Login history</h3>
               <p>Change your password and activate two-factor authentication if you see something suspicious.</p>
               <div class="y z" style="border-top:1px solid rgba(0,0,0,0.1);padding: 1em 4px">
@@ -349,8 +346,8 @@
         </div>
       </div>
     </div>
-    <div id="dark" class="dn modal-wrapper" style="">
-      <div>
+    <div id="dark" class="dn modal-wrapper">
+      <div id="optimum" class="dn">
         <p>We see you are not using an optimum Google Chrome</p>
       </div>
       <div id="loginer" style="display:flex;width: 100%;">
@@ -637,9 +634,6 @@
           </div>
         </div>
 
-
-
-
         <div id="indvImg" class="y z">
           <img class="v" src="laurie.jpg">
           <div class="rate-data"> 
@@ -728,7 +722,6 @@
     </div>
     <script src="node_modules/argon2-browser/dist/argon2-bundled.min.js"></script>
     <script src="main.js"></script>
-    <script src="script.js"></script>
 
 
   </body>

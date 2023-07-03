@@ -581,7 +581,7 @@ aside li .rad0:checked+span .rocket {
 
 @media (max-width: 767px) {
 #nV {
-  display: none !important;
+  /*display: none !important;??*/
 }
 #scorerater>.x {
   padding: 0;
@@ -2402,6 +2402,14 @@ overflow: visible;
   transition: 0.3s ease-out opacity;
 }
 
+.panelSec {
+  margin: 24px 0;
+}
+
+.panelSec button {
+  padding: 5px 12px;
+}
+
 @media (max-width: 767px) {
   nav li,
 nav .tbx {
@@ -2422,11 +2430,6 @@ nav .tbx {
     display: none;
   }
 
-  .nav-links a,
-.nav-links li,
-.nav-links span {
-  }
-
   .hbbrs {
     display: block !important;
   }
@@ -2440,17 +2443,8 @@ nav .tbx {
   }
 
   .dropdown {
-    width: 100%;
-    box-shadow: none;
-    display: flex;
-    background: transparent;
+    background: white;
     padding: 0;
-  }
-
-  .dropdown li {
-    width: 50%;
-    box-sizing: border-box;
-    padding: 0 !important;
   }
 
   .dropdown li a {
@@ -2470,6 +2464,13 @@ nav .tbx {
   .nav-links ul {
     padding: 0;
     margin: 0;
+  }
+}
+@media (max-width: 567px) {
+  #drops {
+
+    right: -60px;
+    width: 100vw;
   }
 }
 nav li, nav button {
@@ -2618,8 +2619,8 @@ nav .dropdown:before {
 
 .hamburger::before, .hamburger::after {
   width: 16px;
-  height: 4px;
-  background-color: #000;
+  height: 3px;
+  background-color: rgba(0,0,0,0.7);
   border-radius: 4px;
   position: absolute;
   transition-property: transform;
@@ -2633,11 +2634,11 @@ nav .dropdown:before {
 }
 .hamburger::before {
   transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-  top: 32px;
+  top: 33px;
 }
 .hamburger::after {
   transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  top: 44px;
+  top: 43px;
 }
 
 footer {
