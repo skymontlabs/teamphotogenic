@@ -125,32 +125,40 @@
           <div id="editProfilePanel" style="display: none;">
             <div>
               <h2>Edit Profile</h2>
-              <button id="save">
-                Save changes
-              </button>
             </div>
             <div>
               <h4>Email</h4>
-              <div class="iS">
+              <div>
                 <p id="accountLinked">Your profile is currently linked with your Google account, <span id="google"></span>. Please open a support ticket if you want this to be changed to a standard email or phone number.</p>
-                <div>
+                <div class="iS">
                   <input id="inputContact" class="" type="email">
+                </div>
+                <div class="iS">
+                  <input id="oldEmail" class="" type="email">
+                  <input id="newEmail" class="" type="email">
                 </div>
               </div>
             </div>
             <div>
               <h4>Change password</h4>
               <button>Change password</button>
+              <div class="iS">
+                <input id="oldPassword" class="" type="email">
+                <input id="newPassword0" class="" type="email">
+                <input id="newPassword1" class="" type="email">
+              </div>
             </div>
-            <div class="dn">
+            <div>
               <h4>When rating others, show me...</h4>
-              <h4>Age</h4>
-              <div class="btn-wrap flex d-flex justify-content-between mt-1">
-                <button class="btn grey btn-rate" id="btn-eh"><span class="d-block emoji">😒</span><span class="tc txt-rate">18-23</span></button>
-                <button class="btn grey btn-rate" id="btn-decent"><span class="d-block emoji">😐</span><span class="tc txt-rate">24-29</span></button>
-                <button class="btn grey btn-rate" id="btn-great"><span class="d-block emoji">😃</span><span class="tc txt-rate">30-39</span></button>
-                <button class="btn grey btn-rate" id="btn-stunning"><span class="d-block emoji">🤩</span><span class="tc txt-rate">40-54</span></button>
-                <button class="btn grey btn-rate" id="btn-brilliant"><span class="d-block emoji">🤑</span><span class="tc txt-rate">55+</span></button>
+              <div class="flex">
+                <h4>Age</h4>
+                <div class="btn-wrap flex d-flex justify-content-between mt-1">
+                  <button class="btn grey btn-rate" id="btn-eh"><span class="d-block emoji">😒</span><span class="tc txt-rate">18-23</span></button>
+                  <button class="btn grey btn-rate" id="btn-decent"><span class="d-block emoji">😐</span><span class="tc txt-rate">24-29</span></button>
+                  <button class="btn grey btn-rate" id="btn-great"><span class="d-block emoji">😃</span><span class="tc txt-rate">30-39</span></button>
+                  <button class="btn grey btn-rate" id="btn-stunning"><span class="d-block emoji">🤩</span><span class="tc txt-rate">40-54</span></button>
+                  <button class="btn grey btn-rate" id="btn-brilliant"><span class="d-block emoji">🤑</span><span class="tc txt-rate">55+</span></button>
+                </div>
               </div>
               <h4>Gender</h4>
               <div class="btn-wrap flex d-flex justify-content-between mt-1">
@@ -158,6 +166,9 @@
                 <button class="btn grey btn-rate half" id="btn-decent"><span class="d-block emoji">😐</span><span class="tc txt-rate">Female</span></button>
               </div>
             </div>
+            <button id="save" class="dn">
+              Save changes
+            </button>
           </div>
           <div id="securityPrivacyPanel">
             <!-- security privacy-->
@@ -214,6 +225,87 @@
               </div>
             </div>
           </div>
+          <div id="displayNotificationsPanel">
+            <h2>Notifications</h2>
+            <div class="y">
+              <div class="toggleWrapper">
+                <input type="checkbox" name="toggle1" class="mobileToggle" id="toggle0" checked>
+                <label for="toggle1"></label>
+              </div>
+              <div>
+                <h3>Image finished rating</h3>
+                <p>Image finished rating</p>
+              </div>
+              <div>
+                <input type="checkbox" style="margin-right:20px" name="imgFinish">
+                <input type="checkbox" name="imgFinish">
+              </div>
+            </div>
+            <div class="y">
+              <div class="toggleWrapper">
+                <input type="checkbox" name="toggle1" class="mobileToggle" id="toggle1" checked>
+                <label for="toggle1"></label>
+              </div>
+              <div>
+                <h3>Task finished rating</h3>
+                <p>Task finished rating</p>
+              </div>
+              <div>
+                <input type="checkbox" style="margin-right:20px" name="taskFinish">
+                <input type="checkbox" name="taskFinish">
+              </div>
+            </div>
+            <div class="y">
+              <div class="toggleWrapper">
+                <input type="checkbox" name="toggle1" class="mobileToggle" id="toggle2" checked>
+                <label for="toggle2"></label>
+              </div>
+              <div>
+                <h3>Support requests</h3>
+                <p>Task finished rating</p>
+              </div>
+              <div>
+                <input type="checkbox" style="margin-right:20px" name="support">
+                <input type="checkbox" name="support">
+              </div>
+            </div>
+            <div class="y">
+              <div class="toggleWrapper">
+                <input type="checkbox" name="toggle1" class="mobileToggle" id="toggle3" checked>
+                <label for="toggle3"></label>
+              </div>
+              <span>Logins</span>
+              <div>
+                <input type="checkbox" style="margin-right:20px" name="login">
+                <input type="checkbox" name="login">
+              </div>
+            </div>
+            <div class="y">
+              <div class="toggleWrapper">
+                <input type="checkbox" name="toggle1" class="mobileToggle" id="toggle4" checked>
+                <label for="toggle4"></label>
+              </div>
+              <span>Purchases</span>
+              <div>
+                <input type="checkbox" style="margin-right:20px" name="login">
+                <input type="checkbox" name="login">
+              </div>
+            </div>
+            <div class="y">
+              <div class="toggleWrapper">
+                <input type="checkbox" name="toggle1" class="mobileToggle" id="toggle5" checked>
+                <label for="toggle5"></label>
+              </div>
+              <span>Login history</span>
+              <div>
+                <input type="checkbox" style="margin-right:20px" name="login">
+                <input type="checkbox" name="login">
+              </div>
+            </div>
+          </div>
+          
+          
+          
           <div id="redeemPanel">
             <h2>Redeem</h2>
             <p>We occasionally offer coupons code for free credits and free upgrades. These codes can be redeemed here:</p>
@@ -223,45 +315,6 @@
     box-sizing: border-box;">
             </div>
             <p id="redeemMessage"></p>
-          </div>
-          <div id="displayNotificationsPanel">
-            <h2>Notifications</h2>
-            <div class="y z">
-              <span>Image finished rating</span>
-              <div>
-                <span>Yes</span>
-                <input class="rad1" type="radio" style="margin-right:20px" name="imgFinish">
-                <span>No</span>
-                <input class="rad1" type="radio" name="imgFinish">
-              </div>
-            </div>
-            <div class="y z">
-              <span>Task finished rating</span>
-              <div>
-                <span>Yes</span>
-                <input class="rad1" type="radio" style="margin-right:20px" name="taskFinish">
-                <span>No</span>
-                <input class="rad1" type="radio" name="taskFinish">
-              </div>
-            </div>
-            <div class="y z">
-              <span>Support requests</span>
-              <div>
-                <span>Yes</span>
-                <input class="rad1" type="radio" style="margin-right:20px" name="support">
-                <span>No</span>
-                <input class="rad1" type="radio" name="support">
-              </div>
-            </div>
-            <div class="y z">
-              <span>Login history</span>
-              <div>
-                <span>Yes</span>
-                <input class="rad1" type="radio" style="margin-right:20px" name="loginHistory">
-                <span>No</span>
-                <input class="rad1" type="radio" name="loginHistory">
-              </div>
-            </div>
           </div>
           <div id="helpSupportPanel">
             <h2>Support tickets</h2>
@@ -274,6 +327,9 @@
               </div>
             </div>
           </div>
+          
+          
+          
         </div>
       </div>
     </div>
@@ -672,7 +728,15 @@
                 </div>
               </div>
               <div style="margin-top: 2em">
-                <h4 style="font-family: 'Colfax Bold'">Tag distribution</h4>
+                <h4 style="font-family: 'Colfax Bold'">
+                  <span>Tag distribution</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="12" height="12" style="top: 1px;position: relative;"><path d="M160 320C71.78 320 0 248.22 0 160S71.78 0 160 0s160 71.78 160 160-71.78 160-160 160Zm0-292.57C86.9 27.43 27.43 86.9 27.43 160S86.9 292.57 160 292.57 292.57 233.1 292.57 160 233.1 27.43 160 27.43ZM151.9 192.85c-3.12 0-5.66-2.53-5.66-5.66v-2.61c0-3.48.25-6.6.76-9.35a35.75 35.75 0 0 1 2.39-7.83c1.09-2.46 2.54-4.86 4.35-7.18 1.81-2.32 4.1-4.79 6.85-7.4l9.79-9.35a40.29 40.29 0 0 0 7.07-8.27c1.96-3.05 2.94-6.74 2.94-11.09 0-5.66-1.78-10.4-5.33-14.25-3.56-3.84-8.59-5.76-15.12-5.76-3.34 0-6.35.62-9.03 1.85-2.69 1.23-5 2.9-6.96 5s-3.45 4.53-4.46 7.29c-.44 1.18-.79 2.38-1.07 3.58-.63 2.76-3.13 4.68-5.95 4.43l-15.35-1.37c-3.4-.3-5.78-3.53-5.02-6.86 1.02-4.46 2.5-8.55 4.44-12.29 2.83-5.44 6.49-10.04 10.99-13.81 4.49-3.77 9.64-6.63 15.45-8.59 5.8-1.96 12.04-2.94 18.71-2.94 6.23 0 12.15.91 17.73 2.72s10.51 4.5 14.79 8.05c4.28 3.56 7.65 7.94 10.12 13.16 2.46 5.22 3.7 11.24 3.7 18.06 0 4.64-.51 8.7-1.52 12.18-1.02 3.48-2.47 6.67-4.35 9.57-1.89 2.9-4.17 5.69-6.85 8.38-2.69 2.69-5.69 5.48-9.03 8.38-2.9 2.47-5.26 4.64-7.07 6.53-1.82 1.89-3.26 3.77-4.35 5.66a19.813 19.813 0 0 0-2.28 6.09c-.44 2.18-.65 4.86-.65 8.05 0 3.12-2.53 5.66-5.66 5.66h-14.36Zm-10.01 30.24c0-4.64 1.7-8.63 5.11-11.96s7.51-5 12.29-5 8.7 1.6 12.18 4.79c3.48 3.19 5.22 7.11 5.22 11.75s-1.71 8.63-5.11 11.96c-3.41 3.34-7.51 5-12.29 5-2.32 0-4.53-.44-6.63-1.31-2.1-.87-3.95-2.03-5.55-3.48-1.6-1.45-2.87-3.19-3.81-5.22-.95-2.03-1.41-4.2-1.41-6.53Z" fill="#424652"/></svg>
+                  <span class="hoverds dn">
+                    <span>Red tags: < 20&#37; of users</span>
+                    <span>yellow tags: < 20&#37; of users</span>
+                    <span>green tags: 60&#37; of users selected this</span>
+                  </span>
+                </h4>
                 <div>
                   <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">13</span> 😓 awkward</span></span>
                   <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">12</span> 🖼 bad framing</span></span>
