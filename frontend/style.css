@@ -600,7 +600,22 @@ aside li .rad0:checked+span .rocket {
 
 
 
-
+.img-infobox {
+  color: black;
+  width: 100%;
+  display: flex;
+  justify-content: space-between
+}
+.data-score {
+  font-size: 13px;
+  font-weight: 500; font-family: 'Colfax Bold';
+}
+.data-score-sq {
+  display: block;
+  font-weight: 500;
+  font-family: 'Colfax Bold';
+  color: #424652;
+}
 
 .txt-rr {
   line-height: 27px;
