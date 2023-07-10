@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--<link rel="icon" href="favicon.ico">-->
+    <title>Canvas</title>
+  </head>
+  <body id="globl" style="margin: 0">
+    
+    <canvas id="cvs" width="1024" height="768">
+    </canvas>
+
+
+    <script type="text/javascript">
+      var imgIdx = 0
+      socket = new WebSocket('ws://localhost:8081/');
+      socket.binaryType = "arraybuffer";
+      //socket.binaryType = ”blob”;
+
+      function drawBinary(binaryImage, width, height) {
+        var context = cvs.getContext('2d');
+        //var imageData = context.createImageData(width, height);
+        var imageData =  new ImageData(binaryImage, width, height)
+        context.imageSmoothingEnabled= false;
+
+        context.putImageData(imageData, 0, 0);
+      }
+
+      function binaryToDataURL(inputArray){
+        var base64 = btoa(String.fromCharCode.apply(null, inputArray));
+        var uri = 'data:image/jpeg;base64,' + base64;
+        return uri;
+      }
+
+      function binaryToDataURL2(inputArray){
+        var blob = new Blob(inputArray, {'type' : 'image/jpeg'});
+        return URL.createObjectURL(blob);
+      }
+
+      function drawToCanvas(binaryArray){
+        var canvas = document.createElement('canvas');
+        var context = canvas.getContext('2d');
+        var img = new Image();
+        img.onload = function(){
+          context.drawImage(img);
+        };
+        img.onerror = function(e){
+          console.log('Error during loading image:', e);
+        };
+        
+        img.src = binaryToDataURL(binaryArray);
+      }
+
+      function getItem() {
+        var snd = new Uint8Array(1)
+        snd[0] = imgIdx
+        console.log(snd)
+        socket.send(snd)
+      }
+
+      socket.onopen = function(event) {
+        getItem()
+      }
+
+      socket.onmessage = function(event) {
+        console.time('test');
+        var buffer = event.data;
+        let j = 0;
+
+        const uint8View = new Uint8ClampedArray(buffer);
+
+        drawBinary(uint8View, 1024, 768)
+
+        console.timeEnd('test');
+        
+        imgIdx += 1
+        getItem()
+      }
+
+      
+    </script>
+  </body>
+</html>

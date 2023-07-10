@@ -159,7 +159,7 @@ body {
   right: -42px;
   top: 64px;
   width: 170px;
-  border: 1px solid rgba(0,20,30,0.08);
+  border: 1px solid rgba(136, 152, 170,0.1)
 }
 
 #nV{top: 0}
@@ -2592,6 +2592,10 @@ nav {
 
 }
 
+nav button {
+  padding: 0
+}
+
 nav li, nav button {
   font-weight: 500;
   display: block;
@@ -2685,6 +2689,22 @@ nav .dropdown li svg {
   transition: 0.4s ease-out opacity, 0.3s ease-out height;
   padding: 0;
   z-index: 999999;
+}
+
+.nav-links>ul {
+  margin: 0
+}
+
+.aux-icons {
+  width: 64px;
+}
+.aux-icons button .checkbox{
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+.aux-icons button>svg path {
+  fill:  rgb(84, 89, 105);
 }
 
 nav .tbx span {
