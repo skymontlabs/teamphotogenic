@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon" /> -->
+
+  <link rel="stylesheet" href="./assets/css/index.bundle.css" />
+  <link rel="shortcut icon" type="image/ico" href="./assets/images/favicon.ico" />
+  
+  <title>TeamPhotogenic</title>
+  <style>
+    
+
+#bg-aur {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+#bg-aur:after {
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: white;
+  background-size: cover;
+}
+#getStarted:before {
+  background: white;
+  height: 3px;
+  width: 10px;
+  border-radius: 4px;
+  content: '';
+  position: absolute;
+  right: 22px;
+  top: 25px;
+
+  transform: rotate(45deg);
+}
+#getStarted:after {
+  background: white;
+  height: 3px;
+  width: 10px;
+  border-radius: 4px;
+  content: '';
+  position: absolute;
+  right: 22px;
+  top: 29px;
+  transform: rotate(-45deg);
+
+}
+
+#fig:after {
+  content: '';
+  position: absolute;
+  height: 100vh;
+  background: #14171a !important;width: 50%;right: 0;
+}
+  </style>
+
+</head>
+
+<body>
+
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-sticky navbar-dark">
+    <div class="container">
+  
+      <a href="./index.html" class="navbar-brand">
+        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="36" height="36" class="display-gtlg" style="overflow:visible;enable-background:new 0 0 36 36"><path fill="#250E70" d="M21.9.4C10.3-2.1 0 6.8 0 18c0 0 .8 1.1 3 1.1S6 18 6 18c0-7.9 7.6-14 15.8-11.4 3.6 1.1 6.5 4 7.6 7.6C32 22.4 25.9 30 18 30c-.1 0-1.1.7-1.1 3.1 0 2.4.9 2.9.9 2.9 11.3.2 20.2-10.2 17.8-21.9C34.2 7.3 28.7 1.9 21.9.4z"/><path fill="#5A43FF" d="M35.8 20.5c.3-2.1.2-4.2-.2-6.4C34.2 7.3 28.7 1.8 21.9.4 20.6.1 19.3 0 18 0c0 .1-1.5 2.5 0 6v.1c1.2 0 2.5.1 3.8.5 3.6 1.1 6.5 4 7.6 7.6.7 2.2.7 4.4.3 6.4h6.1z"/><path fill="#5288FF" d="M36 18.1c-3.3-1.5-5.6 0-6-.1h-.1c0 6.6-5.3 12-11.9 12-.1 0-1.1.7-1.1 3.1s.9 2.9.9 2.9c10 .1 18.2-7.9 18.2-17.9z"/><circle cx="18" cy="18" r="3.3" fill="#3737AA"/><path fill="#5A43FF" d="M18 0h16.3c1 0 1.7.7 1.7 1.7v11.1c0 6.6 0 4.5-.6 4.8-.7.3-1.9-3.1-2.4-3.8l-4.9-7c-.1-.2-.3-.3-.4-.4L18 0z"/></svg><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="36" height="36" class="display-ltlg" style="overflow:visible;enable-background:new 0 0 36 36"><path fill="rgba(255,255,255,0.4)" d="M21.9.4C10.3-2.1 0 6.8 0 18c0 0 .8 1.1 3 1.1S6 18 6 18c0-7.9 7.6-14 15.8-11.4 3.6 1.1 6.5 4 7.6 7.6C32 22.4 25.9 30 18 30c-.1 0-1.1.7-1.1 3.1 0 2.4.9 2.9.9 2.9 11.3.2 20.2-10.2 17.8-21.9C34.2 7.3 28.7 1.9 21.9.4z"/><path fill="rgba(255,255,255,1)" d="M35.8 20.5c.3-2.1.2-4.2-.2-6.4C34.2 7.3 28.7 1.8 21.9.4 20.6.1 19.3 0 18 0c0 .1-1.5 2.5 0 6v.1c1.2 0 2.5.1 3.8.5 3.6 1.1 6.5 4 7.6 7.6.7 2.2.7 4.4.3 6.4h6.1z"/><path fill="rgba(255,255,255,0.8)" d="M36 18.1c-3.3-1.5-5.6 0-6-.1h-.1c0 6.6-5.3 12-11.9 12-.1 0-1.1.7-1.1 3.1s.9 2.9.9 2.9c10 .1 18.2-7.9 18.2-17.9z"/><circle cx="18" cy="18" r="3.3" fill="rgba(255,255,255,0.7)"/><path fill="rgba(255,255,255,1)" d="M18 0h16.3c1 0 1.7.7 1.7 1.7v11.1c0 6.6 0 4.5-.6 4.8-.7.3-1.9-3.1-2.4-3.8l-4.9-7c-.1-.2-.3-.3-.4-.4L18 0z"/></svg>
+      </a>
+      <!--
+      <ul class="navbar-nav navbar-nav-secondary order-lg-3">
+        <li class="col-auto">
+          <a href="./blog.html" class="btn btn-link">
+            Blog
+          </a>
+        </li>
+        <li class="col-auto" style="margin-left: 3em;">
+          <a href="https://app.imagespro.com" class="btn btn-link" >
+            Signup
+          </a>
+        </li>
+      </ul>-->
+    </div>
+  </nav>
+
+
+
+  <div class="offcanvas-wrap" style="background: white !important">
+    <div style="background: white !important">
+      <section class="overflow-hidden" style="background: white !important;">
+        <div class="container-fluid back back-background">
+          <div class="row h-100">
+            <div class="col-12 col-lg-6 aos-init aos-animate" data-aos="fade-in" style="margin-left: auto;background: linear-gradient(#040810, #242833);">
+              <figure class="background skrollable skrollable-between" id="bg-aur" data-top-top="transform: translateY(0%);" data-top-bottom="transform: translateY(10%);" id="fig">
+                <div class="relative col-12 col-lg-6 mb-5 mb-lg-0" id="rateWrap">
+                  <div id="imgWrap">
+                    <div id="bg-image0"></div>
+                    <div id="bg-image1"></div>
+                    <div id="bg-image2"></div>
+                    <div id="bg-image3"></div>
+                    <div id="bg-image4"></div>
+                    <div id="bg-image5"></div>
+                    <div id="bg-image6"></div>
+                    <div id="bg-image7"></div>
+                    <div id="bg-image8"></div>
+                    <div id="bg-image9"></div>
+                    <div id="bg-imagea"></div>
+                    <div id="bg-imageb"></div>
+                    <div id="bg-imagec"></div>
+                    <div id="bg-imaged"></div>
+                    <div id="bg-imagee"></div>
+                    <div id="bg-imagef"></div>
+                    <div id="bg-imageg"></div>
+                    <div id="bg-imageh"></div>
+                    <div id="bg-imagei"></div>
+                    <div id="bg-imagej"></div>
+                    <div id="bg-imagek"></div>
+                    <div id="bg-imagel"></div>
+                    <div id="bg-imagem"></div>
+                    <div id="bg-imagen"></div>
+                    <div id="bg-imageo"></div>
+                    <div id="bg-imagep"></div>
+                    <div id="bg-imageq"></div>
+                    <div id="bg-imager"></div>
+                    <div id="bg-images"></div>
+                    <div id="bg-imaget"></div>
+                    <div id="bg-imageu"></div>
+                    <div id="bg-imagev"></div>
+                    <div id="bg-imagew"></div>
+                    <div id="bg-imagex"></div>
+                    <div id="bg-imagey"></div>
+                    <div id="bg-imagez"></div>
+                    <div id="bg-imagez"></div>
+                    <div id="bg-imageA"></div>
+                    <div id="bg-imageB"></div>
+                    <div id="bg-imageC"></div>
+                    <div id="bg-imageD"></div>
+                    <div id="bg-imageE"></div>
+                    <div id="bg-imageF"></div>
+                    <div id="bg-imageG"></div>
+                    <div id="bg-imageH"></div>
+                    <div id="bg-imageI"></div>
+                    <div id="bg-imageJ"></div>
+                    <div id="bg-imageK"></div>
+                    <div id="bg-imageL"></div>
+                    <div id="bg-imageM"></div>
+                    <div id="bg-imageN"></div>
+                    <img src="./assets/images/samples/0.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-image0" alt="Rudransh">
+                    <img src="./assets/images/samples/1.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-image1" alt="Rudransh">
+                    <img src="./assets/images/samples/2.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-image2" alt="Rudransh">
+                    <img src="./assets/images/samples/3.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-image3" alt="Rudransh">
+                    <img src="./assets/images/samples/4.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-image4" alt="Rudransh">
+                    <img src="./assets/images/samples/5.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-image5" alt="Rudransh">
+                    <img src="./assets/images/samples/6.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-image6" alt="Rudransh">
+                    <img src="./assets/images/samples/7.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-image7" alt="Rudransh">
+                    <img src="./assets/images/samples/8.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-image8" alt="Rudransh">
+                    <img src="./assets/images/samples/9.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-image9" alt="Rudransh">
+                    <img src="./assets/images/samples/a.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imagea" alt="Rudransh">
+                    <img src="./assets/images/samples/b.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageb" alt="Rudransh">
+                    <img src="./assets/images/samples/c.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imagec" alt="Rudransh">
+                    <img src="./assets/images/samples/d.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imaged" alt="Rudransh">
+                    <img src="./assets/images/samples/e.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imagee" alt="Rudransh">
+                    <img src="./assets/images/samples/f.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imagef" alt="Rudransh">
+                    <img src="./assets/images/samples/g.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageg" alt="Rudransh">
+                    <img src="./assets/images/samples/h.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageh" alt="Rudransh">
+                    <img src="./assets/images/samples/i.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imagei" alt="Rudransh">
+                    <img src="./assets/images/samples/j.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imagej" alt="Rudransh">
+                    <img src="./assets/images/samples/k.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imagek" alt="Rudransh">
+                    <img src="./assets/images/samples/l.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imagel" alt="Rudransh">
+                    <img src="./assets/images/samples/m.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imagem" alt="Rudransh">
+                    <img src="./assets/images/samples/n.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imagen" alt="Rudransh">
+                    <img src="./assets/images/samples/o.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageo" alt="Rudransh">
+                    <img src="./assets/images/samples/p.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imagep" alt="Rudransh">
+                    <img src="./assets/images/samples/q.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageq" alt="Rudransh">
+                    <img src="./assets/images/samples/r.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imager" alt="Rudransh">
+                    <img src="./assets/images/samples/s.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-images" alt="Rudransh">
+                    <img src="./assets/images/samples/t.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imaget" alt="Rudransh">
+                    <img src="./assets/images/samples/u.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageu" alt="Rudransh">
+                    <img src="./assets/images/samples/v.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imagev" alt="Rudransh">
+                    <img src="./assets/images/samples/w.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imagew" alt="Rudransh">
+                    <img src="./assets/images/samples/x.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imagex" alt="Rudransh">
+                    <img src="./assets/images/samples/y.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imagey" alt="Rudransh">
+                    <img src="./assets/images/samples/z.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imagez" alt="Rudransh">
+                    <img src="./assets/images/samples/a0.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageA" alt="Rudransh">
+                    <img src="./assets/images/samples/a1.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageB" alt="Rudransh">
+                    <img src="./assets/images/samples/a2.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageC" alt="Rudransh">
+                    <img src="./assets/images/samples/a3.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageD" alt="Rudransh">
+                    <img src="./assets/images/samples/a4.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageE" alt="Rudransh">
+                    <img src="./assets/images/samples/a5.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageF" alt="Rudransh">
+                    <img src="./assets/images/samples/a6.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageG" alt="Rudransh">
+                    <img src="./assets/images/samples/a7.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageH" alt="Rudransh">
+                    <img src="./assets/images/samples/a8.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageI" alt="Rudransh">
+                    <img src="./assets/images/samples/a9.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageJ" alt="Rudransh">
+                    <img src="./assets/images/samples/aa.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageK" alt="Rudransh">
+                    <img src="./assets/images/samples/ab.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageL" alt="Rudransh">
+                    <img src="./assets/images/samples/ac.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageM" alt="Rudransh">
+                    <img src="./assets/images/samples/ad.jpg" class="img-fluid ani-obj ani-panel-image" id="panel-imageN" alt="Rudransh">
+                  </div>
+                  <div id="panel-rate">
+                    <div class="score-column smart">
+                      <span class="fw-heavy">Rating</span>
+                      <div class="btn-wrap d-flex justify-content-between mt-1">
+                        <button class="btn grey btn-rate" id="btn-eh"><span class="d-block emoji">😒</span><span class="tc txt-rate">Eh</span></button>
+                        <button class="btn grey btn-rate" id="btn-decent"><span class="d-block emoji">😐</span><span class="tc txt-rate">Decent</span></button>
+                        <button class="btn grey btn-rate" id="btn-great"><span class="d-block emoji">😃</span><span class="tc txt-rate">Great</span></button>
+                        <button class="btn grey btn-rate" id="btn-stunning"><span class="d-block emoji">🤩</span><span class="tc txt-rate">Stunning</span></button>
+                        <button class="btn grey btn-rate" id="btn-brilliant"><span class="d-block emoji">🤑</span><span class="tc txt-rate">Brilliant</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <!--
+                  <div id="panel-tags">
+                    <span class="fw-heavy">Tags</span>
+                    <div class="tab-pane d-flex flex-wrap mt-1">
+                      <span class="btn-tag ani-obj" id="btn-angle">😓 awkward</span>
+                      <span class="btn-tag ani-obj" id="btn-frame">🖼 bad framing</span>
+                      <span class="btn-tag ani-obj" id="btn-bland">🍞 bland</span>
+                      <span class="btn-tag ani-obj" id="btn-blurry">💨 blurry</span>
+                      <span class="btn-tag ani-obj" id="btn-bright">⚡️ bright</span>
+                      <span class="btn-tag ani-obj" id="btn-busy">🚊 busy</span>
+                      <span class="btn-tag ani-obj" id="btn-color">🌈 colorful</span><br>
+                      <span class="btn-tag ani-obj" id="btn-cool">🕶 cool</span>
+                      <span class="btn-tag ani-obj" id="btn-dark">🌚 dark</span>
+                      <span class="btn-tag ani-obj" id="btn-grainy">🧂 grainy</span>
+                      <span class="btn-tag ani-obj" id="btn-edit">🚨 overedited</span>
+                    </div>
+                  </div>
+                  -->
+                </div>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column container py-20 min-vh-100 level-1" style="margin-right: auto;">
+          <div class="row align-items-center  justify-content-xl-begin my-auto">
+            <div class="col-lg-5 text-center text-lg-start">
+              <h1 class="display-2 fw-heavy lh-sm my-2 my-xl-4 fc-white-lg" style="">Feedback for your photos before you post.</h1>
+              <p class="fc-white-lg dn-x">Stop wasting time waiting for your friends to respond back when you can get better analysis at absolutely no cost.</p>
+
+              <a href="https://app.imagespro.com" id="getStarted" class="btn btn-with-icon btn-blue rounded-pill mt-5">Get Started </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+
+
+
+    <!-- footer -->
+    <footer class="py-15 py-xl-20">
+      <div class="container">
+        <div class="row g-4 g-lg-5 mb-10">
+          <div class="col-md-3 text-center text-md-start">
+            <a href="./index.html" class="navbar-brand">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="89px"
+                 height="9px" viewBox="0 0 89 9" style="overflow:visible;enable-background:new 0 0 89 9;" xml:space="preserve">
+              <style type="text/css">
+                .st0{fill:#250E70;}
+                .st1{fill:#5A43FF;}
+                .st2{fill:#5288FF;}
+                .st3{fill:#3737AA;}
+              </style>
+              <defs>
+              </defs>
+              <path d="M0,0.3h1.5v8.5H0V0.3z"/>
+              <path d="M5.8,0.3h2.4l2.2,6h0l2.2-6H15v8.5h-1.5V1.9h0l-2.6,6.8H9.8L7.2,1.9h0v6.8H5.8V0.3z"/>
+              <path d="M21.9,0.3h1.3l3.7,8.5h-1.7l-0.8-1.9h-3.7l-0.8,1.9h-1.7L21.9,0.3z M23.8,5.5l-1.3-3.5l-1.3,3.5H23.8z"/>
+              <path d="M37.3,8.3c-0.4,0.2-0.9,0.4-1.4,0.5S34.8,9,34.1,9c-0.7,0-1.3-0.1-1.9-0.3c-0.6-0.2-1.1-0.5-1.5-0.9c-0.4-0.4-0.7-0.9-1-1.4
+                c-0.2-0.5-0.3-1.2-0.3-1.8c0-0.7,0.1-1.3,0.4-1.8c0.2-0.5,0.6-1,1-1.4c0.4-0.4,0.9-0.7,1.5-0.9S33.4,0,34.1,0c0.7,0,1.3,0.1,1.9,0.3
+                c0.6,0.2,1,0.5,1.4,0.8l-1,1.1C36,2,35.7,1.8,35.4,1.6c-0.4-0.2-0.8-0.3-1.3-0.3c-0.4,0-0.9,0.1-1.2,0.2c-0.4,0.2-0.7,0.4-0.9,0.7
+                c-0.3,0.3-0.5,0.6-0.6,1c-0.1,0.4-0.2,0.8-0.2,1.2c0,0.5,0.1,0.9,0.2,1.3c0.1,0.4,0.3,0.7,0.6,1c0.3,0.3,0.6,0.5,0.9,0.7
+                c0.4,0.2,0.8,0.2,1.3,0.2c0.6,0,1.2-0.1,1.7-0.3V5.1h-1.8V3.9h3.3V8.3z"/>
+              <path d="M41.6,0.3h5.6v1.3h-4.1v2.2H47V5h-3.9v2.4h4.3v1.3h-5.8V0.3z"/>
+              <path d="M55.6,2c-0.2-0.2-0.4-0.4-0.7-0.5c-0.3-0.1-0.6-0.2-0.9-0.2c-0.2,0-0.4,0-0.5,0.1c-0.2,0-0.3,0.1-0.5,0.2
+                c-0.1,0.1-0.3,0.2-0.4,0.4c-0.1,0.1-0.1,0.3-0.1,0.5c0,0.2,0,0.4,0.1,0.5c0.1,0.1,0.2,0.3,0.3,0.3c0.1,0.1,0.3,0.2,0.5,0.3
+                c0.2,0.1,0.4,0.1,0.7,0.2C54.4,3.9,54.7,4,55,4.1c0.3,0.1,0.6,0.3,0.8,0.4s0.4,0.4,0.6,0.7c0.2,0.3,0.2,0.6,0.2,1
+                c0,0.5-0.1,0.9-0.3,1.2c-0.2,0.3-0.4,0.6-0.7,0.8c-0.3,0.2-0.6,0.4-1,0.5C54.4,8.9,54,9,53.6,9c-0.6,0-1.1-0.1-1.6-0.3
+                c-0.5-0.2-1-0.5-1.3-0.9l1.1-1c0.2,0.3,0.5,0.5,0.8,0.7c0.3,0.2,0.7,0.3,1,0.3c0.2,0,0.4,0,0.5-0.1s0.4-0.1,0.5-0.2S54.9,7.2,55,7
+                c0.1-0.2,0.1-0.3,0.1-0.6c0-0.2-0.1-0.4-0.2-0.6c-0.1-0.1-0.2-0.3-0.4-0.4c-0.2-0.1-0.4-0.2-0.6-0.3c-0.2-0.1-0.5-0.2-0.8-0.3
+                c-0.3-0.1-0.5-0.2-0.8-0.3c-0.3-0.1-0.5-0.3-0.7-0.4c-0.2-0.2-0.4-0.4-0.5-0.7S51,2.9,51,2.5c0-0.4,0.1-0.8,0.3-1.1
+                c0.2-0.3,0.4-0.6,0.7-0.8s0.6-0.4,1-0.5S53.7,0,54.1,0c0.4,0,0.9,0.1,1.3,0.2c0.4,0.2,0.8,0.4,1.2,0.7L55.6,2z"/>
+              <path d="M60.6,0.3h2.8c0.5,0,0.9,0,1.3,0.1c0.4,0.1,0.7,0.2,1,0.4c0.3,0.2,0.5,0.5,0.6,0.8c0.2,0.3,0.2,0.7,0.2,1.1
+                c0,0.5-0.1,0.9-0.3,1.2c-0.2,0.3-0.4,0.6-0.7,0.8c-0.3,0.2-0.6,0.3-1.1,0.4c-0.4,0.1-0.8,0.1-1.3,0.1h-1.2v3.5h-1.5V0.3z M63.1,4
+                c0.2,0,0.5,0,0.7-0.1c0.2,0,0.4-0.1,0.6-0.2c0.2-0.1,0.3-0.2,0.4-0.4C65,3.2,65,3,65,2.7c0-0.2-0.1-0.4-0.2-0.6
+                c-0.1-0.2-0.2-0.3-0.4-0.4s-0.4-0.1-0.6-0.2c-0.2,0-0.4,0-0.7,0h-1.1V4H63.1z"/>
+              <path d="M70.3,0.3h3c0.4,0,0.8,0,1.2,0.1c0.4,0.1,0.7,0.2,1,0.4c0.3,0.2,0.5,0.4,0.7,0.8s0.3,0.7,0.3,1.1c0,0.6-0.2,1.1-0.5,1.5
+                C75.5,4.6,75,4.8,74.4,5l2.3,3.8h-1.8l-2-3.6h-1.1v3.6h-1.5V0.3z M73,3.9c0.2,0,0.4,0,0.6,0c0.2,0,0.4-0.1,0.6-0.2s0.3-0.2,0.4-0.4
+                c0.1-0.2,0.2-0.4,0.2-0.6c0-0.2-0.1-0.4-0.2-0.6c-0.1-0.1-0.2-0.3-0.4-0.4c-0.2-0.1-0.3-0.1-0.5-0.2c-0.2,0-0.4,0-0.6,0h-1.4v2.4H73
+                z"/>
+              <path class="st0" d="M85.4,0.1C82.5-0.5,80,1.7,80,4.5c0,0,0.2,0.3,0.8,0.3s0.7-0.3,0.7-0.3c0-2,1.9-3.5,4-2.9
+                c0.9,0.3,1.6,1,1.9,1.9c0.6,2.1-0.9,4-2.9,4c0,0-0.3,0.2-0.3,0.8c0,0.6,0.2,0.7,0.2,0.7c2.8,0,5.1-2.5,4.5-5.5
+                C88.5,1.8,87.1,0.5,85.4,0.1z"/>
+              <path class="st1" d="M88.9,5.1C89,4.6,89,4.1,88.9,3.5c-0.4-1.7-1.7-3.1-3.4-3.4C85.1,0,84.8,0,84.5,0c0,0-0.4,0.6,0,1.5
+                c0,0,0,0,0,0c0.3,0,0.6,0,0.9,0.1c0.9,0.3,1.6,1,1.9,1.9c0.2,0.6,0.2,1.1,0.1,1.6H88.9z"/>
+              <path class="st2" d="M89,4.5c-0.8-0.4-1.4,0-1.5,0l0,0c0,1.7-1.3,3-3,3c0,0-0.3,0.2-0.3,0.8S84.4,9,84.4,9C86.9,9,88.9,7,89,4.5z"/>
+              <circle class="st3" cx="84.5" cy="4.5" r="0.8"/>
+              <path class="st1" d="M84.5,0h4.1C88.8,0,89,0.2,89,0.4c0,0,0,1.1,0,2.8s0,1.1-0.1,1.2c-0.2,0.1-0.5-0.8-0.6-1L87,1.7
+                c0,0-0.1-0.1-0.1-0.1L84.5,0z"/>
+              </svg>
+            </a>
+          </div>
+          <div class="col-md-4 col-lg-5 text-center text-md-start">
+            <!--
+            <ul class="list-unstyled">
+              <li class="mb-1"><a href="/blog.html" class="text-reset text-primary-hover">blog</a></li>
+              <li class="mb-1"><a href="/about-us.html" class="text-reset text-primary-hover">about us</a></li>
+              <li class="mb-1"><a href="/terms.html" class="text-reset text-primary-hover">terms</a></li>
+              <li class="mb-1"><a href="/privacy.html" class="text-reset text-primary-hover">privacy</a></li>
+              <li class=""><a href="/privacy.html" class="text-reset text-primary-hover">webapp</a></li>
+            </ul>
+            -->
+          </div>
+          <div class="col-md-5 col-lg-4">
+            <div class="grouped-inputs border p-1 rounded-pill">
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control rounded-pill px-3" aria-label="Text input"
+                    placeholder="Text me when it arrives">
+                </div>
+                <div class="col-auto">
+                  <a href="" class="btn btn-blue btn-icon rounded-circle"><i class="bi bi-arrow-return-left"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center g-1 g-lg-6 text-muted">
+          <div class="col-md-6 col-lg-5 order-lg-2 text-center text-md-start">
+            <ul class="list-inline small">
+              <li class="list-inline-item"><a href="" class="text-reset text-primary-hover">facebook</a></li>
+              <li class="list-inline-item ms-1"><a href="" class="text-reset text-primary-hover">twitter</a></li>
+              <li class="list-inline-item ms-1"><a href="" class="text-reset text-primary-hover">instagram</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-4 text-center text-md-end order-lg-3">
+            <ul class="list-inline small">
+              <li class="list-inline-item"><a href="" class="text-reset text-primary-hover">App Store</a></li>
+              <li class="list-inline-item ms-1"><a href="" class="text-reset text-primary-hover">Google Play</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 order-lg-1 text-center text-md-start">
+            <p class="small">Copyright © 2021</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</html>
