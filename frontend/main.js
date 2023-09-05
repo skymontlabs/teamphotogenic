@@ -1,11 +1,25 @@
 accountLinked.style.display="none";
 
-var page = 1
+var initPage = 1
 var cur = editProfilePanel
 var loggedin = false
 
-if (page != 0) {
+//const pageVal = localStorage.getItem("pageVal");
+
+
+if (!loggedin) {
   //dark.style.display="none"
+  // login now
+  //sock.send(seedCode->0 + email.length + email)
+
+  dark.classList.add('overlay')
+  dark.style.display='none';
+  loginer.style.display='none';
+  loggedin=true;
+  globl.className='showS'
+  nV.style.display='block';
+} else {
+  dark.style.display='flex'
 }
 
 
@@ -13,64 +27,66 @@ if (page != 0) {
 
 
 editProfileV.onclick = (event)          => {cur.style.display='none';editProfilePanel.style.display='block';cur=editProfilePanel}
-securityPrivacyV.onclick = (event)      => {cur.style.display='none';securityPrivacyPanel.style.display='block';cur=securityPrivacyPanel}
 addonsV.onclick = (event)               => {cur.style.display='none';addonsPanel.style.display='block';cur=addonsPanel}
-redeemV.onclick = (event)               => {cur.style.display='none';redeemPanel.style.display='block';cur=redeemPanel}
 displayNotificationsV.onclick = (event) => {cur.style.display='none';displayNotificationsPanel.style.display='block';cur=displayNotificationsPanel}
 helpSupportV.onclick = (event)          => {cur.style.display='none';helpSupportPanel.style.display='block';cur=helpSupportPanel}
 dark.onclick = (event) => {
-    if (loggedin && event.target == dark) {
-        dark.style.display='none'
-        indvImg.style.display='none'
-    }
+  if (loggedin && event.target == dark) {
+    dark.style.display='none'
+    indvImg.style.display='none'
+  }
 }
 
 buyCredLi.onclick = (event) => {
-    dark.style.display='block'
-    dark.style.background='rgba(0,0,0,.6)'
-    buyCredData.style.display='flex';
+  dark.style.display='block'
+  dark.style.background='rgba(0,0,0,.6)'
+  buyCredData.style.display='flex';
 }
 
 signuper.onclick = (event) => {
-    const seed = new Uint8Array(16); // get this from the backend, async wait from X
-    
-    //progress.classList.add('active')
-        
-    argon2.hash({
-      pass: passwordSignup.innerText, salt: seed,
-      time: 32, mem: 16384, hashLen: 64,
-      type: argon2.ArgonType.Argon2d
-    })
-    .then(h => {
-        // login now
-        //sock.send(seedCode->0 + email.length + email)
+  const seed = new Uint8Array(16); // get this from the backend, async wait from X
+  
+  argon2.hash({
+    pass: passwordSignup.innerText, salt: seed,
+    time: 32, mem: 16384, hashLen: 64,
+    type: argon2.ArgonType.Argon2d
+  })
+  .then(h => {
+    //sock.send(seedCode->0 + email.length + email)
 
-        dark.classList.add('overlay')
-        dark.style.display='none';
-        loginer.style.display='none';
-        loggedin=true;
+    dark.classList.add('overlay')
+    dark.style.display='none'
+    loginer.style.display='none'
+    loggedin=true
 
-
-        globl.className='showS'
-        nV.style.display='block';
-    })
-    .catch(e => {
-        wrongpass.style.display='block'
-        console.error('sex')
-    })
+    globl.className='showS'
+    nV.style.display='block'
+  })
+  .catch(e => {
+    wrongpass.style.display='block'
+    console.error('incorrect')
+  })
 }
 
+//
+// DROPDOWNS BEGIN
+//
+//infTog.onclick = (event) => {dropn.style.display='none';dropp.style.display='none'}
+//notTog.onclick = (event) => {dropi.style.display='none';dropp.style.display='none'}
+//prfTog.onclick = (event) => {dropi.style.display='none';dropn.style.display='none'}
+//
+// DROPDOWNS END
+//
 
 signouter.onclick = (event) => {
     dark.style.display='block';
+    dark.className='';
     loginer.style.display='block';
     loggedin=false;
 
-    //scorerater.style.display='none';
     globl.className=''
     nV.style.display='none';
     prfChx.checked=false
-
 }
 
 activate2f.onclick = (event) => {
@@ -83,22 +99,22 @@ function fnBrowserDetect(){
   let userAgent = navigator.userAgent;
   let browserName;
   
-  if(userAgent.match(/chrome|chromium|crios/i)){
-     browserName = "chrome";
-   }else if(userAgent.match(/firefox|fxios/i)){
-     browserName = "firefox";
-     optimum.className=''
-   }  else if(userAgent.match(/safari/i)){
-     browserName = "safari";
-     optimum.className=''
-   }else if(userAgent.match(/opr\//i)){
-     browserName = "opera";
-     optimum.className=''
-   } else if(userAgent.match(/edg/i)){
-     browserName = "edge";
-   }else{
-     browserName="No browser detection";
-   }
+  if (userAgent.match(/chrome|chromium|crios/i)){
+    browserName = "chrome";
+  } else if(userAgent.match(/firefox|fxios/i)){
+    browserName = "firefox";
+    optimum.className=''
+  } else if(userAgent.match(/safari/i)){
+    browserName = "safari";
+    optimum.className=''
+  } else if(userAgent.match(/opr\//i)){
+    browserName = "opera";
+    optimum.className=''
+  } else if(userAgent.match(/edg/i)){
+    browserName = "edge";
+  } else{
+    browserName="No browser detection";
+  }
    
    // also track versions
  alert("You are using "+ browserName +" browser");         
@@ -115,6 +131,9 @@ var commentsCache = []
 
 
 function scoreRater() {
+}
+
+function save() {
  // bundle of 32
 }
 
@@ -190,9 +209,10 @@ function get(url) {
         globl.className = "";
         globl.classList.add('showA')
 
-
         editProfilePanel.style.display='block'
         editProfileV.children[0].checked=true
+
+
     } else if (page == 'securityPrivacy') {
         globl.className = "";
         globl.classList.add('showA')
@@ -217,6 +237,7 @@ function get(url) {
 }
 
 
+/*link controller*/
 const links = document.getElementsByTagName('a');
 for(let i = 0; i < links.length; i++) {
   links[i].addEventListener('click', function(event) {
@@ -241,9 +262,10 @@ function onClickOutside() {
     /*alert(event.target)
 */
 
-    console.log(event.target)
 
-    if (!drops.contains(event.target)) {
+    if (!dropp.contains(event.target)) {
+      //alert('seggs')
+      //dropp.style.display='none'
        //drops.style.display='none'
         //prfChx.checked=true
        //alert('seggs')
@@ -312,20 +334,10 @@ rkey.onclick = (event) => {
   globl.className='showS'
 };
 
-
-
-
-square.onclick = (event) => {
-    myTasks.className='square'
-}
-
-rect.onclick = (event) => {
-    myTasks.className='rect'
-}
-
-hotdog.onclick = (event) => {
-    myTasks.className='hotdog'
-}
+square.onclick = (event) => {myTasks.className='square'}
+rect.onclick = (event) => {myTasks.className='rect'}
+hotdog.onclick = (event) => {myTasks.className='hotdog'}
+imgbulk.onclick = (event) => {myTasks.className='imgbulk'}
 
 sortMean.onclick = (event) => {sortMethod.innerText='Mean score';sortCheckbox.checked=false}
 sortGeo.onclick = (event) => {sortMethod.innerText='Geo Mean score';sortCheckbox.checked=false}
@@ -338,121 +350,6 @@ sortDate.onclick = (event) => {sortMethod.innerText='Date added';sortCheckbox.ch
 sortModi.onclick = (event) => {sortMethod.innerText='Date modified';sortCheckbox.checked=false}
 
 
-
-const sck = new WebSocket("wss://api.teamphotogenic.com/ws", "protocolOne");
-sck.binaryType = "arraybuffer";
-//sck.onopen = onopen;
-//sck.onmessage = onmessage;
-sck.onclose = onclose;
-sck.onerror = onerror;
-
-seed = null
-
-onbeforeunload = (event) => {console.log('seggs')};
-
-
-sck.onopen = (event) => {
-}
-
-sck.onmessage = (event) => {
-  const f = document.getElementById("chatbox").contentDocument;
-  const msg = Buffer(event.data);
-
-  switch (msg[0]) {
-    case 0: // get seed
-      seed = ArrayBuffer(msg, 1, 20)
-      break;
-    case 1: // login
-      msg = data
-
-      localStorage.setItem("token", ArrayBuffer(msg, 1));
-      break;
-    case 2: // signup
-      "Username exists"
-
-      "Check code"
-      break;
-    case 3: // submit totp 
-      let password = ArrayBuffer(msg, 1)
-
-      // goes to login
-
-      break;
-    case 4: // init change password
-      // get old seed and new seed
-      let oldSeed = ArrayBuffer(msg, 1)
-      let newSeed = ArrayBuffer(msg, 1)
-
-      changePassword(contact, oldPassword, newPassword, oldSeed, newSeed)
-      break;
-    case 5: // change password
-      "Password changed"
-      break;
-    case 6: // verify acct
-      msg = data
-
-      localStorage.setItem("token", ArrayBuffer(msg, 1));
-      break;
-    case 7: // init totp 
-      "";
-      break;
-    case 8: // add totp
-      "";
-      break;
-    case 9: // remove totp
-      "TOTP Removed"
-      break;
-
-  /*
-  1. GetTasks for all tasks
-  2. GetTaskId for task of certain id with images
-  3. GetImageId for just 1 image data
-  4. RateIndiv for paired rating. Returns 16 images. Will be 8 different sets.
-  5. RatePairs for paired rating. Returns 16 images. Will be 8 different sets.
-  6. CreateSequence, creates a new sequence. This also activates a test.
-  7. DeleteSequence - deletes a certain sequence
-  8. ActivateTest, creates a new test for an already created sequence.
-  9. StopTest - stops a certain test
-  10. GetUsers -  get data from all users, for admin only
-  11. GetUser - get data from a user
-  */
-
-    case 10: // GetTasks
-      // parse all the tasks
-      break;
-    case 11: // GetTaskID
-      // parse all the images
-      break;
-    case 12: // RateIndiv
-      // rate individual image [group of 8], and get 8 back
-
-      break;
-    case 13: // RatePairs
-      // rate individual image [group of 16, or 8 pairs]
-
-      break;
-    case 14: // CreateSequence
-      // Now go to the sequenceID/taskID page
-      break;
-
-    case 15: // DeleteSequence
-      // say it was successful
-      // Go to all tasks
-      break;
-
-    case 16: // Activate task
-      // say it was successful
-      break;
-
-    case 17: // Stop task
-      // say it was successful
-      break;
-    
-    case 18: // Get user
-      // get your own user data, like the extensions bought + the 
-      break;
-  }
-};
 
 function convert2int0(Uint8Arr) {
   var length = Uint8Arr.length;
@@ -558,107 +455,107 @@ sk.send(buff,{binary:true});
 
 function login(contact, password, seed)
 {
-let buff = new ArrayBuffer([1 + contact.length + 64]);
+  let buff = new ArrayBuffer([1 + contact.length + 64]);
 
-argon2.hash({
-  pass: password, salt: seed,
-  time: 32, mem: 32768, hashLen: 64,
-  type: argon2.ArgonType.Argon2d
-})
-.then(h => {alert(h.hashHex)})
-.catch(e => console.error('Login did not work'))
+  argon2.hash({
+    pass: password, salt: seed,
+    time: 32, mem: 32768, hashLen: 64,
+    type: argon2.ArgonType.Argon2d
+  })
+  .then(h => {alert(h.hashHex)})
+  .catch(e => console.error('Login did not work'))
 
-sk.send(buff,{binary:true});
+  sk.send(buff,{binary:true});
 }
 
 
 
-      function changePassword(contact, oldPassword, newPassword, oldSeed, newSeed)
-      {
-        // same as login
-        let buff = new ArrayBuffer([1 + contact.length + 64 + 64]);
+function changePassword(contact, oldPassword, newPassword, oldSeed, newSeed)
+{
+  // same as login
+  let buff = new ArrayBuffer([1 + contact.length + 64 + 64]);
 
 /*
-        argon2.hash({
-          pass: password, salt: oldSeed,
-          time: 32, mem: 32768, hashLen: 64,
-          type: argon2.ArgonType.Argon2d
-        })
-        .then(h => {buff[1:65] = h.hashHex})
-        .catch(e => console.error('Signup did not work'))
+  argon2.hash({
+    pass: password, salt: oldSeed,
+    time: 32, mem: 32768, hashLen: 64,
+    type: argon2.ArgonType.Argon2d
+  })
+  .then(h => {buff[1:65] = h.hashHex})
+  .catch(e => console.error('Signup did not work'))
 
-        argon2.hash({
-          pass: password, salt: newSeed,
-          time: 32, mem: 32768, hashLen: 64,
-          type: argon2.ArgonType.Argon2d
-        })
-        .then(h => {buff[1:65] = h.hashHex})
-        .catch(e => console.error('Signup did not work'))
+  argon2.hash({
+    pass: password, salt: newSeed,
+    time: 32, mem: 32768, hashLen: 64,
+    type: argon2.ArgonType.Argon2d
+  })
+  .then(h => {buff[1:65] = h.hashHex})
+  .catch(e => console.error('Signup did not work'))
 */
-        sk.send(buff,{binary:true});
-      }
+  sk.send(buff,{binary:true});
+}
 
 
-      function submitTOTP(id, input)
-      {
-        // same as login
-        let buff = new ArrayBuffer([8 + 4]);
-        sk.send(buff,{binary:true});
-      }
+function submitTOTP(id, input)
+{
+  // same as login
+  let buff = new ArrayBuffer([8 + 4]);
+  sk.send(buff,{binary:true});
+}
 
-      function verifyUser(id)
-      {
-        let buff = new ArrayBuffer([8]);
-        for (var i = 0; i < 8; ++i)
-          buff[i] = (id >> 4) & 0xF
-        sk.send(id);
-      }
+function verifyUser(id)
+{
+  let buff = new ArrayBuffer([8]);
+  for (var i = 0; i < 8; ++i)
+    buff[i] = (id >> 4) & 0xF
+  sk.send(id);
+}
 
-      function initTOTP(id, input) {
-      }
+function initTOTP(id, input) {
+}
 
-      function upl()
-      {
-        let photo = document.getElementById("image-file").files[0];  // file from input
-        let req = new XMLHttpRequest();
-        let formData = new FormData();
+function upl()
+{
+  let photo = document.getElementById("image-file").files[0];  // file from input
+  let req = new XMLHttpRequest();
+  let formData = new FormData();
 
-        formData.append("photo", photo);                                
-        req.open("POST", '/upload/image');
-        req.send(formData);
+  formData.append("photo", photo);                                
+  req.open("POST", '/upload/image');
+  req.send(formData);
 
-        data = req.recv()
-      }
+  data = req.recv()
+}
 
 
 
-      imgInp.onchange = evt => {
-      console.log(evt)
-      console.log(imgInp.files)
-      const fi = imgInp.files
-      //upImg
-      for (let i = 0; i < fi.length; ++i) {
-        const div = document.createElement('div')
-        const span = document.createElement('span')
-        const img = document.createElement('img')
-        img.src=URL.createObjectURL(fi[i])
-        div.appendChild(img)
-        div.appendChild(span)
-        upImg.appendChild(div)
-        console.log(URL.createObjectURL(fi[i]))
-      }
+imgInp.onchange = evt => {
+  console.log(evt)
+  console.log(imgInp.files)
+  const fi = imgInp.files
+  //upImg
+  for (let i = 0; i < fi.length; ++i) {
+    const div = document.createElement('div')
+    const span = document.createElement('span')
+    const img = document.createElement('img')
+    img.src=URL.createObjectURL(fi[i])
+    div.appendChild(img)
+    div.appendChild(span)
+    upImg.appendChild(div)
+    console.log(URL.createObjectURL(fi[i]))
+  }
 
-      taskpref.style.display="block"
-      imgInp.style.display="none"
-      uplList.style.display="none"
+  taskpref.style.display="block"
+  imgInp.style.display="none"
+  uplList.style.display="none"
 
-      /*
-      const [file] = imgInp.files
-      console.log(file)
-      if (file) {
-        blah.src = URL.createObjectURL(file)
-      }*/
-    }
+  /*
+  const [file] = imgInp.files
+  console.log(file)
+  if (file) {
+    blah.src = URL.createObjectURL(file)
+  }*/
+}
 
 /*
     upImg.addEventListener('drop', handleDrop, false)

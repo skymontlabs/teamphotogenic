@@ -32,34 +32,59 @@
             </ul>
           </div>
           <div class="aux-icons y z">
-            
-            
             <button class="rel  drop-button">
               <svg aria-controls="menu3" aria-haspopup="menu" id="menu3-button" aria-hidden="true" class="SVGInline-svg SVGInline--cleaned-svg SVG-svg Icon-svg Icon--help-svg Icon-color-svg Icon-color--gray600-svg" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM7 8.089V8.5a1 1 0 0 0 1.926.377 3.456 3.456 0 0 0 1.549-.902 3.5 3.5 0 0 0-4.95-4.95A3.437 3.437 0 0 0 4.5 5.51a1.004 1.004 0 1 0 2.009-.02 1.43 1.43 0 0 1 .436-1.045 1.5 1.5 0 0 1 1.058-.437 1.492 1.492 0 0 1 0 2.983A1.004 1.004 0 0 0 7 8.09zM8 14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" fill-rule="evenodd"></path></svg>
-              <input id="nofBtn" type="checkbox" class="checkbox menutog">
-              <ul class="dropdown L p4 mt0 mb0 flg clxl abs">
-                <li class="">
-                  <a class="y pl f13 lh20 w5" style="text-transform: none;text-align: left;line-height: 20px" href="/tests.html">
-                  Your test has finished with 45 votes.</a>
-                </li>
-              </ul>
+              <input id="infTog" type="checkbox" class="checkbox menutog">
+              <div id="dropi" class="dropdown L p4 mt0 mb0 flg clxl abs bsbx">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation">
+                  <defs>
+                    <symbol id="dropdown-arrow" viewbox="0 0 21 9">
+                      <path fill="#8898AA" fill-opacity="0.1" d="M1 9.092h19l-6.402-6.74c-1.717-1.806-4.485-1.8-6.196 0L1 9.093zM20.342 8l-6.02-6.336c-2.108-2.22-5.538-2.218-7.645 0L.658 8h19.684z"></path><path fill="currentcolor" d="M7.402 2.353c1.711-1.801 4.48-1.807 6.196 0L20 9.093H1l6.402-6.74z"></path>
+                    </symbol>
+                  </defs>
+                  <use href="#dropdown-arrow"/>
+                </svg>
+                <ul class="p0">
+                  <li class="-item">
+                    <a class="y pl f13 lh20 w5" style="text-transform: none;text-align: left;line-height: 20px" href="/tests.html">
+                      <span>Documentation</span>
+                    </a>
+                  </li>
+                  <li class="-item">
+                    <a class="y pl f13 lh20 w5" style="text-transform: none;text-align: left;line-height: 20px" href="/tests.html">
+                      <span>Contact us</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </button>
-            
             <button class="rel  drop-button">
-              <svg height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5.55 14h4.9a2.5 2.5 0 0 1-4.9 0zM13 9.066l1.216 1.232A1 1 0 0 1 13.504 12H2.496a1 1 0 0 1-.712-1.702L3 9.066V5a5 5 0 1 1 10 0z" fill-rule="evenodd"></path></svg>
-              <input id="nofBtn" type="checkbox" class="checkbox menutog">
-              <ul class="dropdown L p4 mt0 mb0 flg clxl abs">
-                <li class="">
-                  <a class="y pl f13 lh20 w5" style="text-transform: none;text-align: left;line-height: 20px" href="/tests.html">
-                  Your test has finished with 45 votes.</a>
-                </li>
-              </ul>
+              <svg class="pointer" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5.55 14h4.9a2.5 2.5 0 0 1-4.9 0zM13 9.066l1.216 1.232A1 1 0 0 1 13.504 12H2.496a1 1 0 0 1-.712-1.702L3 9.066V5a5 5 0 1 1 10 0z" fill-rule="evenodd"></path></svg>
+              <input id="notTog" type="checkbox" class="checkbox menutog">
+              <div id="dropn" class="dropdown L p4 mt0 mb0 flg clxl abs bsbx">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation">
+                  <use href="#dropdown-arrow"/>
+                </svg>
+                <ul class="p0">
+                  <li class="notif-item">
+                    <a class="y pl f13 lh20 w5" style="text-transform: none;text-align: left;line-height: 20px;display:flex" href="/tests.html">
+                      <img src="img/square.jpg" alt="">
+                      <span>Your test has finished with 45 votes.</span>
+                    </a>
+                    <span class="delete-elem"></span>
+                  </li>
+                </ul>
+              </div>
             </button>
             <button id="prfBtn" type="button" data-testid="user-avatar" class="drop-button">
-              <svg  class="pointer"  height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 11a5.698 5.698 0 0 0 3.9-1.537l1.76.66A3.608 3.608 0 0 1 16 13.5V15a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1v-1.5c0-1.504.933-2.85 2.34-3.378l1.76-.66A5.698 5.698 0 0 0 8 11zM7.804 0h.392a3.5 3.5 0 0 1 3.488 3.79l-.164 1.971a3.532 3.532 0 0 1-7.04 0l-.164-1.97A3.5 3.5 0 0 1 7.804 0z" fill-rule="evenodd"></path></svg>
-              <input id="prfChx" type="checkbox" class="checkbox menutog">
-              <div id="drops" class="dropdown bsbx">
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation"><g fill="none" fill-rule="evenodd"><path fill="#8898AA" fill-opacity="0.1" d="M1 9.092h19l-6.402-6.74c-1.717-1.806-4.485-1.8-6.196 0L1 9.093zM20.342 8l-6.02-6.336c-2.108-2.22-5.538-2.218-7.645 0L.658 8h19.684z"></path><path fill="currentcolor" d="M7.402 2.353c1.711-1.801 4.48-1.807 6.196 0L20 9.093H1l6.402-6.74z"></path></g></svg>
+              <svg class="pointer"  height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 11a5.698 5.698 0 0 0 3.9-1.537l1.76.66A3.608 3.608 0 0 1 16 13.5V15a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1v-1.5c0-1.504.933-2.85 2.34-3.378l1.76-.66A5.698 5.698 0 0 0 8 11zM7.804 0h.392a3.5 3.5 0 0 1 3.488 3.79l-.164 1.971a3.532 3.532 0 0 1-7.04 0l-.164-1.97A3.5 3.5 0 0 1 7.804 0z" fill-rule="evenodd"></path>
+              </svg>
+              <input id="prfTog" type="checkbox" class="checkbox menutog">
+              <div id="dropp" class="dropdown bsbx">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation">
+                  <use href="#dropdown-arrow"/>
+                </svg>
                 <ul class="p0">
                   <li class="email">
                     <span class="" style="font-size: 15px;">sl@sent.at</span>
@@ -69,10 +94,10 @@
                   </li>
                   <hr class="">
                   <li id="editProfile" class="p0"><a href="/profile">Edit Profile</a></li>
-                  <li id="securityPrivacy" class="p0"><a href="/securityPrivacy">Security &amp; Privacy</a></li>
+                  <!--<li id="securityPrivacy" class="p0"><a href="/securityPrivacy">Security &amp; Privacy</a></li>-->
                   <li id="helpSupport" class="p0"><a href="/helpSupport">Help &amp; Support</a></li>
                   <li id="displayNotifications" class="p0"><a href="/displayNotifications">Display &amp; Notifications</a></li>
-                  <li id="buyCredits" class="p0"><a href="/redeem">Redeem</a></li>
+                  <!--<li id="buyCredits" class="p0"><a href="/redeem">Redeem</a></li>-->
                   <hr class="">
                   <li id="signouter" class="signout point" style="line-height: 28px;font-size: 11px;"><span>Sign Out</span></li>
                 </ul>
@@ -87,7 +112,7 @@
     <div id="admin" class="w100 rdx oh dn">
       <div class="x y-gt-lg z">
         <aside>
-          <ul id="adminnav" class="" style="display: block;list-style: none;padding: 0;">
+          <ul id="adminnav" class="">
             <li class="pointer" id="editProfileV">
               <input class="rad0" type="radio" name="asider">
               <span>
@@ -95,6 +120,7 @@
                 <span>Edit profile</span>
               </span>
             </li>
+            <!--
             <li class="pointer" id="securityPrivacyV">
               <input class="rad0"  type="radio" name="asider">
               <span>
@@ -102,20 +128,21 @@
 
                 <span>Security &amp; Privacy</span>
               </span>
-            </li>
+            </li>-->
             <li class="pointer" id="addonsV"><input class="rad0" type="radio" name="asider">
               <span>
                 <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 320 271.66"><path d="m209.42 53.35-102.76 47.67L3.91 53.35A28.67 28.67 0 0 0 0 67.9v87.87c0 18.63 16.9 27.7 19.3 28.85l78.29 36.55c2.68 1.28 5.77 2.51 8.67 2.51h.81c2.9 0 5.99-1.23 8.67-2.51l78.29-36.55c2.4-1.14 19.3-10.22 19.3-28.85V67.9c0-5.75-1.61-10.58-3.91-14.55Z" class="dark"/><path d="M202.8 45.18a38.28 38.28 0 0 0-8.77-6.12L115.74 2.51C113.06 1.23 109.97 0 107.07 0h-.81c-2.9 0-5.99 1.23-8.67 2.51L19.3 39.05c-1.04.5-4.83 2.5-8.77 6.12l96.13 44.6 96.13-44.6Z" class="dark"/><path d="M316.09 101.33 213.33 149l-102.76-47.67a28.67 28.67 0 0 0-3.91 14.55v87.87c0 18.63 16.9 27.7 19.3 28.85l78.29 36.55c2.68 1.28 5.77 2.51 8.67 2.51h.81c2.9 0 5.99-1.23 8.67-2.51l78.29-36.55c2.4-1.14 19.3-10.22 19.3-28.85v-87.87c0-5.75-1.61-10.58-3.91-14.55Z" class="mid"/><path d="M309.47 93.16a38.28 38.28 0 0 0-8.77-6.12l-78.29-36.55c-2.68-1.28-5.77-2.51-8.67-2.51h-.81c-2.9 0-5.99 1.23-8.67 2.51l-78.29 36.55c-1.04.5-4.83 2.5-8.77 6.12l96.13 44.6 96.13-44.6Z" class="mid"/><path d="m209.42 53.35-89.02 41.3 92.93 43.11V67.9c0-5.75-1.61-10.58-3.91-14.55ZM106.67 115.88v87.87c0 7.81 2.98 13.92 6.61 18.49.85-.34 1.68-.7 2.47-1.08l78.29-36.55c2.4-1.14 19.3-10.22 19.3-28.85v-6.78l-102.76-47.67a28.67 28.67 0 0 0-3.91 14.55Z" class="clear"/></svg>
                 <span>Add-ons</span>
               </span>
             </li>
+            <!--
             <li class="pointer" id="redeemV">
               <input class="rad0" type="radio" name="asider">
               <span>
                 <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 240.35 305.11"><rect width="240.35" height="184.93" y="120.18" rx="25.01" ry="25.01" class="mid"/><path d="M240.35 67.6A67.67 67.67 0 0 0 172.76 0a67.49 67.49 0 0 0-52.59 25.2A67.46 67.46 0 0 0 67.59 0 67.67 67.67 0 0 0 0 67.59a67.46 67.46 0 0 0 25.2 52.59h189.96a67.54 67.54 0 0 0 25.19-52.58ZM67.59 105.18C46.86 105.18 30 88.32 30 67.59S46.86 30 67.59 30s37.59 16.86 37.59 37.59-16.86 37.59-37.59 37.59Zm105.17 0c-20.73 0-37.59-16.86-37.59-37.59S152.03 30 172.76 30s37.59 16.86 37.59 37.59-16.86 37.59-37.59 37.59Z" class="dark"/><path d="M215.16 120.18H25.19a67.26 67.26 0 0 0 61.56 12.22l-53.69 53.69 21.21 21.21 65.74-65.74 66.06 66.06 21.21-21.21-54.13-54.13a67.42 67.42 0 0 0 62-12.1Z" class="clear"/></svg>
                 <span>Redeem</span>
               </span>
-            </li>
+            </li>-->
             <li class="pointer" id="displayNotificationsV">
               <input class="rad0"  type="radio" name="asider">
               <span>
@@ -140,72 +167,61 @@
               <h2>Edit Profile</h2>
             </div>
             <div>
-              <h4>Email</h4>
+              <h3>Email</h3>
               <div>
                 <p id="accountLinked">Your profile is currently linked with your Google account, <span id="google"></span>. Please open a support ticket if you want this to be changed to a standard email or phone number.</p>
                 <div class="iS">
-                  <input id="inputContact" class="" type="email">
-                </div>
-                <div class="iS">
-                  <input id="oldEmail" class="" type="email">
-                  <input id="newEmail" class="" type="email">
+                  <input id="inputContact" class="" placeholder="Current email" type="email">
                 </div>
               </div>
             </div>
-            <div>
-              <h4>Change password</h4>
-              <button>Change password</button>
+            <div class="dn">
+              <h3>Change password</h3>
               <div class="iS">
-                <input id="oldPassword" class="" type="email">
-                <input id="newPassword0" class="" type="email">
-                <input id="newPassword1" class="" type="email">
+                <input id="oldPassword" class="" placeholder="Current password" type="password">
+                <input id="newPassword0" class="" placeholder="New password" type="password">
+                <input id="newPassword1" class="" placeholder="Confirm new password" type="password">
               </div>
+              <button>Change password</button>
             </div>
             <div>
-              <h4>When rating others, show me...</h4>
-              <div class="flex">
-                <h4>Age</h4>
-                <div class="btn-wrap flex d-flex justify-content-between mt-1">
-                  <button class="btn grey btn-rate" id="btn-eh"><span class="d-block emoji">😒</span><span class="tc txt-rate">18-23</span></button>
-                  <button class="btn grey btn-rate" id="btn-decent"><span class="d-block emoji">😐</span><span class="tc txt-rate">24-29</span></button>
-                  <button class="btn grey btn-rate" id="btn-great"><span class="d-block emoji">😃</span><span class="tc txt-rate">30-39</span></button>
-                  <button class="btn grey btn-rate" id="btn-stunning"><span class="d-block emoji">🤩</span><span class="tc txt-rate">40-54</span></button>
-                  <button class="btn grey btn-rate" id="btn-brilliant"><span class="d-block emoji">🤑</span><span class="tc txt-rate">55+</span></button>
+              <h3>Redeem</h2>
+              <p>We occasionally offer coupons code for free credits and free upgrades. These codes can be redeemed here:</p>
+              <div class="iS panelSec16">
+                <input type="text" placeholder="Secret code" style="
+      width: 100%;
+      box-sizing: border-box;">
+              </div>
+              <p id="redeemMessage"></p>
+            </div>
+
+            <div id="">
+              <!-- security privacy-->
+              <div class="panelSec16">
+                <h3>Two-Factor</h3>
+                <p>TeamPhotogenic allows you to require a timed one-time password before logging in. Unlike SMS-based two-factor auth, this is safe from SIM-swapping attacks. This requires the use of Authy or Google Authenticator.</p>
+                <button id="activate2f">Activate two-factor</button>
+                <button id="reset2f">Reset two-factor</button>
+              </div>
+              <div class="panelSec16">
+                <h3>Login history</h3>
+                <p>Change your password and activate two-factor authentication if you see something suspicious.</p>
+                <div class="y z" style="border-top:1px solid rgba(0,0,0,0.1);padding: 1em 4px">
+                  <div class="bl">
+                    <span class="bl">iPhone 13 Pro Max</span>
+                    <span class="bl">Safari 11</span>
+                  </div>
+                  <div class="bl">
+                    <span style="margin-left:auto;display: block;text-align: right;">69.215.210.45 (Pyongyang, North Korea)</span>
+                    <span class="bl">January 29, 2017 11:30:50 PM</span>
+                  </div>
                 </div>
               </div>
-              <h4>Gender</h4>
-              <div class="btn-wrap flex d-flex justify-content-between mt-1">
-                <button class="btn grey btn-rate half" id="btn-eh"><span class="d-block emoji">😒</span><span class="tc txt-rate">Male</span></button>
-                <button class="btn grey btn-rate half" id="btn-decent"><span class="d-block emoji">😐</span><span class="tc txt-rate">Female</span></button>
-              </div>
             </div>
+
             <button id="save" class="dn">
               Save changes
             </button>
-          </div>
-          <div id="securityPrivacyPanel">
-            <!-- security privacy-->
-            <h2>Security &amp; Privacy</h2>
-            <div class="panelSec16">
-              <h3>Two-Factor</h3>
-              <p>TeamPhotogenic allows you to require a timed one-time password before logging in. Unlike SMS-based two-factor auth, this is safe from SIM-swapping attacks. This requires the use of Authy or Google Authenticator.</p>
-              <button id="activate2f">Activate two-factor</button>
-              <button id="reset2f">Reset two-factor</button>
-            </div>
-            <div class="panelSec16">
-              <h3>Login history</h3>
-              <p>Change your password and activate two-factor authentication if you see something suspicious.</p>
-              <div class="y z" style="border-top:1px solid rgba(0,0,0,0.1);padding: 1em 4px">
-                <div class="bl">
-                  <span class="bl">iPhone 13 Pro Max</span>
-                  <span class="bl">Safari 11</span>
-                </div>
-                <div class="bl">
-                  <span style="margin-left:auto;display: block;text-align: right;">69.215.210.45 (Pyongyang, North Korea)</span>
-                  <span class="bl">January 29, 2017 11:30:50 PM</span>
-                </div>
-              </div>
-            </div>
           </div>
           <div id="addonsPanel">
             <h2>Add-ons</h2>
@@ -239,17 +255,23 @@
             </div>
           </div>
           <div id="displayNotificationsPanel">
-            <h2>Notifications</h2>
+            <div>
+              <h2>Notifications</h2>
+              <div>
+                <span>Text</span>
+                <span>Email</span>
+              </div>
+            </div>
             <div class="y">
               <div class="toggleWrapper">
-                <input type="checkbox" name="toggle1" class="mobileToggle" id="toggle0" checked>
-                <label for="toggle1"></label>
+                <input type="checkbox" name="toggle0" class="mobileToggle" id="toggle0" checked>
+                <label for="toggle0"></label>
               </div>
               <div>
                 <h3>Image finished rating</h3>
-                <p>Image finished rating</p>
+                <p>One image finishes all (will probably end up spammy)</p>
               </div>
-              <div>
+              <div style="margin-left:auto">
                 <input type="checkbox" style="margin-right:20px" name="imgFinish">
                 <input type="checkbox" name="imgFinish">
               </div>
@@ -261,73 +283,55 @@
               </div>
               <div>
                 <h3>Task finished rating</h3>
-                <p>Task finished rating</p>
+                <p>Entire task (all images within) finished rating.</p>
               </div>
-              <div>
+              <div style="margin-left:auto">
                 <input type="checkbox" style="margin-right:20px" name="taskFinish">
                 <input type="checkbox" name="taskFinish">
               </div>
             </div>
             <div class="y">
               <div class="toggleWrapper">
-                <input type="checkbox" name="toggle1" class="mobileToggle" id="toggle2" checked>
+                <input type="checkbox" name="toggle2" class="mobileToggle" id="toggle2" checked>
                 <label for="toggle2"></label>
               </div>
               <div>
                 <h3>Support requests</h3>
                 <p>Task finished rating</p>
               </div>
-              <div>
+              <div style="margin-left:auto">
                 <input type="checkbox" style="margin-right:20px" name="support">
                 <input type="checkbox" name="support">
               </div>
             </div>
             <div class="y">
               <div class="toggleWrapper">
-                <input type="checkbox" name="toggle1" class="mobileToggle" id="toggle3" checked>
+                <input type="checkbox" name="toggle3" class="mobileToggle" id="toggle3" checked>
                 <label for="toggle3"></label>
               </div>
-              <span>Logins</span>
               <div>
+                <h3>Logins</h3>
+                <p>Task finished rating</p>
+              </div>
+              <div style="margin-left:auto">
                 <input type="checkbox" style="margin-right:20px" name="login">
                 <input type="checkbox" name="login">
               </div>
             </div>
             <div class="y">
               <div class="toggleWrapper">
-                <input type="checkbox" name="toggle1" class="mobileToggle" id="toggle4" checked>
+                <input type="checkbox" name="toggle4" class="mobileToggle" id="toggle4" checked>
                 <label for="toggle4"></label>
               </div>
-              <span>Purchases</span>
               <div>
+                <h3>Purchases</h3>
+                <p>Task finished rating (just to be safe)</p>
+              </div>
+              <div style="margin-left:auto">
                 <input type="checkbox" style="margin-right:20px" name="login">
                 <input type="checkbox" name="login">
               </div>
             </div>
-            <div class="y">
-              <div class="toggleWrapper">
-                <input type="checkbox" name="toggle1" class="mobileToggle" id="toggle5" checked>
-                <label for="toggle5"></label>
-              </div>
-              <span>Login history</span>
-              <div>
-                <input type="checkbox" style="margin-right:20px" name="login">
-                <input type="checkbox" name="login">
-              </div>
-            </div>
-          </div>
-          
-          
-          
-          <div id="redeemPanel">
-            <h2>Redeem</h2>
-            <p>We occasionally offer coupons code for free credits and free upgrades. These codes can be redeemed here:</p>
-            <div class="iS panelSec16">
-              <input type="text" placeholder="Secret code" style="
-    width: 100%;
-    box-sizing: border-box;">
-            </div>
-            <p id="redeemMessage"></p>
           </div>
           <div id="helpSupportPanel">
             <h2>Support tickets</h2>
@@ -354,17 +358,17 @@
           <div id="rate-data" class="  bsbx pl48">
             <div id="panel-rate">
               <span class="fwHeavy">Rating*</span>
-              <div class="btn-wrap flex d-flex justify-content-between mt-1" style="justify-content: space-between;">
+              <div class="btn-wrap flex d-flex justify-content-between z mt-1">
                 <button class="btn grey btn-rate"><input id="rateEh" type="radio" name="rater" class="checkbox"
-                  style=""><span class="d-block emoji">😒</span><span class="tc txt-rate">Eh</span></button>
+                 ><span class="d-block emoji">😒</span><span class="tc txt-rate">Eh</span></button>
                 <button class="btn grey btn-rate"><input id="rateDe" type="radio" name="rater" class="checkbox"
-                  style=""><span class="d-block emoji">😐</span><span class="tc txt-rate">Decent</span></button>
+                 ><span class="d-block emoji">😐</span><span class="tc txt-rate">Decent</span></button>
                 <button class="btn grey btn-rate"><input id="rateGr" type="radio" name="rater" class="checkbox"
-                  style=""><span class="d-block emoji">😃</span><span class="tc txt-rate">Great</span></button>
+                 ><span class="d-block emoji">😃</span><span class="tc txt-rate">Great</span></button>
                 <button class="btn grey btn-rate"><input id="rateSt" type="radio" name="rater" class="checkbox"
-                  style=""><span class="d-block emoji">🤩</span><span class="tc txt-rate">Stunning</span></button>
+                 ><span class="d-block emoji">🤩</span><span class="tc txt-rate">Stunning</span></button>
                 <button class="btn grey btn-rate"><input id="rateBr" type="radio" name="rater" class="checkbox"
-                  style=""><span class="d-block emoji">🤑</span><span class="tc txt-rate">Brilliant</span></button>
+                 ><span class="d-block emoji">🤑</span><span class="tc txt-rate">Brilliant</span></button>
               </div>
             </div>
             <div id="panel-tags" style="margin-top:1.5em">
@@ -447,7 +451,7 @@
               <p  class="meta">Already have an account? <a href="/welcome">Log in.</a></p>
             </div>
           </form>
-            <button id="signuper" style="width:100%;padding: 0.75em 0;margin-top: 1.5em;" >Sign up</button>
+          <button id="signuper">Sign up</button>
         </div>
       </div>
       <div id="panel2f" class="dn">
@@ -580,7 +584,7 @@
           </div>
           <div class="">
             <h2 class="num-data">0</h2>
-            <p>current credits</p>
+            <p>current credits<span class="dn">active images</span></p>
           </div>
         </div>
         <div class="y z">
@@ -592,7 +596,7 @@
               <p>Median score - The score of the 50th percentile. This can be a little bit more accurate for controverisal images that have a strong skew.</p>
               <p>25th percentile score - S. he score of the 25th percentile. Use this if you are concerned with not posting images that may not be well received by a significant proportion of people.</p>
             </div>
-            <div style="width: 200px;">
+            <div style="width: 200px;position: relative;">
               <span id="sortMethod">Bayesian Approximation</span>
               <input id="sortCheckbox" type="checkbox">
               <ul id="sortDropdown" class="dropsort" style="width: 200px;box-sizing: border-box;">
@@ -605,6 +609,24 @@
                 <li><input id="sortQuart" type="radio" class="radio"><span>Lower quartile score</span></li>
                 <li><input id="sortDate" type="radio" class="radio"><span>Date added</span></li>
                 <li><input id="sortModi" type="radio" class="radio"><span>Date modified</span></li>
+              </ul>
+            </div>
+            <span class="sortby">Filter tags...</span>
+            <div style="width: 200px;position: relative;">
+              <span id="filterTags">Tags</span>
+              <input id="tagCheckbox" type="checkbox">
+              <ul id="tagDropdown" class="dropsort" style="width: 200px;box-sizing: border-box;">
+                <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>😓 awkward</span></span></li>
+                <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>🖼 bad framing</span></span></li>
+                <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>🍞 bland</span></span></li>
+                <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>💨 blurry</span></span></li>
+                <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>⚡️ bright</span></span></li>
+                <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>🚊 busy</span></span></li>
+                <li><span class="wrap-togglable wrap-tag"><input id="tagColorful" type="checkbox" class="checkbox"><span>🌈 colorful</span></span></li>
+                <li><span class="wrap-togglable wrap-tag"><input id="tagCool" type="checkbox" class="checkbox"><span>🕶 cool</span></span></li>
+                <li><span class="wrap-togglable wrap-tag"><input id="tagDark" type="checkbox" class="checkbox"><span>🌚 dark</span></span></li>
+                <li><span class="wrap-togglable wrap-tag"><input id="tagGrainy" type="checkbox" class="checkbox"><span>🧂 grainy</span></span></li>
+                <li><span class="wrap-togglable wrap-tag"><input id="tagOveredited" type="checkbox" class="checkbox"><span>🚨 overedited</span></span></li>
               </ul>
             </div>
           </div>
@@ -634,41 +656,47 @@
                 <rect x="0" y="25.5" width="32" height="6.5" rx="2" />
               </svg>
             </div>
+            <div id="imgbulk" class="structure">
+              <input name="shape" type="radio" class="radio">
+              <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
+                <rect x="0" y="0" width="32" height="6.5" rx="2" />
+                <rect x="0" y="8.5" width="32" height="6.5" rx="2" />
+                <rect x="0" y="17" width="32" height="6.5" rx="2" />
+                <rect x="0" y="25.5" width="32" height="6.5" rx="2" />
+              </svg>
+            </div>
           </div>
         </div>
         <div id="squareContent" class="y z tasklist">
           <div class="task-preview3" href="">
-            <div class="y z" style="width:100%;box-sizing: border-box;padding: 0 0 8px 0;">
-              <span style="data-score-sq">7.49</span>
-              <div style="margin-left:auto;">
-                <span class="data-tag" style=""><span class="btn-tag3">🌄 13 images</span></span>
-                <span class="data-tag" style=""><span class="btn-tag3">🏷️ 13 tags</span></span>
-                <span class="data-tag" style=""><span class="btn-tag3">💬 13 comments</span></span>
-              </div>
+            <div class="gridded v3x2">
+              <img class="imgMat" src="laurie.jpg" alt="">
+              <img class="imgMat" src="laurie.jpg" alt="">
+              <img class="imgMat" src="laurie.jpg" alt="">
+              <img class="imgMat" src="laurie.jpg" alt="">
+              <img class="imgMat" src="laurie.jpg" alt="">
+              <img class="imgMat" src="laurie.jpg" alt="">
             </div>
-            <div class="gridded v3x3">
-              <img class="imgMat" src="laurie.jpg" alt="">
-              <img class="imgMat" src="laurie.jpg" alt="">
-              <img class="imgMat" src="laurie.jpg" alt="">
-              <img class="imgMat" src="laurie.jpg" alt="">
-              <img class="imgMat" src="laurie.jpg" alt="">
-              <img class="imgMat" src="laurie.jpg" alt="">
-              <img class="imgMat" src="laurie.jpg" alt="">
-              <img class="imgMat" src="laurie.jpg" alt="">
-              <img class="imgMat" src="laurie.jpg" alt="">
+            <div class="y z" style="width:100%;box-sizing: border-box;padding: 0 0 8px 0;">
+              <span class="data-score">7.49</span>
+              <div style="margin-left:auto;">
+                <span class="data-tag"><span class="btn-tag3">🌄 13 images</span></span>
+                <span class="data-tag"><span class="btn-tag3">🏷️ 13 tags</span></span>
+                <span class="data-tag"><span class="btn-tag3">💬 13 comments</span></span>
+              </div>
             </div>
           </div>
         </div>
         <div id="rectContent" class="y z tasklist">
-          <div class="task-preview" href="">
-            <div>
-              <h2>7.48</h2>
-              <div>
-                <span class="data-tag" style=""><span class="btn-tag3">🌄 13 images</span></span>
-                <span class="data-tag" style=""><span class="btn-tag3">🏷️ 13 tags</span></span>
-                <span class="data-tag" style=""><span class="btn-tag3">💬 13 comments</span></span>
+          <div class="task-preview2 rel" href="">
+              <div class="img-infobox y z abs">
+                <span class="data-score" style="transform: translateY(2px);line-height: 29px;">6.99</span>
+                <div>
+                  <span class="data-tag"><span class="btn-tag3">🌄 13 images</span></span>
+                  <span class="data-tag"><span class="btn-tag3">🏷️ 13 tags</span></span>
+                  <span class="data-tag"><span class="btn-tag3">💬 13 comments</span></span>
+                </div>
               </div>
-            </div>
             <img class="" src="laurie.jpg" style="display: block;">
           </div>
         </div>
@@ -683,9 +711,9 @@
               <img class="imgMat" src="laurie.jpg" style="display: block;margin: 0 ;width: calc(100%);">
               <img class="imgMat" src="laurie.jpg" style="display: block;margin: 0 ;width: calc(100%);">
             </div>
-            <div class="img-infobox">
+            <div class="img-infobox2">
               <div style="display: ;">
-                <span class="data-score">7.48</span>
+                <span class="data-score">5.69</span>
                 <span class="data-tag"><span class="btn-tag3">🌄 13 images</span></span>
                 <span class="data-tag"><span class="btn-tag3">🏷️ 13 tags</span></span>
                 <span class="data-tag"><span class="btn-tag3">💬 13 comments</span></span>
@@ -702,7 +730,54 @@
             </div>
           </div>
         </div>
-
+        <div id="imgbulkContent" class="y z tasklist ii">
+          <div class="task-preview" href="">
+            <div class="flex">
+              <span class="data-score">7.42</span>
+              <div style="margin-left:auto">
+                <span class="data-tag">
+                  <span class="btn-tag3" style="padding-left: 14px;">
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill="white" d="M76.83 480a25.69 25.69 0 01-25.57-25.74 29.13 29.13 0 011.2-7.63L70.88 380c.77-2.46-.1-4.94-1.23-6.9l-.22-.4c-.08-.13-.46-.66-.73-1.05s-.58-.81-.86-1.22l-.19-.27A215.66 215.66 0 0132 251.37c-.18-57.59 22.35-112 63.46-153.28C138 55.47 194.9 32 255.82 32A227.4 227.4 0 01398 81.84c39.45 31.75 66.87 76 77.21 124.68a213.5 213.5 0 014.78 45c0 58.93-22.64 114.28-63.76 155.87-41.48 42-97.18 65.06-156.83 65.06-21 0-47.87-5.36-60.77-9-15.52-4.34-30.23-10-31.85-10.6a15.12 15.12 0 00-5.37-1 14.75 14.75 0 00-5.8 1.15l-.85.33-67.48 24.38A29.44 29.44 0 0176.83 480zm-2-31.8zM87.48 380z"/></svg>
+                    </span>
+                    <span>19</span>
+                  </span>
+                </span>
+              </div>
+            </div>
+            <img class="" src="laurie.jpg" style="display: block;">
+          </div>
+          <div class="task-preview" href="">
+            <section class="top-data">
+              <span class="meter-wrap">
+                <span class="meter-inner"></span>
+              </span>
+              <small>11/20</small>
+            </section>
+            <div class="flex">
+              <span class="data-score">7.42</span>
+              <div style="margin-left:auto">
+                <span class="data-tag"><span class="btn-tag3">💬 19</span></span>
+              </div>
+            </div>
+            <img class="" src="laurie.jpg" style="display: block;">
+          </div>
+          <div class="task-preview" href="">
+            <section class="top-data tall">
+              <span class="meter-wrap">
+                <span class="meter-inner"></span>
+              </span>
+              <small>11/20</small>
+            </section>
+            <div class="flex">
+              <span class="data-score">7.42</span>
+              <div style="margin-left:auto">
+                <span class="data-tag"><span class="btn-tag3">19 comments</span></span>
+              </div>
+            </div>
+            <img class="" src="laurie.jpg" style="display: block;">
+          </div>
+        </div>
         <div id="indvImg" class="y z">
           <img class="v" src="laurie.jpg">
           <div class="rate-data"> 
@@ -771,7 +846,6 @@
                 </div>
               </div>
             </div>
-
             <!--if we have that enabled-->
             <ul style="display: none">
               <li>Overview</li>
@@ -794,12 +868,9 @@
             </ul>
           </div>
         </div>
-
       </div>
     </div>
-    <script src="node_modules/argon2-browser/dist/argon2-bundled.min.js"></script>
     <script src="main.js"></script>
-
-
+    <script src="node_modules/argon2-browser/dist/argon2-bundled.min.js"></script>
   </body>
 </html>
