@@ -1,1 +1,0 @@
-nginx -p . -s stop

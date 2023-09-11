@@ -26,9 +26,10 @@
             <input type="checkbox" class="checkbox">
           </button>
           <div class="nav-links y z w100">
-            <ul class="y z">
+            <ul class="y z" style="width: 100%;padding-right: 1em;">
               <li><a href="/tasks">My tasks</a></li>
               <li style="margin-left:24px" id="buyCredLi"><span>Buy credits</span></li>
+              <li style="margin-left:auto" id="newPost"><span>New post</span></li>
             </ul>
           </div>
           <div class="aux-icons y z">
@@ -65,14 +66,18 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation">
                   <use href="#dropdown-arrow"/>
                 </svg>
-                <ul class="p0">
-                  <li class="notif-item">
-                    <a class="y pl f13 lh20 w5" style="text-transform: none;text-align: left;line-height: 20px;display:flex" href="/tests.html">
-                      <img src="img/square.jpg" alt="">
-                      <span>Your test has finished with 45 votes.</span>
-                    </a>
-                    <span class="delete-elem"></span>
-                  </li>
+                <span class="" style="font-size: 15px;color: black;text-align: left;
+                    font-size: 13px;
+    color: black;
+    text-align: left;
+    text-align: left;
+    margin: 0;
+    display: block;
+    margin-left: 13px;
+    font-weight: 600;
+    ">Notifications</span>
+                <hr class="">
+                <ul id="notifList" class="p0">
                 </ul>
               </div>
             </button>
@@ -120,7 +125,6 @@
                 <span>Edit profile</span>
               </span>
             </li>
-            <!--
             <li class="pointer" id="securityPrivacyV">
               <input class="rad0"  type="radio" name="asider">
               <span>
@@ -128,7 +132,7 @@
 
                 <span>Security &amp; Privacy</span>
               </span>
-            </li>-->
+            </li>
             <li class="pointer" id="addonsV"><input class="rad0" type="radio" name="asider">
               <span>
                 <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 320 271.66"><path d="m209.42 53.35-102.76 47.67L3.91 53.35A28.67 28.67 0 0 0 0 67.9v87.87c0 18.63 16.9 27.7 19.3 28.85l78.29 36.55c2.68 1.28 5.77 2.51 8.67 2.51h.81c2.9 0 5.99-1.23 8.67-2.51l78.29-36.55c2.4-1.14 19.3-10.22 19.3-28.85V67.9c0-5.75-1.61-10.58-3.91-14.55Z" class="dark"/><path d="M202.8 45.18a38.28 38.28 0 0 0-8.77-6.12L115.74 2.51C113.06 1.23 109.97 0 107.07 0h-.81c-2.9 0-5.99 1.23-8.67 2.51L19.3 39.05c-1.04.5-4.83 2.5-8.77 6.12l96.13 44.6 96.13-44.6Z" class="dark"/><path d="M316.09 101.33 213.33 149l-102.76-47.67a28.67 28.67 0 0 0-3.91 14.55v87.87c0 18.63 16.9 27.7 19.3 28.85l78.29 36.55c2.68 1.28 5.77 2.51 8.67 2.51h.81c2.9 0 5.99-1.23 8.67-2.51l78.29-36.55c2.4-1.14 19.3-10.22 19.3-28.85v-87.87c0-5.75-1.61-10.58-3.91-14.55Z" class="mid"/><path d="M309.47 93.16a38.28 38.28 0 0 0-8.77-6.12l-78.29-36.55c-2.68-1.28-5.77-2.51-8.67-2.51h-.81c-2.9 0-5.99 1.23-8.67 2.51l-78.29 36.55c-1.04.5-4.83 2.5-8.77 6.12l96.13 44.6 96.13-44.6Z" class="mid"/><path d="m209.42 53.35-89.02 41.3 92.93 43.11V67.9c0-5.75-1.61-10.58-3.91-14.55ZM106.67 115.88v87.87c0 7.81 2.98 13.92 6.61 18.49.85-.34 1.68-.7 2.47-1.08l78.29-36.55c2.4-1.14 19.3-10.22 19.3-28.85v-6.78l-102.76-47.67a28.67 28.67 0 0 0-3.91 14.55Z" class="clear"/></svg>
@@ -353,7 +357,7 @@
         <span id="credits-count"></span>
         <div id="rate-sec" class="y z pt64 pb30">
           <div class=" bg-white" id="rate-img">
-            <img id="image" class="mat mt80 mb80  v" src="laurie.jpg">
+            <img id="image" class="mat mt80 mb80  v" src="img/laurie.jpg">
           </div>
           <div id="rate-data" class="  bsbx pl48">
             <div id="panel-rate">
@@ -410,11 +414,11 @@
         <div id="rate-sec" class="y z pt64 pb30">
           <div class="bg-white pair-img">
             <input type="radio" class="rad0" id="e0" name="paired">
-            <img id="image" class="mat mt80 mb80 pair-inner v" src="laurie.jpg">
+            <img id="image" class="mat mt80 mb80 pair-inner v" src="img/laurie.jpg">
           </div>
           <div class="bg-white pair-img">
             <input type="radio" class="rad0" id="e1" name="paired">
-            <img id="image" class="mat mt80 mb80 pair-inner v" src="lake.jpg">
+            <img id="image" class="mat mt80 mb80 pair-inner v" src="img/lake.jpg">
           </div>
         </div>
       </div>
@@ -468,13 +472,8 @@
         </svg>
         <button>Next</button>
       </div>
-
-
-
-
-
       <div id="uploader" class="w100 rdx oh pt128 pb128">
-        <h2 style="font-weight: 600;">Create task</h2>
+        <h4 style="font-weight: 600;">Create task</h4>
         <input id="image-file" type="file" multiple/>
 
         <form runat="server" style="position: relative;">
@@ -569,21 +568,24 @@
 
     <div id="myTasks" class="square">
       <div class="x c">
+        <div id="taskMeta" class="y z data-grid">
+          <span>created Jan 17, 2017</span>
+        </div>
         <div class="y z data-grid">
           <div class="">
-            <h2 class="num-data">23</h2>
+            <h2 id="numTask" class="num-data"></h2>
             <p>tasks</p>
           </div>
           <div class="">
-            <h2 class="num-data">405</h2>
+            <h2 id="numImg" class="num-data"></h2>
             <p>images</p>
           </div>
           <div class="">
-            <h2 class="num-data">1</h2>
+            <h2 id="numCom" class="num-data"></h2>
             <p>comments</p>
           </div>
           <div class="">
-            <h2 class="num-data">0</h2>
+            <h2 id="curCre" class="num-data"></h2>
             <p>current credits<span class="dn">active images</span></p>
           </div>
         </div>
@@ -596,7 +598,7 @@
               <p>Median score - The score of the 50th percentile. This can be a little bit more accurate for controverisal images that have a strong skew.</p>
               <p>25th percentile score - S. he score of the 25th percentile. Use this if you are concerned with not posting images that may not be well received by a significant proportion of people.</p>
             </div>
-            <div style="width: 200px;position: relative;">
+            <div class="dropdownSelector">
               <span id="sortMethod">Bayesian Approximation</span>
               <input id="sortCheckbox" type="checkbox">
               <ul id="sortDropdown" class="dropsort" style="width: 200px;box-sizing: border-box;">
@@ -611,23 +613,25 @@
                 <li><input id="sortModi" type="radio" class="radio"><span>Date modified</span></li>
               </ul>
             </div>
-            <span class="sortby">Filter tags...</span>
-            <div style="width: 200px;position: relative;">
-              <span id="filterTags">Tags</span>
-              <input id="tagCheckbox" type="checkbox">
-              <ul id="tagDropdown" class="dropsort" style="width: 200px;box-sizing: border-box;">
-                <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>😓 awkward</span></span></li>
-                <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>🖼 bad framing</span></span></li>
-                <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>🍞 bland</span></span></li>
-                <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>💨 blurry</span></span></li>
-                <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>⚡️ bright</span></span></li>
-                <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>🚊 busy</span></span></li>
-                <li><span class="wrap-togglable wrap-tag"><input id="tagColorful" type="checkbox" class="checkbox"><span>🌈 colorful</span></span></li>
-                <li><span class="wrap-togglable wrap-tag"><input id="tagCool" type="checkbox" class="checkbox"><span>🕶 cool</span></span></li>
-                <li><span class="wrap-togglable wrap-tag"><input id="tagDark" type="checkbox" class="checkbox"><span>🌚 dark</span></span></li>
-                <li><span class="wrap-togglable wrap-tag"><input id="tagGrainy" type="checkbox" class="checkbox"><span>🧂 grainy</span></span></li>
-                <li><span class="wrap-togglable wrap-tag"><input id="tagOveredited" type="checkbox" class="checkbox"><span>🚨 overedited</span></span></li>
-              </ul>
+            <div id="filterTagsWrapper">
+              <span class="sortby">Filter tags...</span>
+              <div class="dropdownSelector">
+                <span id="filterTags">Tags</span>
+                <input id="tagCheckbox" type="checkbox">
+                <ul id="tagDropdown" class="dropsort" style="width: 200px;box-sizing: border-box;">
+                  <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>😓 awkward</span></span></li>
+                  <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>🖼 bad framing</span></span></li>
+                  <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>🍞 bland</span></span></li>
+                  <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>💨 blurry</span></span></li>
+                  <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>⚡️ bright</span></span></li>
+                  <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>🚊 busy</span></span></li>
+                  <li><span class="wrap-togglable wrap-tag"><input id="tagColorful" type="checkbox" class="checkbox"><span>🌈 colorful</span></span></li>
+                  <li><span class="wrap-togglable wrap-tag"><input id="tagCool" type="checkbox" class="checkbox"><span>🕶 cool</span></span></li>
+                  <li><span class="wrap-togglable wrap-tag"><input id="tagDark" type="checkbox" class="checkbox"><span>🌚 dark</span></span></li>
+                  <li><span class="wrap-togglable wrap-tag"><input id="tagGrainy" type="checkbox" class="checkbox"><span>🧂 grainy</span></span></li>
+                  <li><span class="wrap-togglable wrap-tag"><input id="tagOveredited" type="checkbox" class="checkbox"><span>🚨 overedited</span></span></li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="y z" style="margin-left: auto;margin-top: 1em; margin-bottom: 9px;">
@@ -669,54 +673,76 @@
         </div>
         <div id="squareContent" class="y z tasklist">
           <div class="task-preview3" href="">
+            <div class="y z">
+              <h3>Laurie in Italy69420</h3>
+              <span style="
+    font-size: 10px;
+    line-height: 39px;
+    color: #878c8f;">3y</span>
+            </div>
             <div class="gridded v3x2">
-              <img class="imgMat" src="laurie.jpg" alt="">
-              <img class="imgMat" src="laurie.jpg" alt="">
-              <img class="imgMat" src="laurie.jpg" alt="">
-              <img class="imgMat" src="laurie.jpg" alt="">
-              <img class="imgMat" src="laurie.jpg" alt="">
-              <img class="imgMat" src="laurie.jpg" alt="">
+              <img class="imgMat" src="img/laurie.jpg" alt="">
+              <img class="imgMat" src="img/laurie.jpg" alt="">
+              <img class="imgMat" src="img/laurie.jpg" alt="">
+              <img class="imgMat" src="img/laurie.jpg" alt="">
+              <img class="imgMat" src="img/laurie.jpg" alt="">
+              <img class="imgMat" src="img/laurie.jpg" alt="">
             </div>
             <div class="y z" style="width:100%;box-sizing: border-box;padding: 0 0 8px 0;">
               <span class="data-score">7.49</span>
               <div style="margin-left:auto;">
-                <span class="data-tag"><span class="btn-tag3">🌄 13 images</span></span>
-                <span class="data-tag"><span class="btn-tag3">🏷️ 13 tags</span></span>
-                <span class="data-tag"><span class="btn-tag3">💬 13 comments</span></span>
+                <span class="btn-tag3">🌄 13 images</span>
+                <span class="btn-tag3">🏷️ 13 tags</span>
+                <span class="btn-tag3">💬 13 comments</span>
               </div>
             </div>
           </div>
         </div>
         <div id="rectContent" class="y z tasklist">
           <div class="task-preview2 rel" href="">
-              <div class="img-infobox y z abs">
-                <span class="data-score" style="transform: translateY(2px);line-height: 29px;">6.99</span>
+            <div>
+              <img class="" src="img/laurie.jpg" style="display: block;">
+            </div>
+            <div class="img-infobox rel">
+              <div class="datafag y z abs">
+                <span class="data-score">5.69</span>
                 <div>
-                  <span class="data-tag"><span class="btn-tag3">🌄 13 images</span></span>
-                  <span class="data-tag"><span class="btn-tag3">🏷️ 13 tags</span></span>
-                  <span class="data-tag"><span class="btn-tag3">💬 13 comments</span></span>
+                  <span class="btn-tag3">🌄 13 images</span>
+                  <span class="btn-tag3">🏷️ 13 tags</span>
+                  <span class="btn-tag3">💬 13 comments</span>
                 </div>
               </div>
-            <img class="" src="laurie.jpg" style="display: block;">
+              <div class="tab-pane d-flex flex-wrap mt-1 dn">
+                <span class="btn-tag" id="btn-awkward"><input type="checkbox" class="checkbox">😓 awkward</span>
+                <span class="btn-tag" id="btn-frame"><input type="checkbox" class="checkbox">🖼 bad framing</span>
+                <span class="btn-tag" id="btn-bland"><input type="checkbox" class="checkbox">🍞 bland</span>
+                <span class="btn-tag" id="btn-blurry"><input type="checkbox" class="checkbox">💨 blurry</span>
+                <span class="btn-tag" id="btn-bright"><input type="checkbox" class="checkbox">⚡️ bright</span>
+                <span class="btn-tag" id="btn-busy"><input type="checkbox" class="checkbox">🚊 busy</span>
+                <span class="btn-tag" id="btn-color"><input type="checkbox" class="checkbox">more...</span>
+              </div>
+            </div>
           </div>
         </div>
         <div id="hotdogContent">
-          <div class="task-">
-            <div class="tasklist-sma" style="padding-bottom: 12px;">
-              <img class="imgMat" src="laurie.jpg" style="display: block;margin: 0 ;width: calc(100%);">
-              <img class="imgMat" src="laurie.jpg" style="display: block;margin: 0 ;width: calc(100%);">
-              <img class="imgMat" src="laurie.jpg" style="display: block;margin: 0 ;width: calc(100%);">
-              <img class="imgMat" src="laurie.jpg" style="display: block;margin: 0 ;width: calc(100%);">
-              <img class="imgMat" src="laurie.jpg" style="display: block;margin: 0 ;width: calc(100%);">
-              <img class="imgMat" src="laurie.jpg" style="display: block;margin: 0 ;width: calc(100%);">
-              <img class="imgMat" src="laurie.jpg" style="display: block;margin: 0 ;width: calc(100%);">
+          <div>
+            <div class="tasksHotdog">
+              <img class="imgMat" src="img/laurie.jpg">
+              <img class="imgMat" src="img/laurie.jpg">
+              <img class="imgMat" src="img/laurie.jpg">
+              <img class="imgMat" src="img/laurie.jpg">
+              <img class="imgMat" src="img/laurie.jpg">
+              <img class="imgMat" src="img/laurie.jpg">
+              <img class="imgMat" src="img/laurie.jpg">
             </div>
             <div class="img-infobox2">
-              <div style="display: ;">
+              <div class="y">
                 <span class="data-score">5.69</span>
-                <span class="data-tag"><span class="btn-tag3">🌄 13 images</span></span>
-                <span class="data-tag"><span class="btn-tag3">🏷️ 13 tags</span></span>
-                <span class="data-tag"><span class="btn-tag3">💬 13 comments</span></span>
+                <div>
+                  <span class="btn-tag3">🌄 13 images</span>
+                  <span class="btn-tag3">🏷️ 13 tags</span>
+                  <span class="btn-tag3">💬 13 comments</span>
+                </div>
               </div>
               <div class="tab-pane d-flex flex-wrap mt-1">
                 <span class="btn-tag" id="btn-awkward"><input type="checkbox" class="checkbox">😓 awkward</span>
@@ -745,7 +771,7 @@
                 </span>
               </div>
             </div>
-            <img class="" src="laurie.jpg" style="display: block;">
+            <img class="" src="img/laurie.jpg" style="display: block;">
           </div>
           <div class="task-preview" href="">
             <section class="top-data">
@@ -760,7 +786,7 @@
                 <span class="data-tag"><span class="btn-tag3">💬 19</span></span>
               </div>
             </div>
-            <img class="" src="laurie.jpg" style="display: block;">
+            <img class="" src="img/laurie.jpg" style="display: block;">
           </div>
           <div class="task-preview" href="">
             <section class="top-data tall">
@@ -775,11 +801,11 @@
                 <span class="data-tag"><span class="btn-tag3">19 comments</span></span>
               </div>
             </div>
-            <img class="" src="laurie.jpg" style="display: block;">
+            <img class="" src="img/laurie.jpg" style="display: block;">
           </div>
         </div>
         <div id="indvImg" class="y z">
-          <img class="v" src="laurie.jpg">
+          <img class="v" src="img/laurie.jpg">
           <div class="rate-data"> 
             <!--if we have analytics disabled-->
             <div>
