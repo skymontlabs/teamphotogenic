@@ -511,33 +511,33 @@ for (let i = 0; i < 8; ++i) {
 
 function getSeed()
 {
-let contact = contactInput.innerText
-let buff = new ArrayBuffer(3 + contact.length);
+  let contact = contactInput.innerText
+  let buff = new ArrayBuffer(3 + contact.length);
 
-buff[0] = 1;
-buff[1] = contact.length;
-buff[2] = contact[0] == '+';
+  buff[0] = 1;
+  buff[1] = contact.length;
+  buff[2] = contact[0] == '+';
 
-for (var i = 0; i < contact.length; ++i)
-  buff[i + 3] = contact[i]
+  for (var i = 0; i < contact.length; ++i)
+    buff[i + 3] = contact[i]
 
-sk.send(buff,{binary:true});
+  sk.send(buff,{binary:true});
 }
 
 function signup(contact, password, seed)
 {
-// same as login
-let buff = new ArrayBuffer([1 + contact.length + 64]);
+  // same as login
+  let buff = new ArrayBuffer([1 + contact.length + 64]);
 
-argon2.hash({
-  pass: password, salt: seed,
-  time: 32, mem: 32768, hashLen: 64,
-  type: argon2.ArgonType.Argon2d
-})
-.then(h => {alert(h.hashHex)})
-.catch(e => console.error('Signup did not work'))
+  argon2.hash({
+    pass: password, salt: seed,
+    time: 32, mem: 32768, hashLen: 64,
+    type: argon2.ArgonType.Argon2d
+  })
+  .then(h => {alert(h.hashHex)})
+  .catch(e => console.error('Signup did not work'))
 
-sk.send(buff,{binary:true});
+  sk.send(buff,{binary:true});
 }
 
 function login(contact, password, seed)

@@ -1,36 +1,51 @@
-#globl
-    &.showA #admin
-        display: block
+/*position: absolute; visibility: hidden;*/
+#admin,
+#tasks,
+#scorerater,
+#paired {
+	visibility: hidden;
+	position: absolute;
+}
 
-    &.showA
-        #tasks,
-        #scorerater,
-        #paired
-            display: none
+#globl {
+	&.showA {
+		#admin {
+			display: block
+		}
+		#tasks,
+		#scorerater,
+		#paired {
+		}
+	}
 
-    &.showM #tasks
-        display: block
+	&.showM {
+		#tasks {
+			display: block	
+		}
+		#admin,
+		#scorerater,
+		#paired {
+		}
+	}
 
-    &.showM
-        #admin,
-        #scorerater,
-        #paired
-            display: none
+	&.showS {
+		#scorerater {
+			display: block
+		}
+		#admin,
+		#tasks,
+		#paired {
+		}
+	}
 
-    &.showS #scorerater
-        display: block
-
-    &.showS
-        #admin,
-        #tasks,
-        #paired
-            display: none
-
-    &.showP #paired
-        display: block
-        
-    &.showP
-        #admin,
-        #tasks,
-        #scorerater
-            display: none
+	&.showP {
+		#paired {
+			display: block
+		}
+		#admin,
+		#tasks,
+		#scorerater {
+		}
+ 	}
+		
+}
