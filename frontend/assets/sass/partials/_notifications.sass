@@ -1,0 +1,47 @@
+
+.notifItem
+  width: 180px;
+  height: 40px;
+  position: relative;
+
+  &>a {
+    text-transform: none;
+    text-align: left;
+    line-height: 20px;
+    display: flex;
+    position: relative;
+
+.notifItem>a>span {
+  font-size: 10px;
+  line-height: 14px;
+  display: block;
+  margin: 7px 0 0px 42px;
+}
+
+.notifItem img {
+  width: 32px;
+  height: 32px;
+  border-radius: 1px;
+  margin: 4px 0;
+  position: absolute;
+}
+
+.notifItem .delete-elem:before,
+.notifItem .delete-elem:after {
+  content: '';
+  position: absolute;
+  right: 14px;
+  top: 20px;
+  height: 1px;
+  width: 9px;
+  border-radius: 4px;
+  background: #555;
+}
+
+.notifItem .delete-elem:before {
+  transform: rotate(-45deg)
+}
+
+.notifItem .delete-elem:after {
+  transform: rotate(45deg)
+}

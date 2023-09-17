@@ -1,0 +1,36 @@
+#globl
+    &.showA #admin
+        display: block
+
+    &.showA
+        #tasks,
+        #scorerater,
+        #paired
+            display: none
+
+    &.showM #tasks
+        display: block
+
+    &.showM
+        #admin,
+        #scorerater,
+        #paired
+            display: none
+
+    &.showS #scorerater
+        display: block
+
+    &.showS
+        #admin,
+        #tasks,
+        #paired
+            display: none
+
+    &.showP #paired
+        display: block
+        
+    &.showP
+        #admin,
+        #tasks,
+        #scorerater
+            display: none

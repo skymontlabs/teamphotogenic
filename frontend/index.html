@@ -26,16 +26,15 @@
             <input type="checkbox" class="checkbox">
           </button>
           <div class="nav-links y z w100">
-            <ul class="y z" style="width: 100%;padding-right: 1em;">
-              <li><a href="/tasks">My tasks</a></li>
+            <ul class="y" style="width: 100%;padding-right: 1em;">
+              <li><a href="/tasks">Tasks</a></li>
+              <li style="margin-left:24px" ><a href="/tasks">Add ons</a></li>
               <li style="margin-left:24px" id="buyCredLi"><span>Buy credits</span></li>
-              <li style="margin-left:auto" id="newPost"><span>New post</span></li>
             </ul>
           </div>
           <div class="aux-icons y z">
             <button class="rel  drop-button">
-              <svg aria-controls="menu3" aria-haspopup="menu" id="menu3-button" aria-hidden="true" class="SVGInline-svg SVGInline--cleaned-svg SVG-svg Icon-svg Icon--help-svg Icon-color-svg Icon-color--gray600-svg" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM7 8.089V8.5a1 1 0 0 0 1.926.377 3.456 3.456 0 0 0 1.549-.902 3.5 3.5 0 0 0-4.95-4.95A3.437 3.437 0 0 0 4.5 5.51a1.004 1.004 0 1 0 2.009-.02 1.43 1.43 0 0 1 .436-1.045 1.5 1.5 0 0 1 1.058-.437 1.492 1.492 0 0 1 0 2.983A1.004 1.004 0 0 0 7 8.09zM8 14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" fill-rule="evenodd"></path></svg>
-              <input id="infTog" type="checkbox" class="checkbox menutog">
+              <svg id="infTog" class="pointer" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM7 8.089V8.5a1 1 0 0 0 1.926.377 3.456 3.456 0 0 0 1.549-.902 3.5 3.5 0 0 0-4.95-4.95A3.437 3.437 0 0 0 4.5 5.51a1.004 1.004 0 1 0 2.009-.02 1.43 1.43 0 0 1 .436-1.045 1.5 1.5 0 0 1 1.058-.437 1.492 1.492 0 0 1 0 2.983A1.004 1.004 0 0 0 7 8.09zM8 14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" fill-rule="evenodd"></path></svg>
               <div id="dropi" class="dropdown L p4 mt0 mb0 flg clxl abs bsbx">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation">
                   <defs>
@@ -60,21 +59,12 @@
               </div>
             </button>
             <button class="rel  drop-button">
-              <svg class="pointer" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5.55 14h4.9a2.5 2.5 0 0 1-4.9 0zM13 9.066l1.216 1.232A1 1 0 0 1 13.504 12H2.496a1 1 0 0 1-.712-1.702L3 9.066V5a5 5 0 1 1 10 0z" fill-rule="evenodd"></path></svg>
-              <input id="notTog" type="checkbox" class="checkbox menutog">
+              <svg id="notTog"  class="pointer" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5.55 14h4.9a2.5 2.5 0 0 1-4.9 0zM13 9.066l1.216 1.232A1 1 0 0 1 13.504 12H2.496a1 1 0 0 1-.712-1.702L3 9.066V5a5 5 0 1 1 10 0z" fill-rule="evenodd"></path></svg>
               <div id="dropn" class="dropdown L p4 mt0 mb0 flg clxl abs bsbx">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation">
                   <use href="#dropdown-arrow"/>
                 </svg>
-                <span class="" style="font-size: 15px;color: black;text-align: left;
-                    font-size: 13px;
-    color: black;
-    text-align: left;
-    text-align: left;
-    margin: 0;
-    display: block;
-    margin-left: 13px;
-    font-weight: 600;
+                <span class="" style="
     ">Notifications</span>
                 <hr class="">
                 <ul id="notifList" class="p0">
@@ -82,10 +72,9 @@
               </div>
             </button>
             <button id="prfBtn" type="button" data-testid="user-avatar" class="drop-button">
-              <svg class="pointer"  height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <svg  id="prfTog" class="pointer"  height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 11a5.698 5.698 0 0 0 3.9-1.537l1.76.66A3.608 3.608 0 0 1 16 13.5V15a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1v-1.5c0-1.504.933-2.85 2.34-3.378l1.76-.66A5.698 5.698 0 0 0 8 11zM7.804 0h.392a3.5 3.5 0 0 1 3.488 3.79l-.164 1.971a3.532 3.532 0 0 1-7.04 0l-.164-1.97A3.5 3.5 0 0 1 7.804 0z" fill-rule="evenodd"></path>
               </svg>
-              <input id="prfTog" type="checkbox" class="checkbox menutog">
               <div id="dropp" class="dropdown bsbx">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation">
                   <use href="#dropdown-arrow"/>
@@ -101,12 +90,37 @@
                   <li id="editProfile" class="p0"><a href="/profile">Edit Profile</a></li>
                   <!--<li id="securityPrivacy" class="p0"><a href="/securityPrivacy">Security &amp; Privacy</a></li>-->
                   <li id="helpSupport" class="p0"><a href="/helpSupport">Help &amp; Support</a></li>
-                  <li id="displayNotifications" class="p0"><a href="/displayNotifications">Display &amp; Notifications</a></li>
                   <!--<li id="buyCredits" class="p0"><a href="/redeem">Redeem</a></li>-->
                   <hr class="">
                   <li id="signouter" class="signout point" style="line-height: 28px;font-size: 11px;"><span>Sign Out</span></li>
                 </ul>
                 <span class="sc-gKckTs hHNeJm" style="position: absolute; left: 182px;"></span>
+              </div>
+            </button>
+            <button class="rel  drop-button">
+              <span id="plus"></span>
+              <input id="infTog" type="checkbox" class="checkbox menutog">
+              <div id="dropc" class="dropdown L p4 mt0 mb0 flg clxl abs bsbx">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation">
+                  <defs>
+                    <symbol id="dropdown-arrow" viewbox="0 0 21 9">
+                      <path fill="#8898AA" fill-opacity="0.1" d="M1 9.092h19l-6.402-6.74c-1.717-1.806-4.485-1.8-6.196 0L1 9.093zM20.342 8l-6.02-6.336c-2.108-2.22-5.538-2.218-7.645 0L.658 8h19.684z"></path><path fill="currentcolor" d="M7.402 2.353c1.711-1.801 4.48-1.807 6.196 0L20 9.093H1l6.402-6.74z"></path>
+                    </symbol>
+                  </defs>
+                  <use href="#dropdown-arrow"/>
+                </svg>
+                <ul class="p0">
+                  <li id="newPost" class="-item">
+                    <a class="y pl f13 lh20 w5" style="text-transform: none;text-align: left;line-height: 20px" href="/tests.html">
+                      <span>Documentation</span>
+                    </a>
+                  </li>
+                  <li class="-item">
+                    <a class="y pl f13 lh20 w5" style="text-transform: none;text-align: left;line-height: 20px" href="/tests.html">
+                      <span>Contact us</span>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </button>
             </div>
@@ -116,55 +130,6 @@
     </nav>
     <div id="admin" class="w100 rdx oh dn">
       <div class="x y-gt-lg z">
-        <aside>
-          <ul id="adminnav" class="">
-            <li class="pointer" id="editProfileV">
-              <input class="rad0" type="radio" name="asider">
-              <span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 215.26"><path d="M313.1 113.38H83.29a19.9 19.9 0 0 0-15.56 7.5l-39.28 49.35-26.94 33.84a6.89 6.89 0 0 0 5.39 11.18h229.81a19.9 19.9 0 0 0 15.56-7.5l49.44-62.11 16.78-21.08a6.89 6.89 0 0 0-5.39-11.18Z" class="mid"/><path d="m165.94 113.38-12.83 12.83-10.36 10.36-3.16 3.16c-.3.3-.54.67-.69 1.07l-9.86 26.62-5.27 14.23a.88.88 0 0 0 1.13 1.13l29.76-11.02 11.08-4.1c.4-.15.77-.38 1.07-.69l53.59-53.59h-54.47Z" class="clear"/><rect width="38.52" height="38.52" x="262.96" y="5.08" class="dark" rx="7" ry="7" transform="rotate(-45 282.22 24.34)"/><path d="M270.76 63.03a3 3 0 0 0 0-4.22l-23.02-23.02a3 3 0 0 0-4.22 0l-77.59 77.59h54.47l50.35-50.35Z" class="dark"/></svg>
-                <span>Edit profile</span>
-              </span>
-            </li>
-            <li class="pointer" id="securityPrivacyV">
-              <input class="rad0"  type="radio" name="asider">
-              <span>
-                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 320 449.96"><path d="M235.73 136.15h40v139.93h-40zM44.27 136.15h40v139.93h-40z" class="superdark"/><path d="M215.34 163.25H104.66C38.06 163.25 0 180.92 0 195.87v144.08c0 87.58 160 110.01 160 110.01s160-22.43 160-110.01V195.87c0-14.95-38.06-32.62-104.66-32.62Z" class="mid"/><path d="m139.57 294.09-13.4 67.18c-.6 3.02 1.71 5.84 4.79 5.84h58.1c3.08 0 5.39-2.82 4.79-5.84l-13.4-67.18c9.38-6.76 15.28-18.03 14.5-30.64-1.08-17.36-15.09-31.49-32.45-32.69-20.45-1.41-37.48 14.76-37.48 34.91 0 11.7 5.75 22.05 14.57 28.41Z" class="clear"/><path d="M84.27 136.15v-20.43c0-41.82 33.9-75.73 75.73-75.73s75.73 33.9 75.73 75.73v20.43h40v-20.43C275.73 51.81 223.91 0 160 0S44.27 51.81 44.27 115.73v20.43h40Z" class="dark"/></svg>
-
-                <span>Security &amp; Privacy</span>
-              </span>
-            </li>
-            <li class="pointer" id="addonsV"><input class="rad0" type="radio" name="asider">
-              <span>
-                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 320 271.66"><path d="m209.42 53.35-102.76 47.67L3.91 53.35A28.67 28.67 0 0 0 0 67.9v87.87c0 18.63 16.9 27.7 19.3 28.85l78.29 36.55c2.68 1.28 5.77 2.51 8.67 2.51h.81c2.9 0 5.99-1.23 8.67-2.51l78.29-36.55c2.4-1.14 19.3-10.22 19.3-28.85V67.9c0-5.75-1.61-10.58-3.91-14.55Z" class="dark"/><path d="M202.8 45.18a38.28 38.28 0 0 0-8.77-6.12L115.74 2.51C113.06 1.23 109.97 0 107.07 0h-.81c-2.9 0-5.99 1.23-8.67 2.51L19.3 39.05c-1.04.5-4.83 2.5-8.77 6.12l96.13 44.6 96.13-44.6Z" class="dark"/><path d="M316.09 101.33 213.33 149l-102.76-47.67a28.67 28.67 0 0 0-3.91 14.55v87.87c0 18.63 16.9 27.7 19.3 28.85l78.29 36.55c2.68 1.28 5.77 2.51 8.67 2.51h.81c2.9 0 5.99-1.23 8.67-2.51l78.29-36.55c2.4-1.14 19.3-10.22 19.3-28.85v-87.87c0-5.75-1.61-10.58-3.91-14.55Z" class="mid"/><path d="M309.47 93.16a38.28 38.28 0 0 0-8.77-6.12l-78.29-36.55c-2.68-1.28-5.77-2.51-8.67-2.51h-.81c-2.9 0-5.99 1.23-8.67 2.51l-78.29 36.55c-1.04.5-4.83 2.5-8.77 6.12l96.13 44.6 96.13-44.6Z" class="mid"/><path d="m209.42 53.35-89.02 41.3 92.93 43.11V67.9c0-5.75-1.61-10.58-3.91-14.55ZM106.67 115.88v87.87c0 7.81 2.98 13.92 6.61 18.49.85-.34 1.68-.7 2.47-1.08l78.29-36.55c2.4-1.14 19.3-10.22 19.3-28.85v-6.78l-102.76-47.67a28.67 28.67 0 0 0-3.91 14.55Z" class="clear"/></svg>
-                <span>Add-ons</span>
-              </span>
-            </li>
-            <!--
-            <li class="pointer" id="redeemV">
-              <input class="rad0" type="radio" name="asider">
-              <span>
-                <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 240.35 305.11"><rect width="240.35" height="184.93" y="120.18" rx="25.01" ry="25.01" class="mid"/><path d="M240.35 67.6A67.67 67.67 0 0 0 172.76 0a67.49 67.49 0 0 0-52.59 25.2A67.46 67.46 0 0 0 67.59 0 67.67 67.67 0 0 0 0 67.59a67.46 67.46 0 0 0 25.2 52.59h189.96a67.54 67.54 0 0 0 25.19-52.58ZM67.59 105.18C46.86 105.18 30 88.32 30 67.59S46.86 30 67.59 30s37.59 16.86 37.59 37.59-16.86 37.59-37.59 37.59Zm105.17 0c-20.73 0-37.59-16.86-37.59-37.59S152.03 30 172.76 30s37.59 16.86 37.59 37.59-16.86 37.59-37.59 37.59Z" class="dark"/><path d="M215.16 120.18H25.19a67.26 67.26 0 0 0 61.56 12.22l-53.69 53.69 21.21 21.21 65.74-65.74 66.06 66.06 21.21-21.21-54.13-54.13a67.42 67.42 0 0 0 62-12.1Z" class="clear"/></svg>
-                <span>Redeem</span>
-              </span>
-            </li>-->
-            <li class="pointer" id="displayNotificationsV">
-              <input class="rad0"  type="radio" name="asider">
-              <span>
-                <svg class="rocket" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 320 320"><path d="m128.15 219.01-13.58-13.58-13.58-13.58s-22.76 1.78-39.95 29.5-28.08 65.69-28.08 65.69 37.97-10.89 65.69-28.08c27.72-17.19 29.5-39.95 29.5-39.95Z" class="clear"/><path d="M111.87 162.99 83.76 191.1c-6.05 6.05 39.1 51.2 45.15 45.15l28.11-28.11-45.15-45.15ZM162.51 74.91s-48.8-27.45-101.92 25.66c-19.77 19.77-28.03 28.04-60.4 87.99-.81 1.5 1.2 2.93 2.38 1.71 10.66-10.96 32.46-31.59 54.52-41.81 23.73-10.99 48.13 6.88 48.13 6.88l57.28-80.42ZM245.09 157.49s27.45 48.8-25.66 101.92c-19.77 19.77-28.03 28.03-87.99 60.41-1.5.81-2.93-1.2-1.71-2.38 10.96-10.66 31.59-32.46 41.81-54.52 10.99-23.73-6.88-48.13-6.88-48.13l80.42-57.28Z" class="dark"/><path d="M248.92 167.14a52.87 52.87 0 0 0-3.83-9.65l-80.42 57.28s2.08 2.84 4.38 7.52c24.74-14.16 59.51-35.64 79.88-55.16ZM97.7 150.96a54.92 54.92 0 0 1 7.52 4.38l57.28-80.42s-3.5-1.97-9.65-3.83c-19.52 20.36-41 55.14-55.16 79.88Z" class="superdark"/><path d="M320 0s-82.38-.2-157.49 74.91c-26.75 26.75-59.25 83.38-67.74 98.54a5.74 5.74 0 0 0 .95 6.86l6.84 8.78a163.46 163.46 0 0 0 28.34 28.34l8.78 6.84a5.74 5.74 0 0 0 6.86.95c15.17-8.49 71.79-40.98 98.55-67.74C320.2 82.38 320 0 320 0Zm-97.37 97.37a27.98 27.98 0 1 1 39.58-39.56 27.98 27.98 0 0 1-39.58 39.56Z" class="mid"/></svg>
-                <span>Display &amp; Notifications</span>
-              </span>
-            </li>
-            <li class="pointer" id="helpSupportV">
-              <input class="rad0" type="radio" name="asider">
-              <span>
-                <!--
-                <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 320 319.84" style="width: 20px;height: 20px;"><circle cx="151.38" cy="168.45" r="151.38" class=" mid"/><path d="M247.22 0a72.78 72.78 0 1 0 0 145.56 72.78 72.78 0 0 0 0-145.56Zm37.18 42.29-51.5 65.55a3.68 3.68 0 0 1-6.04-.35l-17.05-27.71a3.69 3.69 0 0 1 3.14-5.62h.13c.92 0 1.8.34 2.48.96l11.43 10.37a3.69 3.69 0 0 0 5.12-.16l46.74-47.9a3.7 3.7 0 0 1 5.54 4.86Z" class="dark"/><path d="m264.39 67.75-31.5 40.09a3.68 3.68 0 0 1-6.04-.35L209.8 79.78a3.69 3.69 0 0 1 3.14-5.62h.13c.92 0 1.8.34 2.48.96l11.43 10.37a3.69 3.69 0 0 0 5.12-.16l24.79-25.4a151.14 151.14 0 0 0-62.9-36.77 72.78 72.78 0 0 0 102.75 102.92 150.98 150.98 0 0 0-32.36-58.34Z" class="superdark"/><path d="M105.64 251.8a6.98 6.98 0 0 1-6.47-4.37l-29.36-72.76-14.38 29.29a7.02 7.02 0 0 1-6.27 3.9H21.87v-12.61h23.79l18.39-37.46a7 7 0 0 1 12.74.47l27.65 68.51 34.59-135.69a6.96 6.96 0 0 1 6.86-5.26c3.24.04 6 2.28 6.71 5.44l23.68 104.75h108.91v12.61H171.78a6.94 6.94 0 0 1-6.81-5.45l-19.51-86.3-33.05 129.65a6.97 6.97 0 0 1-6.3 5.24l-.47.02Zm-61.53-53.4v.01Z" style="fill:#fff"/></svg>-->
-                <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 320 272.1"><path d="M305.47 219.21A106.21 106.21 0 0 0 320 165.44c0-58.91-47.76-106.67-106.67-106.67s-106.67 47.76-106.67 106.67 47.76 106.67 106.67 106.67c20.96 0 40.51-6.05 57-16.5.18.12.38.22.59.29l44.9 14.82a2.39 2.39 0 0 0 3.05-2.88l-13.4-48.64Z" class="mid"/><path d="M14.53 160.44A106.21 106.21 0 0 1 0 106.67C0 47.76 47.76 0 106.67 0s106.67 47.76 106.67 106.67c0 58.91-47.76 106.67-106.67 106.67-20.96 0-40.51-6.05-57-16.5-.18.12-.38.22-.59.29l-44.9 14.82a2.39 2.39 0 0 1-3.05-2.88l13.4-48.64Z"  class="dark"/><path d="M106.66 165.44c0 17 3.98 33.07 11.06 47.33 53.71-5.53 95.61-50.92 95.61-106.1 0-17-3.98-33.07-11.06-47.33-53.71 5.53-95.61 50.92-95.61 106.1Z" class="superdark"/><path d="M207.24 188.59a4.26 4.26 0 0 1-4.26-4.26v-1.97c0-2.62.19-4.97.57-7.04a25.39 25.39 0 0 1 5.08-11.31 50.61 50.61 0 0 1 5.16-5.57l7.37-7.05a30.29 30.29 0 0 0 5.32-6.23c1.47-2.29 2.21-5.08 2.21-8.36 0-4.26-1.34-7.84-4.01-10.73-2.68-2.89-6.47-4.34-11.39-4.34-2.51 0-4.78.47-6.8 1.39a16.2 16.2 0 0 0-8.6 9.26c-.33.89-.6 1.79-.8 2.7a4.24 4.24 0 0 1-4.48 3.34l-11.56-1.03a4.25 4.25 0 0 1-3.78-5.16 38.53 38.53 0 0 1 3.35-9.26 33.71 33.71 0 0 1 8.27-10.4c3.38-2.84 7.26-5 11.63-6.47a43.89 43.89 0 0 1 14.09-2.21c4.7 0 9.15.68 13.35 2.05A33.59 33.59 0 0 1 239.1 112a28.65 28.65 0 0 1 7.62 9.91c1.86 3.93 2.79 8.47 2.79 13.6 0 3.5-.38 6.55-1.15 9.17a27.17 27.17 0 0 1-3.28 7.21 38.8 38.8 0 0 1-5.16 6.31 137.3 137.3 0 0 1-6.8 6.31 72.18 72.18 0 0 0-5.32 4.92 22.14 22.14 0 0 0-3.28 4.26 15.04 15.04 0 0 0-1.72 4.59 31.4 31.4 0 0 0-.49 6.06 4.26 4.26 0 0 1-4.26 4.26h-10.81Zm-7.54 22.77c0-3.49 1.28-6.5 3.85-9.01 2.57-2.51 5.65-3.77 9.26-3.77s6.55 1.2 9.17 3.6c2.62 2.4 3.93 5.35 3.93 8.85s-1.29 6.5-3.85 9.01a12.77 12.77 0 0 1-9.26 3.77c-1.75 0-3.42-.33-5-.98a14.43 14.43 0 0 1-4.18-2.62 12.17 12.17 0 0 1-2.87-3.93 11.55 11.55 0 0 1-1.07-4.92Z" style="fill:#fff"/><path d="M213.29 103.88a43.1 43.1 0 0 0-12.77 2.19 35.48 35.48 0 0 0-11.63 6.47 33.69 33.69 0 0 0-8.27 10.4 38.8 38.8 0 0 0-3.35 9.26 4.25 4.25 0 0 0 3.78 5.16l11.56 1.03a4.24 4.24 0 0 0 4.48-3.34c.21-.91.48-1.81.8-2.7.76-2.07 1.88-3.9 3.36-5.49a16.52 16.52 0 0 1 5.24-3.77c1.73-.8 3.66-1.23 5.76-1.34.7-4.94 1.06-9.99 1.06-15.12 0-.92-.02-1.84-.04-2.76Z" class="clear"/></svg>
-                <span>Help &amp; Support</span>
-              </span>
-            </li>
-          </ul>
-        </aside>
         <div class="admin-base">
           <div id="editProfilePanel" style="display: none;">
             <div>
@@ -187,6 +152,9 @@
                 <input id="newPassword1" class="" placeholder="Confirm new password" type="password">
               </div>
               <button>Change password</button>
+            </div>
+            <div>
+              <h3>Language</h3>
             </div>
             <div>
               <h3>Redeem</h2>
@@ -261,12 +229,13 @@
           <div id="displayNotificationsPanel">
             <div>
               <h2>Notifications</h2>
-              <div>
+              <div style="
+    text-align: right;">
                 <span>Text</span>
                 <span>Email</span>
               </div>
             </div>
-            <div class="y">
+            <div class="y toggleNotif">
               <div class="toggleWrapper">
                 <input type="checkbox" name="toggle0" class="mobileToggle" id="toggle0" checked>
                 <label for="toggle0"></label>
@@ -280,7 +249,7 @@
                 <input type="checkbox" name="imgFinish">
               </div>
             </div>
-            <div class="y">
+            <div class="y toggleNotif">
               <div class="toggleWrapper">
                 <input type="checkbox" name="toggle1" class="mobileToggle" id="toggle1" checked>
                 <label for="toggle1"></label>
@@ -294,7 +263,7 @@
                 <input type="checkbox" name="taskFinish">
               </div>
             </div>
-            <div class="y">
+            <div class="y toggleNotif">
               <div class="toggleWrapper">
                 <input type="checkbox" name="toggle2" class="mobileToggle" id="toggle2" checked>
                 <label for="toggle2"></label>
@@ -308,7 +277,7 @@
                 <input type="checkbox" name="support">
               </div>
             </div>
-            <div class="y">
+            <div class="y toggleNotif">
               <div class="toggleWrapper">
                 <input type="checkbox" name="toggle3" class="mobileToggle" id="toggle3" checked>
                 <label for="toggle3"></label>
@@ -322,7 +291,7 @@
                 <input type="checkbox" name="login">
               </div>
             </div>
-            <div class="y">
+            <div class="y toggleNotif">
               <div class="toggleWrapper">
                 <input type="checkbox" name="toggle4" class="mobileToggle" id="toggle4" checked>
                 <label for="toggle4"></label>
@@ -394,8 +363,6 @@
             <div class="note-section iS" style="margin-top:2em;">
               <div class="note-section-headline w6 f12"><span class="fwHeavy leave-a-note">Leave a note</span></div>
               <textarea placeholder="This picture seems ..." id="txa" tabindex="-1" maxlength="255" class="w100 form-control note-box note-box-mobile js-note-box"></textarea>
-              <div class="tap-block"></div>
-              <div class="to-note-step"></div>
             </div>
             <div class="quick-notes clearfix in-panel mt32">
               <div class="w100 y mt48">
@@ -431,7 +398,7 @@
         <div id="bger"></div>
         <div id="loginpanel">
           <h1 style="font-size: 20px"><span>Sign up to get started</span><span id="loginTitle">Log in</span></h1>
-          <a href="" class="sso-button" id="continue">Continue with Google</a>
+          <a href="" class="btn-sso" id="continue">Continue with Google</a>
           <form>
             <div> or </div>
             <label>
@@ -566,7 +533,7 @@
     </div>
 
 
-    <div id="myTasks" class="square">
+    <div id="tasks" class="square">
       <div class="x c">
         <div id="taskMeta" class="y z data-grid">
           <span>created Jan 17, 2017</span>
@@ -660,25 +627,13 @@
                 <rect x="0" y="25.5" width="32" height="6.5" rx="2" />
               </svg>
             </div>
-            <div id="imgbulk" class="structure">
-              <input name="shape" type="radio" class="radio">
-              <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
-                <rect x="0" y="0" width="32" height="6.5" rx="2" />
-                <rect x="0" y="8.5" width="32" height="6.5" rx="2" />
-                <rect x="0" y="17" width="32" height="6.5" rx="2" />
-                <rect x="0" y="25.5" width="32" height="6.5" rx="2" />
-              </svg>
-            </div>
           </div>
         </div>
         <div id="squareContent" class="y z tasklist">
           <div class="task-preview3" href="">
             <div class="y z">
               <h3>Laurie in Italy69420</h3>
-              <span style="
-    font-size: 10px;
-    line-height: 39px;
-    color: #878c8f;">3y</span>
+              <time>3y</time>
             </div>
             <div class="gridded v3x2">
               <img class="imgMat" src="img/laurie.jpg" alt="">
@@ -691,15 +646,19 @@
             <div class="y z" style="width:100%;box-sizing: border-box;padding: 0 0 8px 0;">
               <span class="data-score">7.49</span>
               <div style="margin-left:auto;">
-                <span class="btn-tag3">🌄 13 images</span>
-                <span class="btn-tag3">🏷️ 13 tags</span>
-                <span class="btn-tag3">💬 13 comments</span>
+                <span class="btn-datapoint">🌄 13 images</span>
+                <span class="btn-datapoint">🏷️ 13 tags</span>
+                <span class="btn-datapoint">💬 13 comments</span>
               </div>
             </div>
           </div>
         </div>
         <div id="rectContent" class="y z tasklist">
           <div class="task-preview2 rel" href="">
+            <div class="y z">
+              <h3>Laurie in Italy69420</h3>
+              <time>3y</time>
+            </div>
             <div>
               <img class="" src="img/laurie.jpg" style="display: block;">
             </div>
@@ -707,25 +666,29 @@
               <div class="datafag y z abs">
                 <span class="data-score">5.69</span>
                 <div>
-                  <span class="btn-tag3">🌄 13 images</span>
-                  <span class="btn-tag3">🏷️ 13 tags</span>
-                  <span class="btn-tag3">💬 13 comments</span>
+                  <span class="btn-datapoint">🌄 13 images</span>
+                  <span class="btn-datapoint">🏷️ 13 tags</span>
+                  <span class="btn-datapoint">💬 13 comments</span>
                 </div>
               </div>
               <div class="tab-pane d-flex flex-wrap mt-1 dn">
-                <span class="btn-tag" id="btn-awkward"><input type="checkbox" class="checkbox">😓 awkward</span>
-                <span class="btn-tag" id="btn-frame"><input type="checkbox" class="checkbox">🖼 bad framing</span>
-                <span class="btn-tag" id="btn-bland"><input type="checkbox" class="checkbox">🍞 bland</span>
-                <span class="btn-tag" id="btn-blurry"><input type="checkbox" class="checkbox">💨 blurry</span>
-                <span class="btn-tag" id="btn-bright"><input type="checkbox" class="checkbox">⚡️ bright</span>
-                <span class="btn-tag" id="btn-busy"><input type="checkbox" class="checkbox">🚊 busy</span>
-                <span class="btn-tag" id="btn-color"><input type="checkbox" class="checkbox">more...</span>
+                <span class="btn-tag">😓 awkward</span>
+                <span class="btn-tag">🖼 bad framing</span>
+                <span class="btn-tag">🍞 bland</span>
+                <span class="btn-tag">💨 blurry</span>
+                <span class="btn-tag">⚡️ bright</span>
+                <span class="btn-tag">🚊 busy</span>
+                <span class="btn-tag">more...</span>
               </div>
             </div>
           </div>
         </div>
         <div id="hotdogContent">
           <div>
+            <div class="y z">
+              <h3>Laurie in Italy69420</h3>
+              <time>3y</time>
+            </div>
             <div class="tasksHotdog">
               <img class="imgMat" src="img/laurie.jpg">
               <img class="imgMat" src="img/laurie.jpg">
@@ -739,69 +702,21 @@
               <div class="y">
                 <span class="data-score">5.69</span>
                 <div>
-                  <span class="btn-tag3">🌄 13 images</span>
-                  <span class="btn-tag3">🏷️ 13 tags</span>
-                  <span class="btn-tag3">💬 13 comments</span>
+                  <span class="btn-datapoint">🌄 13 images</span>
+                  <span class="btn-datapoint">🏷️ 13 tags</span>
+                  <span class="btn-datapoint">💬 13 comments</span>
                 </div>
               </div>
               <div class="tab-pane d-flex flex-wrap mt-1">
-                <span class="btn-tag" id="btn-awkward"><input type="checkbox" class="checkbox">😓 awkward</span>
-                <span class="btn-tag" id="btn-frame"><input type="checkbox" class="checkbox">🖼 bad framing</span>
-                <span class="btn-tag" id="btn-bland"><input type="checkbox" class="checkbox">🍞 bland</span>
-                <span class="btn-tag" id="btn-blurry"><input type="checkbox" class="checkbox">💨 blurry</span>
-                <span class="btn-tag" id="btn-bright"><input type="checkbox" class="checkbox">⚡️ bright</span>
-                <span class="btn-tag" id="btn-busy"><input type="checkbox" class="checkbox">🚊 busy</span>
-                <span class="btn-tag" id="btn-color"><input type="checkbox" class="checkbox">more...</span>
+                <span class="btn-tag">😓 awkward</span>
+                <span class="btn-tag">🖼 bad framing</span>
+                <span class="btn-tag">🍞 bland</span>
+                <span class="btn-tag">💨 blurry</span>
+                <span class="btn-tag">⚡️ bright</span>
+                <span class="btn-tag">🚊 busy</span>
+                <span class="btn-tag">more...</span>
               </div>
             </div>
-          </div>
-        </div>
-        <div id="imgbulkContent" class="y z tasklist ii">
-          <div class="task-preview" href="">
-            <div class="flex">
-              <span class="data-score">7.42</span>
-              <div style="margin-left:auto">
-                <span class="data-tag">
-                  <span class="btn-tag3" style="padding-left: 14px;">
-                    <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 512 512"><path fill="white" d="M76.83 480a25.69 25.69 0 01-25.57-25.74 29.13 29.13 0 011.2-7.63L70.88 380c.77-2.46-.1-4.94-1.23-6.9l-.22-.4c-.08-.13-.46-.66-.73-1.05s-.58-.81-.86-1.22l-.19-.27A215.66 215.66 0 0132 251.37c-.18-57.59 22.35-112 63.46-153.28C138 55.47 194.9 32 255.82 32A227.4 227.4 0 01398 81.84c39.45 31.75 66.87 76 77.21 124.68a213.5 213.5 0 014.78 45c0 58.93-22.64 114.28-63.76 155.87-41.48 42-97.18 65.06-156.83 65.06-21 0-47.87-5.36-60.77-9-15.52-4.34-30.23-10-31.85-10.6a15.12 15.12 0 00-5.37-1 14.75 14.75 0 00-5.8 1.15l-.85.33-67.48 24.38A29.44 29.44 0 0176.83 480zm-2-31.8zM87.48 380z"/></svg>
-                    </span>
-                    <span>19</span>
-                  </span>
-                </span>
-              </div>
-            </div>
-            <img class="" src="img/laurie.jpg" style="display: block;">
-          </div>
-          <div class="task-preview" href="">
-            <section class="top-data">
-              <span class="meter-wrap">
-                <span class="meter-inner"></span>
-              </span>
-              <small>11/20</small>
-            </section>
-            <div class="flex">
-              <span class="data-score">7.42</span>
-              <div style="margin-left:auto">
-                <span class="data-tag"><span class="btn-tag3">💬 19</span></span>
-              </div>
-            </div>
-            <img class="" src="img/laurie.jpg" style="display: block;">
-          </div>
-          <div class="task-preview" href="">
-            <section class="top-data tall">
-              <span class="meter-wrap">
-                <span class="meter-inner"></span>
-              </span>
-              <small>11/20</small>
-            </section>
-            <div class="flex">
-              <span class="data-score">7.42</span>
-              <div style="margin-left:auto">
-                <span class="data-tag"><span class="btn-tag3">19 comments</span></span>
-              </div>
-            </div>
-            <img class="" src="img/laurie.jpg" style="display: block;">
           </div>
         </div>
         <div id="indvImg" class="y z">

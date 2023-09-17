@@ -13,42 +13,6 @@
 
     <script type="text/javascript">
 
-        function base32_encode(data, length, bufSize)
-        {
-            const arr = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','2','3','4','5','6','7']
-            const length = 20
-            let result = ''
-
-            int count = 0;
-            int buffer = data[0];
-            int next = 1;
-            int bitsLeft = 8;
-            
-            while (count < bufSize && (bitsLeft > 0 || next < length)) {
-                if (bitsLeft < 5) {
-                    if (next < length) {
-                        buffer <<= 8;
-                        buffer |= data[next++] & 0xFF;
-                        bitsLeft += 8;
-                    } else {
-                        int pad = 5 - bitsLeft;
-                        buffer <<= pad;
-                        bitsLeft += pad;
-                    }
-                }
-            
-                int index = 0x1F & (buffer >> (bitsLeft - 5));
-                bitsLeft -= 5;
-                result[count++] = [index];
-            }
-
-            if (count < bufSize) {
-                result[count] = '\000';
-            }
-          
-            return count;
-        }
-
 
 
         argon2.hash({ pass: 'password', salt: 'somesalt' })

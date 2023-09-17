@@ -1,0 +1,92 @@
+#rate-data
+  width:         522px
+  padding-left:  35px
+
+#rate-img
+  width:         calc(100% - 522px)
+  background:    #f7f8f9
+
+#paired, #scorerater
+  top:           50%
+  position:      absolute
+  transform:     translateY(-50%)
+  margin-top:    -60px
+
+.pair-img
+  width:         calc(50% - 8px)
+  background:    #f7f8f9
+  border-radius: 4px
+  cursor:        pointer
+  position:      relative
+
+  &:hover
+    box-shadow:  0 0 0 1px rgba(0,0,0,0.0)
+
+  &>input
+    appearance:  none
+    padding:     0
+    z-index:     999999
+
+
+#rate-sec img
+  position:     relative
+  max-width:    100%
+  top: 50%
+  transform: translateY(-50%)
+
+
+@media (max-width: 960px) 
+
+#rate-img
+  width:            45.625%
+
+#rate-data
+  width:            54.375%
+
+
+@media (max-width: 767px) 
+
+.data-grid
+  grid-template-columns:  1fr 1fr
+  grid-template-rows:  1fr 1fr
+
+.admin-base
+  width: 100%
+
+.y-gt-lg
+  display: block
+
+#panel-rate
+  margin-top: 1.5em
+
+#paired, #scorerater 
+ /* padding: 5em 0 !important;*/
+
+
+#rate-img 
+  width: 100%
+
+  .y-gt-md 
+    display: block
+  
+
+#rate-sec 
+  display: block
+
+
+#rate-sec>* 
+  width: 100% !important;
+
+
+#rate-data 
+  width:100%;
+  padding-left: 0;
+
+
+#rate-sec img 
+  transform: translateY(0) !important;
+
+
+
+
+

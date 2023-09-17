@@ -1,3 +1,17 @@
+
+
+//
+// DROPDOWNS BEGIN
+//
+var ziv=0,znv=0,zpv=0;
+infTog.onclick = (event) => {console.log('sex');if(ziv==0){dropi.style.display='block';ziv=1}else{dropi.style.display='none';ziv=0}dropn.style.display='none';dropp.style.display='none';znv=0;zpv=0;}
+notTog.onclick = (event) => {if(znv==0){dropn.style.display='block';znv=1}else{dropn.style.display='none';znv=0}dropi.style.display='none';dropp.style.display='none';ziv=0;zpv=0}
+prfTog.onclick = (event) => {if(zpv==0){dropp.style.display='block';zpv=1}else{dropp.style.display='none';zpv=0}dropi.style.display='none';dropn.style.display='none';ziv=0;znv=0}
+//
+// DROPDOWNS END
+//
+
+
 accountLinked.style.display="none";
 
 var initPage = 1
@@ -23,11 +37,6 @@ if (!loggedin) {
 
 
 
-
-editProfileV.onclick = (event)          => {cur.style.display='none';editProfilePanel.style.display='block';cur=editProfilePanel}
-addonsV.onclick = (event)               => {cur.style.display='none';addonsPanel.style.display='block';cur=addonsPanel}
-displayNotificationsV.onclick = (event) => {cur.style.display='none';displayNotificationsPanel.style.display='block';cur=displayNotificationsPanel}
-helpSupportV.onclick = (event)          => {cur.style.display='none';helpSupportPanel.style.display='block';cur=helpSupportPanel}
 dark.onclick = (event) => {
   if (loggedin && event.target == dark) {
     dark.style.display='none'
@@ -72,16 +81,6 @@ signuper.onclick = (event) => {
     console.error('incorrect')
   })
 }
-
-//
-// DROPDOWNS BEGIN
-//
-//infTog.onclick = (event) => {dropn.style.display='none';dropp.style.display='none'}
-//notTog.onclick = (event) => {dropi.style.display='none';dropp.style.display='none'}
-//prfTog.onclick = (event) => {dropi.style.display='none';dropn.style.display='none'}
-//
-// DROPDOWNS END
-//
 
 signouter.onclick = (event) => {
     dark.style.display='block';
@@ -423,10 +422,11 @@ rkey.onclick = (event) => {
   globl.className='showS'
 };
 
-square.onclick = (event) => {myTasks.className='square';filterTagsWrapper.style.display='none'}
-rect.onclick = (event) => {myTasks.className='rect';filterTagsWrapper.style.display='none'}
-hotdog.onclick = (event) => {myTasks.className='hotdog';filterTagsWrapper.style.display='none'}
-imgbulk.onclick = (event) => {myTasks.className='imgbulk';filterTagsWrapper.style.display='flex'}
+square.onclick = (event) => {tasks.className='square';filterTagsWrapper.style.display='none'}
+rect.onclick = (event) => {tasks.className='rect';filterTagsWrapper.style.display='none'}
+hotdog.onclick = (event) => {tasks.className='hotdog';filterTagsWrapper.style.display='none'}
+/*
+imgbulk.onclick = (event) => {tasks.className='imgbulk';filterTagsWrapper.style.display='flex'}*/
 
 sortMean.onclick = (event) => {sortMethod.innerText='Mean score';sortCheckbox.checked=false}
 sortGeo.onclick = (event) => {sortMethod.innerText='Geo Mean score';sortCheckbox.checked=false}
@@ -663,11 +663,13 @@ window.onbeforeunload = function(){
 // OR
 window.addEventListener("beforeunload", function(e){
    // Do something
-  
+
 }, false);
 
 document.addEventListener("keydown", (event) => {
-  console.log(event)
+  if (paired) {
+    //put rest in here
+  }
   if (event.keyCode === 49)
     e0.checked=true
   if (event.keyCode === 50)
