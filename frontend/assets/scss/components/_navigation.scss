@@ -31,42 +31,41 @@ nav {
     }
 
     .btnwrap {
-      margin: 44px 0;
+      margin:          44px 0;
     }
 
     .big.btn {
-      line-height: 18px !important
+      line-height:     18px !important
     }    
 
     .tp {
-      background: transparent
-      position: absolute
-      border: none
-      box-shadow: none
+      background:      transparent;
+      position:        absolute;
+      border:          none;
+      box-shadow:      none;
     }
     
     .btn {
-      display: inline;
-      color: black;
-      box-sizing: border-box;
-      background: rgba(255, 255, 255, 0.2);
+      display:         inline;
+      color:           black;
+      box-sizing:      border-box;
+      background:      rgba(255, 255, 255, 0.2);
     }
 
-    .btn:before
-      opacity: 0
+    .btn:before {
+      opacity:         0
+    }
 
-    path.alt
-      fill: white
+    path.alt {
+      fill:            white
+    }
 
-    .arrow svg
-      top: 3px
+    .arrow svg {
+      top:             3px
+    }
 
     .mla .arrow svg
       top: 33px
-
-    .tbx svg 
-      right: 11px
-      top: 10px
 
     span.ct
       color: rgba(200, 220, 255, 0.5)

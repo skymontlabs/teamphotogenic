@@ -28,22 +28,24 @@ button {
   background:     rgba(255, 255, 255, 0.1);
 
   &.blue {
-    color: #5984FF;
-    background: rgba(#3880ff, 0.1);
-    box-shadow: none !important;
-    border: none;
+    color:        #5984FF;
+    background:   rgba(#3880ff, 0.1);
+    box-shadow:   none !important;
+    border:       none;
   }
 
   &.red {
-    color: #ff003f;
+    color:        #ff003f;
+    background:   rgba(#ff447f, 0.1);
   }
 
   &.green {
-    color: #ceff00;
+    color:        #ceff00;
+    background:   rgba(#dfff30, 0.1);
   }
 
   &.no-bg {
-    background: transparent !important;
+    background:   transparent !important;
   }
 }
 
@@ -85,16 +87,35 @@ button {
   font-weight:    500;
 }
 
+.btn-rating {
+  font-size:      11px;
+  padding:        0;
+  border-radius:  4px;
+  position:       relative;
+  margin:         4px 3px;
+  line-height:    2.5;
+  font-weight:    700;
+  color:          #878c8f;
+  cursor:         pointer;
+  white-space:    nowrap;
+  margin-left:    0;
+  font-family:    $base-font;
+  font-weight:    500;
+}
+
 .btn-sso {
   width:          100%;
   max-width:      none;
   height:         45px;
   display:        flex;
-  background:     var(--color-3);
+  background:     #4285F4;
   margin-right:   auto;
   margin-bottom:  1em;
   margin-left:    auto;
   border-width:   1px;
   border-radius:  3px;
-  box-shadow:     0 3px 6px 0 rgba(36, 129, 215, 0.04), 0 2px 3px 0 rgba(36, 129, 215, 0.04);
+  box-shadow:     0 3px 6px 0 rgba(36, 129, 215, 0.04),
+                  0 2px 3px 0 rgba(36, 129, 215, 0.04);
+  text-align:     center;
+  display:        block;
 }

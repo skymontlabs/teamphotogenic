@@ -1,3 +1,7 @@
+@mixin bradius($rad: 4px){
+    border-radius: $rad;
+}
+
 @mixin pseudo($display: block, $pos: absolute, $content: ''){
     content: $content;
     display: $display;
@@ -8,6 +12,19 @@
     margin: { 
         left: auto;
         right: auto;
+    }
+}
+
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+    $padding: unquote( ( $y / $x ) * 100 + '%' );
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    } @else {
+        padding-top: $padding;
     }
 }
 

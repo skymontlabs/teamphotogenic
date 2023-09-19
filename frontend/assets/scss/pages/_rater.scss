@@ -59,49 +59,16 @@
 
 
 
-@media (max-width: 767px) 
+.txt-rate {
+  text-align:   center;
+  font-size:    10px !important;
+  line-height:  24px;
+  font-weight:  500;
+  color:        rgba(0,0,0,0.8);
+  font-family:  $btn-rate;
+}
 
-.data-grid
-  grid-template-columns:  1fr 1fr
-  grid-template-rows:  1fr 1fr
-
-.admin-base
-  width: 100%
-
-.y-gt-lg
-  display: block
-
-#panel-rate
-  margin-top: 1.5em
-
-#paired, #scorerater 
- /* padding: 5em 0 !important;*/
-
-
-#rate-img 
-  width: 100%
-
-  .y-gt-md 
-    display: block
-  
-
-#rate-sec 
-  display: block
-
-
-#rate-sec>* 
-  width: 100% !important;
-
-
-#rate-data 
-  width:100%;
-  padding-left: 0;
-
-
-#rate-sec img 
-  transform: translateY(0) !important;
-
-
-
-
-
+.data-grid {
+  grid-template-columns:  1fr 1fr;
+  grid-template-rows:     1fr 1fr;
+}

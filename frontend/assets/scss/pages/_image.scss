@@ -1,0 +1,53 @@
+#indvImg {
+  border-radius:   4px;
+  width:           900px;
+  box-shadow:      0 0 20px -1px rgba(0,0,0,0.2);
+  margin-bottom:   2em;
+  overflow:        hidden;
+  display:         none;
+  background:      white;
+  position:        fixed;
+  z-index:         199999999;
+  top:             50%;
+  left:            50%;
+  transform:       translate(-50%, -50%);
+}
+
+.rating-score2 {
+  &:div {
+    width:         calc(20% - 6px);
+    height:        55px;
+    position:      relative;
+    
+    &>.score-bar {
+      margin-top:  auto;
+      position:    absolute;
+      height:      100%;
+      background:  rgba(51,54,56,0.04);
+      bottom:      0;
+    }
+    
+    &>.tag-name {
+      width:       100%;
+      margin-top:  auto;
+      position:    absolute;
+      bottom:      0;
+      text-align:  center;
+      display:     block;
+    }
+    
+    &>.tag-name>.emoji {
+      line-height: 9px;
+    }
+
+    &>.dist-elem {
+      width:       100%;
+      margin-top:  auto;
+      position:    absolute;
+      bottom:      -30px;
+      font-family: $base-font;
+      text-align:  center;
+      display:     block;
+    }
+  }
+}

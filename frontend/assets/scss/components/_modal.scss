@@ -1,0 +1,49 @@
+#dark {
+  width:      100vw;
+  height:     100vh;
+  z-index:    99999999;
+  position:   fixed;
+  background: rgba(0, 0, 0, 0.6);
+  display:    flex;
+  top:        0;
+  left:       0;
+  display:    none;
+}
+
+.modal {
+  top:        0;
+  left:       0;
+  border-radius: 4px;
+  left:       50%;
+  top:        50%;
+  transform:  translate(-50%,-50%);
+  display:    flex;
+  display:    none;
+}
+
+#buyCredData {
+  top:        0;
+  left:       0;
+  border-radius: 4px;
+  left:       50%;
+  top:        50%;
+  transform:  translate(-50%,-50%);
+  display:    flex;
+  display:    none;
+}
+
+#buyCredData>* {
+  padding:    2em 0;
+}
+
+#buyCredData>*:not(:last-child) {
+  border-right: 1px solid rgba(0,0,0,0.05);
+}
+
+#buyCredData>* .disc {
+  font-size:  9px;
+}
+
+#buyCredData a{
+  font-size:  29px;
+}
