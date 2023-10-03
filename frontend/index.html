@@ -6,34 +6,47 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--<link rel="icon" href="favicon.ico">-->
     <title>TeamPhotogenic</title>
-    <link rel="stylesheet" href="style.css"/>
+    <!--<link rel="stylesheet" href="style.css"/>-->
+    <link rel="stylesheet" href="main.css"/>
   </head>
-  <body id="globl">
-    <nav id="nV" class="tp">
-      <div class="x y z flg">
-        <div class="w100 y z rel">
-          <div class="y hW">
-            <span class="nX" id="mss" style="line-height: 82px;cursor: pointer;"><span class="cl- w6" style="color: #111">team</span><span style="color:#5984ff">photogenic</span></span>
-            <input id="logoDrop" class="checkbox" type="checkbox">
-            <div id="logoRateType" class="dropdown">
-              <ul class="p0">
-                <li id="rkey" class="point">Rating</li>
-                <li id="pkey" class="point">Paired</li>
-              </ul>
-            </div>
+  <body id="gbl" class="showRate">
+    <nav id="nv">
+      <div class="x y z rel">
+        <div id="logoSec">
+          <a href="/" id="logo"><span style="color: #111">team</span><span style="color:#5984ff">photogenic</span></a>
+          <div id="logoRateType" class="dropdown">
+            <ul id="ratePgs" class="p0">
+              <li id="rkey" class="point">
+                <h6>Rating</h6>
+                <p>Score, tag, and comment on an image</p>
+              </li>
+              <li id="pkey" class="point">
+                <span>Paired</span>
+                <p>Best of two images from the same task</p>
+              </li>
+            </ul>
           </div>
-          <button class="rel hamburger" style="display:none">
-            <input type="checkbox" class="checkbox">
-          </button>
-          <div class="nav-links y z w100">
-            <ul class="y" style="width: 100%;padding-right: 1em;">
-              <li><a href="/tasks">Tasks</a></li>
-              <li style="margin-left:24px"><a href="/tasks">Add ons</a></li>
-              <li style="margin-left:24px" id="buyCredLi"><span>Buy credits</span></li>
+        </div>
+        <button id="barsL" class="rel">
+        </button>
+        <div id="mobi" class="dn y z">
+          <ul class="spaced-list y">
+            <li>
+              <a id="lTsk_" href="/tasks">
+                <h6>Tasks</h6>
+                <p>List out my tasks</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div id="nsec" class="y z">
+          <div id="links" class="y z">
+            <ul class="spaced-list y">
+              <li><a id="lTsk_" href="/tasks">Tasks</a></li>
             </ul>
           </div>
           <div class="aux-icons y z">
-            <button class="rel  drop-button">
+            <button class="rel drop-button">
               <svg id="infTog" class="pointer" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM7 8.089V8.5a1 1 0 0 0 1.926.377 3.456 3.456 0 0 0 1.549-.902 3.5 3.5 0 0 0-4.95-4.95A3.437 3.437 0 0 0 4.5 5.51a1.004 1.004 0 1 0 2.009-.02 1.43 1.43 0 0 1 .436-1.045 1.5 1.5 0 0 1 1.058-.437 1.492 1.492 0 0 1 0 2.983A1.004 1.004 0 0 0 7 8.09zM8 14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" fill-rule="evenodd"></path></svg>
               <div id="dropi" class="dropdown L p4 mt0 mb0 flg clxl abs bsbx">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation">
@@ -46,34 +59,33 @@
                 </svg>
                 <ul class="p0">
                   <li class="-item">
-                    <a class="y pl f13 lh20 w5" style="text-transform: none;text-align: left;line-height: 20px" href="/tests.html">
+                    <a class="y" href="/tests.html">
                       <span>Documentation</span>
                     </a>
                   </li>
                   <li class="-item">
-                    <a class="y pl f13 lh20 w5" style="text-transform: none;text-align: left;line-height: 20px" href="/tests.html">
+                    <a class="y" href="/tests.html">
                       <span>Contact us</span>
                     </a>
                   </li>
                 </ul>
               </div>
             </button>
-            <button class="rel  drop-button">
-              <svg id="notTog"  class="pointer" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5.55 14h4.9a2.5 2.5 0 0 1-4.9 0zM13 9.066l1.216 1.232A1 1 0 0 1 13.504 12H2.496a1 1 0 0 1-.712-1.702L3 9.066V5a5 5 0 1 1 10 0z" fill-rule="evenodd"></path></svg>
+            <button id="notBtnT" class="rel drop-button">
+              <svg id="notTogT" class="pointer" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path id="notPthT" d="M5.55 14h4.9a2.5 2.5 0 0 1-4.9 0zM13 9.066l1.216 1.232A1 1 0 0 1 13.504 12H2.496a1 1 0 0 1-.712-1.702L3 9.066V5a5 5 0 1 1 10 0z" fill-rule="evenodd"></path></svg>
               <div id="dropn" class="dropdown L p4 mt0 mb0 flg clxl abs bsbx">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation">
                   <use href="#dropdown-arrow"/>
                 </svg>
-                <span class="" style="
-    ">Notifications</span>
+                <span class="">Notifications</span>
                 <hr class="">
                 <ul id="notifList" class="p0">
                 </ul>
               </div>
             </button>
-            <button id="prfBtn" type="button" data-testid="user-avatar" class="drop-button">
-              <svg  id="prfTog" class="pointer"  height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 11a5.698 5.698 0 0 0 3.9-1.537l1.76.66A3.608 3.608 0 0 1 16 13.5V15a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1v-1.5c0-1.504.933-2.85 2.34-3.378l1.76-.66A5.698 5.698 0 0 0 8 11zM7.804 0h.392a3.5 3.5 0 0 1 3.488 3.79l-.164 1.971a3.532 3.532 0 0 1-7.04 0l-.164-1.97A3.5 3.5 0 0 1 7.804 0z" fill-rule="evenodd"></path>
+            <button id="prfBtnU" type="button" data-testid="user-avatar" class="drop-button">
+              <svg  id="prfTogU" class="pointer"  height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path id="prfPthU" d="M8 11a5.698 5.698 0 0 0 3.9-1.537l1.76.66A3.608 3.608 0 0 1 16 13.5V15a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1v-1.5c0-1.504.933-2.85 2.34-3.378l1.76-.66A5.698 5.698 0 0 0 8 11zM7.804 0h.392a3.5 3.5 0 0 1 3.488 3.79l-.164 1.971a3.532 3.532 0 0 1-7.04 0l-.164-1.97A3.5 3.5 0 0 1 7.804 0z" fill-rule="evenodd"></path>
               </svg>
               <div id="dropp" class="dropdown bsbx">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation">
@@ -81,101 +93,136 @@
                 </svg>
                 <ul class="p0">
                   <li class="email">
-                    <span class="" style="font-size: 15px;">sl@sent.at</span>
+                    <span id="emailTg">sl@sent.at</span>
                   </li>
                   <li class="email">
                     <span class="" style="font-size: 10px;line-height: 1;padding-bottom: 6px;">54 credits</span>
                   </li>
                   <hr class="">
-                  <li id="editProfile" class="p0"><a href="/profile">Edit Profile</a></li>
-                  <!--<li id="securityPrivacy" class="p0"><a href="/securityPrivacy">Security &amp; Privacy</a></li>-->
-                  <li id="helpSupport" class="p0"><a href="/helpSupport">Help &amp; Support</a></li>
-                  <!--<li id="buyCredits" class="p0"><a href="/redeem">Redeem</a></li>-->
+                  <li class="p0"><a id="lPf_" href="/profile">Edit Profile</a></li>
+                  <li class="p0"><a href="/helpSupport">Get premium</a></li>
                   <hr class="">
                   <li id="signouter" class="signout point" style="line-height: 28px;font-size: 11px;"><span>Sign Out</span></li>
                 </ul>
-                <span class="sc-gKckTs hHNeJm" style="position: absolute; left: 182px;"></span>
+                <span style="position: absolute; left: 182px;"></span>
               </div>
             </button>
-            <button class="rel  drop-button">
-              <span id="plus"></span>
-              <input id="infTog" type="checkbox" class="checkbox menutog">
+            <button id="plsBtnR" class="rel drop-button">
+              <span id="plusR"></span>
               <div id="dropc" class="dropdown L p4 mt0 mb0 flg clxl abs bsbx">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation">
-                  <defs>
-                    <symbol id="dropdown-arrow" viewbox="0 0 21 9">
-                      <path fill="#8898AA" fill-opacity="0.1" d="M1 9.092h19l-6.402-6.74c-1.717-1.806-4.485-1.8-6.196 0L1 9.093zM20.342 8l-6.02-6.336c-2.108-2.22-5.538-2.218-7.645 0L.658 8h19.684z"></path><path fill="currentcolor" d="M7.402 2.353c1.711-1.801 4.48-1.807 6.196 0L20 9.093H1l6.402-6.74z"></path>
-                    </symbol>
-                  </defs>
                   <use href="#dropdown-arrow"/>
                 </svg>
                 <ul class="p0">
                   <li id="newPost" class="-item">
-                    <a class="y pl f13 lh20 w5" style="text-transform: none;text-align: left;line-height: 20px" href="/tests.html">
-                      <span>Documentation</span>
+                    <a class="y" href="/new">
+                      <span>New task</span>
+                    </a>
+                  </li>
+                  <li id="newPost" class="-item">
+                    <a class="y" href="/tests.html">
+                      <span>Buy credits</span>
                     </a>
                   </li>
                   <li class="-item">
-                    <a class="y pl f13 lh20 w5" style="text-transform: none;text-align: left;line-height: 20px" href="/tests.html">
+                    <a class="y" href="/tests.html">
                       <span>Contact us</span>
                     </a>
                   </li>
                 </ul>
               </div>
             </button>
-            </div>
           </div>
         </div>
       </div>
     </nav>
-    <div id="admin" class="w100 rdx oh dn">
-      <div class="x y-gt-lg z">
-        <div class="admin-base">
-          <div id="editProfilePanel" style="display: none;">
-            <div>
+    <div id="profile" class="rdx oh">
+      <div class="x y">
+        <div id="sbar">
+          <ul id="nvz">
+            <li id="nvP_"><a id="nvp_" href="/profile">Profile</a></li>
+            <li id="nvP_"><a id="nvp_" href="/profile">Settings</a></li>
+            <li id="nvP_"><a id="nvp_" href="/profile">Premium</a></li>
+            <li id="nvS_"><a id="nvs_" href="/profile#password">Notifications</a></li>
+            <li id="nvS_"><a id="nvs_" href="/profile#password">Notifications</a></li>
+            <li id="nvN_"><a id="nvn_" href="/profile#notifications">Help</a></li>
+          </ul>
+        </div>
+        <div class="" style="background: white">
+          <div>
+            <ul id="nvz" class="y">
+              <li id="nvP_"><a id="nvs_" href="/profile">Profile</a></li>
+              <li id="nvS_"><a id="nvs_" href="/profile#password">Password &amp; Security</a></li>
+              <li id="nvN_"><a id="nvn_" href="/profile#notifications">Linked accounts</a></li>
+            </ul>
+          </div>
+          <div class="admin-base">
+            <div id="editProfilePanel">
               <h2>Edit Profile</h2>
-            </div>
-            <div>
-              <h3>Email</h3>
               <div>
-                <p id="accountLinked">Your profile is currently linked with your Google account, <span id="google"></span>. Please open a support ticket if you want this to be changed to a standard email or phone number.</p>
-                <div class="iS">
+                <h4>Email</h4>
+                <div>
                   <input id="inputContact" class="" placeholder="Current email" type="email">
                 </div>
               </div>
-            </div>
-            <div class="dn">
-              <h3>Change password</h3>
-              <div class="iS">
-                <input id="oldPassword" class="" placeholder="Current password" type="password">
-                <input id="newPassword0" class="" placeholder="New password" type="password">
-                <input id="newPassword1" class="" placeholder="Confirm new password" type="password">
+              <div>
+                <span class="fwHeavy">Gender*</span>
+                <div id="btnRs" class="btn-wrap">
+                  <button id="age" class="btn-demographics"><span id="age" class="emoji">🤩</span><span id="btnZR3" class="tc txt-rate">Male</span></button>
+                  <button id="age" class="btn-demographics"><span id="age" class="emoji">🤑</span><span id="btnZR4" class="tc txt-rate">Female</span></button>
+                </div>
               </div>
-              <button>Change password</button>
-            </div>
-            <div>
-              <h3>Language</h3>
-            </div>
-            <div>
-              <h3>Redeem</h2>
-              <p>We occasionally offer coupons code for free credits and free upgrades. These codes can be redeemed here:</p>
-              <div class="iS panelSec16">
-                <input type="text" placeholder="Secret code" style="
-      width: 100%;
-      box-sizing: border-box;">
+              <div>
+                <span class="fwHeavy">Rating*</span>
+                <div id="btnRs" class="btn-wrap">
+                  <button id="age" class="btn-demographics"><span id="age" class="emoji">😒</span><span id="btnZR0" class="tc txt-rate">18-24</span></button>
+                  <button id="age" class="btn-demographics"><span id="age" class="emoji">😐</span><span id="btnZR1" class="tc txt-rate">25-29</span></button>
+                  <button id="age" class="btn-demographics"><span id="age" class="emoji">😃</span><span id="btnZR2" class="tc txt-rate">30-39</span></button>
+                  <button id="age" class="btn-demographics"><span id="age" class="emoji">🤩</span><span id="btnZR3" class="tc txt-rate">40-49</span></button>
+                  <button id="age" class="btn-demographics"><span id="age" class="emoji">🤑</span><span id="btnZR4" class="tc txt-rate">50+</span></button>
+                </div>
               </div>
-              <p id="redeemMessage"></p>
-            </div>
+              <div>
+                <span class="fwHeavy">Online Habits*</span>
+                <div id="btnRs" class="btn-wrap">
+                  <button id="age" class="btn-demographics"><span id="age" class="emoji">🤩</span><span id="btnZR3" class="tc txt-rate">Rarely</span></button>
+                  <button id="age" class="btn-demographics"><span id="age" class="emoji">🤑</span><span id="btnZR4" class="tc txt-rate">Weekly</span></button>
+                  <button id="age" class="btn-demographics"><span id="age" class="emoji">🤑</span><span id="btnZR4" class="tc txt-rate">Daily</span></button>
+                  <button id="age" class="btn-demographics"><span id="age" class="emoji">🤑</span><span id="btnZR4" class="tc txt-rate">Hourly</span></button>
+                </div>
 
-            <div id="">
-              <!-- security privacy-->
-              <div class="panelSec16">
+                <div class="dropdownSelector">
+                  <span id="sortMethodV"></span>
+                  <ul id="sortDropdown" class="dropsort">
+                    <li><span id="dlW">Lower quartile score</span></li>
+                    <li><span id="daW">Date added</span></li>
+                    <li><span id="dmW">Date modified</span></li>
+                  </ul>
+                </div>
+
+              </div>
+              <button id="save" class="dn">
+                Save changes
+              </button>
+            </div>
+            <div id="passwordSec" class="dn">
+              <div id="passwordPanel">
+                <h4>Password</h4>
+                <button>Change password</button>
+                <div class="dn">
+                  <input id="oldPassword" class="" placeholder="Current password" type="password">
+                  <input id="newPassword0" class="" placeholder="New password" type="password">
+                  <input id="newPassword1" class="" placeholder="Confirm new password" type="password">
+                </div>
+                <button>Change password</button>
+              </div>
+              <div>
                 <h3>Two-Factor</h3>
                 <p>TeamPhotogenic allows you to require a timed one-time password before logging in. Unlike SMS-based two-factor auth, this is safe from SIM-swapping attacks. This requires the use of Authy or Google Authenticator.</p>
                 <button id="activate2f">Activate two-factor</button>
                 <button id="reset2f">Reset two-factor</button>
               </div>
-              <div class="panelSec16">
+              <div>
                 <h3>Login history</h3>
                 <p>Change your password and activate two-factor authentication if you see something suspicious.</p>
                 <div class="y z" style="border-top:1px solid rgba(0,0,0,0.1);padding: 1em 4px">
@@ -190,185 +237,127 @@
                 </div>
               </div>
             </div>
-
-            <button id="save" class="dn">
-              Save changes
-            </button>
-          </div>
-          <div id="addonsPanel">
-            <h2>Add-ons</h2>
-            <p>One-time payments to upgrade your picture selection process and user experience.</p>
-            <div class="hgrid ">
-              <div class="panelSec16">
-                <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 516.8 501.86"><path d="M516.8 12.02v441.35a48.49 48.49 0 0 1-48.49 48.49H13.06c-6.23 0-8.38-8.3-2.93-11.32l161.56-89.48a52.1 52.1 0 0 0 22.06-23.72l44.3-95.79a12.9 12.9 0 0 1 15.12-7.02l64.91 25.07a22.41 22.41 0 0 0 27.94-10.51L494.25 6.3c5.93-10.94 22.54-6.73 22.54 5.71Z" style="fill:#60cff8"/><path d="m494.25 6.3-75.87 144.74 98.41 86.7V12.02c0-12.45-16.62-16.66-22.54-5.71ZM331.18 93.5l-88.55 182.71a12.91 12.91 0 0 1 10.36-1.59l64.91 25.07a22.41 22.41 0 0 0 27.94-10.51l72.54-138.39-68.82-60.97a11.75 11.75 0 0 0-18.37 3.67Z" style="fill:#0148e5"/><path d="M182.79 256.02a23.18 23.18 0 0 0-25.52 7.65C121.53 309.06 30.52 433.24 6.36 466.92c-12.66 17.65-3.8 31.34 4.08 34.3-4.05-1.94-4.84-8.18-.27-10.72l161.56-89.48a52.1 52.1 0 0 0 22.06-23.72l44.3-95.79a12.85 12.85 0 0 1 4.54-5.3l-59.84-20.19Z" style="fill:#7973f6"/></svg>
-                <h3>Insights  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="12" height="12" style="top: 1px;right: 8px;position: relative;"><path d="M160 320C71.78 320 0 248.22 0 160S71.78 0 160 0s160 71.78 160 160-71.78 160-160 160Zm0-292.57C86.9 27.43 27.43 86.9 27.43 160S86.9 292.57 160 292.57 292.57 233.1 292.57 160 233.1 27.43 160 27.43ZM151.9 192.85c-3.12 0-5.66-2.53-5.66-5.66v-2.61c0-3.48.25-6.6.76-9.35a35.75 35.75 0 0 1 2.39-7.83c1.09-2.46 2.54-4.86 4.35-7.18 1.81-2.32 4.1-4.79 6.85-7.4l9.79-9.35a40.29 40.29 0 0 0 7.07-8.27c1.96-3.05 2.94-6.74 2.94-11.09 0-5.66-1.78-10.4-5.33-14.25-3.56-3.84-8.59-5.76-15.12-5.76-3.34 0-6.35.62-9.03 1.85-2.69 1.23-5 2.9-6.96 5s-3.45 4.53-4.46 7.29c-.44 1.18-.79 2.38-1.07 3.58-.63 2.76-3.13 4.68-5.95 4.43l-15.35-1.37c-3.4-.3-5.78-3.53-5.02-6.86 1.02-4.46 2.5-8.55 4.44-12.29 2.83-5.44 6.49-10.04 10.99-13.81 4.49-3.77 9.64-6.63 15.45-8.59 5.8-1.96 12.04-2.94 18.71-2.94 6.23 0 12.15.91 17.73 2.72s10.51 4.5 14.79 8.05c4.28 3.56 7.65 7.94 10.12 13.16 2.46 5.22 3.7 11.24 3.7 18.06 0 4.64-.51 8.7-1.52 12.18-1.02 3.48-2.47 6.67-4.35 9.57-1.89 2.9-4.17 5.69-6.85 8.38-2.69 2.69-5.69 5.48-9.03 8.38-2.9 2.47-5.26 4.64-7.07 6.53-1.82 1.89-3.26 3.77-4.35 5.66a19.813 19.813 0 0 0-2.28 6.09c-.44 2.18-.65 4.86-.65 8.05 0 3.12-2.53 5.66-5.66 5.66h-14.36Zm-10.01 30.24c0-4.64 1.7-8.63 5.11-11.96s7.51-5 12.29-5 8.7 1.6 12.18 4.79c3.48 3.19 5.22 7.11 5.22 11.75s-1.71 8.63-5.11 11.96c-3.41 3.34-7.51 5-12.29 5-2.32 0-4.53-.44-6.63-1.31-2.1-.87-3.95-2.03-5.55-3.48-1.6-1.45-2.87-3.19-3.81-5.22-.95-2.03-1.41-4.2-1.41-6.53Z" fill="#424652"/></svg></h3>
-                <p>Get detailed analytics on your image and see who rated for what, and which types of images are popular throughout your tasks.</p>
-                <a href="">Buy for $5.99</a>
-              </div>
-              <div class="panelSec16">
-                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 320 193.55"><defs><style>.cls-4{fill:#7973f6}</style></defs><rect width="232.27" height="9.88" x="43.87" y="24.25" class="cls-4" rx="4.94" ry="4.94"/><rect width="193.55" height="9.88" x="63.22" y="91.84" class="cls-4" rx="4.94" ry="4.94" transform="rotate(90 160 96.78)"/><path d="M118.86 115.64H4.53a4.53 4.53 0 0 0-3.23 7.7c15.35 15.65 36.73 25.36 60.39 25.36s45.04-9.71 60.39-25.36a4.53 4.53 0 0 0-3.23-7.7Zm196.61 0H201.15a4.53 4.53 0 0 0-3.23 7.7c15.35 15.65 36.73 25.36 60.39 25.36s45.04-9.71 60.39-25.36a4.53 4.53 0 0 0-3.23-7.7Z" style="fill:#60cff8"/><path d="M15.49 115.64h92.41L61.69 34.13l-46.2 81.51zm242.82-81.51-46.21 81.51h92.41l-46.2-81.51z" style="fill:#d4fcfc"/><path d="M202.86 173.36a1.42 1.42 0 0 0-1.14-.57h-83.44c-.45 0-.87.21-1.14.57l-13.49 17.92a1.42 1.42 0 0 0 1.14 2.28h110.42a1.43 1.43 0 0 0 1.14-2.28l-13.49-17.92Z" style="fill:#0148e5"/></svg>
-                <h3>R4R Parity</h3>
-                <p>Have 1 rating you give to others count equally towards 1 rate for you (default: 0.4-0.8).</p>
-                <a href="" >Buy for $9.99</a>
-              </div>
-              <div class="panelSec16">
-                <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 320 320"><path d="m128.15 219.01-13.58-13.58-13.58-13.58s-22.76 1.78-39.95 29.5-28.08 65.69-28.08 65.69 37.97-10.89 65.69-28.08c27.72-17.19 29.5-39.95 29.5-39.95Z" style="fill:#d4fcfc"/><path d="M111.87 162.99 83.76 191.1c-6.05 6.05 39.1 51.2 45.15 45.15l28.11-28.11-45.15-45.15Zm50.64-88.08s-48.8-27.45-101.92 25.66c-19.77 19.77-28.03 28.04-60.4 87.99-.81 1.5 1.2 2.93 2.38 1.71 10.66-10.96 32.46-31.59 54.52-41.81 23.73-10.99 48.13 6.88 48.13 6.88l57.28-80.42Zm82.58 82.58s27.45 48.8-25.66 101.92c-19.77 19.77-28.03 28.03-87.99 60.41-1.5.81-2.93-1.2-1.71-2.38 10.96-10.66 31.59-32.46 41.81-54.52 10.99-23.73-6.88-48.13-6.88-48.13l80.42-57.28Z" style="fill:#7873ec"/><path d="M248.92 167.14a52.87 52.87 0 0 0-3.83-9.65l-80.42 57.28s2.08 2.84 4.38 7.52c24.74-14.16 59.51-35.64 79.88-55.16ZM97.7 150.96a54.92 54.92 0 0 1 7.52 4.38l57.28-80.42s-3.5-1.97-9.65-3.83c-19.52 20.36-41 55.14-55.16 79.88Z" style="fill:#0148e5"/><path d="M320 0s-82.38-.2-157.49 74.91c-26.75 26.75-59.25 83.38-67.74 98.54a5.74 5.74 0 0 0 .95 6.86l6.84 8.78a163.46 163.46 0 0 0 28.34 28.34l8.78 6.84a5.74 5.74 0 0 0 6.86.95c15.17-8.49 71.79-40.98 98.55-67.74C320.2 82.38 320 0 320 0Zm-97.37 97.37a27.98 27.98 0 1 1 39.58-39.56 27.98 27.98 0 0 1-39.58 39.56Z" style="fill:#60cff8"/></svg>
-                <h3>Faster results</h3>
-                <p>Take a trip on the fast lane and get your images shown to raters more frequently than those of other users.</p>
-                <a href="">Buy for $4.99</a>
-              </div>
-              <div class="panelSec16">
-                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 284.37 320" style="width: 32px;height: 32px;"><defs><style>.cls-2{fill:#1c47db}</style></defs><path d="M84.17 58.73 36.42 86.3l74.79 43.18c4.28 2.47 9.49 2.39 13.81.02 4.21-2.56 6.89-7.02 6.89-11.97V31.17L84.16 58.74Zm23.26 101.26c-.11-4.92-2.64-9.49-6.92-11.95l-74.8-43.18v110.26l74.79-43.18c4.28-2.47 6.81-7.02 6.92-11.95h.01Zm17.59 30.5c-4.33-2.37-9.53-2.45-13.81.02l-74.79 43.18 47.75 27.57 47.75 27.57v-86.37c0-4.95-2.68-9.41-6.89-11.97Zm34.4 0c-4.21 2.56-6.89 7.02-6.89 11.97v86.37l47.75-27.57 47.75-27.57-74.79-43.18c-4.28-2.47-9.49-2.39-13.81-.02Zm24.52-42.44c-4.28 2.47-6.81 7.02-6.93 11.95.11 4.92 2.64 9.49 6.93 11.95l74.79 43.18V104.88l-74.79 43.18Zm-24.52-18.55c4.33 2.37 9.53 2.45 13.81-.02l74.79-43.18-47.75-27.57-47.75-27.57v86.37c0 4.95 2.68 9.41 6.89 11.97Z" style="fill:#a9e2f7"/><path d="M42.65 69.96c-13.58-7.84-30.92-3.19-38.76 10.38C-3.95 93.92.7 111.26 14.27 119.1c13.58 7.84 30.92 3.19 38.76-10.38 7.84-13.58 3.19-30.92-10.38-38.76ZM14.27 200.89C.69 208.73-3.95 226.08 3.89 239.65c7.84 13.58 25.19 18.22 38.76 10.38 13.58-7.84 18.22-25.19 10.38-38.76-7.84-13.56-25.19-18.22-38.76-10.38Z" class="cls-2"/><circle cx="142.21" cy="291.62" r="28.37" class="cls-2"/><path d="M270.18 200.89c-13.58-7.84-30.93-3.19-38.76 10.38-7.84 13.58-3.19 30.92 10.38 38.76 13.58 7.84 30.92 3.19 38.76-10.38 7.84-13.58 3.19-30.93-10.38-38.76Z" class="cls-2"/><circle cx="142.23" cy="28.38" r="28.37" class="cls-2"/><circle cx="255.99" cy="94.54" r="28.37" class="cls-2"/><path d="M46.13 116.66c2.68-2.14 5.02-4.81 6.83-7.95 1.97-3.42 3.15-7.07 3.6-10.75L36.35 86.29l14.88-8.6c-2.25-3.06-5.16-5.73-8.66-7.75-13.58-7.84-30.93-3.19-38.76 10.38-7.84 13.58-3.19 30.92 10.38 38.76 3.63 2.1 7.53 3.29 11.44 3.67v-17.92l20.48 11.82h.01Zm10.43 105.36c-.45-3.68-1.63-7.33-3.6-10.75-1.82-3.16-4.16-5.82-6.85-7.98l-20.46 11.82v-17.9c-3.92.37-7.82 1.57-11.44 3.67-13.58 7.84-18.22 25.19-10.38 38.76 7.84 13.58 25.19 18.22 38.76 10.38 3.39-1.96 6.34-4.6 8.66-7.75l-14.88-8.6L56.58 222h-.01Zm95.91 43.17c-3.2-1.25-6.67-1.94-10.31-1.94s-7.11.7-10.31 1.94v23.65l-15.51-8.96c-1.68 3.69-2.55 7.69-2.55 11.74 0 15.67 12.71 28.37 28.37 28.37s28.37-12.71 28.37-28.37c0-4.19-.92-8.17-2.55-11.74l-15.51 8.96v-23.65Zm117.64-64.29c-3.51-2.03-7.41-3.28-11.44-3.67v17.92l-20.48-11.82c-2.68 2.14-5.02 4.81-6.83 7.95-1.97 3.42-3.15 7.07-3.6 10.75l20.21 11.67-14.88 8.6c2.25 3.06 5.16 5.73 8.66 7.75 13.58 7.84 30.92 3.19 38.76-10.38 7.84-13.58 3.19-30.93-10.38-38.76h-.01ZM131.84 54.8c3.2 1.25 6.67 1.94 10.31 1.94s7.11-.7 10.31-1.94V31.15l15.51 8.96c1.63-3.58 2.55-7.56 2.55-11.74C170.52 12.7 157.81 0 142.15 0s-28.37 12.71-28.37 28.37c0 4.19.92 8.17 2.55 11.74l15.51-8.96V54.8Zm95.91 43.16c.45 3.68 1.63 7.33 3.6 10.75 1.82 3.16 4.16 5.82 6.85 7.98l20.46-11.81v17.9c3.92-.37 7.82-1.57 11.44-3.67 13.58-7.84 18.22-25.19 10.38-38.76-7.84-13.58-25.19-18.22-38.76-10.38-3.39 1.95-6.34 4.59-8.66 7.75l14.88 8.6-20.21 11.67v-.02Z" style="fill:#7873ed"/></svg>
-
-                <h3>Bigger samples</h3>
-                <p>Be allowed to upload up to 128 pictures per task, instead of the regular 32.</p>
-                <a href="">Buy for $2.99</a>
-              </div>
+            <div class="">
+              <h4>Language</h4>
             </div>
-          </div>
-          <div id="displayNotificationsPanel">
-            <div>
-              <h2>Notifications</h2>
-              <div style="
-    text-align: right;">
-                <span>Text</span>
-                <span>Email</span>
-              </div>
-            </div>
-            <div class="y toggleNotif">
-              <div class="toggleWrapper">
-                <input type="checkbox" name="toggle0" class="mobileToggle" id="toggle0" checked>
-                <label for="toggle0"></label>
-              </div>
+            <div id="displayNotificationsPanel" class="dn">
               <div>
-                <h3>Image finished rating</h3>
-                <p>One image finishes all (will probably end up spammy)</p>
+                <h2>Notifications</h2>
+                <div style="text-align: right;">
+                  <span>Text</span>
+                  <span>Email</span>
+                </div>
               </div>
-              <div style="margin-left:auto">
-                <input type="checkbox" style="margin-right:20px" name="imgFinish">
-                <input type="checkbox" name="imgFinish">
+              <div class="y toggleNotif">
+                <div>
+                  <h3>Image finished rating</h3>
+                  <p>One image finishes all (will probably end up spammy)</p>
+                </div>
+                <div style="margin-left:auto">
+                  <input type="checkbox" style="margin-right:20px" name="imgFinish">
+                  <input type="checkbox" name="imgFinish">
+                </div>
               </div>
-            </div>
-            <div class="y toggleNotif">
-              <div class="toggleWrapper">
-                <input type="checkbox" name="toggle1" class="mobileToggle" id="toggle1" checked>
-                <label for="toggle1"></label>
+              <div class="y toggleNotif">
+                <div>
+                  <h3>Task finished rating</h3>
+                  <p>Entire task (all images within) finished rating.</p>
+                </div>
+                <div style="margin-left:auto">
+                  <input type="checkbox" style="margin-right:20px" name="taskFinish">
+                  <input type="checkbox" name="taskFinish">
+                </div>
               </div>
-              <div>
-                <h3>Task finished rating</h3>
-                <p>Entire task (all images within) finished rating.</p>
+              <div class="y toggleNotif">
+                <div>
+                  <h3>Support requests</h3>
+                  <p>Task finished rating</p>
+                </div>
+                <div style="margin-left:auto">
+                  <input type="checkbox" style="margin-right:20px" name="support">
+                  <input type="checkbox" name="support">
+                </div>
               </div>
-              <div style="margin-left:auto">
-                <input type="checkbox" style="margin-right:20px" name="taskFinish">
-                <input type="checkbox" name="taskFinish">
+              <div class="y toggleNotif">
+                <div>
+                  <h3>Logins</h3>
+                  <p>Task finished rating</p>
+                </div>
+                <div style="margin-left:auto">
+                  <input type="checkbox" style="margin-right:20px" name="login">
+                  <input type="checkbox" name="login">
+                </div>
               </div>
-            </div>
-            <div class="y toggleNotif">
-              <div class="toggleWrapper">
-                <input type="checkbox" name="toggle2" class="mobileToggle" id="toggle2" checked>
-                <label for="toggle2"></label>
-              </div>
-              <div>
-                <h3>Support requests</h3>
-                <p>Task finished rating</p>
-              </div>
-              <div style="margin-left:auto">
-                <input type="checkbox" style="margin-right:20px" name="support">
-                <input type="checkbox" name="support">
-              </div>
-            </div>
-            <div class="y toggleNotif">
-              <div class="toggleWrapper">
-                <input type="checkbox" name="toggle3" class="mobileToggle" id="toggle3" checked>
-                <label for="toggle3"></label>
-              </div>
-              <div>
-                <h3>Logins</h3>
-                <p>Task finished rating</p>
-              </div>
-              <div style="margin-left:auto">
-                <input type="checkbox" style="margin-right:20px" name="login">
-                <input type="checkbox" name="login">
-              </div>
-            </div>
-            <div class="y toggleNotif">
-              <div class="toggleWrapper">
-                <input type="checkbox" name="toggle4" class="mobileToggle" id="toggle4" checked>
-                <label for="toggle4"></label>
-              </div>
-              <div>
-                <h3>Purchases</h3>
-                <p>Task finished rating (just to be safe)</p>
-              </div>
-              <div style="margin-left:auto">
-                <input type="checkbox" style="margin-right:20px" name="login">
-                <input type="checkbox" name="login">
+              <div class="y toggleNotif">
+                <div>
+                  <h3>Purchases</h3>
+                  <p>Task finished rating (just to be safe)</p>
+                </div>
+                <div style="margin-left:auto">
+                  <input type="checkbox" style="margin-right:20px" name="login">
+                  <input type="checkbox" name="login">
+                </div>
               </div>
             </div>
-          </div>
-          <div id="helpSupportPanel">
-            <h2>Support tickets</h2>
-            <button>New ticket</button>
-            <div>
+            <div id="helpSupportPanel" class="dn">
+              <h2>Support tickets</h2>
+              <button>New ticket</button>
               <div>
-                <h2></h2>
-                <p>Hi, i think you need to do X</p>
-                <span>30 July, 2020</span>
+                <div>
+                  <h2></h2>
+                  <p>Hi, i think you need to do X</p>
+                  <span>30 July, 2020</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
-    <div id="scorerater" class="w100">
-      <div class=" narrow x c">
+    <div id="scorerater">
+      <div class="x tablet-max">
         <span id="credits-count"></span>
-        <div id="rate-sec" class="y z pt64 pb30">
-          <div class=" bg-white" id="rate-img">
-            <img id="image" class="mat mt80 mb80  v" src="img/laurie.jpg">
+        <div id="rate-sec">
+          <div id="rate-img">
+            <div id="rate-bg" style="background: url(img/laurie.jpg);"></div>
+            <img id="image" src="img/laurie.jpg" alt="Rating picture">
           </div>
-          <div id="rate-data" class="  bsbx pl48">
+          <div id="rate-data">
             <div id="panel-rate">
               <span class="fwHeavy">Rating*</span>
-              <div class="btn-wrap flex d-flex justify-content-between z mt-1">
-                <button class="btn grey btn-rate"><input id="rateEh" type="radio" name="rater" class="checkbox"
-                 ><span class="d-block emoji">😒</span><span class="tc txt-rate">Eh</span></button>
-                <button class="btn grey btn-rate"><input id="rateDe" type="radio" name="rater" class="checkbox"
-                 ><span class="d-block emoji">😐</span><span class="tc txt-rate">Decent</span></button>
-                <button class="btn grey btn-rate"><input id="rateGr" type="radio" name="rater" class="checkbox"
-                 ><span class="d-block emoji">😃</span><span class="tc txt-rate">Great</span></button>
-                <button class="btn grey btn-rate"><input id="rateSt" type="radio" name="rater" class="checkbox"
-                 ><span class="d-block emoji">🤩</span><span class="tc txt-rate">Stunning</span></button>
-                <button class="btn grey btn-rate"><input id="rateBr" type="radio" name="rater" class="checkbox"
-                 ><span class="d-block emoji">🤑</span><span class="tc txt-rate">Brilliant</span></button>
+              <div id="btnRs" class="btn-wrap y z">
+                <button id="btnR0" class="btn btn-rate"><span id="btnXR0" class="emoji">😒</span><span id="btnZR0" class="tc txt-rate">Eh</span></button>
+                <button id="btnR1" class="btn btn-rate"><span id="btnXR1" class="emoji">😐</span><span id="btnZR1" class="tc txt-rate">Decent</span></button>
+                <button id="btnR2" class="btn btn-rate"><span id="btnXR2" class="emoji">😃</span><span id="btnZR2" class="tc txt-rate">Great</span></button>
+                <button id="btnR3" class="btn btn-rate"><span id="btnXR3" class="emoji">🤩</span><span id="btnZR3" class="tc txt-rate">Stunning</span></button>
+                <button id="btnR4" class="btn btn-rate"><span id="btnXR4" class="emoji">🤑</span><span id="btnZR4" class="tc txt-rate">Brilliant</span></button>
               </div>
             </div>
             <div id="panel-tags" style="margin-top:1.5em">
               <span class="fwHeavy">Tags</span>
               <div id="optTag">
-                <span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span class="btn-tag">😓 awkward</span></span>
-                <span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span class="btn-tag">🖼 bad framing</span></span>
-                <span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span class="btn-tag">🍞 bland</span></span>
-                <span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span class="btn-tag">💨 blurry</span></span>
-                <span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span class="btn-tag">⚡️ bright</span></span>
-                <span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span class="btn-tag">🚊 busy</span></span>
-                <span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span class="btn-tag">🌈 colorful</span></span>
-                <span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span class="btn-tag">🕶 cool</span></span>
-                <span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span class="btn-tag">🌚 dark</span></span>
-                <span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span class="btn-tag">🧂 grainy</span></span>
-                <span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span class="btn-tag">🚨 overedited</span></span>
+                <span id="tagX5" class="wrap-tag btn-tag">😓 awkward</span>
+                <span id="tagX6" class="wrap-tag btn-tag">🖼 bad framing</span>
+                <span id="tagX7" class="wrap-tag btn-tag">🍞 bland</span>
+                <span id="tagX8" class="wrap-tag btn-tag">💨 blurry</span>
+                <span id="tagX9" class="wrap-tag btn-tag">⚡️ bright</span>
+                <span id="tagXA" class="wrap-tag btn-tag">🚊 busy</span>
+                <span id="tagXB" class="wrap-tag btn-tag">🌈 colorful</span>
+                <span id="tagXC" class="wrap-tag btn-tag">🕶 cool</span>
+                <span id="tagXD" class="wrap-tag btn-tag">🌚 dark</span>
+                <span id="tagXE" class="wrap-tag btn-tag">🧂 grainy</span>
+                <span id="tagXF" class="wrap-tag btn-tag">🚨 overedited</span>
               </div>
             </div>
-            <div class="note-section iS" style="margin-top:2em;">
-              <div class="note-section-headline w6 f12"><span class="fwHeavy leave-a-note">Leave a note</span></div>
-              <textarea placeholder="This picture seems ..." id="txa" tabindex="-1" maxlength="255" class="w100 form-control note-box note-box-mobile js-note-box"></textarea>
+            <div class="note-section iS" style="margin-top:1.5em;">
+              <div class=""><span class="fwHeavy leave-a-note">Leave a note</span></div>
+              <textarea id="txa" placeholder="This picture seems ..." tabindex="-1" maxlength="255" class=" form-control note-box note-box-mobile js-note-box"></textarea>
             </div>
-            <div class="quick-notes clearfix in-panel mt32">
-              <div class="w100 y mt48">
-                <button onclick="report()" class="pointer rnd2  lh20 y bti btn red report"  style="margin-top:20px"><span class="f11">Report</span></button>
-                <button onclick="skip()" class="pointer rnd2 lh20 mla y bti btn " style="margin-top:20px"><span class="f11">Skip</span></button>
-                <button id="scoreratersubmit" onclick="submit()" class="pointer rnd2 lh20 y bti btn blue alt" style="margin-top:20px"><span class="f11">Submit</span></button>
+            <div class="quick-notes in-panel">
+              <div class="y">
+                <button id="reportG" class="pointer y bti btn red report"  style="margin-top:20px"><span class="f11">Report</span></button>
+                <button id="skipH" class="pointer mla y bti btn " style="margin-top:20px"><span class="f11">Skip</span></button>
+                <button id="scoreratersubmitI" class="pointer rnd2 lh20 y bti btn blue alt" style="margin-top:20px"><span class="f11">Submit</span></button>
               </div>
             </div>
           </div>
@@ -376,16 +365,14 @@
       </div>
     </div>
     <!-- send over 8 images(4 pair) in a pack, and then do elo ratings for them, send back 8 ratings of binary, so 1 byte -->
-    <div id="paired" class="w100">
-      <div class=" narrow x c">
-        <div id="rate-sec" class="y z pt64 pb30">
-          <div class="bg-white pair-img">
-            <input type="radio" class="rad0" id="e0" name="paired">
-            <img id="image" class="mat mt80 mb80 pair-inner v" src="img/laurie.jpg">
+    <div id="paired" class="">
+      <div class="x">
+        <div id="rate-sec">
+          <div id="pairK" class="bg-white pair-img">
+            <img id="imageK" class="mat mt80 mb80 pair-inner v" src="img/laurie.jpg">
           </div>
-          <div class="bg-white pair-img">
-            <input type="radio" class="rad0" id="e1" name="paired">
-            <img id="image" class="mat mt80 mb80 pair-inner v" src="img/lake.jpg">
+          <div id="pairL" class="bg-white pair-img">
+            <img id="imageL" class="mat mt80 mb80 pair-inner v" src="img/lake.jpg">
           </div>
         </div>
       </div>
@@ -439,7 +426,7 @@
         </svg>
         <button>Next</button>
       </div>
-      <div id="uploader" class="w100 rdx oh pt128 pb128">
+      <div id="uploader" class=" rdx oh pt128 pb128">
         <h4 style="font-weight: 600;">Create task</h4>
         <input id="image-file" type="file" multiple/>
 
@@ -456,28 +443,28 @@
           <div>
             <h3>Age</h3>
             <div>
-              <span class="btn-rating"><input type="radio" name="aged">😓 18-23</span>
-              <span class="btn-rating"><input type="radio" name="aged">😓 24-29</span>
-              <span class="btn-rating"><input type="radio" name="aged">😓 30-39</span>
-              <span class="btn-rating"><input type="radio" name="aged">😓 40-54</span>
-              <span class="btn-rating"><input type="radio" name="aged">😓 55+</span>
+              <span class="btn-rating">😓 18-23</span>
+              <span class="btn-rating">😓 24-29</span>
+              <span class="btn-rating">😓 30-39</span>
+              <span class="btn-rating">😓 40-54</span>
+              <span class="btn-rating">😓 55+</span>
             </div>
           </div>
           <div>
             <h3>Gender</h3>
             <div>
-              <span class="btn-rating"><input type="radio" name="gender">😓 Male</span>
-              <span class="btn-rating"><input type="radio" name="gender">😓 Female</span>
-              <span class="btn-rating"><input type="radio" name="gender">😓 Both</span>
+              <span class="btn-rating">😓 Male</span>
+              <span class="btn-rating">😓 Female</span>
+              <span class="btn-rating">😓 Both</span>
             </div>
           </div>
           <div>
             <h3># / image</h3>
             <div>
-              <span class="btn-rating"><input type="radio" name="number">😓 5</span>
-              <span class="btn-rating"><input type="radio" name="number">😓 10</span>
-              <span class="btn-rating"><input type="radio" name="number">😓 15</span>
-              <span class="btn-rating"><input type="radio" name="number">😓 Custom</span>
+              <span class="btn-rating">😓 5</span>
+              <span class="btn-rating">😓 10</span>
+              <span class="btn-rating">😓 15</span>
+              <span class="btn-rating">😓 Custom</span>
             </div>
           </div>
           <div>
@@ -485,9 +472,9 @@
             <div>
               <!--
               <p>Like a bracketing system, using pairs, Using an elo score, can accurately score. This will be much faster, but as a consequence you will not be able to receive tags or any commentary advice.</p>-->
-              <span class="btn-rating"><input type="radio" name="styling">😓 Paired</span>
-              <span class="btn-rating"><input type="radio" name="styling">😓 Scored</span>
-              <span class="btn-rating"><input type="radio" name="styling">😓 Both</span>
+              <span class="btn-rating">😓 Paired</span>
+              <span class="btn-rating">😓 Scored</span>
+              <span class="btn-rating">😓 Both</span>
             </div>
           </div>
           <span>Credits needed: 100</span>
@@ -504,27 +491,27 @@
       <div id="buyCredData" class="box-layout visible-lg visible-md abs v50 l50 bg-white a-center pt40 pb40 pl32 pr32" style="display:none">
         <div id="40c" class="mt11 pt11 buy-button">
           <div class="credit-buy">
-            <a href="https://buy.stripe.com/bIYeYof1YbYbcEM9AA" target="_blank" class="w48p price v mat buy w5 tr btn-primary f17"><span>$5</span></a>
+            <a href="/" target="_blank" class="w48p price v mat buy w5 tr btn-primary f17"><span>$5</span></a>
             <div class="quantity v w120p w6">50 Credits</div>
           </div>
         </div>
         <div id="100c" class="mt11 pt11 buy-button">
           <div class="credit-buy">
-            <a href="https://buy.stripe.com/bIY4jK7zwfan9sAcMN" target="_blank" class="w48p price v mat buy w5 tr btn-primary f17"><span>$9</span></a>
+            <a href="/" target="_blank" class="w48p price v mat buy w5 tr btn-primary f17"><span>$9</span></a>
             <div class="quantity v w120p w6">100 Credits</div>
             <div class="disc">(10% discount)</div>
           </div>
         </div>
         <div id="250c" class="mt11 pt11 buy-button">
           <div class="credit-buy">
-            <a href="https://buy.stripe.com/fZe3fGf1YbYbdIQ4gi" target="_blank" class="w48p price v mat buy w5 tr btn-primary f17"><span>$13</span></a>
+            <a href="/" target="_blank" class="w48p price v mat buy w5 tr btn-primary f17"><span>$13</span></a>
             <div class="quantity v w120p w6">150 Credits</div>
             <div class="disc v w120p w6">(13% discount)</div>
           </div>
         </div>
         <div id="500c" class="mt11 pt11 buy-button">
           <div class="credit-buy">
-            <a href="https://buy.stripe.com/cN217y9HE4vJcEMdQT" target="_blank" class="w48p price v mat buy w5 tr btn-primary f17"><span>$16</span></a>
+            <a href="/" target="_blank" class="w48p price v mat buy w5 tr btn-primary f17"><span>$16</span></a>
             <div class="quantity v w120p w6">200 Credits</div>
             <div class="disc v w120p w6">(20% discount)</div>
           </div>
@@ -532,9 +519,45 @@
       </div>
     </div>
 
+    <div id="addonsPanel" class="dn">
+      <h2>Add-ons</h2>
+      <p>One-time payments to upgrade your picture selection process and user experience.</p>
+      <div class="hgrid ">
+        <div>
+          <div>
+            <h3>Insights</h3>
+            <p>Get detailed analytics on your image and see who rated for what, and which types of images are popular throughout your tasks.</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h3>Insights</h3>
+            <p>Get detailed analytics on your image and see who rated for what, and which types of images are popular throughout your tasks.</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h3>R4R Parity</h3>
+            <p>Have 1 rating you give to others count equally towards 1 rate for you (default: 0.4-0.8).</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h3>Faster results</h3>
+            <p>Take a trip on the fast lane and get your images shown to raters more frequently than those of other users.</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h3>Bigger samples</h3>
+            <p>Be allowed to upload up to 128 pictures per task, instead of the regular 32.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <div id="tasks" class="square">
-      <div class="x c">
+    <div id="tasks" class="squared">
+      <div class="x">
         <div id="taskMeta" class="y z data-grid">
           <span>created Jan 17, 2017</span>
         </div>
@@ -557,167 +580,64 @@
           </div>
         </div>
         <div class="y z">
-          <div class="wrapsort">
+          <div class="wrapsort y z">
             <span class="sortby">Sort by...</span>
-            <div style="display: none;">
-              <p>Bayesian approximation (default)</p>
-              <p>Mean score - arithmetic mean of all the adjusted scores</p>
-              <p>Median score - The score of the 50th percentile. This can be a little bit more accurate for controverisal images that have a strong skew.</p>
-              <p>25th percentile score - S. he score of the 25th percentile. Use this if you are concerned with not posting images that may not be well received by a significant proportion of people.</p>
-            </div>
             <div class="dropdownSelector">
-              <span id="sortMethod">Bayesian Approximation</span>
-              <input id="sortCheckbox" type="checkbox">
-              <ul id="sortDropdown" class="dropsort" style="width: 200px;box-sizing: border-box;">
-                <li><input id="sortMean" type="radio" class="radio"><span>Mean score</span></li>
-                <li><input id="sortGeo" type="radio" class="radio"><span>Geo Mean score</span></li>
-                <li><input id="sortHarm" type="radio" class="radio"><span>Harmonic Mean score</span></li>
-                <li><input id="sortPyth" type="radio" class="radio"><span>Pythago Mean score</span></li>
-                <li><input id="sortMedian" type="radio" class="radio"><span>Median score</span></li>
-                <li><input id="sortBayes" type="radio" class="radio"><span>Bayesian Approximation</span></li><!--for K star scale-->
-                <li><input id="sortQuart" type="radio" class="radio"><span>Lower quartile score</span></li>
-                <li><input id="sortDate" type="radio" class="radio"><span>Date added</span></li>
-                <li><input id="sortModi" type="radio" class="radio"><span>Date modified</span></li>
+              <span id="sortMethodV">Average score</span>
+              <ul id="sortDropdown" class="dropsort">
+                <li><span id="daW">Average score</span></li>
+                <li><span id="dnW"># comments</span></li>
+                <li><span id="dlW">Lower quartile score</span></li>
+                <li><span id="daW">Date added</span></li>
+                <li><span id="dmW">Date modified</span></li>
               </ul>
             </div>
-            <div id="filterTagsWrapper">
+            <div id="filterTagsWrapper" class="dn">
               <span class="sortby">Filter tags...</span>
               <div class="dropdownSelector">
                 <span id="filterTags">Tags</span>
-                <input id="tagCheckbox" type="checkbox">
                 <ul id="tagDropdown" class="dropsort" style="width: 200px;box-sizing: border-box;">
-                  <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>😓 awkward</span></span></li>
-                  <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>🖼 bad framing</span></span></li>
-                  <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>🍞 bland</span></span></li>
-                  <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>💨 blurry</span></span></li>
-                  <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>⚡️ bright</span></span></li>
-                  <li><span class="wrap-togglable wrap-tag"><input type="checkbox" class="checkbox"><span>🚊 busy</span></span></li>
-                  <li><span class="wrap-togglable wrap-tag"><input id="tagColorful" type="checkbox" class="checkbox"><span>🌈 colorful</span></span></li>
-                  <li><span class="wrap-togglable wrap-tag"><input id="tagCool" type="checkbox" class="checkbox"><span>🕶 cool</span></span></li>
-                  <li><span class="wrap-togglable wrap-tag"><input id="tagDark" type="checkbox" class="checkbox"><span>🌚 dark</span></span></li>
-                  <li><span class="wrap-togglable wrap-tag"><input id="tagGrainy" type="checkbox" class="checkbox"><span>🧂 grainy</span></span></li>
-                  <li><span class="wrap-togglable wrap-tag"><input id="tagOveredited" type="checkbox" class="checkbox"><span>🚨 overedited</span></span></li>
+                  <li><span class="wrap-tag">😓 awkward</span></li>
+                  <li><span class="wrap-tag">🖼 bad framing</span></li>
+                  <li><span class="wrap-tag">🍞 bland</span></li>
+                  <li><span class="wrap-tag">💨 blurry</span></li>
+                  <li><span class="wrap-tag">⚡️ bright</span></li>
+                  <li><span class="wrap-tag">🚊 busy</span></li>
+                  <li><span class="wrap-tag">🌈 colorful</span></li>
+                  <li><span class="wrap-tag">🕶 cool</span></li>
+                  <li><span class="wrap-tag">🌚 dark</span></li>
+                  <li><span class="wrap-tag">🧂 grainy</span></li>
+                  <li><span class="wrap-tag">🚨 overedited</span></li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="y z" style="margin-left: auto;margin-top: 1em; margin-bottom: 9px;">
-            <div id="square" class="structure">
-              <input name="shape" type="radio" class="radio" checked>
-              <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
-                <rect x="0" y="0" width="15" height="15" rx="2" />
-                <rect x="0" y="17" width="15" height="15" rx="2" />
-                <rect x="17" y="0" width="15" height="15" rx="2" />
-                <rect x="17" y="17" width="15" height="15" rx="2" />
+            <button id="squareX" class="structure">
+              <svg id="s0X" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
+                <rect id="s1X" x="0" y="0" width="15" height="15" rx="2" />
+                <rect id="s2X" x="0" y="17" width="15" height="15" rx="2" />
+                <rect id="s3X" x="17" y="0" width="15" height="15" rx="2" />
+                <rect id="s4X" x="17" y="17" width="15" height="15" rx="2" />
               </svg>
-            </div>
-            <div id="rect" class="structure">
-              <input name="shape" type="radio" class="radio">
-              <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
-                <rect x="0" y="0" width="15" height="32" rx="2" />
-                <rect x="17" y="0" width="15" height="32" rx="2" />
+            </button>
+            <button id="rectY" class="structure">
+              <svg id="r0Y" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
+                <rect id="r1Y" x="0" y="0" width="15" height="32" rx="2" />
+                <rect id="r2Y" x="17" y="0" width="15" height="32" rx="2" />
               </svg>
-            </div>
-            <div id="hotdog" class="structure">
-              <input name="shape" type="radio" class="radio">
-              <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
-                <rect x="0" y="0" width="32" height="6.5" rx="2" />
-                <rect x="0" y="8.5" width="32" height="6.5" rx="2" />
-                <rect x="0" y="17" width="32" height="6.5" rx="2" />
-                <rect x="0" y="25.5" width="32" height="6.5" rx="2" />
+            </button>
+            <button id="hotdogZ" class="structure">
+              <svg id="h0Z"  xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
+                <rect id="h1Z" x="0" y="0" width="32" height="6.5" rx="2" />
+                <rect id="h2Z" x="0" y="8.5" width="32" height="6.5" rx="2" />
+                <rect id="h3Z" x="0" y="17" width="32" height="6.5" rx="2" />
+                <rect id="h4Z" x="0" y="25.5" width="32" height="6.5" rx="2" />
               </svg>
-            </div>
+            </button>
           </div>
         </div>
-        <div id="squareContent" class="y z tasklist">
-          <div class="">
-            <div class="y z">
-              <h3>Laurie in Italy69420</h3>
-              <time>3y</time>
-            </div>
-            <div class="gridded v3x2">
-              <img class="imgMat" src="img/laurie.jpg" alt="">
-              <img class="imgMat" src="img/laurie.jpg" alt="">
-              <img class="imgMat" src="img/laurie.jpg" alt="">
-              <img class="imgMat" src="img/laurie.jpg" alt="">
-              <img class="imgMat" src="img/laurie.jpg" alt="">
-              <img class="imgMat" src="img/laurie.jpg" alt="">
-            </div>
-            <div class="y z" style="width:100%;box-sizing: border-box;padding: 0 0 8px 0;">
-              <span class="data-score">7.49</span>
-              <div style="margin-left:auto;">
-                <span class="btn-datapoint">🌄 13 images</span>
-                <span class="btn-datapoint">🏷️ 13 tags</span>
-                <span class="btn-datapoint">💬 13 comments</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="rectContent" class="y z tasklist">
-          <div class="rel" href="">
-            <div class="y z">
-              <h3>Laurie in Italy69420</h3>
-              <time>3y</time>
-            </div>
-            <div>
-              <img class="" src="img/laurie.jpg" style="display: block;">
-            </div>
-            <div class="img-infobox rel">
-              <div class="datafag y z abs">
-                <span class="data-score">5.69</span>
-                <div>
-                  <span class="btn-datapoint">🌄 13 images</span>
-                  <span class="btn-datapoint">🏷️ 13 tags</span>
-                  <span class="btn-datapoint">💬 13 comments</span>
-                </div>
-              </div>
-              <div class="tab-pane d-flex flex-wrap mt-1 dn">
-                <span class="btn-tag">😓 awkward</span>
-                <span class="btn-tag">🖼 bad framing</span>
-                <span class="btn-tag">🍞 bland</span>
-                <span class="btn-tag">💨 blurry</span>
-                <span class="btn-tag">⚡️ bright</span>
-                <span class="btn-tag">🚊 busy</span>
-                <span class="btn-tag">more...</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="hotdogContent" class="tasklist">
-          <div>
-            <div class="y z">
-              <h3>Laurie in Italy69420</h3>
-              <time>3y</time>
-            </div>
-            <div class="tasksHotdog">
-              <img class="imgMat" src="img/laurie.jpg">
-              <img class="imgMat" src="img/laurie.jpg">
-              <img class="imgMat" src="img/laurie.jpg">
-              <img class="imgMat" src="img/laurie.jpg">
-              <img class="imgMat" src="img/laurie.jpg">
-              <img class="imgMat" src="img/laurie.jpg">
-              <img class="imgMat" src="img/laurie.jpg">
-            </div>
-            <div class="img-infobox2">
-              <div class="y">
-                <span class="data-score">5.69</span>
-                <div>
-                  <span class="btn-datapoint">🌄 13 images</span>
-                  <span class="btn-datapoint">🏷️ 13 tags</span>
-                  <span class="btn-datapoint">💬 13 comments</span>
-                </div>
-              </div>
-              <div class="tab-pane d-flex flex-wrap mt-1">
-                <span class="btn-tag">😓 awkward</span>
-                <span class="btn-tag">🖼 bad framing</span>
-                <span class="btn-tag">🍞 bland</span>
-                <span class="btn-tag">💨 blurry</span>
-                <span class="btn-tag">⚡️ bright</span>
-                <span class="btn-tag">🚊 busy</span>
-                <span class="btn-tag">more...</span>
-              </div>
-            </div>
-          </div>
+        <div id="tasklist" class="y z">
         </div>
         <div id="indvImg" class="y z">
           <img class="v" src="img/laurie.jpg">
@@ -729,27 +649,27 @@
                 <div class="rating-score2 y z" style="padding-bottom: 1em;">
                   <div>
                     <div class="score-bar"></div>
-                    <span class="tag-name"><span class="d-block emoji">😒</span><span class="tc txt-rate">Eh</span></span>
+                    <span class="tag-name"><span class="emoji">😒</span><span class="tc txt-rate">Eh</span></span>
                     <span class="dist-elem">5</span>
                   </div>
                   <div>
                     <div class="score-bar"></div>
-                    <span class="tag-name"><span class="d-block emoji">😐</span><span class="tc txt-rate">Decent</span></span>
+                    <span class="tag-name"><span class="emoji">😐</span><span class="tc txt-rate">Decent</span></span>
                     <span class="dist-elem">11</span>
                   </div>
                   <div>
                     <div class="score-bar"></div>
-                    <span class="tag-name"><span class="d-block emoji">😃</span><span class="tc txt-rate">Great</span></span>
+                    <span class="tag-name"><span class="emoji">😃</span><span class="tc txt-rate">Great</span></span>
                     <span class="dist-elem">7</span>
                   </div>
                   <div>
                     <div class="score-bar"></div>
-                    <span class="tag-name"><span class="d-block emoji">🤩</span><span class="tc txt-rate">Stunning</span></span>
+                    <span class="tag-name"><span class="emoji">🤩</span><span class="tc txt-rate">Stunning</span></span>
                     <span class="dist-elem">5</span>
                   </div>
                   <div>
                     <div class="score-bar"></div>
-                    <span class="tag-name"><span class="d-block emoji">🤑</span><span class="tc txt-rate">Brilliant</span></span>
+                    <span class="tag-name"><span class="emoji">🤑</span><span class="tc txt-rate">Brilliant</span></span>
                     <span class="dist-elem">25</span>
                   </div>
                 </div>
@@ -811,7 +731,11 @@
         </div>
       </div>
     </div>
-    <script src="main.js"></script>
+    <script src="assets/js/router.js"></script>
+    <script src="assets/js/clicker.js"></script>
+    <script src="assets/js/swipe.js"></script>
+    <script src="assets/js/tasks.js"></script>
+    <!--<script src="main.js"></script>-->
     <script src="node_modules/argon2-browser/dist/argon2-bundled.min.js"></script>
   </body>
 </html>

@@ -1,0 +1,56 @@
+#sortDropdown {
+  width: 200px;
+  box-sizing: border-box;
+}
+
+.wrapsort {
+  position: relative;
+  display: flex;
+  line-height: 32px;
+  font-size: 14px;
+}
+.sortby {
+  padding-right: 1em;
+  line-height: 50px;
+}
+#sortMethodV {
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 2px 8px;
+  line-height: 50px;
+  cursor: pointer;
+  line-height: 20px;
+  margin: 12px 0;
+  display: block;
+}
+.dropdownSelector {
+  width: 200px;position: relative;
+  
+    z-index: 99999;
+}
+.dropsort {
+  top: 20px;
+  right: 0;
+  position: absolute;
+  padding: 0;
+  list-style: none;
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.1);
+  z-index: 999;
+  background: white;
+  padding: 0;
+  margin:0;
+  top: 42px;
+  cursor: pointer;
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}
+input:checked+.dropsort {
+  display: block;
+}
+.dropsort>li{
+  padding: 2px 8px;
+}

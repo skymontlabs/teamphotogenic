@@ -2988,6 +2988,7 @@ footer ul {
 }
 .dropdownSelector {
   width: 200px;position: relative;
+  
     z-index: 99999;
 }
 .dropsort {

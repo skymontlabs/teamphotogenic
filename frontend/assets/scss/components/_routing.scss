@@ -1,51 +1,78 @@
 /*position: absolute; visibility: hidden;*/
-#admin,
+#profile,
 #tasks,
 #scorerater,
 #paired {
-	visibility: hidden;
-	position: absolute;
+	width:  			100%;
+	height: 			0;
+	visibility: 		hidden;
+	position: 			absolute;
 }
 
-#globl {
-	&.showA {
-		#admin {
-			display: block
+#gbl {
+	&>#profile,
+	&>#tasks,
+	&>#paired,
+	&>#dark,
+	&>#admin {
+		margin-top: 82px;
+	}
+	&.showRate {
+		@media (max-width: $tablet-max) {
+			overflow: hidden;
+			height: 100vh;
+			width: 100vw;
+			position: fixed;
 		}
+
+		#scorerater {
+			height: auto;
+			visibility: visible;
+		}
+		#profile,
 		#tasks,
-		#scorerater,
 		#paired {
 		}
 	}
 
-	&.showM {
+	&.showS,
+	&.showTasks {
 		#tasks {
-			display: block	
+			height: auto;
+			visibility: visible
 		}
-		#admin,
+		#profile,
 		#scorerater,
 		#paired {
 		}
 	}
 
-	&.showS {
-		#scorerater {
-			display: block
+	&.showProfile {
+		#profile {
+			height: auto;
+			visibility: visible
 		}
-		#admin,
 		#tasks,
+		#scorerater,
 		#paired {
 		}
 	}
 
-	&.showP {
+	&.showTasks {
+	}
+
+	&.showTaskID {
+	}
+
+	&.showNotifications {
 		#paired {
-			display: block
+			height: auto;
+			visibility: visible
 		}
-		#admin,
+		#profile,
 		#tasks,
 		#scorerater {
 		}
- 	}
-		
+	}
+	
 }

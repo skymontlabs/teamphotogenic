@@ -1,15 +1,87 @@
-.tasklist {
+#tasklist {
   width: 100%;
   display: grid;
   row-gap: 16px;
   column-gap: 16px;
-  grid-template-columns:  1fr 1fr 1fr;
+  padding-top: 1em;
   padding-bottom: 2em;
+  border-top: 1px solid rgba(0,0,0,0.05);
 
   time {
     font-size: 10px;
     line-height: 39px;
     color: #878c8f;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0;
+  }
+
+  .mtaWrap {
+    width:100%;
+    box-sizing: border-box;
+    padding: 0 0 8px 0;
+  }
+}
+
+#tasks {
+  &.squared #squareX rect,
+  &.slideshow #rectY rect,
+  &.hlong #hotdogZ rect {
+    fill: #5984ff;
+  }
+
+  &.squared #tasklist {
+    @media (max-width: $tablet-max) {
+      grid-template-columns:  1fr;
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {
+      grid-template-columns:  1fr 1fr;
+    }
+     
+    @media (min-width: $tablet-wide-min) {
+      grid-template-columns:  1fr 1fr 1fr;
+    }
+
+    .imgWrap {
+      width: 100%;
+      display: grid;
+      row-gap: 8px;
+      column-gap: 8px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      padding-bottom: 8px;
+    }
+  }
+
+  &.slideshow #tasklist {
+    .imgWrap {
+      display: block;
+      width: 100%;
+      padding-bottom: 8px;
+      position: relative;
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &.hlong #tasklist {
+    display: block;
+    .imgWrap {
+      width:                  100%;
+      display:                grid;
+      row-gap:                16px;
+      column-gap:             8px;
+      grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr;
+      padding-bottom:         12px;
+    }
   }
 }
 
@@ -25,6 +97,7 @@
   position: relative;
   width: 20px;
   margin-left: 12px;
+  padding: 0;
 
   svg {
     width: 20px;
@@ -57,39 +130,5 @@
 
   .radio:checked+svg rect {
     fill:#5984ff;
-  }
-}
-
-.square {
-  .squareImages {
-    width: 100%;
-    display: grid;
-    row-gap: 8px;
-    column-gap: 8px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    padding-bottom: 8px;
-  }
-}
-
-.slideshow {
-
-}
-
-.hlong {
-  display: block;
-  .hotdogImages {
-    width:                  100%;
-    display:                grid;
-    row-gap:                16px;
-    column-gap:             8px;
-    grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    padding-bottom:         12px;
-
-    &>img {
-      width: 100%;
-      display: block;
-      margin: 0;
-    }
   }
 }

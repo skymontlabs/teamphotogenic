@@ -4,9 +4,9 @@
 // DROPDOWNS BEGIN
 //
 var ziv=0,znv=0,zpv=0;
-infTog.onclick = (event) => {console.log('sex');if(ziv==0){dropi.style.display='block';ziv=1}else{dropi.style.display='none';ziv=0}dropn.style.display='none';dropp.style.display='none';znv=0;zpv=0;}
-notTog.onclick = (event) => {if(znv==0){dropn.style.display='block';znv=1}else{dropn.style.display='none';znv=0}dropi.style.display='none';dropp.style.display='none';ziv=0;zpv=0}
-prfTog.onclick = (event) => {if(zpv==0){dropp.style.display='block';zpv=1}else{dropp.style.display='none';zpv=0}dropi.style.display='none';dropn.style.display='none';ziv=0;znv=0}
+//infTog.onclick = (event) => {console.log('sex');if(ziv==0){dropi.style.display='block';ziv=1}else{dropi.style.display='none';ziv=0}dropn.style.display='none';dropp.style.display='none';znv=0;zpv=0;}
+//notTog.onclick = (event) => {if(znv==0){dropn.style.display='block';znv=1}else{dropn.style.display='none';znv=0}dropi.style.display='none';dropp.style.display='none';ziv=0;zpv=0}
+//prfTog.onclick = (event) => {if(zpv==0){dropp.style.display='block';zpv=1}else{dropp.style.display='none';zpv=0}dropi.style.display='none';dropn.style.display='none';ziv=0;znv=0}
 //
 // DROPDOWNS END
 //
@@ -29,7 +29,7 @@ if (!loggedin) {
   loginer.style.display='none';
   loggedin=true;
   globl.className='showS'
-  nV.style.display='block';
+  nv.style.display='block';
 } else {
   dark.style.display='flex'
 }
@@ -51,6 +51,7 @@ buyCredLi.onclick = (event) => {
   dark.style.background='rgba(0,0,0,.6)'
   buyCredData.style.display='flex';
 }
+
 newPost.onclick = (event) => {
   dark.style.display='block'
   dark.style.background='rgba(0,0,0,.6)'
@@ -199,89 +200,6 @@ for(var i = 0; i < anchors.length; i++) {
 
 // setup router
 
-const useHash = true;
-const apiUrl = 'https://lucasreta.com/stack-overflow/spa-vanilla-js/api';
-const routes = ['section-1', 'section-2'];
-const content_box = document.getElementById("content_box");
-
-function get(url) {
-    page = url.split('/').pop()
-    //scorerater.style.display='none'
-
-    if (page == 'profile') {
-        globl.className = "";
-        globl.classList.add('showA')
-
-        editProfilePanel.style.display='block'
-        editProfileV.children[0].checked=true
-
-
-    } else if (page == 'securityPrivacy') {
-        globl.className = "";
-        globl.classList.add('showA')
-    } else if (page == 'helpSupport') {
-        globl.className = "";
-        globl.classList.add('showA')
-    } else if (page == 'displayNotifications') {
-        globl.className = "";
-        globl.classList.add('showA')
-        notificationsPanel.style.display='block'
-    } else if (page == 'tasks') {
-        globl.className = "";
-        globl.classList.add('showM')
-    } else if (page == 'paired') {
-        globl.className = "";
-        globl.classList.add('showP')
-    } else if (page == '') {
-        globl.className = "";
-        globl.classList.add('showS')
-    } else if (page == 'paired') {
-    }
-}
-
-
-/*link controller*/
-const links = document.getElementsByTagName('a');
-for(let i = 0; i < links.length; i++) {
-  links[i].addEventListener('click', function(event) {
-    console.log('lauren')
-    event.preventDefault();
-    get(links[i].href);
-
-    window.history.pushState({},links[i].href,links[i].href)
-
-    if (prfTog.checked) {
-        prfTog.checked=false
-    }
-  }, false);
-}
-
-
-
-// clickoutside removal 
-//https://stackoverflow.com/questions/152975/how-do-i-detect-a-click-outside-an-element
-function onClickOutside() {
-  document.addEventListener('click', event => {
-    /*alert(event.target)
-*/
-
-
-    if (!dropp.contains(event.target)) {
-      //alert('seggs')
-      //dropp.style.display='none'
-       //drops.style.display='none'
-        //prfChx.checked=true
-       //alert('seggs')
-    }
-  });
-};
-
-// Using
-onClickOutside();
-
-
-
-
 
 
 
@@ -320,96 +238,6 @@ function get_totp(secret)
     str = sArr.join("");
     var sArr = [];
 }
-
-function addNotifications() {
-  /*
-    <li class="notifItem">
-      <a class="y pl f13 lh20 w5" href="/tests.html">
-        <img src="img/square.jpg" alt="">
-        <span>Your test has finished with 45 votes.</span>
-      </a>
-      <span class="delete-elem"></span>
-    </li>
-  */
-  const del = document.createElement('span')
-  del.className='delete-elem'
-
-  for (var i = 0; i < 10; ++i) {
-    const lii = document.createElement('li')
-    const link = document.createElement('a')
-    const img = document.createElement('img')
-    const txt = document.createElement('span')
-
-    lii.className='notifItem'
-    link.className='y pl f13 lh20 w5'
-    link.href='/profile'
-    img.src='img/square.jpg'
-    txt.innerText='Your text has sexmaster69420'
-
-    link.appendChild(img)
-    link.appendChild(txt)
-    lii.appendChild(link)
-    lii.appendChild(del.cloneNode(true))
-
-    notifList.appendChild(lii)
-  }
-}
-
-
-addNotifications()
-
-function setupMeters() {
-
-/*
-            <h2 id="numTask" class="num-data">23</h2>
-            <p>tasks</p>
-          </div>
-          <div class="">
-            <h2 id="numImg" class="num-data">405</h2>
-            <p>images</p>
-          </div>
-          <div class="">
-            <h2 id="numCom" class="num-data">1</h2>
-            <p>comments</p>
-          </div>
-          <div class="">
-            <h2 id="curCre" class="num-data">0</h2>
-            <p>current credits<span class="dn">active images</span></p>
-          </div>
-*/
-  numTask.innerText = '30'
-  numImg.innerText = '30'
-  numCom.innerText = '30'
-  curCre.innerText = '30'
-}
-setupMeters()
-
-function hotdogData() {
-  const outer = document.createElement('div')
-  
-  const imgWrap = document.createElement('div')
-  const txtWrap = document.createElement('div')
-
-  const mtaWrap = document.createElement('div')
-  const score = document.createElement('span')
-  const imgCt = score.cloneNode(true)
-  const tagCt = score.cloneNode(true)
-  const comCt = score.cloneNode(true)
-
-  const tagWrap = document.createElement('div')
-
-  score.innerText = '5.69'
-  imgCt.innerText = '🌄 13 images'
-  tagCt.innerText = '🏷️ 13 tags'
-  comCt.innerText = '💬 13 comments'
-
-  tagWrap.className = 'tab-pane d-flex flex-wrap mt-1'
-  for (var i = 0; i < 6; ++i) {
-    const tagElem = score.cloneNode(true)
-    tagElem.className='btn-tag'
-  }
-}
-
 
 
 pkey.onclick = (event) => {

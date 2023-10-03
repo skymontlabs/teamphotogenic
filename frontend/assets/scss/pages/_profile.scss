@@ -1,0 +1,26 @@
+#sbar {
+	@media (min-width: $tablet-min) {
+		width: 200px;
+		height: 100%;
+		display: block;
+	}
+}
+
+#pnl {
+	width: calc(100% - 200px);
+}
+
+#nvz {
+	width: 100%;
+}
+
+#nvs_,
+#nvn_,
+#nvp_ {
+	color: #424652;
+}
+
+#nvS_,
+#nvN_ {
+	margin-left: 10px;
+}
