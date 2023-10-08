@@ -3,16 +3,17 @@
   height:              82px;
   z-index:             99;
   transition:          0.1s ease-out padding;
-  position:            absolute  ;
+  position:            absolute;
   z-index:             9999999;
 
   #logo {
-
     @media (max-width: $tablet-max) {
-      visibility: hidden;
+      opacity:         0;
+      visibility:      hidden;
     }
     @media (min-width: $tablet-min) {
-      line-height: 82px;cursor: pointer;
+      line-height:     82px;
+      cursor:          pointer;
     }
   }
 
@@ -24,8 +25,8 @@
     p {
       font-size:       12px;
       @media (min-width: $tablet-min) {
-        visibility: hidden;
-        position: absolute;
+        visibility:    hidden;
+        position:      absolute;
       }
     }
 
@@ -86,11 +87,11 @@
     #logo {
       @media (max-width: $tablet-max) {
         border-bottom: 1px dashed gray;
-        visibility: visible;
-        line-height: 60px;
-        top: 16px;
-        box-sizing: border-box;
-        padding: 0 0 0 20px;
+        visibility:    visible;
+        line-height:   60px;
+        top:           16px;
+        box-sizing:    border-box;
+        padding:       0 0 0 20px;
         cursor: pointer;
         display: block;
         width: 100%;
@@ -104,6 +105,15 @@
 
 #logoSec {
   width: 100%;
+  position: relative;
+}
+
+#team {
+  color: #111
+}
+
+#photogenic {
+  color: #5984ff
 }
 
 #nsec {
@@ -117,6 +127,7 @@
     display: block;
     background: white;
     visibility: hidden;
+    box-shadow: 0px 8px 25px -1px rgba(0,0,0,0.2);
   }
 }
 
@@ -241,28 +252,37 @@
 #barsL {
   width:               60px;
   height:              50px;
-  background:          rgba(255,255,255,0.2);
   backdrop-filter:     blur(40px);
   //box-shadow:          4px 5px 10px -3px rgba(0, 0, 0, 0.2);
   border-radius:       30px;
   display:             block;
   position:            absolute;
   top:                 20px;
+  background:          rgba(255, 255, 255, 0.2);
+  border:              1px solid rgba(0,0,0,0.1);
 
-  @media (min-width: $tablet-min) {
-    visibility: hidden;
+  @media (max-width: $tablet-max) {
+    opacity:           1;
   }
+  
+  @media (min-width: $tablet-min) {
+    opacity:           0;
+    visibility:        hidden;
+  }
+
 
   &:before,
   &:after {
-    width:             26px;
-    height:            4px;
-    background:        white;
+    width:             22px;
+    height:            2px;
     content:           '';
     display:           block;
+    background:        black;
+
     position:          absolute;
     border-radius:     3px;
-    left:              17px
+    left:              18px;
+
   }
 
   &:before {

@@ -1,6 +1,21 @@
 #sortDropdown {
-  width: 200px;
+  min-width: $dropdown-width;
   box-sizing: border-box;
+//  transform: translate(8px, 10px);
+  line-height: 32px;
+  font-size: 14px;
+}
+
+#bblDropdown {
+  width: 140px !important;
+  min-width: 0;
+  box-sizing: border-box;
+  transform: translate(90px, 10px);
+  right: 0;
+  li {
+    line-height: 32px;
+    font-size: 14px;
+  }
 }
 
 .wrapsort {
@@ -9,48 +24,107 @@
   line-height: 32px;
   font-size: 14px;
 }
+
+/*
 .sortby {
   padding-right: 1em;
-  line-height: 50px;
-}
-#sortMethodV {
-  border-radius: 4px;
+  line-height: 70px;
+}*/
+
+.selClick {
+  border-radius: 12px;
   border: 1px solid rgba(0,0,0,0.1);
-  padding: 2px 8px;
+  padding: 5px 8px 5px 16px;
   line-height: 50px;
   cursor: pointer;
   line-height: 20px;
-  margin: 12px 0;
+  margin: 22px 0;
   display: block;
-}
-.dropdownSelector {
-  width: 200px;position: relative;
+  color: black;
+  -webkit-touch-callout: none; 
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
   
-    z-index: 99999;
 }
+
+#filterMethodW,
+#sortMethodV {
+}
+
+.dropdownSelector {
+  width: $selector-width;
+  position: relative;
+  z-index: 99999;
+  &.short {
+    width: $selector-s-width;
+  }
+  svg {
+    width: 12px;
+    height: 24px;
+    position: absolute;
+    top: 27px;
+    right: 15px;
+    rect,
+    path {
+      fill: #3d3d4e;
+    }
+  }
+}
+
+.noselect {
+}
+
 .dropsort {
-  top: 20px;
+  min-width: 180px;
   right: 0;
   position: absolute;
   padding: 0;
   list-style: none;
-  border-radius: 4px;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.0);
   z-index: 999;
   background: white;
-  padding: 0;
-  margin:0;
-  top: 42px;
+  margin: 0;
+  top: 54px;
   cursor: pointer;
-  display: none;
+  box-shadow: 0px 15px 50px 0px rgba(27, 32, 50, 0.1);
+  border-radius: 24px;
+  padding: 14px;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease all;
+  transform: translate(8px, 20px);
+
+  &>li{
+    padding: 2px 8px 2px 15px;
+    transition: 0.4s ease all;
+    border-radius: 12px;
+    &:hover {
+      background: $hover-bg;
+    }
+    &.active {
+      background: $active-bg;
+    }
+  }
 
   &.show {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    transform: translate(8px, 10px);
+    &+#caret {
+      transform: rotate(180deg);
+    }
   }
 }
+
+#caret {
+  transition: 0.2s ease all;
+}
+
 input:checked+.dropsort {
   display: block;
-}
-.dropsort>li{
-  padding: 2px 8px;
 }

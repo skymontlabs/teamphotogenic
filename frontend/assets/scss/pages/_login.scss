@@ -6,6 +6,7 @@
   position:      absolute;
   left:          0;
   top:           0;
+  opacity:       0;
 }
 
 #loginpanel {
@@ -15,14 +16,14 @@
   top:           50%;
   transform:     translate(-50%,-50%);
   width:         350px;
-  margin-left:   260px;
 }
-
 
 #loginer {
   text-align:    center;
   display:       flex;
   width:         100%;
+  opacity:       0;
+  visibility:    hidden;
 
   label {
     display:     block;

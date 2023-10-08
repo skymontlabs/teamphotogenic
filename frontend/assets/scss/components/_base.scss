@@ -21,10 +21,6 @@ body {
   text-align: left;
 }
 
-body.dark {
-  background: #252829;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   line-height: 1.4;
@@ -82,11 +78,19 @@ p {
       padding-right: 0
     }
   }
+
+  &.nomax {
+    max-width: 999999px;
+  }
 }
 
 ul {
   list-style: none;
   padding-left: 0;
+}
+
+.abs {
+  position: absolute;
 }
 
 .y {
@@ -113,6 +117,11 @@ ul {
 
 .rel {
   position: relative;
+}
+
+
+.pointer {
+  cursor: pointer;
 }
 
 .mla {

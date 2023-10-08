@@ -1,7 +1,10 @@
 /*position: absolute; visibility: hidden;*/
 #profile,
 #tasks,
+#taskID,
+#dark,
 #scorerater,
+#addonsPanel,
 #paired {
 	width:  			100%;
 	height: 			0;
@@ -10,10 +13,14 @@
 }
 
 #gbl {
+	&.hideall>* {
+		display: none;
+
+	}
 	&>#profile,
 	&>#tasks,
+	&>#taskID,
 	&>#paired,
-	&>#dark,
 	&>#admin {
 		margin-top: 82px;
 	}
@@ -33,10 +40,51 @@
 		#tasks,
 		#paired {
 		}
+
+		#barsL {
+  			border: 1px solid rgba(0,0,0,0.0);
+		  	&:before,
+		  	&:after {
+		  		background: white !important;
+		  	}
+		}	
+	}
+
+	&.showImg {
+		overflow-y: hidden !important;
+		#indvImg {
+			display: block;
+			opacity: 1;
+			visibility: visible;
+		}
+		#dark {
+		    visibility: visible;
+		    opacity: 1;
+		    height: 100vh;
+		    display: block;
+		}
 	}
 
 	&.showS,
 	&.showTasks {
+		#tasks {
+			height: auto;
+			visibility: visible
+		}
+		#tIdNav,
+		#taskMeta {
+			display: none;
+		}
+		.wrapsort {
+			width: 100%;
+		}
+		#profile,
+		#scorerater,
+		#paired {
+		}
+	}
+
+	&.showTaskID {
 		#tasks {
 			height: auto;
 			visibility: visible
@@ -58,11 +106,38 @@
 		}
 	}
 
-	&.showTasks {
+
+	&.showSignup,
+	&.showLogin {
+		#nv {
+			opacity: 0;
+			z-index: 1;
+			visibility: visible;
+			transform: translate(0,-82px);
+		}
+		#loginer {
+			display: block;
+			visibility: visible;
+			opacity: 1;
+		}
 	}
 
-	&.showTaskID {
+	&.showSignup {
+		#loginTitle {
+			display: none;
+		}
+		#loginpanel {
+			margin-left: 250px;
+		}
 	}
+
+	&.showLogin {
+		#signupTitle {
+			display: none;
+		}
+	}
+
+	
 
 	&.showNotifications {
 		#paired {

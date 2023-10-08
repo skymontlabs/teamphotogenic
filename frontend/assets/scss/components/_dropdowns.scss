@@ -8,21 +8,24 @@
   position:      absolute;
   visibility:    hidden;
   top:           29px;
+  opacity:       0;
+  transition:    0.2s ease all;
+  transform:     translate(2.25px, 30px);
 
 // original, make sure to keep for sort dropdown
   @media (min-width: $tablet-min) {
     right:       -21px;
     width:       120px;
     border:      1px solid rgba(#8898AA, 0.1);
-    box-shadow:    1px 3px 14px -4px rgba(0, 2, 4, 0.14);
+    box-shadow:  1px 3px 14px -4px rgba(0, 2, 4, 0.14);
   }
 
   @media (max-width: $tablet-max) {
-    left: 0;
-    width: 100%;
-    border: none;
+    left:        0;
+    width:       100%;
+    border:      none;
     box-shadow:  none;
-    position: static;
+    position:    static;
   }
 
   .drophead {
@@ -39,6 +42,8 @@
 
   &.active {
     visibility:  visible;
+    opacity: 1;
+    transform:   translate(2.25px, 0);
   }
 
   .email, .signout {

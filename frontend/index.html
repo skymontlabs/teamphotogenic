@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--<link rel="icon" href="favicon.ico">-->
     <title>TeamPhotogenic</title>
-    <!--<link rel="stylesheet" href="style.css"/>-->
     <link rel="stylesheet" href="main.css"/>
   </head>
-  <body id="gbl" class="showRate">
+  <body id="gbl" class="hideall">
     <nav id="nv">
-      <div class="x y z rel">
+      <div class="x y z nomax rel">
         <div id="logoSec">
-          <a href="/" id="logo"><span style="color: #111">team</span><span style="color:#5984ff">photogenic</span></a>
+          <a href="/" id="logo"><span id="team">team</span><span id="photogenic">photogenic</span></a>
           <div id="logoRateType" class="dropdown">
             <ul id="ratePgs" class="p0">
               <li id="rkey" class="point">
@@ -96,7 +95,7 @@
                     <span id="emailTg">sl@sent.at</span>
                   </li>
                   <li class="email">
-                    <span class="" style="font-size: 10px;line-height: 1;padding-bottom: 6px;">54 credits</span>
+                    <span class="" style="">54 credits</span>
                   </li>
                   <hr class="">
                   <li class="p0"><a id="lPf_" href="/profile">Edit Profile</a></li>
@@ -109,7 +108,7 @@
             </button>
             <button id="plsBtnR" class="rel drop-button">
               <span id="plusR"></span>
-              <div id="dropc" class="dropdown L p4 mt0 mb0 flg clxl abs bsbx">
+              <div id="dropc" class="dropdown L abs bsbx">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation">
                   <use href="#dropdown-arrow"/>
                 </svg>
@@ -139,16 +138,17 @@
     <div id="profile" class="rdx oh">
       <div class="x y">
         <div id="sbar">
-          <ul id="nvz">
-            <li id="nvP_"><a id="nvp_" href="/profile">Profile</a></li>
-            <li id="nvP_"><a id="nvp_" href="/profile">Settings</a></li>
-            <li id="nvP_"><a id="nvp_" href="/profile">Premium</a></li>
-            <li id="nvS_"><a id="nvs_" href="/profile#password">Notifications</a></li>
-            <li id="nvS_"><a id="nvs_" href="/profile#password">Notifications</a></li>
-            <li id="nvN_"><a id="nvn_" href="/profile#notifications">Help</a></li>
+          <ul id="sbu">
+            <li id="sbro_"><a id="sblh_" href="/profile/">Profile</a></li>
+            <li id="sbrs_"><a id="sbls_" href="/profile#settings">Settings</a></li>
+            <li id="sbrw_"><a id="sblw_" href="/profile#password">Password</a></li>
+            <li id="sbrp_"><a id="sblp_" href="/profile#premium">Premium</a></li>
+            <li id="sbrn_"><a id="sbln_" href="/profile#notifications">Notifications</a></li>
+            <li id="sbrh_"><a id="sblh_" href="/profile#help">Help</a></li>
           </ul>
         </div>
-        <div class="" style="background: white">
+        <div id="pnl">
+          <h2>Edit Profile</h2>
           <div>
             <ul id="nvz" class="y">
               <li id="nvP_"><a id="nvs_" href="/profile">Profile</a></li>
@@ -158,7 +158,6 @@
           </div>
           <div class="admin-base">
             <div id="editProfilePanel">
-              <h2>Edit Profile</h2>
               <div>
                 <h4>Email</h4>
                 <div>
@@ -166,40 +165,33 @@
                 </div>
               </div>
               <div>
-                <span class="fwHeavy">Gender*</span>
-                <div id="btnRs" class="btn-wrap">
-                  <button id="age" class="btn-demographics"><span id="age" class="emoji">🤩</span><span id="btnZR3" class="tc txt-rate">Male</span></button>
-                  <button id="age" class="btn-demographics"><span id="age" class="emoji">🤑</span><span id="btnZR4" class="tc txt-rate">Female</span></button>
-                </div>
+                <h5 class="fwHeavy">Gender*</h5>
+                <ul id="myGendera" class="">
+                  <li class="y"><input type="radio" name="gender"><span id="m24x">Male</span></li>
+                  <li class="y"><input type="radio" name="gender"><span id="m24x">Female</span></li>
+                </ul>
               </div>
               <div>
-                <span class="fwHeavy">Rating*</span>
-                <div id="btnRs" class="btn-wrap">
-                  <button id="age" class="btn-demographics"><span id="age" class="emoji">😒</span><span id="btnZR0" class="tc txt-rate">18-24</span></button>
-                  <button id="age" class="btn-demographics"><span id="age" class="emoji">😐</span><span id="btnZR1" class="tc txt-rate">25-29</span></button>
-                  <button id="age" class="btn-demographics"><span id="age" class="emoji">😃</span><span id="btnZR2" class="tc txt-rate">30-39</span></button>
-                  <button id="age" class="btn-demographics"><span id="age" class="emoji">🤩</span><span id="btnZR3" class="tc txt-rate">40-49</span></button>
-                  <button id="age" class="btn-demographics"><span id="age" class="emoji">🤑</span><span id="btnZR4" class="tc txt-rate">50+</span></button>
-                </div>
+                <h5 class="fwHeavy">Rating*</h5>
+                  <ul id="myAgea" class="">
+                    <li class="y"><input type="radio" name="age"><span id="m24x">18-24</span></li>
+                    <li class="y"><input type="radio" name="age"><span id="m30x">25-29</span></li>
+                    <li class="y"><input type="radio" name="age"><span id="m40x">30-39</span></li>
+                    <li class="y"><input type="radio" name="age"><span id="m40x">40-49</span></li>
+                    <li class="y"><input type="radio" name="age"><span id="m50x">50+</span></li>
+                  </ul>
               </div>
               <div>
-                <span class="fwHeavy">Online Habits*</span>
-                <div id="btnRs" class="btn-wrap">
-                  <button id="age" class="btn-demographics"><span id="age" class="emoji">🤩</span><span id="btnZR3" class="tc txt-rate">Rarely</span></button>
-                  <button id="age" class="btn-demographics"><span id="age" class="emoji">🤑</span><span id="btnZR4" class="tc txt-rate">Weekly</span></button>
-                  <button id="age" class="btn-demographics"><span id="age" class="emoji">🤑</span><span id="btnZR4" class="tc txt-rate">Daily</span></button>
-                  <button id="age" class="btn-demographics"><span id="age" class="emoji">🤑</span><span id="btnZR4" class="tc txt-rate">Hourly</span></button>
-                </div>
-
+                <h5 class="fwHeavy">Online Habits*</h5>
                 <div class="dropdownSelector">
-                  <span id="sortMethodV"></span>
-                  <ul id="sortDropdown" class="dropsort">
-                    <li><span id="dlW">Lower quartile score</span></li>
-                    <li><span id="daW">Date added</span></li>
-                    <li><span id="dmW">Date modified</span></li>
+                  <span id="myFreqa"></span>
+                  <ul id="myFreqa" class="">
+                    <li class="y"><input type="radio" name="habits"><span id="ras">Rarely</span></li>
+                    <li class="y"><input type="radio" name="habits"><span id="wes">Weekly</span></li>
+                    <li class="y"><input type="radio" name="habits"><span id="das">Daily</span></li>
+                    <li class="y"><input type="radio" name="habits"><span id="hrs">Hourly</span></li>
                   </ul>
                 </div>
-
               </div>
               <button id="save" class="dn">
                 Save changes
@@ -356,8 +348,8 @@
             <div class="quick-notes in-panel">
               <div class="y">
                 <button id="reportG" class="pointer y bti btn red report"  style="margin-top:20px"><span class="f11">Report</span></button>
-                <button id="skipH" class="pointer mla y bti btn " style="margin-top:20px"><span class="f11">Skip</span></button>
-                <button id="scoreratersubmitI" class="pointer rnd2 lh20 y bti btn blue alt" style="margin-top:20px"><span class="f11">Submit</span></button>
+                <button id="skipH" class="pointer mla y btn " style="margin-top:20px"><span class="f11">Skip</span></button>
+                <button id="scoreratersubmitI" class="pointer btn blue" style="margin-top:20px"><span class="f11">Submit</span></button>
               </div>
             </div>
           </div>
@@ -377,40 +369,41 @@
         </div>
       </div>
     </div>
-    <div id="dark">
-      <div id="optimum" class="dn">
-        <p>We see you are not using an optimum Google Chrome</p>
+    <div id="loginer" style="">
+      <div id="bger">
       </div>
-      <div id="loginer" style="">
-        <div id="bger"></div>
-        <div id="loginpanel">
-          <h1 style="font-size: 20px"><span>Sign up to get started</span><span id="loginTitle">Log in</span></h1>
-          <a href="" class="btn-sso" id="continue">Continue with Google</a>
-          <form>
-            <div> or </div>
+      <div id="loginpanel">
+        <h1 style="font-size: 20px"><span id="signupTitle">Sign up to get started</span><span id="loginTitle">Log in</span></h1>
+        <a href="" id="btnSso">Continue with Google</a>
+        <form>
+          <div> or </div>
+          <label>
+            <label>Email</label>
+          </label>
+          <div class="iS" style="width: 100%;">
+            <input id="emailSignup" autocomplete="email" name="email" type="email" value="" placeholder="user@example.com"  style="width: 100%;box-sizing: border-box;"/>
+          </div>
+          <div style="margin-top: 1em">
             <label>
-              <label>Email</label>
+              <label>Password</label>
             </label>
-            <div class="iS" style="width: 100%;">
-              <input id="emailSignup" autocomplete="email" name="email" type="email" value="" placeholder="user@example.com"  style="width: 100%;box-sizing: border-box;"/>
+            <div class="iS">
+              <input id="passwordSignup" name="password" type="password" value="" placeholder="Password" style="width: 100%;box-sizing: border-box;"/>
             </div>
-            <div style="margin-top: 1em">
-              <label>
-                <label>Password</label>
-              </label>
-              <div class="iS">
-                <input id="passwordSignup" name="password" type="password" value="" placeholder="Password" style="width: 100%;box-sizing: border-box;"/>
-              </div>
-            </div>
-            <div style="width:100%">
-              <p id="wrongpass" class="meta red">Wrong password</p>
-              <div class="meta">By signing up, you agree to our <a href="https://frame.io/terms/" target="_blank">Terms of Service</a> and <a href="https://frame.io/privacy" target="_blank">Privacy Policy.</a>
-              </div>
-              <p  class="meta">Already have an account? <a href="/welcome">Log in.</a></p>
-            </div>
-          </form>
-          <button id="signuper">Sign up</button>
+          </div>
+        </form>
+        <button id="signuper">Sign up</button>
+        <div style="width:100%">
+          <p id="wrongpass" class="meta red">Wrong password</p>
+          <div class="meta">By signing up, you agree to our <a href="https://frame.io/terms/" target="_blank">Terms of Service</a> and <a href="https://frame.io/privacy" target="_blank">Privacy Policy.</a>
+          </div>
+          <p  class="meta">Already have an account? <a href="/welcome">Log in.</a></p>
         </div>
+      </div>
+    </div>
+    <div id="dark">
+      <div id="opt" class="dn">
+        <p>We see you are not using an optimum Google Chrome</p>
       </div>
       <div id="panel2f" class="dn">
         <p>Scan this QR code and copy down this</p>
@@ -429,15 +422,12 @@
       <div id="uploader" class=" rdx oh pt128 pb128">
         <h4 style="font-weight: 600;">Create task</h4>
         <input id="image-file" type="file" multiple/>
-
         <form runat="server" style="position: relative;">
           <input multiple accept="*" type="file" id="imgInp" title="Upload files" />
           <span id="uplList"><b style="font-family:'Colfax Bold'">Upload up to 32 pictures.</b><br> Files can be: JPEG, PNG, TIFF, HEIC, WEBP, AVIF.</span>
         </form>
-
         <div id="upImg" class="upload-list">
         </div>
-
         <div id="taskpref">
           <h3>Task preferences</h3>
           <div>
@@ -470,25 +460,22 @@
           <div>
             <h3>Style</h3>
             <div>
-              <!--
-              <p>Like a bracketing system, using pairs, Using an elo score, can accurately score. This will be much faster, but as a consequence you will not be able to receive tags or any commentary advice.</p>-->
+              <!--<p>Like a bracketing system, using pairs, Using an elo score, can accurately score. This will be much faster, but as a consequence you will not be able to receive tags or any commentary advice.</p>-->
               <span class="btn-rating">😓 Paired</span>
               <span class="btn-rating">😓 Scored</span>
               <span class="btn-rating">😓 Both</span>
             </div>
           </div>
           <span>Credits needed: 100</span>
-          <button style="  width: 100%;margin: 2em 0 0;">Submit task</button>
+          <button style="width: 100%;margin: 2em 0 0;">Submit task</button>
         </div>
       </div>
-
-
-      <div class="abs dn pl32 pr32 pt32 pb32 v50 l50 a-center" style=" background: white;width: 700px;display: none;" id="report-ov">
+      <div class="abs dn" style=" background: white;width: 700px;display: none;" id="report-ov">
         <h3>Are you sure you want to report this image?</h3>
         <p>Images can be reported for being off-topic (results in a change) or being pornographic or harassing (results in removal).</p>
-        <button onclick="submit()" class="ml32 btn alt lh16 w6 f13" style="margin: 4px 0;padding: 6px 19px 5px; font-weight: 600; letter-spacing: 0">Submit</button>
+        <button class="btn alt" style="margin: 4px 0;padding: 6px 19px 5px; font-weight: 600; letter-spacing: 0">Submit</button>
       </div>
-      <div id="buyCredData" class="box-layout visible-lg visible-md abs v50 l50 bg-white a-center pt40 pb40 pl32 pr32" style="display:none">
+      <div id="buyCredData" class="box-layout abs" style="display:none">
         <div id="40c" class="mt11 pt11 buy-button">
           <div class="credit-buy">
             <a href="/" target="_blank" class="w48p price v mat buy w5 tr btn-primary f17"><span>$5</span></a>
@@ -518,7 +505,6 @@
         </div>
       </div>
     </div>
-
     <div id="addonsPanel" class="dn">
       <h2>Add-ons</h2>
       <p>One-time payments to upgrade your picture selection process and user experience.</p>
@@ -555,165 +541,164 @@
         </div>
       </div>
     </div>
-
-    <div id="tasks" class="squared">
+    <div id="tasks">
       <div class="x">
-        <div id="taskMeta" class="y z data-grid">
-          <span>created Jan 17, 2017</span>
-        </div>
-        <div class="y z data-grid">
-          <div class="">
-            <h2 id="numTask" class="num-data"></h2>
-            <p>tasks</p>
+        <div id="taskMeta" class="y z data-grid" style="margin: 3em 0">
+          <div id="taskLs">
+            <h2 style="font-weight: 600;">Sarah Lasalle</h2>
+            <div class="y">
+              <h4>45 <span style="font-size: 12px">images</span></h4>
+              <h4 style="margin-left: 15px">45 <span style="font-size:12px">total votes</span></h4>
+            </div>
+            <span style="font-size: 11px">created Jan 17, 2017</span>
+            <div class="y rel">
+              <button id="resumetests" class="btn blue" style="margin-top:20px;"><span class="f11">Resume test</span></button>
+              <button id="endtests" class="btn red" style="margin-top:20px;margin-left: 12px;"><span class="f11">End test</span></button>
+              <button id="dropdownDotsX" class="dots btn border"><span class="dlef" id="dd0X"></span><span class="dmid" id="dd1X"></span><span class="drig" id="dd2X"></span></button>
+              <ul id="bblDropdown" class="dropsort">
+                <li><span id="editM">Edit test</span></li>
+                <li><span id="deleN">Delete test</span></li>
+              </ul>
+            </div>
           </div>
-          <div class="">
-            <h2 id="numImg" class="num-data"></h2>
-            <p>images</p>
-          </div>
-          <div class="">
-            <h2 id="numCom" class="num-data"></h2>
-            <p>comments</p>
-          </div>
-          <div class="">
-            <h2 id="curCre" class="num-data"></h2>
-            <p>current credits<span class="dn">active images</span></p>
+          <div id="tImgWr">
+            <img id="tImgRt" src="img/laurie.jpg">
           </div>
         </div>
         <div class="y z">
+          <ul id="tIdNav" class="partNav y">
+            <li style=""><a href="/tasks" class="active">Images</a></li>
+            <li style="margin-left: 12px;"><a href="/statistics">Statistics</a></li>
+            <li style="margin-left: 12px;"><a href="/settingsz">Settings</a></li>
+          </ul>
           <div class="wrapsort y z">
-            <span class="sortby">Sort by...</span>
-            <div class="dropdownSelector">
-              <span id="sortMethodV">Average score</span>
-              <ul id="sortDropdown" class="dropsort">
-                <li><span id="daW">Average score</span></li>
-                <li><span id="dnW"># comments</span></li>
-                <li><span id="dlW">Lower quartile score</span></li>
-                <li><span id="daW">Date added</span></li>
-                <li><span id="dmW">Date modified</span></li>
-              </ul>
+            <div class="dropdownSelector short pointer">
+              <span id="filterMethodW" class="selClick">Filter</span>
+              <svg id="s0jW" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 24 24">
+                <rect id="s1W" x="0" y="2.5" width="24" height="3" rx="2" />
+                <rect id="s4W" x="3" y="9" width="18" height="3" rx="2" />
+                <rect id="s4W" x="6" y="15.5" width="12" height="3" rx="2" />
+              </svg>
             </div>
-            <div id="filterTagsWrapper" class="dn">
-              <span class="sortby">Filter tags...</span>
-              <div class="dropdownSelector">
-                <span id="filterTags">Tags</span>
-                <ul id="tagDropdown" class="dropsort" style="width: 200px;box-sizing: border-box;">
-                  <li><span class="wrap-tag">😓 awkward</span></li>
-                  <li><span class="wrap-tag">🖼 bad framing</span></li>
-                  <li><span class="wrap-tag">🍞 bland</span></li>
-                  <li><span class="wrap-tag">💨 blurry</span></li>
-                  <li><span class="wrap-tag">⚡️ bright</span></li>
-                  <li><span class="wrap-tag">🚊 busy</span></li>
-                  <li><span class="wrap-tag">🌈 colorful</span></li>
-                  <li><span class="wrap-tag">🕶 cool</span></li>
-                  <li><span class="wrap-tag">🌚 dark</span></li>
-                  <li><span class="wrap-tag">🧂 grainy</span></li>
-                  <li><span class="wrap-tag">🚨 overedited</span></li>
-                </ul>
-              </div>
+            <div class="dropdownSelector">
+              <span id="sortMethodV" class="selClick">Average score</span>
+              <ul id="sortDropdown" class="dropsort">
+                <li id="daq" class="noselect active">Average score</li>
+                <li id="dmq" class="noselect">Median score</li>
+                <li id="dlq" class="noselect">Lower quartile score</li>
+                <li id="dcq" class="noselect">Comments</li>
+              </ul>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" id="caret"><path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path></svg>
             </div>
           </div>
-          <div class="y z" style="margin-left: auto;margin-top: 1em; margin-bottom: 9px;">
-            <button id="squareX" class="structure">
-              <svg id="s0X" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
-                <rect id="s1X" x="0" y="0" width="15" height="15" rx="2" />
-                <rect id="s2X" x="0" y="17" width="15" height="15" rx="2" />
-                <rect id="s3X" x="17" y="0" width="15" height="15" rx="2" />
-                <rect id="s4X" x="17" y="17" width="15" height="15" rx="2" />
-              </svg>
-            </button>
-            <button id="rectY" class="structure">
-              <svg id="r0Y" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
-                <rect id="r1Y" x="0" y="0" width="15" height="32" rx="2" />
-                <rect id="r2Y" x="17" y="0" width="15" height="32" rx="2" />
-              </svg>
-            </button>
-            <button id="hotdogZ" class="structure">
-              <svg id="h0Z"  xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 32 32">
-                <rect id="h1Z" x="0" y="0" width="32" height="6.5" rx="2" />
-                <rect id="h2Z" x="0" y="8.5" width="32" height="6.5" rx="2" />
-                <rect id="h3Z" x="0" y="17" width="32" height="6.5" rx="2" />
-                <rect id="h4Z" x="0" y="25.5" width="32" height="6.5" rx="2" />
-              </svg>
-            </button>
+        </div>
+        <div id="filtDropdown" class="wrapsort">
+          <div class="dropdownSelector">
+            <span id="statusr" class="selClick">Status</span>
+            <ul id="sortDropdownf" class="dropsort">
+              <li id="sr" class="noselect active"><input type="checkbox">Running</li>
+              <li id="sr" class="noselect active"><input type="checkbox">Running</li>
+            </ul>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" id="caret"><path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path></svg>
+          </div>
+          <div class="dropdownSelector">
+            <span id="statusr" class="selClick">Score range</span>
+            <ul id="sortDropdownf" class="dropsort">
+              <li id="sr" class="noselect active"><input type="checkbox">Running</li>
+              <li id="sr" class="noselect active"><input type="checkbox">Running</li>
+            </ul>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" id="caret"><path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path></svg>
+          </div>
+          <div class="dropdownSelector">
+            <span id="statusr" class="selClick">Score range</span>
+            <ul id="sortDropdownf" class="dropsort">
+              <li id="sr" class="noselect active"><input type="checkbox">Running</li>
+              <li id="sr" class="noselect active"><input type="checkbox">Running</li>
+            </ul>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" id="caret"><path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path></svg>
           </div>
         </div>
         <div id="tasklist" class="y z">
         </div>
-        <div id="indvImg" class="y z">
+        <div id="indvImg" class="y z score">
           <img class="v" src="img/laurie.jpg">
-          <div class="rate-data"> 
+          <div class="rate-data" style="padding: 10px 18px"> 
             <!--if we have analytics disabled-->
-            <div>
+            <ul id="indvNava" class="y" style="padding: 8px 0;margin: 0;">
+              <li>Scoring</li>
+              <li style="margin-left: 1em">Tags</li>
+              <li style="margin-left: 1em">Comments</li>
+            </ul>
+            <div id="scoringa">
+              <h4 style="margin-top: 0;margin-bottom: 1em;">Line graph</h4>
               <div>
-                <h4 style="margin-top: 0;font-family: 'Colfax Bold';margin-bottom: 1em;">Score distribution</h4>
-                <div class="rating-score2 y z" style="padding-bottom: 1em;">
-                  <div>
-                    <div class="score-bar"></div>
-                    <span class="tag-name"><span class="emoji">😒</span><span class="tc txt-rate">Eh</span></span>
-                    <span class="dist-elem">5</span>
-                  </div>
-                  <div>
-                    <div class="score-bar"></div>
-                    <span class="tag-name"><span class="emoji">😐</span><span class="tc txt-rate">Decent</span></span>
-                    <span class="dist-elem">11</span>
-                  </div>
-                  <div>
-                    <div class="score-bar"></div>
-                    <span class="tag-name"><span class="emoji">😃</span><span class="tc txt-rate">Great</span></span>
-                    <span class="dist-elem">7</span>
-                  </div>
-                  <div>
-                    <div class="score-bar"></div>
-                    <span class="tag-name"><span class="emoji">🤩</span><span class="tc txt-rate">Stunning</span></span>
-                    <span class="dist-elem">5</span>
-                  </div>
-                  <div>
-                    <div class="score-bar"></div>
-                    <span class="tag-name"><span class="emoji">🤑</span><span class="tc txt-rate">Brilliant</span></span>
-                    <span class="dist-elem">25</span>
+                <div style="width:100%;height:4px;background:rgba(0,2,40,0.1);border-radius: 4px;">
+                  <div style="width:78%;height:4px;background:rgba(200,250,255,0.8);">
                   </div>
                 </div>
               </div>
-              <div style="margin-top: 2em">
-                <h4 style="font-family: 'Colfax Bold'">
-                  <span>Tag distribution</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="12" height="12" style="top: 1px;position: relative;"><path d="M160 320C71.78 320 0 248.22 0 160S71.78 0 160 0s160 71.78 160 160-71.78 160-160 160Zm0-292.57C86.9 27.43 27.43 86.9 27.43 160S86.9 292.57 160 292.57 292.57 233.1 292.57 160 233.1 27.43 160 27.43ZM151.9 192.85c-3.12 0-5.66-2.53-5.66-5.66v-2.61c0-3.48.25-6.6.76-9.35a35.75 35.75 0 0 1 2.39-7.83c1.09-2.46 2.54-4.86 4.35-7.18 1.81-2.32 4.1-4.79 6.85-7.4l9.79-9.35a40.29 40.29 0 0 0 7.07-8.27c1.96-3.05 2.94-6.74 2.94-11.09 0-5.66-1.78-10.4-5.33-14.25-3.56-3.84-8.59-5.76-15.12-5.76-3.34 0-6.35.62-9.03 1.85-2.69 1.23-5 2.9-6.96 5s-3.45 4.53-4.46 7.29c-.44 1.18-.79 2.38-1.07 3.58-.63 2.76-3.13 4.68-5.95 4.43l-15.35-1.37c-3.4-.3-5.78-3.53-5.02-6.86 1.02-4.46 2.5-8.55 4.44-12.29 2.83-5.44 6.49-10.04 10.99-13.81 4.49-3.77 9.64-6.63 15.45-8.59 5.8-1.96 12.04-2.94 18.71-2.94 6.23 0 12.15.91 17.73 2.72s10.51 4.5 14.79 8.05c4.28 3.56 7.65 7.94 10.12 13.16 2.46 5.22 3.7 11.24 3.7 18.06 0 4.64-.51 8.7-1.52 12.18-1.02 3.48-2.47 6.67-4.35 9.57-1.89 2.9-4.17 5.69-6.85 8.38-2.69 2.69-5.69 5.48-9.03 8.38-2.9 2.47-5.26 4.64-7.07 6.53-1.82 1.89-3.26 3.77-4.35 5.66a19.813 19.813 0 0 0-2.28 6.09c-.44 2.18-.65 4.86-.65 8.05 0 3.12-2.53 5.66-5.66 5.66h-14.36Zm-10.01 30.24c0-4.64 1.7-8.63 5.11-11.96s7.51-5 12.29-5 8.7 1.6 12.18 4.79c3.48 3.19 5.22 7.11 5.22 11.75s-1.71 8.63-5.11 11.96c-3.41 3.34-7.51 5-12.29 5-2.32 0-4.53-.44-6.63-1.31-2.1-.87-3.95-2.03-5.55-3.48-1.6-1.45-2.87-3.19-3.81-5.22-.95-2.03-1.41-4.2-1.41-6.53Z" fill="#424652"/></svg>
-                  <span class="hoverds dn">
-                    <span>Red tags: < 20&#37; of users</span>
-                    <span>yellow tags: < 20&#37; of users</span>
-                    <span>green tags: 60&#37; of users selected this</span>
-                  </span>
-                </h4>
+              <h4 style="margin-top: 1em;margin-bottom: 1em;">Distribution</h4>
+              <div class="rating-score2 y z" style="padding-bottom: 1em;">
                 <div>
-                  <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">13</span> 😓 awkward</span></span>
-                  <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">12</span> 🖼 bad framing</span></span>
-                  <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">11</span> 🍞 bland</span></span>
-                  <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">10</span> 💨 blurry</span></span>
-                  <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">5</span> ⚡️ bright</span></span>
-                  <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">4</span> 🚊 busy</span></span>
-                  <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">4</span> 🌈 colorful</span></span>
-                  <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">4</span> 🕶 cool</span></span>
-                  <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">1</span> 🌚 dark</span></span>
+                  <div class="score-bar"></div>
+                  <span class="tag-name"><span class="emoji">😒</span><span class="tc txt-rate">Eh</span></span>
+                  <span class="dist-elem">5</span>
                 </div>
-              </div>
-              <div style="margin-top: 2em">
-                <h4 style="font-family: 'Colfax Bold'">Comments</h4>
-                <div id="commentGrid" style="overflow-x:hidden;overflow-y:scroll;height: auto;">
-                  <div class="comment"><span style="font-size:12px">So pretty ava</span><i>F, 32</i></div>
-                  <div class="comment"><span style="font-size:12px">Move the right side lefta</span><i>F, 32</i></div>
-                  <div class="comment"><span style="font-size:12px">That's a bit too gay</span><i>F, 32</i></div>
-                  <div class="comment"><span style="font-size:12px">Aubrey is kinda cute</span><i>F, 32</i></div>
-                  <div class="comment"><span style="font-size:12px">Do not include the other parts</span><i>F, 32</i></div>
+                <div>
+                  <div class="score-bar"></div>
+                  <span class="tag-name"><span class="emoji">😐</span><span class="tc txt-rate">Decent</span></span>
+                  <span class="dist-elem">11</span>
+                </div>
+                <div>
+                  <div class="score-bar"></div>
+                  <span class="tag-name"><span class="emoji">😃</span><span class="tc txt-rate">Great</span></span>
+                  <span class="dist-elem">7</span>
+                </div>
+                <div>
+                  <div class="score-bar"></div>
+                  <span class="tag-name"><span class="emoji">🤩</span><span class="tc txt-rate">Stunning</span></span>
+                  <span class="dist-elem">5</span>
+                </div>
+                <div>
+                  <div class="score-bar"></div>
+                  <span class="tag-name"><span class="emoji">🤑</span><span class="tc txt-rate">Brilliant</span></span>
+                  <span class="dist-elem">25</span>
                 </div>
               </div>
             </div>
+            <div id="taga" style="margin-top: 2em">
+              <h4 style="font-family: 'Colfax Bold'">
+                <span>Tag distribution</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="12" height="12" style="top: 1px;position: relative;"><path d="M160 320C71.78 320 0 248.22 0 160S71.78 0 160 0s160 71.78 160 160-71.78 160-160 160Zm0-292.57C86.9 27.43 27.43 86.9 27.43 160S86.9 292.57 160 292.57 292.57 233.1 292.57 160 233.1 27.43 160 27.43ZM151.9 192.85c-3.12 0-5.66-2.53-5.66-5.66v-2.61c0-3.48.25-6.6.76-9.35a35.75 35.75 0 0 1 2.39-7.83c1.09-2.46 2.54-4.86 4.35-7.18 1.81-2.32 4.1-4.79 6.85-7.4l9.79-9.35a40.29 40.29 0 0 0 7.07-8.27c1.96-3.05 2.94-6.74 2.94-11.09 0-5.66-1.78-10.4-5.33-14.25-3.56-3.84-8.59-5.76-15.12-5.76-3.34 0-6.35.62-9.03 1.85-2.69 1.23-5 2.9-6.96 5s-3.45 4.53-4.46 7.29c-.44 1.18-.79 2.38-1.07 3.58-.63 2.76-3.13 4.68-5.95 4.43l-15.35-1.37c-3.4-.3-5.78-3.53-5.02-6.86 1.02-4.46 2.5-8.55 4.44-12.29 2.83-5.44 6.49-10.04 10.99-13.81 4.49-3.77 9.64-6.63 15.45-8.59 5.8-1.96 12.04-2.94 18.71-2.94 6.23 0 12.15.91 17.73 2.72s10.51 4.5 14.79 8.05c4.28 3.56 7.65 7.94 10.12 13.16 2.46 5.22 3.7 11.24 3.7 18.06 0 4.64-.51 8.7-1.52 12.18-1.02 3.48-2.47 6.67-4.35 9.57-1.89 2.9-4.17 5.69-6.85 8.38-2.69 2.69-5.69 5.48-9.03 8.38-2.9 2.47-5.26 4.64-7.07 6.53-1.82 1.89-3.26 3.77-4.35 5.66a19.813 19.813 0 0 0-2.28 6.09c-.44 2.18-.65 4.86-.65 8.05 0 3.12-2.53 5.66-5.66 5.66h-14.36Zm-10.01 30.24c0-4.64 1.7-8.63 5.11-11.96s7.51-5 12.29-5 8.7 1.6 12.18 4.79c3.48 3.19 5.22 7.11 5.22 11.75s-1.71 8.63-5.11 11.96c-3.41 3.34-7.51 5-12.29 5-2.32 0-4.53-.44-6.63-1.31-2.1-.87-3.95-2.03-5.55-3.48-1.6-1.45-2.87-3.19-3.81-5.22-.95-2.03-1.41-4.2-1.41-6.53Z" fill="#424652"/></svg>
+                <span class="hoverds dn">
+                  <span>Red tags: < 20&#37; of users</span>
+                  <span>yellow tags: < 20&#37; of users</span>
+                  <span>green tags: 60&#37; of users selected this</span>
+                </span>
+              </h4>
+              <div>
+                <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">13</span> 😓 awkward</span></span>
+                <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">12</span> 🖼 bad framing</span></span>
+                <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">11</span> 🍞 bland</span></span>
+                <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">10</span> 💨 blurry</span></span>
+                <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">5</span> ⚡️ bright</span></span>
+                <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">4</span> 🚊 busy</span></span>
+                <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">4</span> 🌈 colorful</span></span>
+                <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">4</span> 🕶 cool</span></span>
+                <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">1</span> 🌚 dark</span></span>
+              </div>
+            </div>
+            <div id="commenta" style="margin-top: 2em">
+              <h4 style="font-family: 'Colfax Bold'">Comments</h4>
+              <div id="commentGrid" style="overflow-x:hidden;overflow-y:scroll;height: auto;">
+                <div class="comment"><span style="font-size:12px">So pretty ava</span><i>F, 32</i></div>
+                <div class="comment"><span style="font-size:12px">Move the right side lefta</span><i>F, 32</i></div>
+                <div class="comment"><span style="font-size:12px">That's a bit too gay</span><i>F, 32</i></div>
+                <div class="comment"><span style="font-size:12px">Aubrey is kinda cute</span><i>F, 32</i></div>
+                <div class="comment"><span style="font-size:12px">Do not include the other parts</span><i>F, 32</i></div>
+              </div>
+            </div>
             <!--if we have that enabled-->
-            <ul style="display: none">
-              <li>Overview</li>
-              <li>Ratings</li>
-              <li>Tags</li>
-              <li>Comments</li>
-            </ul>
             <ul style="display: none">
               <li>
                 <h2></h2>
@@ -731,10 +716,9 @@
         </div>
       </div>
     </div>
-    <script src="assets/js/router.js"></script>
+    <script src="assets/js/tasks.js"></script>
     <script src="assets/js/clicker.js"></script>
     <script src="assets/js/swipe.js"></script>
-    <script src="assets/js/tasks.js"></script>
     <!--<script src="main.js"></script>-->
     <script src="node_modules/argon2-browser/dist/argon2-bundled.min.js"></script>
   </body>

@@ -10,8 +10,13 @@
 	width: calc(100% - 200px);
 }
 
+#sbu,
 #nvz {
 	width: 100%;
+	a {
+		color: #424652;
+		font-weight: 400;
+	}
 }
 
 #nvs_,

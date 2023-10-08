@@ -1,12 +1,12 @@
 a {
   text-decoration: none;
-  color:           #5984ff;
+  color:           #424652;
   font-weight:     500;
   transition:      0.2s all ease-out;
 }
 
-a:hover, a:active, a:focus {
+a:hover, a:active, a:focus, a:visited {
   outline:         none;
-  color:           #5984ff;
+  color:           #424652;
   transition:      0.2s all ease-in;
 }

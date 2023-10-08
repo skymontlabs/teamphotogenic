@@ -12,31 +12,79 @@ function s() {
 
 }
 var loggedIn = true
+
+window.onhashchange = function() {
+ //blah blah blah
+    alert('hashchange')
+}
+
+
+
+window.onpopstate = function(event) {
+    alert('back or forward triggered')
+    rte(event.target.location.pathname)
+}
+
 function rte(url) {
-    page = url.split('/').pop()
-    //scorerater.style.display='none'
-    
-    if (page == '') {
+    let pg = url.split('/').pop()
+    let hh = window.location.hash
+
+    if (pg==='') {
         if (loggedIn) {
             gbl.className = 'showRate';
         } else {
             gbl.className = 'showLogin';
         }
-    } else if (page == 'tasks') {
+    } else if (pg==='tasks') {
+        console.log('tasks yee')
         gbl.className = 'showTasks';
         let limit = 0
         let offset = 0
-    } else if (page == 'taskID') {
+
+        for (let i = 0; i < 10; ++i) {
+            taskData()
+        }
+    } else if (pg==='taskID') {
         gbl.className = 'showTaskID';
         let taskID = 1
-    } else if (page == 'profile') {
-        gbl.className = 'showProfile';
-    } else if (page == 'notifications') {
+
+        for (let i = 0; i < 10; ++i) {
+            imageIndiv()
+        }
+    } else if (pg==='imageID') {
+        gbl.className = 'showTasks showImg';
+        let taskID = 1
+
+        for (let i = 0; i < 10; ++i) {
+            imageIndiv()
+        }
+    } else if (pg==='settingsz') {
+        gbl.className = 'showTaskID';
+        let taskID = 1
+    } else if (pg==='login') {
+        gbl.className = 'showLogin';
+    } else if (pg==='signup') {
+        gbl.className = 'showSignup';
+    } else if (pg==='statistics') {
+        gbl.className = 'showTaskID';
+        let taskID = 1
+    } else if (pg==='profile') {
+        if (hh==='') {gbl.className = 'showProfile';}
+        else if (hh==='settings') {gbl.className = 'showProfile';}
+        else if (hh==='premium') {gbl.className = 'showProfile';}
+        else if (hh==='password') {gbl.className = 'showProfile';}
+        else if (hh==='notif') {gbl.className = 'showProfile';}
+        else if (hh==='help') {gbl.className = 'showProfile';}
+        else {alert('phucc')}
+    } else if (pg==='notifications') {
         gbl.className = 'showNotifications';
-    } else if (page == 'paired') {
+    } else if (pg==='paired') {
         gbl.className = 'showPaired';
+    } else {
+        alert('phucc')
     }
 }
+
 
 rte(window.location.pathname)
 
@@ -50,30 +98,48 @@ function goBack() {
     window.location.lasthash.pop();
 }
 
+var dotOptions = false
 var sortDropdownOn = false
+var filtDropdownOn = false
 var mobilemenuDown = false
+/*
 
-function removeDropdowns() {
-    if (sortDropdownOn){sortDropdown.classList.remove('show');sortDropdownOn=false;}
-    if (auxIconData.prf) {dropp.classList.remove('active');auxIconData.prf=false}
+let auxIconData = {
+    que: false,
+    nof: false,
+    prf: false,
+    pls: false
+};
+*/
+
+var questionDropdownOn = false
+var notificDropdownOn = false
+var profileDropdownOn = false
+var plusDropdownOn = false
+
+function removeDropdowns(idxv) {
+    if (sortDropdownOn){sortDropdown.classList.remove('show');sortDropdownOn=false;return idxv==0}
+    if (auxIconData.prf) {dropp.classList.remove('active');auxIconData.prf=false;return idxv==1}
+    if (dotOptions) {bblDropdown.classList.remove('show');dotOptions=false;return idxv==2}
+    if (notificDropdownOn) {dropn.classList.remove('active');notificDropdownOn=false;return idxv==3}
+    if (questionDropdownOn) {dropi.classList.remove('active');questionDropdownOn=false;return idxv==4}
+    if (plusDropdownOn) {dropc.classList.remove('active');plusDropdownOn=false;return idxv==5}
+    if (filtDropdownOn){filtDropdown.classList.remove('show');filtDropdownOn=false;return idxv==6}
+    return false
 }
 
-
 let btns = [btnR0,btnR1,btnR2,btnR3,btnR4]
+let activeImageSort = daq
 
 document.onclick = (e) => {
-    //alert(e.target)
-    //alert(e.target.id)
     var key = e.target.id.slice(-1)
 
     // link
     if (key == '_') {
         event.preventDefault();
         rte(e.target.href)
-
         window.history.pushState({},e.target.href,e.target.href)
-
-        removeDropdowns()
+        removeDropdowns(-1)
     }
 
     // rating 
@@ -93,6 +159,16 @@ document.onclick = (e) => {
         //alert('tagged', e.target)
         e.target.classList.add('active')
     }
+
+    // DARK 
+    else if (key == 'k') {
+        alert('dark')
+        gbl.className = 'showTasks'
+        rte('/taskID')
+        window.history.pushState({},'/taskID','/taskID')
+
+    }
+
 
     // skip 
     else if (key == 'G') {
@@ -125,24 +201,44 @@ document.onclick = (e) => {
         else{nv.className='a';mobilemenuDown=false;}
     }
 
-    //
+    // edit test
     else if (key == 'M') {
+        // 
+    }
+
+    // delete test
+    else if (key == 'N') {
 
     }
 
-    // 
-    else if (key == 'N') {
+    // AVERAGE SCORE button 
+    else if (key == 'O') {
+
+    }
+
+    // MEDIAN SCORE button 
+    else if (key == 'P') {
+
+    }
+
+    // LOWER QUARTILE button 
+    else if (key == 'Q') {
+        // this is always remove, most important is to change
+        sortDropdown.classList.remove('show');
+        sortDropdownOn=false;
+
+        console.log(e.target)
 
     }
 
     // plus button 
     else if (key == 'R') {
-        if (!auxIconData.pls) {
+        if (!plusDropdownOn) {
             dropc.classList.add('active')
-            auxIconData.pls = true
+            plusDropdownOn = true
         } else {
             dropc.classList.remove('active')
-            auxIconData.pls = false
+            plusDropdownOn = false
         }
     }
 
@@ -167,6 +263,8 @@ document.onclick = (e) => {
 
     // dropdown, profile
     else if (key == 'U') {
+
+        //if (!removeDropdowns(1)) {}
         if (!auxIconData.prf) {
             dropn.classList.remove('active')
             auxIconData.nof = false
@@ -181,25 +279,33 @@ document.onclick = (e) => {
 
     // dropsort item title
     else if (key == 'V') {
-        if (!sortDropdownOn){sortDropdown.classList.add('show');sortDropdownOn=true;}
-        else{sortDropdown.classList.remove('show');sortDropdownOn=false;}
+        if (!removeDropdowns(0)) {
+            if (!sortDropdownOn){sortDropdown.classList.add('show');sortDropdownOn=true;}
+            else{sortDropdown.classList.remove('show');sortDropdownOn=false;}
+        }
     }
 
-    // dropsort item elements
+    // dropsort filter elements
     else if (key == 'W') {
-        if (!sortDropdownOn){sortDropdown.classList.add('show');sortDropdownOn=true;}
-        else{sortDropdown.classList.remove('show');sortDropdownOn=false;}
+        if (!removeDropdowns(6)) {
+            if (!filtDropdownOn){filtDropdown.classList.add('show');filtDropdownOn=true;}
+            else{filtDropdown.classList.remove('show');filtDropdownOn=false;}
+        }
     }
 
-    // square 
+    // dot options 
     else if (key == 'X') {
-        tasks.className = 'squared'
+        if (!removeDropdowns(2)) {
+            if (!dotOptions){bblDropdown.classList.add('show');dotOptions=true;}
+            else{bblDropdown.classList.remove('show');dotOptions=false;}
+        }
     }
-    // rect 
+
+    // resume test 
     else if (key == 'Y') {
-        tasks.className = 'slideshow'
     }
-    // hotdog 
+
+    // pause test 
     else if (key == 'Z') {
         tasks.className = 'hlong'
     }
@@ -207,8 +313,8 @@ document.onclick = (e) => {
     // remove dropdowns,
     // this is click outside
     else {
-        console.log(e)
-        removeDropdowns()
+        console.log('remove dropdown')
+        removeDropdowns(-1)
     }
     
     // report

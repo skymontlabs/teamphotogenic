@@ -1,18 +1,36 @@
 #tasklist {
   width: 100%;
   display: grid;
-  row-gap: 16px;
-  column-gap: 16px;
-  padding-top: 1em;
+  padding-top: 3em;
   padding-bottom: 2em;
   border-top: 1px solid rgba(0,0,0,0.05);
 
-  time {
-    font-size: 10px;
-    line-height: 39px;
-    color: #878c8f;
+  @media (min-width: $tablet-wide-min) {
+    grid-gap: 36px;
   }
 
+  @media (min-width: $tablet-max) and (max-width: $tablet-wide-max) {
+    grid-gap: 20px;
+  }
+
+  @media (max-width: $tablet-max) {
+    grid-gap: 12px;
+  }
+
+  time {
+    font-size: 12px;
+    line-height: 34px;
+    margin-top: 0;
+    color: #878c8f;
+    margin-left: 10px;
+    font-weight: 600;
+  }
+  h6 {
+    line-height: 28px;
+    font-size: 12px;
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
   img {
     width: 100%;
     max-width: 100%;
@@ -23,40 +41,112 @@
   .mtaWrap {
     width:100%;
     box-sizing: border-box;
-    padding: 0 0 8px 0;
   }
 }
 
+.taskItem {
+  border-radius: 8px;
+  overflow: hidden;
+  .btn-datapoint {
+    margin-left: auto;
+  }
+}
+
+.imgData {
+  bottom: 0;
+  padding: 0 24px 24px;
+  padding-top: 84px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.7), rgba(0,0,0,0.35) 64% , rgba(0,0,0,0.0));
+
+  span {
+    color: white;
+  }
+}
+
+.partNav {
+  li {
+    line-height: 42px;
+    a {
+      font-size: 14px;
+      border-radius: 25px;
+      padding: 10px 15px;
+      color: #0d0c22;
+      
+      &:hover {
+        color: #9296a2;
+      }
+
+      &.active {
+        background: $active-bg;
+        &:hover {
+          color: #0d0c22;
+        }
+      }
+    }
+  }
+}
+
+#tasklist {
+  @media (max-width: $tablet-max) {
+  }
+
+  @media (min-width: $tablet-wide-min) {
+    grid-template-columns:  1fr 1fr 1fr ;
+  }
+
+  @media (max-width: $tablet-wide-max) {
+    grid-template-columns:  1fr 1fr;
+  }
+   
+
+  .imgWrp {
+    width: 100%;
+    display: grid;
+    row-gap: 4px;
+    column-gap: 4px;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 0 0 6px 6px;
+    overflow: hidden;
+  }
+}
+
+#fillImg {
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 10px;
+  display: block;
+
+
+  height: 290px;
+  background: url(img/laurie.jpg) 0% 18% / cover;
+  margin-bottom: 4px;
+  border-radius: 6px 6px 0px 0px;
+}
+
+#taskLs {
+  padding: 7em 0
+}
+
 #tasks {
+  /*
+
+"header  header header""nav     nav""sidebar content""ad      footer" 
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      "header  header  header"
+      "nav     abc     def"
+      "sidebar content"
+      "ad      footer";
+
+
   &.squared #squareX rect,
   &.slideshow #rectY rect,
   &.hlong #hotdogZ rect {
     fill: #5984ff;
   }
 
-  &.squared #tasklist {
-    @media (max-width: $tablet-max) {
-      grid-template-columns:  1fr;
-    }
-
-    @media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {
-      grid-template-columns:  1fr 1fr;
-    }
-     
-    @media (min-width: $tablet-wide-min) {
-      grid-template-columns:  1fr 1fr 1fr;
-    }
-
-    .imgWrap {
-      width: 100%;
-      display: grid;
-      row-gap: 8px;
-      column-gap: 8px;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      padding-bottom: 8px;
-    }
-  }
+  &.squared 
 
   &.slideshow #tasklist {
     .imgWrap {
@@ -82,7 +172,46 @@
       grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr;
       padding-bottom:         12px;
     }
+  }*/
+}
+
+.dots {
+  padding: 10px 17px;
+  margin-top:20px;
+  margin-left: 12px;
+  .dlef,
+  .dmid,
+  .drig {
+    width: 3px;
+    height: 3px;
+    background: black;
+    position: absolute;
+    border-radius: 2px;
+    top: 15px;
   }
+  .dlef {
+    left: 10px;
+  }
+  .dmid {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .drig {
+    right: 10px;
+  }
+}
+
+#tImgWr {
+  height: 400px;
+  width: 532px;
+}
+
+#tImgRt {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .data-score {
@@ -91,6 +220,20 @@
   font-family: $base-font;
   line-height: 32px;
   margin-right: 16px;
+}
+
+.ascore {
+  font-family: $base-font;
+  line-height: 32px;
+  margin-right: 16px;
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.acomm {
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 300;
 }
 
 .structure {

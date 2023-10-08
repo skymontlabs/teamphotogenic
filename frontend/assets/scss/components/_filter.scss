@@ -1,0 +1,14 @@
+#filtDropdown {
+	visibility: hidden;
+	box-sizing: border-box;
+	font-size: 14px;
+	opacity: 0;
+	height: 0;
+	transition: 0.2s ease all;
+
+	&.show {
+		visibility: visible;
+		opacity: 1;
+		height: 76px;
+	}
+}
