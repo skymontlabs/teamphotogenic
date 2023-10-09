@@ -44,6 +44,9 @@ const AX = document.createElement('a')
           </div>*/
 
 /**/
+function taskData2() {
+
+}
 
 function taskData2() {
   const taskItem = DIV.cloneNode(true)

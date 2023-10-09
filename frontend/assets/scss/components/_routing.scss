@@ -53,7 +53,7 @@
 	&.showImg {
 		overflow-y: hidden !important;
 		#indvImg {
-			display: block;
+			display: flex;
 			opacity: 1;
 			visibility: visible;
 		}

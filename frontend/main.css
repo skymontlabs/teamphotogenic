@@ -761,7 +761,7 @@ a:hover, a:active, a:focus, a:visited {
   margin: 0;
   background: #fff;
   border-radius: 8px;
-  padding: 7px 0 8px 0 !important;
+  padding: 9px 0 9px 0 !important;
   position: absolute;
   visibility: hidden;
   top: 29px;
@@ -786,7 +786,8 @@ a:hover, a:active, a:focus, a:visited {
     position: static;
   }
 }
-.dropdown .drophead {
+.dropdown .dropHd {
+  opacity: 1;
   color: black;
   text-align: left;
   font-size: 13px;
@@ -901,7 +902,7 @@ a:hover, a:active, a:focus, a:visited {
   overflow-y: hidden !important;
 }
 #gbl.showImg #indvImg {
-  display: block;
+  display: flex;
   opacity: 1;
   visibility: visible;
 }
@@ -1075,9 +1076,9 @@ input:checked + .dropsort {
 }
 
 #indvImg {
-  border-radius: 4px;
+  border-radius: 12px;
   width: calc(100% - 16px);
-  max-width: 520px;
+  max-width: 940px;
   box-shadow: 0 0 20px -1px rgba(0, 0, 0, 0.2);
   margin-bottom: 2em;
   overflow: hidden;
@@ -1099,19 +1100,49 @@ input:checked + .dropsort {
   visibility: hidden;
 }
 
-.rating-score2:div {
-  width: calc(20% - 6px);
-  height: 55px;
-  position: relative;
+#indvNava {
+  padding: 1em 0 2em;
+  margin: 0;
 }
-.rating-score2:div > .score-bar {
+
+.scoSc {
+  width: calc(20% - 6px);
+  height: 128px;
+  position: relative;
+  background: none;
+  width: calc(20% - 8px);
+  padding: 10px 0 7px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+.scoSc .emoji {
+  display: block;
+  font-size: 19px;
+  margin-bottom: 0;
+}
+
+.rating-score2 .score-bar {
   margin-top: auto;
-  position: absolute;
+  width: 8px;
   height: 100%;
+  border-radius: 5px;
   background: rgba(51, 54, 56, 0.04);
   bottom: 0;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
 }
-.rating-score2:div > .tag-name {
+.rating-score2 .score-tag {
+  width: 16px;
+  height: 8px;
+  border-radius: 5px;
+  background: rgb(0, 200, 255);
+  top: 0;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 20px);
+}
+.rating-score2 .tag-name {
   width: 100%;
   margin-top: auto;
   position: absolute;
@@ -1119,10 +1150,7 @@ input:checked + .dropsort {
   text-align: center;
   display: block;
 }
-.rating-score2:div > .tag-name > .emoji {
-  line-height: 9px;
-}
-.rating-score2:div > .dist-elem {
+.rating-score2 .dist-elem {
   width: 100%;
   margin-top: auto;
   position: absolute;
@@ -1130,6 +1158,31 @@ input:checked + .dropsort {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-align: center;
   display: block;
+}
+
+.meterEm {
+  height: 4px;
+  border-radius: 4px;
+}
+
+#B0 {
+  background: rgb(200, 250, 255);
+}
+
+#B1 {
+  background: rgb(100, 200, 255);
+}
+
+#B2 {
+  background: rgb(50, 180, 230);
+}
+
+#B3 {
+  background: rgb(25, 120, 220);
+}
+
+#B4 {
+  background: rgb(10, 100, 200);
 }
 
 #bger {
@@ -1275,7 +1328,7 @@ input:checked + .dropsort {
   }
 }
 
-#rate-img {
+#rateIm {
   width: 100%;
   background: #f7f8f9;
   z-index: 9999;
@@ -1283,16 +1336,21 @@ input:checked + .dropsort {
   position: relative;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  #rate-img {
+  #rateIm {
     width: 38.2%;
   }
 }
 @media (min-width: 1025px) {
-  #rate-img {
+  #rateIm {
     width: calc(100% - 522px);
   }
 }
-#rate-img img {
+@media (min-width: 769px) {
+  #rateIm {
+    border-radius: 9px;
+  }
+}
+#rateIm img {
   position: relative;
   max-width: 100%;
   height: auto;
@@ -1301,13 +1359,13 @@ input:checked + .dropsort {
   width: auto;
 }
 @media (max-width: 768px) {
-  #rate-img img {
+  #rateIm img {
     max-height: 600px;
   }
 }
 @media (min-width: 769px) {
-  #rate-img img {
-    max-height: 480px;
+  #rateIm img {
+    max-height: 520px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -1421,7 +1479,6 @@ input:checked + .dropsort {
   display: grid;
   padding-top: 3em;
   padding-bottom: 2em;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 @media (min-width: 1025px) {
   #tasklist {

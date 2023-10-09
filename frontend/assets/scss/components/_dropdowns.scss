@@ -4,13 +4,14 @@
   margin:        0;
   background:    #fff;
   border-radius: 8px;
-  padding:       7px 0 8px 0 !important;
+  padding:       9px 0 9px 0 !important;
   position:      absolute;
   visibility:    hidden;
   top:           29px;
   opacity:       0;
   transition:    0.2s ease all;
   transform:     translate(2.25px, 30px);
+
 
 // original, make sure to keep for sort dropdown
   @media (min-width: $tablet-min) {
@@ -28,7 +29,8 @@
     position:    static;
   }
 
-  .drophead {
+  .dropHd {
+    opacity: 1;
     color:       black;
     text-align:  left;
     font-size:   13px;

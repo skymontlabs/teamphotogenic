@@ -244,7 +244,7 @@ document.onclick = (e) => {
 
     // documentation button 
     else if (key == 'S') {
-
+        dropi.classList.toggle('active')
     }
 
     // dropdown, notifications

@@ -45,9 +45,9 @@
             </ul>
           </div>
           <div class="aux-icons y z">
-            <button class="rel drop-button">
-              <svg id="infTog" class="pointer" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM7 8.089V8.5a1 1 0 0 0 1.926.377 3.456 3.456 0 0 0 1.549-.902 3.5 3.5 0 0 0-4.95-4.95A3.437 3.437 0 0 0 4.5 5.51a1.004 1.004 0 1 0 2.009-.02 1.43 1.43 0 0 1 .436-1.045 1.5 1.5 0 0 1 1.058-.437 1.492 1.492 0 0 1 0 2.983A1.004 1.004 0 0 0 7 8.09zM8 14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" fill-rule="evenodd"></path></svg>
-              <div id="dropi" class="dropdown L p4 mt0 mb0 flg clxl abs bsbx">
+            <button id="infBtnS" class="rel drop-button">
+              <svg id="infTogS" class="pointer" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM7 8.089V8.5a1 1 0 0 0 1.926.377 3.456 3.456 0 0 0 1.549-.902 3.5 3.5 0 0 0-4.95-4.95A3.437 3.437 0 0 0 4.5 5.51a1.004 1.004 0 1 0 2.009-.02 1.43 1.43 0 0 1 .436-1.045 1.5 1.5 0 0 1 1.058-.437 1.492 1.492 0 0 1 0 2.983A1.004 1.004 0 0 0 7 8.09zM8 14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" fill-rule="evenodd"></path></svg>
+              <div id="dropi" class="dropdown">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation">
                   <defs>
                     <symbol id="dropdown-arrow" viewbox="0 0 21 9">
@@ -72,11 +72,11 @@
             </button>
             <button id="notBtnT" class="rel drop-button">
               <svg id="notTogT" class="pointer" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path id="notPthT" d="M5.55 14h4.9a2.5 2.5 0 0 1-4.9 0zM13 9.066l1.216 1.232A1 1 0 0 1 13.504 12H2.496a1 1 0 0 1-.712-1.702L3 9.066V5a5 5 0 1 1 10 0z" fill-rule="evenodd"></path></svg>
-              <div id="dropn" class="dropdown L p4 mt0 mb0 flg clxl abs bsbx">
+              <div id="dropn" class="dropdown">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation">
                   <use href="#dropdown-arrow"/>
                 </svg>
-                <span class="">Notifications</span>
+                <span class="dropHd">Notifications</span>
                 <hr class="">
                 <ul id="notifList" class="p0">
                 </ul>
@@ -310,7 +310,7 @@
       <div class="x tablet-max">
         <span id="credits-count"></span>
         <div id="rate-sec">
-          <div id="rate-img">
+          <div id="rateIm">
             <div id="rate-bg" style="background: url(img/laurie.jpg);"></div>
             <img id="image" src="img/laurie.jpg" alt="Rating picture">
           </div>
@@ -329,20 +329,26 @@
               <span class="fwHeavy">Tags</span>
               <div id="optTag">
                 <span id="tagX5" class="wrap-tag btn-tag">😓 awkward</span>
+                <span id="tagXF" class="wrap-tag btn-tag">🫥 bad expression</span>
                 <span id="tagX6" class="wrap-tag btn-tag">🖼 bad framing</span>
                 <span id="tagX7" class="wrap-tag btn-tag">🍞 bland</span>
+                <span id="tagX7" class="wrap-tag btn-tag">🏟 distracting</span>
                 <span id="tagX8" class="wrap-tag btn-tag">💨 blurry</span>
                 <span id="tagX9" class="wrap-tag btn-tag">⚡️ bright</span>
                 <span id="tagXA" class="wrap-tag btn-tag">🚊 busy</span>
                 <span id="tagXB" class="wrap-tag btn-tag">🌈 colorful</span>
                 <span id="tagXC" class="wrap-tag btn-tag">🕶 cool</span>
                 <span id="tagXD" class="wrap-tag btn-tag">🌚 dark</span>
+                <span id="tagXF" class="wrap-tag btn-tag">😬 forced smile</span>
                 <span id="tagXE" class="wrap-tag btn-tag">🧂 grainy</span>
                 <span id="tagXF" class="wrap-tag btn-tag">🚨 overedited</span>
+                <span id="tagXF" class="wrap-tag btn-tag">🚶 poor posture</span>
+                <span id="tagXF" class="wrap-tag btn-tag">🔭 too far away</span>
+                <span id="tagXF" class="wrap-tag btn-tag">🔎 too close up</span>
               </div>
             </div>
             <div class="note-section iS" style="margin-top:1.5em;">
-              <div class=""><span class="fwHeavy leave-a-note">Leave a note</span></div>
+              <div class=""><span class="fwHeavy leave-a-note">Comment</span></div>
               <textarea id="txa" placeholder="This picture seems ..." tabindex="-1" maxlength="255" class=" form-control note-box note-box-mobile js-note-box"></textarea>
             </div>
             <div class="quick-notes in-panel">
@@ -624,7 +630,7 @@
           <img class="v" src="img/laurie.jpg">
           <div class="rate-data" style="padding: 10px 18px"> 
             <!--if we have analytics disabled-->
-            <ul id="indvNava" class="y" style="padding: 8px 0;margin: 0;">
+            <ul id="indvNava" class="y" >
               <li>Scoring</li>
               <li style="margin-left: 1em">Tags</li>
               <li style="margin-left: 1em">Comments</li>
@@ -632,35 +638,47 @@
             <div id="scoringa">
               <h4 style="margin-top: 0;margin-bottom: 1em;">Line graph</h4>
               <div>
-                <div style="width:100%;height:4px;background:rgba(0,2,40,0.1);border-radius: 4px;">
-                  <div style="width:78%;height:4px;background:rgba(200,250,255,0.8);">
-                  </div>
+                <h2>43</h2><span>total votes</span>
+                <h2>43</h2><span>total votes</span>
+              </div>
+              <div class="rel">
+                <div id="meterB" style="width:100%;height:4px;background:rgba(0,2,40,0.1);border-radius: 4px;">
+                  <div style="width:80%;" id="B0" class="meterEm abs"></div>
+                  <div style="width:75%;" id="B1" class="meterEm abs"></div>
+                  <div style="width:70%;" id="B2" class="meterEm abs"></div>
+                  <div style="width:65%;" id="B3" class="meterEm abs"></div>
+                  <div style="width:60%;" id="B4" class="meterEm abs"></div>
                 </div>
               </div>
               <h4 style="margin-top: 1em;margin-bottom: 1em;">Distribution</h4>
               <div class="rating-score2 y z" style="padding-bottom: 1em;">
-                <div>
+                <div class="scoSc">
                   <div class="score-bar"></div>
+                  <div class="score-tag"></div>
                   <span class="tag-name"><span class="emoji">😒</span><span class="tc txt-rate">Eh</span></span>
                   <span class="dist-elem">5</span>
                 </div>
-                <div>
+                <div class="scoSc">
                   <div class="score-bar"></div>
+                  <div class="score-tag"></div>
                   <span class="tag-name"><span class="emoji">😐</span><span class="tc txt-rate">Decent</span></span>
                   <span class="dist-elem">11</span>
                 </div>
-                <div>
+                <div class="scoSc">
                   <div class="score-bar"></div>
+                  <div class="score-tag"></div>
                   <span class="tag-name"><span class="emoji">😃</span><span class="tc txt-rate">Great</span></span>
                   <span class="dist-elem">7</span>
                 </div>
-                <div>
+                <div class="scoSc">
                   <div class="score-bar"></div>
+                  <div class="score-tag"></div>
                   <span class="tag-name"><span class="emoji">🤩</span><span class="tc txt-rate">Stunning</span></span>
                   <span class="dist-elem">5</span>
                 </div>
-                <div>
+                <div class="scoSc">
                   <div class="score-bar"></div>
+                  <div class="score-tag"></div>
                   <span class="tag-name"><span class="emoji">🤑</span><span class="tc txt-rate">Brilliant</span></span>
                   <span class="dist-elem">25</span>
                 </div>

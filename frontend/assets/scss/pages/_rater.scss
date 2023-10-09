@@ -58,7 +58,7 @@
   }
 }
 
-#rate-img {
+#rateIm {
   width:           100%;
   background:      #f7f8f9;
   z-index:         9999;
@@ -71,6 +71,10 @@
    
   @media (min-width: $tablet-wide-min) {
     width:         calc(100% - 522px);
+  }
+
+  @media (min-width: $tablet-min) {
+    border-radius: 9px;
   }
 
   img {
@@ -86,7 +90,7 @@
     }
 
     @media (min-width: $tablet-min) {
-      max-height:  480px;
+      max-height:  520px;
       top:         50%;
       transform:   translateY(-50%);
     }
