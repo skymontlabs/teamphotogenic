@@ -143,8 +143,12 @@ function filterStatus() {
   let b1 = Bn.cloneNode(true)
   let b2 = Bn.cloneNode(true)
   let b3 = Bn.cloneNode(true)
-  b1.
 
+  Pr.appendChild(bn)
+  Pr.appendChild(b1)
+  Pr.appendChild(b2)
+  Pr.appendChild(b3)
+  return Pr
 }
 
 

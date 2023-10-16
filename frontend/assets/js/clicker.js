@@ -186,6 +186,7 @@ let cRate=-1
 let cTg=0
 let cLanguage=-1
 let cStatus=0
+let cSortVal=0
 
 document.onclick = (e) => {
     let tG=e.target
@@ -298,6 +299,8 @@ document.onclick = (e) => {
 
     else if (sortDropdown.contains(tG) && tG !== sortDropdown) {
         let aidx=key - '0'
+
+        sortMethodV.innerText = sortDropdown.children[aidx].innerText
         
         console.log('seg')
     }
@@ -317,7 +320,7 @@ document.onclick = (e) => {
 */
 
 ////// DARK 
-    else if (key == 'Z') {
+    else if (tG == ZZ) {
         alert('dark')
         Ga.className = 'showTasks'
         rte('/taskID')

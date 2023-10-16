@@ -24,7 +24,14 @@
       transform: translateY(31px);
       position: absolute;
     }
+  }
 
+  button {
+    svg {
+      @media (max-width: $tablet-max) {
+        opacity: 0;
+      }
+    }
   }
 
   #links li {

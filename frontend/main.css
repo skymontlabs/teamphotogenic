@@ -757,6 +757,11 @@ a:hover, a:active, a:focus, a:visited {
   transform: translateY(31px);
   position: absolute;
 }
+@media (max-width: 768px) {
+  #Na button svg {
+    opacity: 0;
+  }
+}
 #Na #links li {
   font-size: 15px;
   font-weight: 500;
