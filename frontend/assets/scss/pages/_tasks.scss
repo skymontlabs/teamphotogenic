@@ -1,35 +1,43 @@
-#tasklist {
-  width: 100%;
-  display: grid;
+#TLS {
   padding-top: 3em;
-  padding-bottom: 2em;
+  padding-bottom: 4em;
 
   @media (min-width: $tablet-wide-min) {
+    grid-template-columns:  1fr 1fr 1fr ;
     grid-gap: 36px;
   }
 
   @media (min-width: $tablet-max) and (max-width: $tablet-wide-max) {
+    grid-template-columns:  1fr 1fr;
     grid-gap: 20px;
   }
 
   @media (max-width: $tablet-max) {
+    grid-template-columns:  1fr;
     grid-gap: 12px;
   }
 
   time {
     font-size: 12px;
-    line-height: 34px;
+    line-height: 38px;
     margin-top: 0;
     color: #878c8f;
-    margin-left: 10px;
-    font-weight: 600;
+    margin-left: 16px;
+    font-weight: 400;
   }
+
   h6 {
-    line-height: 28px;
+    line-height: 38px;
     font-size: 12px;
-    margin-top: 3px;
+    margin-top: 0;
     margin-bottom: 0;
+    font-weight: 500;
   }
+  
+  span {
+    font-weight: 400;
+  }
+  
   img {
     width: 100%;
     max-width: 100%;
@@ -37,16 +45,26 @@
     margin: 0;
   }
 
-  .mtaWrap {
-    width:100%;
-    box-sizing: border-box;
+  .imgWrp {
+    width: 100%;
+    display: grid;
+    row-gap: 4px;
+    column-gap: 4px;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 0 0 6px 6px;
+    overflow: hidden;
   }
+}
+
+// task meta for task ID page
+#TMta {
+  margin: 3em 0;
 }
 
 .taskItem {
   border-radius: 8px;
   overflow: hidden;
-  .btn-datapoint {
+  .dtpt {
     margin-left: auto;
   }
 }
@@ -63,51 +81,43 @@
 }
 
 .partNav {
-  li {
+  a {
     line-height: 42px;
-    a {
-      font-size: 14px;
-      border-radius: 25px;
-      padding: 10px 15px;
+    font-size: 14px;
+    color: #0d0c22;
+    padding: 16px 12px;
+    
+    &:hover {
+      color: #9296a2;
+    }
+  }
+  .active {
+    border-bottom: 1px solid blue;
+    &:hover {
       color: #0d0c22;
-      
-      &:hover {
-        color: #9296a2;
-      }
-
-      &.active {
-        background: $active-bg;
-        &:hover {
-          color: #0d0c22;
-        }
-      }
     }
   }
 }
 
-#tasklist {
-  @media (max-width: $tablet-max) {
-  }
+#tflta {
+  display: grid;
+  column-gap: 8px;
+  overflow: hidden;
+  grid-template-columns:  1fr 1fr 1fr 1fr;
+  padding-top: 1em;
 
-  @media (min-width: $tablet-wide-min) {
-    grid-template-columns:  1fr 1fr 1fr ;
-  }
-
-  @media (max-width: $tablet-wide-max) {
-    grid-template-columns:  1fr 1fr;
-  }
-   
-
-  .imgWrp {
-    width: 100%;
-    display: grid;
-    row-gap: 4px;
-    column-gap: 4px;
-    grid-template-columns: 1fr 1fr 1fr;
-    border-radius: 0 0 6px 6px;
-    overflow: hidden;
+  &>button {
+    border: 1px solid rgb(235,238,241);
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 1em 1em 1em;
+    text-align: left;
+    h4 {
+      margin: 8px 0 0;
+    }
   }
 }
+
 
 #fillImg {
   width: 100%;
@@ -127,82 +137,24 @@
   padding: 7em 0
 }
 
-#tasks {
-  /*
 
-"header  header header""nav     nav""sidebar content""ad      footer" 
-    grid-template-columns: 1fr 3fr;
-    grid-template-areas:
-      "header  header  header"
-      "nav     abc     def"
-      "sidebar content"
-      "ad      footer";
-
-
-  &.squared #squareX rect,
-  &.slideshow #rectY rect,
-  &.hlong #hotdogZ rect {
-    fill: #5984ff;
-  }
-
-  &.squared 
-
-  &.slideshow #tasklist {
-    .imgWrap {
-      display: block;
-      width: 100%;
-      padding-bottom: 8px;
-      position: relative;
-      img {
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
-    }
-  }
-
-  &.hlong #tasklist {
-    display: block;
-    .imgWrap {
-      width:                  100%;
-      display:                grid;
-      row-gap:                16px;
-      column-gap:             8px;
-      grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr;
-      padding-bottom:         12px;
-    }
-  }*/
+// h2 for Tasks
+#Fa {
+  line-height:76px;
+  margin: 0
 }
 
-.dots {
-  padding: 10px 17px;
-  margin-top:20px;
-  margin-left: 12px;
-  .dlef,
-  .dmid,
-  .drig {
-    width: 3px;
-    height: 3px;
-    background: black;
-    position: absolute;
-    border-radius: 2px;
-    top: 15px;
-  }
-  .dlef {
-    left: 10px;
-  }
-  .dmid {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .drig {
-    right: 10px;
-  }
+// rating or pairing type
+#RQ {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(104,115,133);
 }
 
-#tImgWr {
-  height: 400px;
-  width: 532px;
+.ST {
+  font-weight: 400;
+  color: rgb(104,115,133);
 }
 
 #tImgRt {
@@ -234,6 +186,26 @@
   line-height: 32px;
   font-weight: 300;
 }
+
+
+.dtpt {
+  background:      transparent;
+  font-size:       11px;
+  line-height:     38px;
+  position:        relative;
+  margin:          0;
+  color:           #878c8f;
+  cursor:          pointer;
+  white-space:     nowrap;
+  margin-left:     0;
+  font-family:     $base-font;
+  font-weight:     500;
+}
+
+
+/*
+
+for gearagora
 
 .structure {
   position: relative;
@@ -273,4 +245,4 @@
   .radio:checked+svg rect {
     fill:#5984ff;
   }
-}
+}*/

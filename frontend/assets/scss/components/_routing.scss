@@ -1,29 +1,52 @@
 /*position: absolute; visibility: hidden;*/
-#profile,
-#tasks,
+#Pa,
+#Ta,
 #taskID,
-#dark,
-#scorerater,
-#addonsPanel,
-#paired {
-	width:  			100%;
-	height: 			0;
-	visibility: 		hidden;
-	position: 			absolute;
+#ZZ,
+#Ra,
+#Aa,
+#Ya,
+#Up,
+#Xa {
+	width:              100%;
+	height:             0;
+	visibility:         hidden;
+	position:           absolute;
 }
 
-#gbl {
+// login panel
+#Ya {
+	background: white;
+}
+
+#Ga {
 	&.hideall>* {
 		display: none;
 
 	}
-	&>#profile,
-	&>#tasks,
+	&>#Pa,
+	&>#Ta,
 	&>#taskID,
-	&>#paired,
 	&>#admin {
 		margin-top: 82px;
 	}
+	&.showPaired {
+		#Xa {
+			display: block;
+			height: auto;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	&.showPremium {
+		#Aa {
+			display: block;
+			height: auto;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
 	&.showRate {
 		@media (max-width: $tablet-max) {
 			overflow: hidden;
@@ -32,93 +55,171 @@
 			position: fixed;
 		}
 
-		#scorerater {
+		#Ra {
 			height: auto;
 			visibility: visible;
 		}
-		#profile,
-		#tasks,
-		#paired {
+		#Pa,
+		#Ta,
+		#Xa {
 		}
 
-		#barsL {
-  			border: 1px solid rgba(0,0,0,0.0);
-		  	&:before,
-		  	&:after {
-		  		background: white !important;
-		  	}
-		}	
+		#Bc {
+			border: 1px solid rgba(0,0,0,0.0);
+
+			&:before,
+			&:after {
+				background: white !important;
+			}
+		}
+
+		.active #Bc {
+			width: 50px;
+			height: 50px;
+			//border: 1px solid rgba(0,0,0,0.5);
+
+			&:before,
+			&:after {
+				background: $nav-bars-color !important;
+				left: 15px;
+			}
+			&:before {
+				top: 23px;
+			}
+			&:after {
+				bottom: 23px;
+			}
+		}
 	}
 
 	&.showImg {
 		overflow-y: hidden !important;
-		#indvImg {
+		#Ia {
 			display: flex;
 			opacity: 1;
 			visibility: visible;
 		}
-		#dark {
-		    visibility: visible;
-		    opacity: 1;
-		    height: 100vh;
-		    display: block;
+		#ZZ {
+			visibility: visible;
+			opacity: 1;
+			height: 100vh;
+			display: block;
+		}
+	}
+
+
+	&.showUpl {
+		#ZZ {
+			visibility: visible;
+			opacity: 1;
+			height: 100vh;
+			display: block;
 		}
 	}
 
 	&.showS,
 	&.showTasks {
-		#tasks {
+		#Ta {
 			height: auto;
 			visibility: visible
 		}
 		#tIdNav,
-		#taskMeta {
+		#TMta {
 			display: none;
 		}
 		.wrapsort {
 			width: 100%;
 		}
-		#profile,
-		#scorerater,
-		#paired {
+		#Pa,
+		#Ra,
+		#Xa {
 		}
 	}
 
 	&.showTaskID {
-		#tasks {
+		#Fa {
+			display: none;
+		}
+		#tflta {
+			visibility: hidden;
+			height: 0;
+			opacity: 0;
+			padding: 0;
+			margin: 0;
+		}
+		#Ta {
 			height: auto;
 			visibility: visible
 		}
-		#profile,
-		#scorerater,
-		#paired {
+		#Pa,
+		#Ra,
+		#Xa {
 		}
 	}
 
 	&.showProfile {
-		#profile {
+		#Pa {
 			height: auto;
-			visibility: visible
+			visibility: visible;
+			
+			.profilePage.A {
+				visibility: visible;
+			}
 		}
-		#tasks,
-		#scorerater,
-		#paired {
+		#Ta,
+		#Ra,
+		#Xa {
+		}
+	}
+	&.edit {
+		#EPa {
+			height: auto;
+			visibility: visible;
+
+		}
+	}
+	&.sec {
+		#SCa {
+			height: auto;
+			visibility: visible;
+		}
+	}
+
+	&.alr {
+		#Alr {
+			height: auto;
+			visibility: visible;
+		}
+	}
+
+	&.bil {
+		#Bil {
+			height: auto;
+			visibility: visible;
+		}
+	}
+
+	&.hlp {
+		#Hlp {
+			height: auto;
+			visibility: visible;
 		}
 	}
 
 
 	&.showSignup,
 	&.showLogin {
-		#nv {
+		#Na {
 			opacity: 0;
 			z-index: 1;
 			visibility: visible;
 			transform: translate(0,-82px);
 		}
-		#loginer {
+		#Ya {
 			display: block;
 			visibility: visible;
 			opacity: 1;
+			  height:        100vh;
 		}
 	}
 
@@ -140,13 +241,13 @@
 	
 
 	&.showNotifications {
-		#paired {
+		#Xa {
 			height: auto;
 			visibility: visible
 		}
-		#profile,
-		#tasks,
-		#scorerater {
+		#Pa,
+		#Ta,
+		#Ra {
 		}
 	}
 	

@@ -1,18 +1,36 @@
-
-function setupMeters() {
-  numTask.innerText = '30'
-  numImg.innerText = '30'
-  numCom.innerText = '30'
-  curCre.innerText = '30'
-}
-
 const DIV = document.createElement('div')
 const SPN = document.createElement('span')
 const BTN = document.createElement('button')
+const INP = document.createElement('input')
+const H4 = document.createElement('h4')
 const AX = document.createElement('a')
 
+function cr8_dt() {
+  let DT = BTN.cloneNode(true)
+  DT.className = 'dots btn L16'
+  let D0 = SPN.cloneNode(true)
+  D0.className = 'd0'
+  let D1 = SPN.cloneNode(true)
+  D1.className = 'd1'
+  let D2 = SPN.cloneNode(true)
+  D2.className = 'd2'
+
+  DT.appendChild(D0)
+  DT.appendChild(D1)
+  DT.appendChild(D2)
+
+  return DT
+}
+
+let DZ = cr8_dt()
 
 /*
+
+<button id="dropdownDotsg" class="dots btn border"><span class="dlef" id="dd0X"></span>
+<span class="dmid" id="dd1X"></span><span class="drig" id="dd2X"></span></button>
+
+
+
   const tagWrap = DIV.cloneNode(true)
   for (var i = 0; i < 6; ++i) {
     const tagElem = score.cloneNode(true)
@@ -44,62 +62,6 @@ const AX = document.createElement('a')
           </div>*/
 
 /**/
-function taskData2() {
-
-}
-
-function taskData2() {
-  const taskItem = DIV.cloneNode(true)
-  taskItem.className = 'taskItem'
-
-  const imgWrap = DIV.cloneNode(true)
-  imgWrap.className = 'imgWrap'
-  const imgMat = document.createElement('img')
-  for (var i = 0; i < 6; ++i) {
-    const imgClone = imgMat.cloneNode(true)
-    imgClone.src = 'img/laurie.jpg'
-    imgClone.alt = 'Sample image'
-    imgWrap.appendChild(imgClone)
-  }
-
-  const txtWrap = DIV.cloneNode(true)
-  txtWrap.className = 'y z'
-  const title = document.createElement('h6')
-  title.innerText = 'seggs'
-  const time = document.createElement('time')
-  time.innerText = '5y'
-  txtWrap.appendChild(title)
-  txtWrap.appendChild(time)
-
-  const mtaWrap = DIV.cloneNode(true)
-  mtaWrap.className = 'mtaWrap y z'
-
-  const score = document.createElement('span')
-  
-  const ctWrap = DIV.cloneNode(true)
-  const imgCt = score.cloneNode(true)
-  const comCt = score.cloneNode(true)
-  imgCt.className = 'btn-datapoint'
-  comCt.className = 'btn-datapoint'
-
-  score.className = 'data-score'
-  score.innerText = '5.69'
-  ctWrap.className = 'mla'
-  imgCt.innerText = '🌄 13 images'
-  comCt.innerText = '💬 13 comments'
-
-  ctWrap.appendChild(imgCt)
-  ctWrap.appendChild(comCt)
-  mtaWrap.appendChild(score)
-  mtaWrap.appendChild(ctWrap)
-
-  taskItem.appendChild(imgWrap)
-  taskItem.appendChild(txtWrap)
-  taskItem.appendChild(mtaWrap)
-
-  tasklist.appendChild(taskItem)
-}
-
 
 function taskData() {
   const taskItem = DIV.cloneNode(true)
@@ -123,18 +85,12 @@ function taskData() {
   txtWrap.className = 'y'
   const title = document.createElement('h6')
   title.innerText = 'seggs'
+  const imgCt = SPN.cloneNode(true)
+  imgCt.className = 'dtpt'
+  imgCt.innerText = '13 images'
   const time = document.createElement('time')
   time.innerText = '5y'
-
-  const mtaWrap = DIV.cloneNode(true)
-  mtaWrap.className = 'mtaWrap y z'
-
-  
-  const ctWrap = SPN.cloneNode(true)
-  const imgCt = SPN.cloneNode(true)
-  imgCt.className = 'btn-datapoint'
-
-  imgCt.innerText = '13 images'
+  const dtv = DZ.cloneNode(true)
 
   //<button id="dropdownDotsX" class="dots btn border"><span class="dlef" id="dd0X"></span><span class="dmid" id="dd1X"></span><span class="drig" id="dd2X"></span></button>
 
@@ -142,13 +98,53 @@ function taskData() {
   txtWrap.appendChild(title)
   txtWrap.appendChild(imgCt)
   txtWrap.appendChild(time)
+  txtWrap.appendChild(dtv)
 
 
   taskItem.appendChild(imgMat)
   taskItem.appendChild(imgWrap)
   taskItem.appendChild(txtWrap)
 
-  tasklist.appendChild(taskItem)
+  TLS.appendChild(taskItem)
+}
+
+function filterStatus() {
+  /*
+  <div id="tflta">
+    <button id="Bv0" class="btn A">
+      <span id="Bw0" class="F12 ST">All</span>
+      <h4 id="Bx0">12</h4>
+    </button>
+    <button id="Bv1" class="btn">
+      <span id="Bw1" class="F12 ST">Running</span>
+      <h4 id="Bx1">1</h4>
+    </button>
+    <button id="Bv2" class="btn">
+      <span id="Bw2" class="F12 ST">Paused</span>
+      <h4 id="Bx2">0</h4>
+    </button>
+    <button id="Bv3" class="btn">
+      <span id="Bw3" class="F12 ST">Finished</span>
+      <h4 id="Bx3">11</h4>
+    </button>
+  </div>
+  */
+  let Pr = DIV.cloneNode(true)
+  let Bn = BTN.cloneNode(true)
+  let Sx = SPN.cloneNode(true)
+  let Zx = H4.cloneNode(true)
+  Bn.id='Bv0'
+  Bn.className='btn A'
+  Sx.id='Bw0'
+  Sx.className='F12 ST'
+  Zx.id='Bx0'
+  Bn.appendChild(Sx)
+  Bn.appendChild(Zx)
+  let b1 = Bn.cloneNode(true)
+  let b2 = Bn.cloneNode(true)
+  let b3 = Bn.cloneNode(true)
+  b1.
+
 }
 
 
@@ -166,7 +162,7 @@ function imageIndiv() {
 
 
   const mtaWrap = DIV.cloneNode(true)
-  mtaWrap.className = 'mtaWrap imgData abs y z'
+  mtaWrap.className = 'W D imgData abs y z'
 
   const score = document.createElement('span')
   
@@ -185,5 +181,19 @@ function imageIndiv() {
   imgItem.appendChild(imgWrap)
   imgItem.appendChild(mtaWrap)
 
-  tasklist.appendChild(imgItem)
+  TLS.appendChild(imgItem)
 }
+
+
+function imageModal() {
+
+}
+
+
+
+function imageModal() {
+
+}
+
+
+

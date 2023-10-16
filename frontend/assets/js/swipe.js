@@ -1,6 +1,6 @@
 document.addEventListener('touchstart', handleTouchStart, false);        
 document.addEventListener('touchmove', handleTouchMove, false);
-let rateData = document.getElementById('rate-data')
+let rateData = document.getElementById('RDa')
 var xDown = null;                                                        
 var yDown = null;
 

@@ -12,13 +12,12 @@ function s() {
 
 }
 var loggedIn = true
+let W=window
 
 window.onhashchange = function() {
  //blah blah blah
     alert('hashchange')
 }
-
-
 
 window.onpopstate = function(event) {
     alert('back or forward triggered')
@@ -31,62 +30,66 @@ function rte(url) {
 
     if (pg==='') {
         if (loggedIn) {
-            gbl.className = 'showRate';
+            Ga.className = 'showRate';
         } else {
-            gbl.className = 'showLogin';
+            Ga.className = 'showLogin';
         }
     } else if (pg==='tasks') {
         console.log('tasks yee')
-        gbl.className = 'showTasks';
+        Ga.className = 'showTasks';
         let limit = 0
         let offset = 0
 
-        for (let i = 0; i < 10; ++i) {
+        for (let i = 0; i < 1; ++i) {
             taskData()
         }
     } else if (pg==='taskID') {
-        gbl.className = 'showTaskID';
+        Ga.className = 'showTaskID';
         let taskID = 1
 
-        for (let i = 0; i < 10; ++i) {
+        for (let i = 0; i < 1; ++i) {
             imageIndiv()
         }
     } else if (pg==='imageID') {
-        gbl.className = 'showTasks showImg';
+        Ga.className = 'showTasks showImg';
         let taskID = 1
 
-        for (let i = 0; i < 10; ++i) {
+        for (let i = 0; i < 1; ++i) {
             imageIndiv()
         }
-    } else if (pg==='settingsz') {
-        gbl.className = 'showTaskID';
-        let taskID = 1
-    } else if (pg==='login') {
-        gbl.className = 'showLogin';
-    } else if (pg==='signup') {
-        gbl.className = 'showSignup';
-    } else if (pg==='statistics') {
-        gbl.className = 'showTaskID';
-        let taskID = 1
     } else if (pg==='profile') {
-        if (hh==='') {gbl.className = 'showProfile';}
-        else if (hh==='settings') {gbl.className = 'showProfile';}
-        else if (hh==='premium') {gbl.className = 'showProfile';}
-        else if (hh==='password') {gbl.className = 'showProfile';}
-        else if (hh==='notif') {gbl.className = 'showProfile';}
-        else if (hh==='help') {gbl.className = 'showProfile';}
-        else {alert('phucc')}
+        Ga.className = 'showProfile edit';
+    } else if (pg==='security') {
+        Ga.className = 'showProfile sec';
+    } else if (pg==='alerts') {
+        Ga.className = 'showProfile alr';
+    } else if (pg==='billing') {
+        Ga.className = 'showProfile bil';
+    } else if (pg==='help') {
+        Ga.className = 'showProfile hlp';
+    } else if (pg==='login') {
+        Ga.className = 'showLogin';
+    } else if (pg==='signup') {
+        Ga.className = 'showSignup';
+    } else if (pg==='statistics') {
+        Ga.className = 'showTaskID';
+        let taskID = 1
     } else if (pg==='notifications') {
-        gbl.className = 'showNotifications';
+        Ga.className = 'showNotifications';
     } else if (pg==='paired') {
-        gbl.className = 'showPaired';
+        Ga.className = 'showPaired';
+    } else if (pg==='premium') {
+        Ga.className = 'showPremium';
     } else {
         alert('phucc')
     }
+
+    //window.history.pushState({},e.target.href,e.target.href)
 }
 
 
 rte(window.location.pathname)
+window.history.pushState({},window.location.pathname,window.location.pathname)
 
 function updateHistory(curr) {
     window.location.lasthash.push(window.location.hash);
@@ -102,203 +105,307 @@ var dotOptions = false
 var sortDropdownOn = false
 var filtDropdownOn = false
 var mobilemenuDown = false
-/*
-
-let auxIconData = {
-    que: false,
-    nof: false,
-    prf: false,
-    pls: false
-};
-*/
 
 var questionDropdownOn = false
 var notificDropdownOn = false
 var profileDropdownOn = false
 var plusDropdownOn = false
 
+
+
+var OPN = -1 // this represents the id that is opened
+var FIL = -1 // controls if filter is open
+
+/*
+  <ul id="zDropdown" class="dropsort">
+    <li id="Sd0" class="noselect active">Delete test</li>
+    <li id="Sd1" class="noselect active">Pause test</li>
+    <li id="Sd2" class="noselect active">Restart test</li>
+    <li id="Sd3" class="noselect active"> test</li>
+  </ul>
+*/
+
+
 function removeDropdowns(idxv) {
-    if (sortDropdownOn){sortDropdown.classList.remove('show');sortDropdownOn=false;return idxv==0}
-    if (auxIconData.prf) {dropp.classList.remove('active');auxIconData.prf=false;return idxv==1}
-    if (dotOptions) {bblDropdown.classList.remove('show');dotOptions=false;return idxv==2}
-    if (notificDropdownOn) {dropn.classList.remove('active');notificDropdownOn=false;return idxv==3}
-    if (questionDropdownOn) {dropi.classList.remove('active');questionDropdownOn=false;return idxv==4}
-    if (plusDropdownOn) {dropc.classList.remove('active');plusDropdownOn=false;return idxv==5}
-    if (filtDropdownOn){filtDropdown.classList.remove('show');filtDropdownOn=false;return idxv==6}
-    return false
+    if (OPN==-1) {return true}
+
+    switch (OPN) {
+        case 1: // mobile hamburger menu for nav
+            // previously was 'A'
+            Na.className=''
+        case 2: // logo dropdown
+            // previously had 'A'
+            Da.className='dropdown BlA'
+        case 3: // nav notification dropdown
+            // previously had 'A'
+            dea.className='dropdown'
+            break
+        case 4: // profile dropdown
+            // previously had 'A'
+            dfa.className='dropdown'
+            break
+        case 5: // rate more dropdown (reports, etc)
+            // previously had 'A'
+            rMor.className='dropsort'
+            break
+        case 6: // dots for edit/delete task in /taskID
+            // previously had 'A'
+            Da.className='dropdown BlA'
+            break
+        case 7: // dots for edit/delete task in grid /tasks
+            // previously had 'A'
+            Da.className='dropdown BlA'
+            break
+        case 8: // sort dropdown for /tasks
+            sortDropdown.className='dropsort'
+            break
+        case 9: // filter dropdown for /tasks
+            Da.className='dropdown BlA'
+            break
+        case 10: // date dropdown in /profile
+            DAT.className='dropdown BlA'
+            break
+        case 11: // language dropdown in /profile
+            LNG.className='dropdown BlA'
+            break
+        case 100: // new test upload modal
+            // previously was 'U'
+            ZZ.className='A'
+            break
+        default:
+            break
+    }
+
+    let ov = OPN
+    OPN=-1
+    return (idxv!==ov)
 }
 
-let btns = [btnR0,btnR1,btnR2,btnR3,btnR4]
-let activeImageSort = daq
+
+let cRate=-1
+let cTg=0
+let cLanguage=-1
+let cStatus=0
 
 document.onclick = (e) => {
-    var key = e.target.id.slice(-1)
+    let tG=e.target
+    let H=e.target.id
+    let key=H.slice(-1)
+    console.log(H)
 
     // link
-    if (key == '_') {
+    if (key === '_') {
         event.preventDefault();
         rte(e.target.href)
         window.history.pushState({},e.target.href,e.target.href)
         removeDropdowns(-1)
     }
 
-    // rating 
-    else if (key >= '0' && key <= '4') {
-        if (ratingData.rating != -1) {
-            btns[ratingData.rating].classList.remove('active')
-        }
+////// navigation #Na
+    if (tG === Bc) {
+        if (removeDropdowns(1)) {Na.className='A';OPN=1}
+    }
 
-        console.log(key - '0')
-        btns[key - '0'].classList.add('active')
-        ratingData.rating = key - '0'
-        rateData.classList.add('tagsLevel')
+    else if (Lb.contains(tG)) {
+        if (removeDropdowns(2)) {Da.className='dropdown BlA A';OPN=2}
+    }
+
+
+    else if (tG===Je||tG===Ke||tG===Le) {
+        if (removeDropdowns(3)) {dea.className='dropdown BlA A';OPN=3}
+    }
+
+
+    else if (tG===Jf||tG===Kf||tG===Lf) {
+        if (removeDropdowns(4)) {dfa.className='dropdown BlA A';OPN=4}
+    }
+
+    // new test upload modal
+    else if (tG===Pd) {
+        alert('seg')
+        if (removeDropdowns(100)) {Ga.className='showUpl';OPN=100}
+    }
+
+
+////// / page (rater)
+
+    // rating 
+    else if (Ca.contains(tG) && tG !== Ca) {
+        let aidx=key - '0'
+        if (cRate!==-1){Ca.children[cRate].className='btn BR';}
+        Ca.children[aidx].className='btn BR A';
+        cRate = aidx
+    }
+
+    // tag 
+    else if (Ua.contains(tG) && tG !== Ua) {
+        let aidx=key.charCodeAt(0) - 97
+        //console.log(aidx)
+        if (cTg&(1<<aidx)){Ua.children[aidx].className='BZ';cTg ^= (1<<aidx);}
+        else{Ua.children[aidx].className='BZ A';cTg |= (1<<aidx);}
     }
     
-    // tag 
-    else if ((key >= '5' && key <= '9') || (key >= 'A' && key <= 'F')) {
-        //alert('tagged', e.target)
-        e.target.classList.add('active')
-    }
-
-    // DARK 
-    else if (key == 'k') {
-        alert('dark')
-        gbl.className = 'showTasks'
-        rte('/taskID')
-        window.history.pushState({},'/taskID','/taskID')
-
-    }
-
-
-    // skip 
-    else if (key == 'G') {
-
+    // dropdown
+    else if (Dmo.contains(tG)) {
+        console.log('69420')
+        if (removeDropdowns(5)) {rMor.className='dropsort A';OPN=5}
     }
 
     // report
-    else if (key == 'H') {
-
+    else if (Rpt.contains(tG)) {
+        console.log('report')
     }
 
-    // submit 
-    else if (key == 'I') {
-
+    // skip
+    else if (Sk.contains(tG)) {
+        console.log('skip')
     }
+
+    // submit
+    else if (Sm.contains(tG)) {
+        console.log('submit')
+    }
+
+////// /paired page
+    else if (IWa.contains(tG)) {
+        console.log('pic a')
+    }
+
+    else if (IWb.contains(tG)) {
+        console.log('pic b')
+    }
+
+////// /tasks page
+
+    // sort method in tests 
+    else if (tG === sortMethodV) {
+        if (removeDropdowns(8)) {sortDropdown.className='dropsort show active A';OPN=8}
+    }
+
+
+    // view all regardless of task status
+    else if (tflta.contains(tG) && tG !== tflta) { //a === vAll
+        let aidx=key - '0'
+        // make sure this is not 0 samples!
+        if (cStatus!==aidx) {
+            tflta.children[cStatus].className='btn'
+            tflta.children[aidx].className='btn A'
+            cStatus=aidx
+
+            // refresh page
+        }
+    }
+
+    else if (sortDropdown.contains(tG) && tG !== sortDropdown) {
+        let aidx=key - '0'
+        
+        console.log('seg')
+    }
+
+/*
+    // view tasks of current run status
+    else if (tG === vRun) {
+    }
+
+    // view tasks of paused status
+    else if (tG === vPau) {
+    }
+
+    // view tasks of finished status
+    else if (tG === vFin) {
+    }
+*/
+
+////// DARK 
+    else if (key == 'Z') {
+        alert('dark')
+        Ga.className = 'showTasks'
+        rte('/taskID')
+        window.history.pushState({},'/taskID','/taskID')
+    }
+
+////// /profile page
+
+    // email
+    else if (EiEml.contains(tG)) {
+        console.log('same procedure as /rater tag')
+    }
+
+    // phone country code
+
+    // phone edit
+    else if (EiEml.contains(tG)) {
+        console.log('same procedure as /rater tag')
+    }
+
+    // gender
+    else if (pGda.contains(tG)) {
+        console.log('same procedure as /rater tag')
+    }
+
+    // activity
+    else if (pHbt.contains(tG)) {
+        console.log('same procedure as /rater tag')
+    }
+
+    // dropdown for language
+    else if (lndr.contains(tG)) {
+        if (removeDropdowns(11)) {LNG.className='dropsort A';OPN=11}
+    }
+
+    // picked a language
+    else if (LNG.contains(tG)) {
+        console.log('picked language, same procedure as /rater tag, now remove dropdown and change language')
+    }
+
+
 
     // image indivual toggle
-    else if (key == 'J') {
-
-    }
-
     // image slideshow toggle
-    else if (key == 'K') {
-
-    }
-
-    //  hamburger
-    else if (key == 'L') {
-        if (!mobilemenuDown){nv.className='active';mobilemenuDown=true;}
-        else{nv.className='a';mobilemenuDown=false;}
-    }
-
     // edit test
-    else if (key == 'M') {
-        // 
-    }
-
     // delete test
-    else if (key == 'N') {
-
-    }
-
     // AVERAGE SCORE button 
-    else if (key == 'O') {
-
-    }
 
     // MEDIAN SCORE button 
-    else if (key == 'P') {
-
-    }
 
     // LOWER QUARTILE button 
-    else if (key == 'Q') {
-        // this is always remove, most important is to change
-        sortDropdown.classList.remove('show');
-        sortDropdownOn=false;
 
-        console.log(e.target)
-
+    //  hamburger
+    else if (key == 'c') {
     }
 
     // plus button 
-    else if (key == 'R') {
-        if (!plusDropdownOn) {
-            dropc.classList.add('active')
-            plusDropdownOn = true
-        } else {
-            dropc.classList.remove('active')
-            plusDropdownOn = false
-        }
+    else if (key == 'd') {
     }
 
-    // documentation button 
-    else if (key == 'S') {
-        dropi.classList.toggle('active')
+    // notifications button 
+    else if (key == 'e') {
     }
 
-    // dropdown, notifications
-    else if (key == 'T') {
-        if (!auxIconData.nof) {
-            dropp.classList.remove('active')
-            auxIconData.prf = false
-
-            dropn.classList.add('active')
-            auxIconData.nof = true
-        } else {
-            dropn.classList.remove('active')
-            auxIconData.nof = false
-        }
+    // notifications button 
+    else if (key == 'f') {
     }
 
     // dropdown, profile
-    else if (key == 'U') {
+    else if (key == 'f') {
 
-        //if (!removeDropdowns(1)) {}
-        if (!auxIconData.prf) {
-            dropn.classList.remove('active')
-            auxIconData.nof = false
+    }
 
-            dropp.classList.add('active')
-            auxIconData.prf = true
-        } else {
-            dropp.classList.remove('active')
-            auxIconData.prf = false
-        }
+    // dropdown, profile
+    else if (key == 'g') {
+
     }
 
     // dropsort item title
     else if (key == 'V') {
-        if (!removeDropdowns(0)) {
-            if (!sortDropdownOn){sortDropdown.classList.add('show');sortDropdownOn=true;}
-            else{sortDropdown.classList.remove('show');sortDropdownOn=false;}
-        }
     }
 
     // dropsort filter elements
     else if (key == 'W') {
-        if (!removeDropdowns(6)) {
-            if (!filtDropdownOn){filtDropdown.classList.add('show');filtDropdownOn=true;}
-            else{filtDropdown.classList.remove('show');filtDropdownOn=false;}
-        }
     }
 
     // dot options 
     else if (key == 'X') {
-        if (!removeDropdowns(2)) {
-            if (!dotOptions){bblDropdown.classList.add('show');dotOptions=true;}
-            else{bblDropdown.classList.remove('show');dotOptions=false;}
-        }
     }
 
     // resume test 
@@ -306,14 +413,39 @@ document.onclick = (e) => {
     }
 
     // pause test 
-    else if (key == 'Z') {
-        tasks.className = 'hlong'
+    else if (key == 'ZZZ') {
+    }
+
+    // logo dropdown
+    else if (key == 'b') {
+    }
+
+    //  
+
+    // sign up
+    else if (key == 'q') {
+        rte('/')
+        window.history.pushState({},'/','/')
+    }
+
+    // sign out
+    else if (key == 'r') {
+        console.log('seggs')
+        rte('/login')
+        window.history.pushState({},'/login','/login')
+    }
+
+    // status filter dropdown
+    else if (key == 'y') {
+        console.log('seg')
+        stusDrop.classList.toggle('show')
     }
 
     // remove dropdowns,
     // this is click outside
     else {
         console.log('remove dropdown')
+
         removeDropdowns(-1)
     }
     
@@ -360,4 +492,116 @@ document.addEventListener('click', function(event) {
     alert('You clicked outside A')
   }
 });
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// oninputchange
+
+
+/*
+
+function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
+    const [from, to] = getParsed(fromInput, toInput);
+    fillSlider(fromInput, toInput, '#C6C6C6', '#25daa5', controlSlider);
+    if (from > to) {
+        fromSlider.value = to;
+        fromInput.value = to;
+    } else {
+        fromSlider.value = from;
+    }
+}
+    
+function controlToInput(toSlider, fromInput, toInput, controlSlider) {
+    const [from, to] = getParsed(fromInput, toInput);
+    fillSlider(fromInput, toInput, '#C6C6C6', '#25daa5', controlSlider);
+    setToggleAccessible(toInput);
+    if (from <= to) {
+        toSlider.value = to;
+        toInput.value = to;
+    } else {
+        toInput.value = from;
+    }
+}
+
+function controlFromSlider(fromSlider, toSlider, fromInput) {
+  const [from, to] = getParsed(fromSlider, toSlider);
+  fillSlider(fromSlider, toSlider, '#C6C6C6', '#25daa5', toSlider);
+  if (from > to) {
+    fromSlider.value = to;
+    fromInput.value = to;
+  } else {
+    fromInput.value = from;
+  }
+}
+
+function controlToSlider(fromSlider, toSlider, toInput) {
+  const [from, to] = getParsed(fromSlider, toSlider);
+  fillSlider(fromSlider, toSlider, '#C6C6C6', '#25daa5', toSlider);
+  setToggleAccessible(toSlider);
+  if (from <= to) {
+    toSlider.value = to;
+    toInput.value = to;
+  } else {
+    toInput.value = from;
+    toSlider.value = from;
+  }
+}
+
+function getParsed(currentFrom, currentTo) {
+  const from = parseInt(currentFrom.value, 10);
+  const to = parseInt(currentTo.value, 10);
+  return [from, to];
+}
+
+function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
+    const rangeDistance = to.max-to.min;
+    const fromPosition = from.value - to.min;
+    const toPosition = to.value - to.min;
+    controlSlider.style.background = `linear-gradient(
+      to right,
+      ${sliderColor} 0%,
+      ${sliderColor} ${((fromPosition)/(rangeDistance)*100)+5}%,
+      ${rangeColor} ${(((fromPosition)/(rangeDistance))*100)+5}%,
+      ${rangeColor} ${((toPosition)/(rangeDistance)*100)-2}%, 
+      ${sliderColor} ${((toPosition)/(rangeDistance)*100)-2}%, 
+      ${sliderColor} 100%)`;
+}
+
+function setToggleAccessible(currentTarget) {
+  const toSlider = document.querySelector('#toSlider');
+  if (Number(currentTarget.value) <= 0 ) {
+    toSlider.style.zIndex = 2;
+  } else {
+    toSlider.style.zIndex = 0;
+  }
+}
+
+const fromSlider = document.querySelector('#fromSlider');
+const toSlider = document.querySelector('#toSlider');
+const fromInput = document.querySelector('#fromInput');
+const toInput = document.querySelector('#toInput');
+fillSlider(fromSlider, toSlider, '#C6C6C6', '#25daa5', toSlider);
+setToggleAccessible(toSlider);
+
+fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
+toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
+fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
+toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
+
+
 */

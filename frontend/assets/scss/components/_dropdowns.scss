@@ -9,15 +9,14 @@
   visibility:    hidden;
   top:           29px;
   opacity:       0;
-  transition:    0.2s ease all;
   transform:     translate(2.25px, 30px);
 
 
 // original, make sure to keep for sort dropdown
   @media (min-width: $tablet-min) {
+    transition:  0.2s ease all;
     right:       -21px;
-    width:       120px;
-    border:      1px solid rgba(#8898AA, 0.1);
+    width:       136px;
     box-shadow:  1px 3px 14px -4px rgba(0, 2, 4, 0.14);
   }
 
@@ -26,7 +25,6 @@
     width:       100%;
     border:      none;
     box-shadow:  none;
-    position:    static;
   }
 
   .dropHd {
@@ -42,17 +40,20 @@
     font-weight: 600;
   }
 
+  &.A,
   &.active {
     visibility:  visible;
     opacity: 1;
-    transform:   translate(2.25px, 0);
+    transform:   translate(0, 0);
   }
 
   .email, .signout {
-    padding:     0 4px 0 13px !important;
     box-sizing:  border-box;
     text-align:  left;
     color:       black;
+    @media (min-width: $tablet-min) {
+      padding:     0 4px 0 13px !important;
+    }
   }
 
   .email {
@@ -85,15 +86,18 @@
   }
 
   hr {
-    border:      none;
-    height:      1px;
-    background:  rgba(0,20,30,0.08);
+    border: none;
+    outline: none;
+    height: 1px;
+    display: block;
+    width: 100%;
+    background: rgba(0, 20, 30, 0.08);
   }
 
   svg {
     position:    absolute;
     top:         -8px;
-    right:       20px;
+    right:       24px;
 
     @media (max-width: $tablet-max) {
       display: none;
@@ -101,13 +105,14 @@
   }
 }
 
-#dropn {
-  width: 206px;
-  li {
-        line-height: 14px;
-  }
+// Edit Profile Icon
+#dea,
+#dfa {
+  right: -20px;
+  transform: translate(0,40px);
 }
 
-#emailTg {
-  font-size: 15px;
+#dea {
+  width: 270px;
 }
+

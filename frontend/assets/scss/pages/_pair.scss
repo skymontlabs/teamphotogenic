@@ -1,0 +1,40 @@
+.PI {
+  height:        400px;
+  background:    #f7f8f9;
+  border-radius: 4px;
+  cursor:        pointer;
+  position:      relative;
+
+  @media (max-width: $tablet-max) {
+    width:       100%;
+  }
+   
+  @media (min-width: $tablet-min) {
+    width:       calc(50% - 8px);
+  }
+
+  img {
+    max-height:  400px;
+    position:    relative;
+    max-width:   100%;
+    height:      auto;
+    display:     block;
+    margin:      0 auto;
+    width:       auto;
+
+    @media (min-width: $tablet-min) {
+      top:       50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &:hover {
+    box-shadow:  0 0 0 1px rgba(0,0,0,0.0);
+  }
+
+  &>input {
+    appearance:  none;
+    padding:     0;
+    z-index:     999999;
+  }
+}

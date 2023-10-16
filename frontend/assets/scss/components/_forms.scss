@@ -12,21 +12,47 @@ textarea {
 input,
 textarea {
   font-size:     13px;
-  background:    transparent;
-  border-left:   none;
-  border-top:    none;
-  border-right:  none;
+  background:    white;
   margin-top:    5px;
   transition:    0.2s ease-out border;
-  border:        1px solid rgba(89, 92, 143, 0.08);
+  border:        1px solid rgba(0,0,0,0.09);
+  box-shadow:    inset 0 0 5px -1px rgba(89, 90, 100, 0.2);
   border-radius: 4px;
   font-family:   $base-font;
   display:       block;
 }
 
+input:active,
+textarea:active,
 input:focus,
-textarea:focus {
+textarea:focus,
+input:focus-visible,
+textarea:focus-visible, {
   border:        1px solid rgba(153, 166, 255, 0.7);
   box-shadow:    0 0 0 5px rgba(89, 132, 255, 0.2);
+  outline:       none;
 }
 
+.dateWr {
+  width: 101px;
+  padding: 5px 8px;
+  background: white;
+  box-shadow: inset 0 0 5px -1px rgba(89, 90, 100, 0.2);
+  border-radius: 4px;
+  &>input {
+    padding: 0;
+    display: inline;
+    box-shadow: none;
+    border: none;
+    border-radius: 0px;
+    margin: 0;
+    &:active,
+    &:focus-visible,
+    &:focus {
+      border-radius: 0;
+      border: none !important;
+      box-shadow: none !important;
+      background: blue;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+let languages =
+[
+	'English',
+	'Spanish'
+]

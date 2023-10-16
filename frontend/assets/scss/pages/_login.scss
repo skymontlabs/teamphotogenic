@@ -1,29 +1,33 @@
 #bger {
-  width:         100%;
-  max-width:     522px;
+  width:         50%;
   height:        100vh;
   background:    linear-gradient(#4030ff, #8090ff);
   position:      absolute;
   left:          0;
   top:           0;
-  opacity:       0;
+
 }
 
 #loginpanel {
-  margin:        0 auto;
-  position:      absolute;
-  left:          50%;
-  top:           50%;
-  transform:     translate(-50%,-50%);
-  width:         350px;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 350px;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  position: absolute;
 }
 
-#loginer {
+#Ya {
   text-align:    center;
   display:       flex;
-  width:         100%;
+  width:         100vw;
   opacity:       0;
   visibility:    hidden;
+  background: white;
 
   label {
     display:     block;

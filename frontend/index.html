@@ -8,513 +8,380 @@
     <title>TeamPhotogenic</title>
     <link rel="stylesheet" href="main.css"/>
   </head>
-  <body id="gbl" class="hideall">
-    <nav id="nv">
+  <body id="Ga" class="hideall">
+    <!-- nav section -->
+    <nav id="Na">
       <div class="x y z nomax rel">
-        <div id="logoSec">
-          <a href="/" id="logo"><span id="team">team</span><span id="photogenic">photogenic</span></a>
-          <div id="logoRateType" class="dropdown">
-            <ul id="ratePgs" class="p0">
-              <li id="rkey" class="point">
-                <h6>Rating</h6>
-                <p>Score, tag, and comment on an image</p>
-              </li>
-              <li id="pkey" class="point">
-                <span>Paired</span>
-                <p>Best of two images from the same task</p>
-              </li>
-            </ul>
+        <div id="La" class="noselect">
+          <div id="Lb" class="noselect crt rel">
+            <span id="Tb" class="noselect">team</span><span id="Pb" class="noselect">photogenic</span>
+          </div>
+          <div id="Da" class="dropdown BlA">
+            <a id="r_" href="/">Rating</a>
+            <a id="p_" href="/paired">Paired</a>
           </div>
         </div>
-        <button id="barsL" class="rel">
-        </button>
-        <div id="mobi" class="dn y z">
-          <ul class="spaced-list y">
-            <li>
-              <a id="lTsk_" href="/tasks">
-                <h6>Tasks</h6>
-                <p>List out my tasks</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="nsec" class="y z">
-          <div id="links" class="y z">
-            <ul class="spaced-list y">
-              <li><a id="lTsk_" href="/tasks">Tasks</a></li>
-            </ul>
-          </div>
-          <div class="aux-icons y z">
-            <button id="infBtnS" class="rel drop-button">
-              <svg id="infTogS" class="pointer" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM7 8.089V8.5a1 1 0 0 0 1.926.377 3.456 3.456 0 0 0 1.549-.902 3.5 3.5 0 0 0-4.95-4.95A3.437 3.437 0 0 0 4.5 5.51a1.004 1.004 0 1 0 2.009-.02 1.43 1.43 0 0 1 .436-1.045 1.5 1.5 0 0 1 1.058-.437 1.492 1.492 0 0 1 0 2.983A1.004 1.004 0 0 0 7 8.09zM8 14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" fill-rule="evenodd"></path></svg>
-              <div id="dropi" class="dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation">
-                  <defs>
-                    <symbol id="dropdown-arrow" viewbox="0 0 21 9">
-                      <path fill="#8898AA" fill-opacity="0.1" d="M1 9.092h19l-6.402-6.74c-1.717-1.806-4.485-1.8-6.196 0L1 9.093zM20.342 8l-6.02-6.336c-2.108-2.22-5.538-2.218-7.645 0L.658 8h19.684z"></path><path fill="currentcolor" d="M7.402 2.353c1.711-1.801 4.48-1.807 6.196 0L20 9.093H1l6.402-6.74z"></path>
-                    </symbol>
-                  </defs>
-                  <use href="#dropdown-arrow"/>
-                </svg>
-                <ul class="p0">
-                  <li class="-item">
-                    <a class="y" href="/tests.html">
-                      <span>Documentation</span>
-                    </a>
-                  </li>
-                  <li class="-item">
-                    <a class="y" href="/tests.html">
-                      <span>Contact us</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </button>
-            <button id="notBtnT" class="rel drop-button">
-              <svg id="notTogT" class="pointer" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path id="notPthT" d="M5.55 14h4.9a2.5 2.5 0 0 1-4.9 0zM13 9.066l1.216 1.232A1 1 0 0 1 13.504 12H2.496a1 1 0 0 1-.712-1.702L3 9.066V5a5 5 0 1 1 10 0z" fill-rule="evenodd"></path></svg>
-              <div id="dropn" class="dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation">
-                  <use href="#dropdown-arrow"/>
-                </svg>
+        <button id="Bc" class="rel"></button>
+        <div id="Ja" class="y z">
+          <button id="Pd" class="btn rel blue" style="margin: 24px 0px;">New Test</button>
+          <button id="Je" class="rel drop-button">
+            <svg id="Ke" class="pointer" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path id="Le" fill="#414552" d="M5.55 14h4.9a2.5 2.5 0 0 1-4.9 0zM13 9.066l1.216 1.232A1 1 0 0 1 13.504 12H2.496a1 1 0 0 1-.712-1.702L3 9.066V5a5 5 0 1 1 10 0z" fill-rule="evenodd"></path></svg>
+            <div id="dea" class="dropdown">
+              <div class="y">
                 <span class="dropHd">Notifications</span>
-                <hr class="">
-                <ul id="notifList" class="p0">
-                </ul>
+                <a class="btn blue">See All</a>
               </div>
-            </button>
-            <button id="prfBtnU" type="button" data-testid="user-avatar" class="drop-button">
-              <svg  id="prfTogU" class="pointer"  height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                <path id="prfPthU" d="M8 11a5.698 5.698 0 0 0 3.9-1.537l1.76.66A3.608 3.608 0 0 1 16 13.5V15a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1v-1.5c0-1.504.933-2.85 2.34-3.378l1.76-.66A5.698 5.698 0 0 0 8 11zM7.804 0h.392a3.5 3.5 0 0 1 3.488 3.79l-.164 1.971a3.532 3.532 0 0 1-7.04 0l-.164-1.97A3.5 3.5 0 0 1 7.804 0z" fill-rule="evenodd"></path>
-              </svg>
-              <div id="dropp" class="dropdown bsbx">
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation">
-                  <use href="#dropdown-arrow"/>
-                </svg>
-                <ul class="p0">
-                  <li class="email">
-                    <span id="emailTg">sl@sent.at</span>
-                  </li>
-                  <li class="email">
-                    <span class="" style="">54 credits</span>
-                  </li>
-                  <hr class="">
-                  <li class="p0"><a id="lPf_" href="/profile">Edit Profile</a></li>
-                  <li class="p0"><a href="/helpSupport">Get premium</a></li>
-                  <hr class="">
-                  <li id="signouter" class="signout point" style="line-height: 28px;font-size: 11px;"><span>Sign Out</span></li>
-                </ul>
-                <span style="position: absolute; left: 182px;"></span>
+              <hr class=""/>
+              <ul id="nla">
+              </ul>
+            </div>
+          </button>
+          <button id="Jf" type="button" data-testid="user-avatar" class="drop-button">
+            <svg id="Kf" class="pointer"  height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path id="Lf" fill="#414552" d="M8 11a5.698 5.698 0 0 0 3.9-1.537l1.76.66A3.608 3.608 0 0 1 16 13.5V15a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1v-1.5c0-1.504.933-2.85 2.34-3.378l1.76-.66A5.698 5.698 0 0 0 8 11zM7.804 0h.392a3.5 3.5 0 0 1 3.488 3.79l-.164 1.971a3.532 3.532 0 0 1-7.04 0l-.164-1.97A3.5 3.5 0 0 1 7.804 0z" fill-rule="evenodd"></path></svg>
+            <div id="dfa" class="dropdown bsbx">
+              <div class="BlA">
+                <a id="Ep_" href="/tasks">Tasks</a>
+                <a id="Ep_" href="/profile">Settings</a>
+                <a id="Do_" href="/docs">Documentation</a>
+                <a id="Su_" href="/support">Support</a>
+                <a id="By_" href="/credits">Credits</a>
+                <a id="Gp_" href="/premium">Premium</a>
+                <hr/>
+                <span id="Sg" class="point">Sign Out</span>
               </div>
-            </button>
-            <button id="plsBtnR" class="rel drop-button">
-              <span id="plusR"></span>
-              <div id="dropc" class="dropdown L abs bsbx">
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="9" role="presentation">
-                  <use href="#dropdown-arrow"/>
-                </svg>
-                <ul class="p0">
-                  <li id="newPost" class="-item">
-                    <a class="y" href="/new">
-                      <span>New task</span>
-                    </a>
-                  </li>
-                  <li id="newPost" class="-item">
-                    <a class="y" href="/tests.html">
-                      <span>Buy credits</span>
-                    </a>
-                  </li>
-                  <li class="-item">
-                    <a class="y" href="/tests.html">
-                      <span>Contact us</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </button>
-          </div>
+            </div>
+          </button>
         </div>
       </div>
     </nav>
-    <div id="profile" class="rdx oh">
-      <div class="x y">
-        <div id="sbar">
-          <ul id="sbu">
-            <li id="sbro_"><a id="sblh_" href="/profile/">Profile</a></li>
-            <li id="sbrs_"><a id="sbls_" href="/profile#settings">Settings</a></li>
-            <li id="sbrw_"><a id="sblw_" href="/profile#password">Password</a></li>
-            <li id="sbrp_"><a id="sblp_" href="/profile#premium">Premium</a></li>
-            <li id="sbrn_"><a id="sbln_" href="/profile#notifications">Notifications</a></li>
-            <li id="sbrh_"><a id="sblh_" href="/profile#help">Help</a></li>
-          </ul>
-        </div>
-        <div id="pnl">
-          <h2>Edit Profile</h2>
-          <div>
-            <ul id="nvz" class="y">
-              <li id="nvP_"><a id="nvs_" href="/profile">Profile</a></li>
-              <li id="nvS_"><a id="nvs_" href="/profile#password">Password &amp; Security</a></li>
-              <li id="nvN_"><a id="nvn_" href="/profile#notifications">Linked accounts</a></li>
-            </ul>
-          </div>
-          <div class="admin-base">
-            <div id="editProfilePanel">
-              <div>
-                <h4>Email</h4>
-                <div>
-                  <input id="inputContact" class="" placeholder="Current email" type="email">
-                </div>
-              </div>
-              <div>
-                <h5 class="fwHeavy">Gender*</h5>
-                <ul id="myGendera" class="">
-                  <li class="y"><input type="radio" name="gender"><span id="m24x">Male</span></li>
-                  <li class="y"><input type="radio" name="gender"><span id="m24x">Female</span></li>
-                </ul>
-              </div>
-              <div>
-                <h5 class="fwHeavy">Rating*</h5>
-                  <ul id="myAgea" class="">
-                    <li class="y"><input type="radio" name="age"><span id="m24x">18-24</span></li>
-                    <li class="y"><input type="radio" name="age"><span id="m30x">25-29</span></li>
-                    <li class="y"><input type="radio" name="age"><span id="m40x">30-39</span></li>
-                    <li class="y"><input type="radio" name="age"><span id="m40x">40-49</span></li>
-                    <li class="y"><input type="radio" name="age"><span id="m50x">50+</span></li>
-                  </ul>
-              </div>
-              <div>
-                <h5 class="fwHeavy">Online Habits*</h5>
-                <div class="dropdownSelector">
-                  <span id="myFreqa"></span>
-                  <ul id="myFreqa" class="">
-                    <li class="y"><input type="radio" name="habits"><span id="ras">Rarely</span></li>
-                    <li class="y"><input type="radio" name="habits"><span id="wes">Weekly</span></li>
-                    <li class="y"><input type="radio" name="habits"><span id="das">Daily</span></li>
-                    <li class="y"><input type="radio" name="habits"><span id="hrs">Hourly</span></li>
-                  </ul>
-                </div>
-              </div>
-              <button id="save" class="dn">
-                Save changes
-              </button>
-            </div>
-            <div id="passwordSec" class="dn">
-              <div id="passwordPanel">
-                <h4>Password</h4>
-                <button>Change password</button>
-                <div class="dn">
-                  <input id="oldPassword" class="" placeholder="Current password" type="password">
-                  <input id="newPassword0" class="" placeholder="New password" type="password">
-                  <input id="newPassword1" class="" placeholder="Confirm new password" type="password">
-                </div>
-                <button>Change password</button>
-              </div>
-              <div>
-                <h3>Two-Factor</h3>
-                <p>TeamPhotogenic allows you to require a timed one-time password before logging in. Unlike SMS-based two-factor auth, this is safe from SIM-swapping attacks. This requires the use of Authy or Google Authenticator.</p>
-                <button id="activate2f">Activate two-factor</button>
-                <button id="reset2f">Reset two-factor</button>
-              </div>
-              <div>
-                <h3>Login history</h3>
-                <p>Change your password and activate two-factor authentication if you see something suspicious.</p>
-                <div class="y z" style="border-top:1px solid rgba(0,0,0,0.1);padding: 1em 4px">
-                  <div class="bl">
-                    <span class="bl">iPhone 13 Pro Max</span>
-                    <span class="bl">Safari 11</span>
-                  </div>
-                  <div class="bl">
-                    <span style="margin-left:auto;display: block;text-align: right;">69.215.210.45 (Pyongyang, North Korea)</span>
-                    <span class="bl">January 29, 2017 11:30:50 PM</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="">
-              <h4>Language</h4>
-            </div>
-            <div id="displayNotificationsPanel" class="dn">
-              <div>
-                <h2>Notifications</h2>
-                <div style="text-align: right;">
-                  <span>Text</span>
-                  <span>Email</span>
-                </div>
-              </div>
-              <div class="y toggleNotif">
-                <div>
-                  <h3>Image finished rating</h3>
-                  <p>One image finishes all (will probably end up spammy)</p>
-                </div>
-                <div style="margin-left:auto">
-                  <input type="checkbox" style="margin-right:20px" name="imgFinish">
-                  <input type="checkbox" name="imgFinish">
-                </div>
-              </div>
-              <div class="y toggleNotif">
-                <div>
-                  <h3>Task finished rating</h3>
-                  <p>Entire task (all images within) finished rating.</p>
-                </div>
-                <div style="margin-left:auto">
-                  <input type="checkbox" style="margin-right:20px" name="taskFinish">
-                  <input type="checkbox" name="taskFinish">
-                </div>
-              </div>
-              <div class="y toggleNotif">
-                <div>
-                  <h3>Support requests</h3>
-                  <p>Task finished rating</p>
-                </div>
-                <div style="margin-left:auto">
-                  <input type="checkbox" style="margin-right:20px" name="support">
-                  <input type="checkbox" name="support">
-                </div>
-              </div>
-              <div class="y toggleNotif">
-                <div>
-                  <h3>Logins</h3>
-                  <p>Task finished rating</p>
-                </div>
-                <div style="margin-left:auto">
-                  <input type="checkbox" style="margin-right:20px" name="login">
-                  <input type="checkbox" name="login">
-                </div>
-              </div>
-              <div class="y toggleNotif">
-                <div>
-                  <h3>Purchases</h3>
-                  <p>Task finished rating (just to be safe)</p>
-                </div>
-                <div style="margin-left:auto">
-                  <input type="checkbox" style="margin-right:20px" name="login">
-                  <input type="checkbox" name="login">
-                </div>
-              </div>
-            </div>
-            <div id="helpSupportPanel" class="dn">
-              <h2>Support tickets</h2>
-              <button>New ticket</button>
-              <div>
-                <div>
-                  <h2></h2>
-                  <p>Hi, i think you need to do X</p>
-                  <span>30 July, 2020</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="scorerater">
+
+
+    <!-- /paired image section -->
+    <div id="Ra">
       <div class="x tablet-max">
-        <span id="credits-count"></span>
-        <div id="rate-sec">
-          <div id="rateIm">
-            <div id="rate-bg" style="background: url(img/laurie.jpg);"></div>
-            <img id="image" src="img/laurie.jpg" alt="Rating picture">
+        <span id="credits-count"></span><!-- BUY CREDITS BUTTON HERE-->
+        <div id="RSa">
+          <div id="RIa">
+            <div id="RBa" style="background: url('img/laurie.jpg');"></div>
+            <img src="img/laurie.jpg" alt="Rating picture">
           </div>
-          <div id="rate-data">
-            <div id="panel-rate">
+          <div id="RDa">
+            <div>
               <span class="fwHeavy">Rating*</span>
-              <div id="btnRs" class="btn-wrap y z">
-                <button id="btnR0" class="btn btn-rate"><span id="btnXR0" class="emoji">😒</span><span id="btnZR0" class="tc txt-rate">Eh</span></button>
-                <button id="btnR1" class="btn btn-rate"><span id="btnXR1" class="emoji">😐</span><span id="btnZR1" class="tc txt-rate">Decent</span></button>
-                <button id="btnR2" class="btn btn-rate"><span id="btnXR2" class="emoji">😃</span><span id="btnZR2" class="tc txt-rate">Great</span></button>
-                <button id="btnR3" class="btn btn-rate"><span id="btnXR3" class="emoji">🤩</span><span id="btnZR3" class="tc txt-rate">Stunning</span></button>
-                <button id="btnR4" class="btn btn-rate"><span id="btnXR4" class="emoji">🤑</span><span id="btnZR4" class="tc txt-rate">Brilliant</span></button>
+              <div id="Ca" class="y z">
+                <button id="R0" class="btn BR"><span id="RE0" class="E">😒</span><span id="RT0" class="T TR">Eh</span></button>
+                <button id="R1" class="btn BR"><span id="RE1" class="E">😐</span><span id="RT1" class="T TR">Decent</span></button>
+                <button id="R2" class="btn BR"><span id="RE2" class="E">😃</span><span id="RT2" class="T TR">Great</span></button>
+                <button id="R3" class="btn BR"><span id="RE3" class="E">🤩</span><span id="RT3" class="T TR">Stunning</span></button>
+                <button id="R4" class="btn BR"><span id="RE4" class="E">🤑</span><span id="RT4" class="T TR">Brilliant</span></button>
               </div>
             </div>
-            <div id="panel-tags" style="margin-top:1.5em">
+            <div>
               <span class="fwHeavy">Tags</span>
-              <div id="optTag">
-                <span id="tagX5" class="wrap-tag btn-tag">😓 awkward</span>
-                <span id="tagXF" class="wrap-tag btn-tag">🫥 bad expression</span>
-                <span id="tagX6" class="wrap-tag btn-tag">🖼 bad framing</span>
-                <span id="tagX7" class="wrap-tag btn-tag">🍞 bland</span>
-                <span id="tagX7" class="wrap-tag btn-tag">🏟 distracting</span>
-                <span id="tagX8" class="wrap-tag btn-tag">💨 blurry</span>
-                <span id="tagX9" class="wrap-tag btn-tag">⚡️ bright</span>
-                <span id="tagXA" class="wrap-tag btn-tag">🚊 busy</span>
-                <span id="tagXB" class="wrap-tag btn-tag">🌈 colorful</span>
-                <span id="tagXC" class="wrap-tag btn-tag">🕶 cool</span>
-                <span id="tagXD" class="wrap-tag btn-tag">🌚 dark</span>
-                <span id="tagXF" class="wrap-tag btn-tag">😬 forced smile</span>
-                <span id="tagXE" class="wrap-tag btn-tag">🧂 grainy</span>
-                <span id="tagXF" class="wrap-tag btn-tag">🚨 overedited</span>
-                <span id="tagXF" class="wrap-tag btn-tag">🚶 poor posture</span>
-                <span id="tagXF" class="wrap-tag btn-tag">🔭 too far away</span>
-                <span id="tagXF" class="wrap-tag btn-tag">🔎 too close up</span>
+              <div id="Ua">
+                <span id="Qa" class="BZ">😓 awkward</span>
+                <span id="Qb" class="BZ">🫥 bad expression</span>
+                <span id="Qc" class="BZ">🖼 bad framing</span>
+                <span id="Qd" class="BZ">🍞 bland</span>
+                <span id="Qe" class="BZ">🏟 distracting</span>
+                <span id="Qf" class="BZ">💨 blurry</span>
+                <span id="Qg" class="BZ">⚡️ bright</span>
+                <span id="Qh" class="BZ">🚊 busy</span>
+                <span id="Qi" class="BZ">🌈 colorful</span>
+                <span id="Qj" class="BZ">🕶 cool</span>
+                <span id="Qk" class="BZ">🌚 dark</span>
+                <span id="Ql" class="BZ">😬 forced smile</span>
+                <span id="Qm" class="BZ">🧂 grainy</span>
+                <span id="Qn" class="BZ">🚨 overedited</span>
+                <span id="Qo" class="BZ">🚶 poor posture</span>
+                <span id="Qp" class="BZ">🔭 too far away</span>
+                <span id="Qq" class="BZ">🔎 too close up</span>
               </div>
             </div>
-            <div class="note-section iS" style="margin-top:1.5em;">
-              <div class=""><span class="fwHeavy leave-a-note">Comment</span></div>
-              <textarea id="txa" placeholder="This picture seems ..." tabindex="-1" maxlength="255" class=" form-control note-box note-box-mobile js-note-box"></textarea>
+            <div>
+              <span class="fwHeavy">Comment</span>
+              <textarea id="CMa" placeholder="This picture seems ..." tabindex="-1" maxlength="255"></textarea>
             </div>
-            <div class="quick-notes in-panel">
+            <div class="y z rel">
+              <button id="Dmo" class="dots btn"><span class="d0" id="dd0X"></span><span class="d1" id="dd1X"></span><span class="d2" id="dd2X"></span></button>
+              <ul id="rMor" class="dropsort">
+                <li><span id="Rpt">Report image</span></li>
+              </ul>
               <div class="y">
-                <button id="reportG" class="pointer y bti btn red report"  style="margin-top:20px"><span class="f11">Report</span></button>
-                <button id="skipH" class="pointer mla y btn " style="margin-top:20px"><span class="f11">Skip</span></button>
-                <button id="scoreratersubmitI" class="pointer btn blue" style="margin-top:20px"><span class="f11">Submit</span></button>
+                <button id="Sk" class="pointer  y btn " style="margin-top:20px"><span class="f11">Skip</span></button>
+                <button id="Sm" class="pointer btn blue" style="margin-top:20px"><span class="f11">Submit</span></button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- send over 8 images(4 pair) in a pack, and then do elo ratings for them, send back 8 ratings of binary, so 1 byte -->
-    <div id="paired" class="">
+
+
+
+    <!-- /paired image section -->
+    <div id="Xa" class="">
       <div class="x">
-        <div id="rate-sec">
-          <div id="pairK" class="bg-white pair-img">
-            <img id="imageK" class="mat mt80 mb80 pair-inner v" src="img/laurie.jpg">
+        <div id="RSa">
+          <div id="IWa" class="PI">
+            <img id="IMa" src="img/laurie.jpg">
           </div>
-          <div id="pairL" class="bg-white pair-img">
-            <img id="imageL" class="mat mt80 mb80 pair-inner v" src="img/lake.jpg">
+          <div id="IWb" class="PI">
+            <img id="IMb" src="img/lake.jpg">
           </div>
         </div>
       </div>
     </div>
-    <div id="loginer" style="">
+
+
+
+    <!-- /profile image section -->
+    <div id="Pa" class="oh">
+      <div class="x y narrow rel">
+        <div id="SBa" class="BlA">
+          <a id="P_" href="/profile">Profile</a>
+          <a id="S_" href="/security">Security</a>
+          <a id="A_" href="/alerts">Alerts</a>
+          <a id="R_" href="/billing">Billing</a>
+          <a id="H_" href="/help">Help</a>
+        </div>
+        <div id="PFa" class="rel">
+          <div id="EPa" class="profilePage">
+            <h2>Edit Profile</h2>
+            <div class="y z">
+              <div class="rel" style="width: calc(50% - 10px);">
+                <h5>Email</h5>
+                <div class="rel">
+                  <input id="EMLa" class="" placeholder="Email" type="email">
+                  <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="24" height="24" viewBox="0 0 528.899 528.899" class="editSvg" id="EiEml"><path fill="#999" d="m328.883 89.125 107.59 107.589-272.34 272.34L56.604 361.465l272.279-272.34zm189.23-25.948-47.981-47.981c-18.543-18.543-48.653-18.543-67.259 0l-45.961 45.961 107.59 107.59 53.611-53.611c14.382-14.383 14.382-37.577 0-51.959zM.3 512.69c-1.958 8.812 5.998 16.708 14.811 14.565l119.891-29.069L27.473 390.597.3 512.69z"/></svg>
+                </div>
+              </div>
+              <div class="rel" style="width: calc(50% - 10px);">
+                <h5>Phone</h5>
+                <div>
+                  <input id="PHNn" class="" placeholder="Phone" type="text">
+                </div>
+              </div>
+            </div>
+            <div>
+              <h5 class="fwHeavy">Gender*</h5>
+              <div id="pGda" class="pilWr y">
+                <div class="pilBg pointer"></div>
+                <div id="Ff" class="pilIt pointer">Female</div>
+                <div id="Mf" class="pilIt pointer">Male</div>
+              </div>
+            </div>
+            <div>
+              <h5 class="fwHeavy">Birthdate*</h5>
+              <div class="dateWr y">
+                <input id="BMa" type="text" maxlength="2">
+                <span>/</span>
+                <input id="BDa" type="text" maxlength="2">
+                <span>/</span>
+                <input id="BYa" type="text" maxlength="4">
+              </div>
+            </div>
+            <div>
+              <h5 class="fwHeavy">Online Habits*</h5>
+              <div id="pHbt" class="pilWr y">
+                <div class="pilBg pointer"></div>
+                <div id="Rh" class="pilIt pointer">Rarely</div>
+                <div id="Wh" class="pilIt pointer">Weekly</div>
+                <div id="Dh" class="pilIt pointer">Daily</div>
+                <div id="Hh" class="pilIt pointer">Hourly</div>
+              </div>
+            </div>
+            <div>
+              <h5 class="fwHeavy">Language*</h5>
+              <div class="wrapsort y z">
+                <div class="dropdownSelector short pointer">
+                  <span id="lndr" class="selClick">English</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" class="caret"><path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path></svg>
+                  <ul id="LNG" class="dropsort">
+                    <li id="lnga" class="noselect active">English</li>
+                    <li id="lngb" class="noselect">Romanian</li>
+                    <li id="lngc" class="noselect">Turkish</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button id="savz" class="btn blue">
+              Save changes
+            </button>
+          </div>
+          <div id="SCa" class="profilePage">
+            <h2>Security</h2>
+            <div id="PPa">
+              <h4>Password</h4>
+              <button id="CH" class="btn blue">Change password</button>
+              <div id="CHpw" class="dn">
+                <input id="oldPassword" class="" placeholder="Current password" type="password">
+                <input id="newPassword0" class="" placeholder="New password" type="password">
+                <input id="newPassword1" class="" placeholder="Confirm new password" type="password">
+                <button id="CF" class="btn">Change password</button>
+              </div>
+            </div>
+            <div>
+              <h4>Two-Factor Authentication</h4>
+              <p id="TFa" class="F12">TFA is active.</p>
+              <button id="A2F" class="btn gray">Activate two-factor</button>
+              <button id="R2F" class="btn blue">Reset two-factor</button>
+            </div>
+            <div>
+              <h4>Login history</h4>
+              <div class="y z" style="border-top:1px solid rgba(0,0,0,0.04);padding: 1em 4px">
+                <div class="bl">
+                  <span class="bl F12">iPhone 13 Pro Max</span>
+                  <span class="bl F12">Safari 11</span>
+                </div>
+                <div class="bl">
+                  <span style="margin-left:auto;display: block;text-align: right;" class="F12">69.215.210.45 (Pyongyang, North Korea)</span>
+                  <span class="bl F12">January 29, 2017 11:30:50 PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="Alr">
+            <h2>Notifications</h2>
+            <div>
+              <div class="F12" style="text-align: right;">
+                <span>Text</span>
+                <span>Email</span>
+              </div>
+            </div>
+            <div class="y toggleNotif">
+              <div>
+                <h5>Image finished</h5>
+                <p class="F12">One image meets rating quota (excessive)</p>
+              </div>
+              <div class="mla y chbxg">
+                <input type="checkbox" style="margin-right:20px" name="imgFinish">
+                <input type="checkbox" name="imgFinish">
+              </div>
+            </div>
+            <div class="y toggleNotif">
+              <div>
+                <h5>Task finished</h5>
+                <p class="F12">All images in the entire task finishes testing.</p>
+              </div>
+              <div class="mla y chbxg">
+                <input type="checkbox" style="margin-right:20px" name="taskFinish">
+                <input type="checkbox" name="taskFinish">
+              </div>
+            </div>
+            <div class="y toggleNotif">
+              <div>
+                <h5>Profile change</h5>
+                <p class="F12">When you click save changes made to profile.</p>
+              </div>
+              <div class="mla y chbxg">
+                <input type="checkbox" style="margin-right:20px" name="login">
+                <input type="checkbox" name="login">
+              </div>
+            </div>
+            <div class="y toggleNotif">
+              <div>
+                <h5>Support requests</h5>
+                <p class="F12">When a support ticket is updated.</p>
+              </div>
+              <div class="mla y chbxg">
+                <input type="checkbox" style="margin-right:20px" name="support">
+                <input type="checkbox" name="support">
+              </div>
+            </div>
+            <div class="y toggleNotif">
+              <div>
+                <h5>Login</h5>
+                <p class="F12">Each time you login to the website.</p>
+              </div>
+              <div class="mla y chbxg">
+                <input type="checkbox" style="margin-right:20px" name="login">
+                <input type="checkbox" name="login">
+              </div>
+            </div>
+            <div class="y toggleNotif">
+              <div>
+                <h5>Purchase</h5>
+                <p class="F12">Each time a purchase is made.</p>
+              </div>
+              <div class="mla y chbxg">
+                <input type="checkbox" style="margin-right:20px" name="login">
+                <input type="checkbox" name="login">
+              </div>
+            </div>
+          </div>
+          <div id="Bil">
+            <h2>Billing</h2>
+            <button>New ticket</button>
+            <div>
+              <div class="y z" style="border-top:1px solid rgba(0,0,0,0.04);padding: 1em 4px">
+                <div class="bl">
+                  <h6 class="bl ">Premium subscription (monthly)</h6>
+                  <span class="bl F12">January 29, 2017</span>
+                </div>
+                <div class="bl">
+                  <span style="margin-left:auto;display: block;text-align: right;" class="F12">$10.99</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="Hlp">
+            <h2>Help</h2>
+            <button class="btn blue">New ticket</button>
+            <div>
+              <div class="tkt y z" style="border-top:1px solid rgba(0,0,0,0.04);padding: 1em 4px">
+                <h6 class="bl ">From: Support staff</h6>
+                <span style="margin-left:auto;display: block;text-align: right;" class="F12">Blah69420jjhadsads adsijijasd</span>
+                <span class="bl F12">January 29, 2017</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Premium -->
+    <div id="Ma" class="oh">
+    </div>
+
+
+    <!-- Login -->
+
+    <div id="Ya">
       <div id="bger">
       </div>
       <div id="loginpanel">
         <h1 style="font-size: 20px"><span id="signupTitle">Sign up to get started</span><span id="loginTitle">Log in</span></h1>
-        <a href="" id="btnSso">Continue with Google</a>
         <form>
           <div> or </div>
-          <label>
-            <label>Email</label>
-          </label>
+          <label>Phone or Email</label>
           <div class="iS" style="width: 100%;">
             <input id="emailSignup" autocomplete="email" name="email" type="email" value="" placeholder="user@example.com"  style="width: 100%;box-sizing: border-box;"/>
           </div>
           <div style="margin-top: 1em">
-            <label>
-              <label>Password</label>
-            </label>
+            <label>Password</label>
             <div class="iS">
               <input id="passwordSignup" name="password" type="password" value="" placeholder="Password" style="width: 100%;box-sizing: border-box;"/>
             </div>
           </div>
         </form>
-        <button id="signuper">Sign up</button>
+        <button id="signupeq">Sign up</button>
         <div style="width:100%">
-          <p id="wrongpass" class="meta red">Wrong password</p>
-          <div class="meta">By signing up, you agree to our <a href="https://frame.io/terms/" target="_blank">Terms of Service</a> and <a href="https://frame.io/privacy" target="_blank">Privacy Policy.</a>
+          <p id="WrPa" class="meta red">Wrong password</p>
+          <div class="PrPa">By signing up, you agree to our <a href="https://frame.io/terms/" target="_blank">Terms of Service</a> and <a href="https://frame.io/privacy" target="_blank">Privacy Policy.</a>
           </div>
-          <p  class="meta">Already have an account? <a href="/welcome">Log in.</a></p>
+          <p class="meta">Already have an account? <a href="/welcome">Log in.</a></p>
         </div>
       </div>
     </div>
-    <div id="dark">
-      <div id="opt" class="dn">
-        <p>We see you are not using an optimum Google Chrome</p>
-      </div>
-      <div id="panel2f" class="dn">
-        <p>Scan this QR code and copy down this</p>
-        <p>If you lose this secret, you will need to contact support and pass more sophisticated authentication to regain access to your account.</p>
-        <svg id="tf-qr" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 33 33" style="width: 330px;">
-          <rect x="0.5" y="0.5" width="6" height="6" fill="white" stroke-width="1" stroke="black" stroke-align="outer" />
-          <rect x="2" y="2" width="3" height="3" />
-          <rect x="26.5" y="0.5" width="6" height="6" fill="white" stroke-width="1" stroke="black" stroke-align="outer" />
-          <rect x="28" y="2" width="3" height="3" />
-          <rect x="0.5" y="26.5" width="6" height="6" fill="white" stroke-width="1" stroke="black" stroke-align="outer" />
-          <rect x="2" y="28" width="3" height="3" />
-          <rect x="26" y="26" width="7" height="7" />
-        </svg>
-        <button>Next</button>
-      </div>
-      <div id="uploader" class=" rdx oh pt128 pb128">
-        <h4 style="font-weight: 600;">Create task</h4>
-        <input id="image-file" type="file" multiple/>
-        <form runat="server" style="position: relative;">
-          <input multiple accept="*" type="file" id="imgInp" title="Upload files" />
-          <span id="uplList"><b style="font-family:'Colfax Bold'">Upload up to 32 pictures.</b><br> Files can be: JPEG, PNG, TIFF, HEIC, WEBP, AVIF.</span>
-        </form>
-        <div id="upImg" class="upload-list">
-        </div>
-        <div id="taskpref">
-          <h3>Task preferences</h3>
-          <div>
-            <h3>Age</h3>
-            <div>
-              <span class="btn-rating">😓 18-23</span>
-              <span class="btn-rating">😓 24-29</span>
-              <span class="btn-rating">😓 30-39</span>
-              <span class="btn-rating">😓 40-54</span>
-              <span class="btn-rating">😓 55+</span>
-            </div>
-          </div>
-          <div>
-            <h3>Gender</h3>
-            <div>
-              <span class="btn-rating">😓 Male</span>
-              <span class="btn-rating">😓 Female</span>
-              <span class="btn-rating">😓 Both</span>
-            </div>
-          </div>
-          <div>
-            <h3># / image</h3>
-            <div>
-              <span class="btn-rating">😓 5</span>
-              <span class="btn-rating">😓 10</span>
-              <span class="btn-rating">😓 15</span>
-              <span class="btn-rating">😓 Custom</span>
-            </div>
-          </div>
-          <div>
-            <h3>Style</h3>
-            <div>
-              <!--<p>Like a bracketing system, using pairs, Using an elo score, can accurately score. This will be much faster, but as a consequence you will not be able to receive tags or any commentary advice.</p>-->
-              <span class="btn-rating">😓 Paired</span>
-              <span class="btn-rating">😓 Scored</span>
-              <span class="btn-rating">😓 Both</span>
-            </div>
-          </div>
-          <span>Credits needed: 100</span>
-          <button style="width: 100%;margin: 2em 0 0;">Submit task</button>
-        </div>
-      </div>
-      <div class="abs dn" style=" background: white;width: 700px;display: none;" id="report-ov">
-        <h3>Are you sure you want to report this image?</h3>
-        <p>Images can be reported for being off-topic (results in a change) or being pornographic or harassing (results in removal).</p>
-        <button class="btn alt" style="margin: 4px 0;padding: 6px 19px 5px; font-weight: 600; letter-spacing: 0">Submit</button>
-      </div>
-      <div id="buyCredData" class="box-layout abs" style="display:none">
-        <div id="40c" class="mt11 pt11 buy-button">
-          <div class="credit-buy">
-            <a href="/" target="_blank" class="w48p price v mat buy w5 tr btn-primary f17"><span>$5</span></a>
-            <div class="quantity v w120p w6">50 Credits</div>
-          </div>
-        </div>
-        <div id="100c" class="mt11 pt11 buy-button">
-          <div class="credit-buy">
-            <a href="/" target="_blank" class="w48p price v mat buy w5 tr btn-primary f17"><span>$9</span></a>
-            <div class="quantity v w120p w6">100 Credits</div>
-            <div class="disc">(10% discount)</div>
-          </div>
-        </div>
-        <div id="250c" class="mt11 pt11 buy-button">
-          <div class="credit-buy">
-            <a href="/" target="_blank" class="w48p price v mat buy w5 tr btn-primary f17"><span>$13</span></a>
-            <div class="quantity v w120p w6">150 Credits</div>
-            <div class="disc v w120p w6">(13% discount)</div>
-          </div>
-        </div>
-        <div id="500c" class="mt11 pt11 buy-button">
-          <div class="credit-buy">
-            <a href="/" target="_blank" class="w48p price v mat buy w5 tr btn-primary f17"><span>$16</span></a>
-            <div class="quantity v w120p w6">200 Credits</div>
-            <div class="disc v w120p w6">(20% discount)</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="addonsPanel" class="dn">
+
+
+
+    <!-- /premium section -->
+    <div id="Aa">
       <h2>Add-ons</h2>
       <p>One-time payments to upgrade your picture selection process and user experience.</p>
-      <div class="hgrid ">
+      <div class="hgrid">
         <div>
           <div>
             <h3>Insights</h3>
@@ -547,197 +414,298 @@
         </div>
       </div>
     </div>
-    <div id="tasks">
+
+    <!-- /taskID section -->
+    <div id="Ta" class="oh">
       <div class="x">
-        <div id="taskMeta" class="y z data-grid" style="margin: 3em 0">
-          <div id="taskLs">
-            <h2 style="font-weight: 600;">Sarah Lasalle</h2>
-            <div class="y">
-              <h4>45 <span style="font-size: 12px">images</span></h4>
-              <h4 style="margin-left: 15px">45 <span style="font-size:12px">total votes</span></h4>
-            </div>
-            <span style="font-size: 11px">created Jan 17, 2017</span>
-            <div class="y rel">
-              <button id="resumetests" class="btn blue" style="margin-top:20px;"><span class="f11">Resume test</span></button>
-              <button id="endtests" class="btn red" style="margin-top:20px;margin-left: 12px;"><span class="f11">End test</span></button>
-              <button id="dropdownDotsX" class="dots btn border"><span class="dlef" id="dd0X"></span><span class="dmid" id="dd1X"></span><span class="drig" id="dd2X"></span></button>
-              <ul id="bblDropdown" class="dropsort">
-                <li><span id="editM">Edit test</span></li>
-                <li><span id="deleN">Delete test</span></li>
-              </ul>
-            </div>
+        <div id="TMta">
+          <div class="y z">
+            <span id="RQ">Rating Test</span>
+            <span id="RQ">ts_0123456789abcdef</span>
           </div>
-          <div id="tImgWr">
+          <div  class="rel y BB">
+            <h2 style="font-weight: 600;width: 100%;padding-bottom: 12px;" >Sarah Lasalle <span class="BW">Running</span></h2>
+            <button id="dtz" class="dots btn L16"><span class="d0" id="dd0X"></span><span class="d1" id="dd1X"></span><span class="d2" id="dd2X"></span></button>
+            <ul id="bblDropdown" class="dropsort">
+              <li><span id="editM">Restart test...</span></li>
+              <li><span id="editM">Resume test</span></li>
+              <li><span id="editM">Pause test</span></li>
+              <li><span id="editM">Edit test</span></li>
+              <li><span id="deleN">Delete test</span></li>
+            </ul>
+          </div>
+          <div class="y t16">
+            <div class="BY r16"><span class="F12 ST">total votes</span><span class="bl">45</span></div>
+            <div class="BY L16 r16"><span class="F12 ST">total votes</span><span class="bl">45</span></div>
+            <div class="L16"><span class="F12 ST">created</span><span class="bl">Jan 17, 2017</span></div>
+          </div>
+          <span style="font-size: 11px"></span>
+          <div class="y rel">
+          </div>
+          <!--<div id="tImgWr">
             <img id="tImgRt" src="img/laurie.jpg">
-          </div>
+          </div>-->
         </div>
-        <div class="y z">
-          <ul id="tIdNav" class="partNav y">
-            <li style=""><a href="/tasks" class="active">Images</a></li>
-            <li style="margin-left: 12px;"><a href="/statistics">Statistics</a></li>
-            <li style="margin-left: 12px;"><a href="/settingsz">Settings</a></li>
-          </ul>
-          <div class="wrapsort y z">
-            <div class="dropdownSelector short pointer">
+        <div class="y z BB">
+          <div id="tIdNav" class="partNav y">
+            <a class="active" href="/tasks">Images</a>
+            <a class="L16" href="/statistics">Statistics</a>
+            <a class="L16" href="/settingsz">Settings</a>
+          </div>
+          <div class="wrapsort y z rel">
+            <!--
+            <div class="dropdownSelector short pointer FL">
               <span id="filterMethodW" class="selClick">Filter</span>
-              <svg id="s0jW" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 24 24">
-                <rect id="s1W" x="0" y="2.5" width="24" height="3" rx="2" />
-                <rect id="s4W" x="3" y="9" width="18" height="3" rx="2" />
-                <rect id="s4W" x="6" y="15.5" width="12" height="3" rx="2" />
-              </svg>
-            </div>
+            </div>-->
+            <h2 id="Fa">Tests</h2>
             <div class="dropdownSelector">
               <span id="sortMethodV" class="selClick">Average score</span>
               <ul id="sortDropdown" class="dropsort">
-                <li id="daq" class="noselect active">Average score</li>
-                <li id="dmq" class="noselect">Median score</li>
-                <li id="dlq" class="noselect">Lower quartile score</li>
-                <li id="dcq" class="noselect">Comments</li>
+                <li id="Sd0" class="noselect active">Average score</li>
+                <li id="Sd1" class="noselect">Median score</li>
+                <li id="Sd2" class="noselect">Date created</li>
+                <li id="Sd3" class="noselect">Date created</li>
               </ul>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" id="caret"><path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" class="caret"><path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path></svg>
             </div>
           </div>
         </div>
-        <div id="filtDropdown" class="wrapsort">
-          <div class="dropdownSelector">
-            <span id="statusr" class="selClick">Status</span>
-            <ul id="sortDropdownf" class="dropsort">
-              <li id="sr" class="noselect active"><input type="checkbox">Running</li>
-              <li id="sr" class="noselect active"><input type="checkbox">Running</li>
-            </ul>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" id="caret"><path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path></svg>
+        <div id="tflta">
+          <button id="Bv0" class="btn A">
+            <span id="Bw0" class="F12 ST">All</span>
+            <h4 id="Bx0">12</h4>
+          </button>
+          <button id="Bv1" class="btn">
+            <span id="Bw1" class="F12 ST">Running</span>
+            <h4 id="Bx1">1</h4>
+          </button>
+          <button id="Bv2" class="btn">
+            <span id="Bw2" class="F12 ST">Paused</span>
+            <h4 id="Bx2">0</h4>
+          </button>
+          <button id="Bv3" class="btn">
+            <span id="Bw3" class="F12 ST">Finished</span>
+            <h4 id="Bx3">11</h4>
+          </button>
+        </div>
+        <div id="TLS" class="W G y z">
+        </div>
+      </div>
+    </div>
+
+
+    <!-- /imageID section -->
+    <div id="Ia" class="y z">
+      <img class="v" src="img/laurie.jpg">
+      <div class="RDa" style="padding: 10px 28px"> 
+        <!--if we have analytics disabled-->
+        <div id="scoringa">
+          <div class="rel" style="margin-bottom: 2em">
+            <div class="y" style="padding:2em 0 8px;">
+              <span><b>7.56</b> <span>avg score</span></span> <span style="margin-left:1em"><b>43</b> <span>total votes</span></span>
+            </div>
+            <div id="meterB" style="width:100%;height:4px;background:rgba(0,2,40,0.1);border-radius: 4px;">
+              <div style="width:80%;" id="B0a" class="meterEm abs"></div>
+              <div style="width:75%;" id="B1a" class="meterEm abs"></div>
+              <div style="width:70%;" id="B2a" class="meterEm abs"></div>
+              <div style="width:65%;" id="B3a" class="meterEm abs"></div>
+              <div style="width:60%;" id="B4a" class="meterEm abs"></div>
+            </div>
           </div>
-          <div class="dropdownSelector">
-            <span id="statusr" class="selClick">Score range</span>
-            <ul id="sortDropdownf" class="dropsort">
-              <li id="sr" class="noselect active"><input type="checkbox">Running</li>
-              <li id="sr" class="noselect active"><input type="checkbox">Running</li>
-            </ul>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" id="caret"><path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path></svg>
-          </div>
-          <div class="dropdownSelector">
-            <span id="statusr" class="selClick">Score range</span>
-            <ul id="sortDropdownf" class="dropsort">
-              <li id="sr" class="noselect active"><input type="checkbox">Running</li>
-              <li id="sr" class="noselect active"><input type="checkbox">Running</li>
-            </ul>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" id="caret"><path d="M21.5265 8.77171C22.1578 8.13764 22.1578 7.10962 21.5265 6.47555C20.8951 5.84148 19.8714 5.84148 19.24 6.47555L11.9999 13.7465L4.75996 6.47573C4.12858 5.84166 3.10492 5.84166 2.47354 6.47573C1.84215 7.10979 1.84215 8.13782 2.47354 8.77188L10.8332 17.1671C10.8408 17.1751 10.8486 17.183 10.8565 17.1909C11.0636 17.399 11.313 17.5388 11.577 17.6103C11.5834 17.6121 11.5899 17.6138 11.5964 17.6154C12.132 17.7536 12.7242 17.6122 13.1435 17.1911C13.1539 17.1807 13.1641 17.1702 13.1742 17.1596L21.5265 8.77171Z"></path></svg>
+          <div class="rScore" style="padding-bottom: 1em;">
+            <div class="scoSc">
+              <div class="score-bar"></div>
+              <div class="score-tag" style="width: 10%"></div>
+              <span class="tag-name"><span class="E">😒</span><span class="tc TR">Eh (5)</span></span>
+            </div>
+            <div class="scoSc">
+              <div class="score-bar"></div>
+              <div class="score-tag"  style="width: 10%"></div>
+              <span class="tag-name"><span class="E">😐</span><span class="tc TR">Decent (6)</span></span>
+            </div>
+            <div class="scoSc">
+              <div class="score-bar"></div>
+              <div class="score-tag" style="width: 10%"></div>
+              <span class="tag-name"><span class="E">😃</span><span class="tc TR">Great (9)</span></span>
+            </div>
+            <div class="scoSc">
+              <div class="score-bar"></div>
+              <div class="score-tag" style="width: 20%"></div>
+              <span class="tag-name"><span class="E">🤩</span><span class="tc TR">Stunning (10)</span></span>
+            </div>
+            <div class="scoSc">
+              <div class="score-bar"></div>
+              <div class="score-tag" style="width: 60%"></div>
+              <span class="tag-name"><span class="E">🤑</span><span class="tc TR">Brilliant (25)</span></span>
+            </div>
           </div>
         </div>
-        <div id="tasklist" class="y z">
+        <div id="tagaa"  style="margin-top: 0;">
+          <h4>
+            <span>Tag distribution</span>
+            <span class="hoverds dn">
+              <span>Red tags: < 20&#37; of users</span>
+              <span>yellow tags: < 20&#37; of users</span>
+              <span>green tags: 60&#37; of users selected this</span>
+            </span>
+          </h4>
+          <div>
+            <span class="wrap-tag"><span class="BZ"><span class="btn-ct">13</span> 😓 awkward</span></span>
+            <span class="wrap-tag"><span class="BZ"><span class="btn-ct">12</span> 🖼 bad framing</span></span>
+            <span class="wrap-tag"><span class="BZ"><span class="btn-ct">11</span> 🍞 bland</span></span>
+            <span class="wrap-tag"><span class="BZ"><span class="btn-ct">10</span> 💨 blurry</span></span>
+            <span class="wrap-tag"><span class="BZ"><span class="btn-ct">5</span> ⚡️ bright</span></span>
+            <span class="wrap-tag"><span class="BZ"><span class="btn-ct">4</span> 🚊 busy</span></span>
+            <span class="wrap-tag"><span class="BZ"><span class="btn-ct">4</span> 🌈 colorful</span></span>
+            <span class="wrap-tag"><span class="BZ"><span class="btn-ct">4</span> 🕶 cool</span></span>
+            <span class="wrap-tag"><span class="BZ"><span class="btn-ct">1</span> 🌚 dark</span></span>
+          </div>
         </div>
-        <div id="indvImg" class="y z score">
-          <img class="v" src="img/laurie.jpg">
-          <div class="rate-data" style="padding: 10px 18px"> 
-            <!--if we have analytics disabled-->
-            <ul id="indvNava" class="y" >
-              <li>Scoring</li>
-              <li style="margin-left: 1em">Tags</li>
-              <li style="margin-left: 1em">Comments</li>
-            </ul>
-            <div id="scoringa">
-              <h4 style="margin-top: 0;margin-bottom: 1em;">Line graph</h4>
-              <div>
-                <h2>43</h2><span>total votes</span>
-                <h2>43</h2><span>total votes</span>
-              </div>
-              <div class="rel">
-                <div id="meterB" style="width:100%;height:4px;background:rgba(0,2,40,0.1);border-radius: 4px;">
-                  <div style="width:80%;" id="B0" class="meterEm abs"></div>
-                  <div style="width:75%;" id="B1" class="meterEm abs"></div>
-                  <div style="width:70%;" id="B2" class="meterEm abs"></div>
-                  <div style="width:65%;" id="B3" class="meterEm abs"></div>
-                  <div style="width:60%;" id="B4" class="meterEm abs"></div>
-                </div>
-              </div>
-              <h4 style="margin-top: 1em;margin-bottom: 1em;">Distribution</h4>
-              <div class="rating-score2 y z" style="padding-bottom: 1em;">
-                <div class="scoSc">
-                  <div class="score-bar"></div>
-                  <div class="score-tag"></div>
-                  <span class="tag-name"><span class="emoji">😒</span><span class="tc txt-rate">Eh</span></span>
-                  <span class="dist-elem">5</span>
-                </div>
-                <div class="scoSc">
-                  <div class="score-bar"></div>
-                  <div class="score-tag"></div>
-                  <span class="tag-name"><span class="emoji">😐</span><span class="tc txt-rate">Decent</span></span>
-                  <span class="dist-elem">11</span>
-                </div>
-                <div class="scoSc">
-                  <div class="score-bar"></div>
-                  <div class="score-tag"></div>
-                  <span class="tag-name"><span class="emoji">😃</span><span class="tc txt-rate">Great</span></span>
-                  <span class="dist-elem">7</span>
-                </div>
-                <div class="scoSc">
-                  <div class="score-bar"></div>
-                  <div class="score-tag"></div>
-                  <span class="tag-name"><span class="emoji">🤩</span><span class="tc txt-rate">Stunning</span></span>
-                  <span class="dist-elem">5</span>
-                </div>
-                <div class="scoSc">
-                  <div class="score-bar"></div>
-                  <div class="score-tag"></div>
-                  <span class="tag-name"><span class="emoji">🤑</span><span class="tc txt-rate">Brilliant</span></span>
-                  <span class="dist-elem">25</span>
-                </div>
-              </div>
+        <div id="commenta" style="margin-top: 0;">
+          <h4>Comments</h4>
+          <div id="CGa" style="overflow-x:hidden;overflow-y:scroll;height: auto;">
+            <div class="comment"><span style="font-size:12px">So pretty ava</span><i>F, 32</i></div>
+            <div class="comment"><span style="font-size:12px">Move the right side lefta</span><i>F, 32</i></div>
+            <div class="comment"><span style="font-size:12px">That's a bit too gay</span><i>F, 32</i></div>
+            <div class="comment"><span style="font-size:12px">Aubrey is kinda cute</span><i>F, 32</i></div>
+            <div class="comment"><span style="font-size:12px">Do not include the other parts</span><i>F, 32</i></div>
+          </div>
+        </div>
+        <!--if we have that enabled-->
+        <ul style="display: none">
+          <li>
+            <h2></h2>
+            <p>Males, on average, rated your pictures 50% higher than did females.</p>
+          </li>
+          <li>
+            <p>Males, on average, rated your pictures 50% higher than did females.</p>
+          </li>
+          <li>
+            <p>This picture was 40% more likely than , and 4% more likely than all pictures to get </p>
+          </li>
+          <li>Comments</li>
+        </ul>
+      </div>
+
+      <!-- Premium analytics -->
+      <div id="PZa">
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- dark modal section -->
+    <div id="ZZ">
+      <div id="opt" class="dn">
+        <p>We see you are not using an optimum Google Chrome</p>
+      </div>
+      <div id="panel2a" class="dn">
+        <p>Scan this QR code and copy down this</p>
+        <p>If you lose this secret, you will need to contact support and pass more sophisticated authentication to regain access to your account.</p>
+        <svg id="QRa" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 33 33" style="width: 330px;">
+          <rect x="0.5" y="0.5" width="6" height="6" fill="white" stroke-width="1" stroke="black" stroke-align="outer" />
+          <rect x="2" y="2" width="3" height="3" />
+          <rect x="26.5" y="0.5" width="6" height="6" fill="white" stroke-width="1" stroke="black" stroke-align="outer" />
+          <rect x="28" y="2" width="3" height="3" />
+          <rect x="0.5" y="26.5" width="6" height="6" fill="white" stroke-width="1" stroke="black" stroke-align="outer" />
+          <rect x="2" y="28" width="3" height="3" />
+          <rect x="26" y="26" width="7" height="7" />
+        </svg>
+        <button>Next</button>
+      </div>
+      <div id="Up" class=" rdx oh pt128 pb128">
+        <h4 style="font-weight: 600;">Create task</h4>
+        <input id="image-file" type="file" multiple/>
+        <form runat="server" style="position: relative;">
+          <input multiple accept="*" type="file" id="imgInp" title="Upload files" />
+          <span id="uplList"><b>Upload up to 32 pictures.</b><br> Files can be: JPEG, PNG, TIFF, HEIC, WEBP, AVIF.</span>
+        </form>
+        <div id="upImg" class="upload-list">
+        </div>
+        <div id="TPRa">
+          <h3>Task preferences</h3>
+          <div>
+            <h3>Age</h3>
+            <div class="DualSliderAge">
             </div>
-            <div id="taga" style="margin-top: 2em">
-              <h4 style="font-family: 'Colfax Bold'">
-                <span>Tag distribution</span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="12" height="12" style="top: 1px;position: relative;"><path d="M160 320C71.78 320 0 248.22 0 160S71.78 0 160 0s160 71.78 160 160-71.78 160-160 160Zm0-292.57C86.9 27.43 27.43 86.9 27.43 160S86.9 292.57 160 292.57 292.57 233.1 292.57 160 233.1 27.43 160 27.43ZM151.9 192.85c-3.12 0-5.66-2.53-5.66-5.66v-2.61c0-3.48.25-6.6.76-9.35a35.75 35.75 0 0 1 2.39-7.83c1.09-2.46 2.54-4.86 4.35-7.18 1.81-2.32 4.1-4.79 6.85-7.4l9.79-9.35a40.29 40.29 0 0 0 7.07-8.27c1.96-3.05 2.94-6.74 2.94-11.09 0-5.66-1.78-10.4-5.33-14.25-3.56-3.84-8.59-5.76-15.12-5.76-3.34 0-6.35.62-9.03 1.85-2.69 1.23-5 2.9-6.96 5s-3.45 4.53-4.46 7.29c-.44 1.18-.79 2.38-1.07 3.58-.63 2.76-3.13 4.68-5.95 4.43l-15.35-1.37c-3.4-.3-5.78-3.53-5.02-6.86 1.02-4.46 2.5-8.55 4.44-12.29 2.83-5.44 6.49-10.04 10.99-13.81 4.49-3.77 9.64-6.63 15.45-8.59 5.8-1.96 12.04-2.94 18.71-2.94 6.23 0 12.15.91 17.73 2.72s10.51 4.5 14.79 8.05c4.28 3.56 7.65 7.94 10.12 13.16 2.46 5.22 3.7 11.24 3.7 18.06 0 4.64-.51 8.7-1.52 12.18-1.02 3.48-2.47 6.67-4.35 9.57-1.89 2.9-4.17 5.69-6.85 8.38-2.69 2.69-5.69 5.48-9.03 8.38-2.9 2.47-5.26 4.64-7.07 6.53-1.82 1.89-3.26 3.77-4.35 5.66a19.813 19.813 0 0 0-2.28 6.09c-.44 2.18-.65 4.86-.65 8.05 0 3.12-2.53 5.66-5.66 5.66h-14.36Zm-10.01 30.24c0-4.64 1.7-8.63 5.11-11.96s7.51-5 12.29-5 8.7 1.6 12.18 4.79c3.48 3.19 5.22 7.11 5.22 11.75s-1.71 8.63-5.11 11.96c-3.41 3.34-7.51 5-12.29 5-2.32 0-4.53-.44-6.63-1.31-2.1-.87-3.95-2.03-5.55-3.48-1.6-1.45-2.87-3.19-3.81-5.22-.95-2.03-1.41-4.2-1.41-6.53Z" fill="#424652"/></svg>
-                <span class="hoverds dn">
-                  <span>Red tags: < 20&#37; of users</span>
-                  <span>yellow tags: < 20&#37; of users</span>
-                  <span>green tags: 60&#37; of users selected this</span>
-                </span>
-              </h4>
-              <div>
-                <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">13</span> 😓 awkward</span></span>
-                <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">12</span> 🖼 bad framing</span></span>
-                <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">11</span> 🍞 bland</span></span>
-                <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">10</span> 💨 blurry</span></span>
-                <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">5</span> ⚡️ bright</span></span>
-                <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">4</span> 🚊 busy</span></span>
-                <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">4</span> 🌈 colorful</span></span>
-                <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">4</span> 🕶 cool</span></span>
-                <span class="wrap-tag"><span class="btn-tag"><span class="btn-ct">1</span> 🌚 dark</span></span>
-              </div>
+          </div>
+          <div>
+            <h3>Gender</h3>
+            <div class="Pillbox pilWr">
             </div>
-            <div id="commenta" style="margin-top: 2em">
-              <h4 style="font-family: 'Colfax Bold'">Comments</h4>
-              <div id="commentGrid" style="overflow-x:hidden;overflow-y:scroll;height: auto;">
-                <div class="comment"><span style="font-size:12px">So pretty ava</span><i>F, 32</i></div>
-                <div class="comment"><span style="font-size:12px">Move the right side lefta</span><i>F, 32</i></div>
-                <div class="comment"><span style="font-size:12px">That's a bit too gay</span><i>F, 32</i></div>
-                <div class="comment"><span style="font-size:12px">Aubrey is kinda cute</span><i>F, 32</i></div>
-                <div class="comment"><span style="font-size:12px">Do not include the other parts</span><i>F, 32</i></div>
-              </div>
+          </div>
+          <div>
+            <h3># / image</h3>
+            <div class="SingleSlider">
             </div>
-            <!--if we have that enabled-->
-            <ul style="display: none">
-              <li>
-                <h2></h2>
-                <p>Males, on average, rated your pictures 50% higher than did females.</p>
-              </li>
-              <li>
-                <p>Males, on average, rated your pictures 50% higher than did females.</p>
-              </li>
-              <li>
-                <p>This picture was 40% more likely than , and 4% more likely than all pictures to get </p>
-              </li>
-              <li>Comments</li>
-            </ul>
+          </div>
+          <div>
+            <h3>Style</h3>
+            <div>
+              <!--<p>Like a bracketing system, using pairs, Using an elo score, can accurately score. This will be much faster, but as a consequence you will not be able to receive tags or any commentary advice.</p>-->
+              <span class="btn-rating">😓 Paired</span>
+              <span class="btn-rating">😓 Scored</span>
+              <span class="btn-rating">😓 Both</span>
+            </div>
+          </div>
+          <span>Credits needed: 100</span>
+          <button style="width: 100%;margin: 2em 0 0;">Submit task</button>
+        </div>
+      </div>
+      <div class="abs dn" style=" background: white;width: 700px;display: none;" id="REPa">
+        <h3>Are you sure you want to report this image?</h3>
+        <p>Images can be reported for being off-topic (results in a change) or being pornographic or harassing (results in removal).</p>
+        <button class="btn alt" style="margin: 4px 0;padding: 6px 19px 5px; font-weight: 600; letter-spacing: 0">Submit</button>
+      </div>
+      <div id="buyCredData" class="box-layout abs" style="display:none">
+        <div id="z40c" class="mt11 pt11 buy-button">
+          <div class="credit-buy">
+            <a href="/" target="_blank" class="w48p price v mat buy w5 tr btn-primary f17"><span>$5</span></a>
+            <div class="quantity v w120p w6">50 Credits</div>
+          </div>
+        </div>
+        <div id="z100c" class="mt11 pt11 buy-button">
+          <div class="credit-buy">
+            <a href="/" target="_blank" class="w48p price v mat buy w5 tr btn-primary f17"><span>$9</span></a>
+            <div class="quantity v w120p w6">100 Credits</div>
+            <div class="disc">(10% discount)</div>
+          </div>
+        </div>
+        <div id="z250c" class="mt11 pt11 buy-button">
+          <div class="credit-buy">
+            <a href="/" target="_blank" class="w48p price v mat buy w5 tr btn-primary f17"><span>$13</span></a>
+            <div class="quantity v w120p w6">150 Credits</div>
+            <div class="disc v w120p w6">(13% discount)</div>
+          </div>
+        </div>
+        <div id="z500c" class="mt11 pt11 buy-button">
+          <div class="credit-buy">
+            <a href="/" target="_blank" class="w48p price v mat buy w5 tr btn-primary f17"><span>$16</span></a>
+            <div class="quantity v w120p w6">200 Credits</div>
+            <div class="disc v w120p w6">(20% discount)</div>
+          </div>
+        </div>
+        <div class="dn">
+          <h2>Checkout</h2>
+          <div>
+            <input id="CCcodea" type="text">
+            <input id="CCexpa" type="text">
+            <input id="CCcvva" type="number">
           </div>
         </div>
       </div>
     </div>
+
+
     <script src="assets/js/tasks.js"></script>
     <script src="assets/js/clicker.js"></script>
     <script src="assets/js/swipe.js"></script>
-    <!--<script src="main.js"></script>-->
     <script src="node_modules/argon2-browser/dist/argon2-bundled.min.js"></script>
   </body>
 </html>

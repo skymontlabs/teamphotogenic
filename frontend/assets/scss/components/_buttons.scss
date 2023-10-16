@@ -20,7 +20,7 @@ button {
   font-weight:     600;
   transition:      0.2s ease-in-out all;
   box-shadow:      1px 2px 5px 0 rgba(255, 255, 255, 0.01);
-  margin-bottom:   16px;
+  //margin-bottom:   16px;
   position:        relative;
   font-size:       13px;
   color:           #425466;
@@ -55,29 +55,39 @@ button {
   &.border {
     border:        1px solid rgba(0,2,4,0.05);
   }
+
+  &.A {
+    border:        1px solid #5984FF !important;
+    color:         #5984FF;
+    span {
+      color:       #5984FF;
+
+    }
+  }
 }
 
-.btn-rate {
+.BR {
   background:      rgba(51,54,56,0.04);
   width:           calc(20% - 8px);
   padding:         10px 0 7px;
   border-radius:   5px;
   border:          2px solid rgba(0, 0, 0, 0.0);
   
-  &>.emoji {
+  &>.E {
     display:       block;
     font-size:     19px;
     margin-bottom: 0;
   }
 
   &:hover {
-    border:        2px solid #5984ff;
-    box-shadow:    0 0 0 3px rgba(#5984ff, 0.4);
+    border:        2px solid $scheme-color-2;
+    box-shadow:    0 0 0 3px rgba($scheme-color-2, 0.4);
   }
 
+  &.A,
   &.active {
-    border:        2px solid #5984ff;
-    box-shadow:    0 0 0 1px #5984ff;
+    border:        2px solid $scheme-color-2;
+    box-shadow:    0 0 0 1px $scheme-color-2;
   }
 
 }
@@ -88,23 +98,25 @@ button {
   border-radius:   5px;
   border:          2px solid rgba(0, 0, 0, 0.0);
   
-  &>.emoji {
+  &>.E {
     font-size:     19px;
     margin-bottom: 0;
   }
 
   &:hover {
-    border:        2px solid #5984ff;
-    box-shadow:    0 0 0 3px rgba(#5984ff, 0.4);
+    border:        2px solid $scheme-color-2;
+    box-shadow:    0 0 0 3px rgba($scheme-color-2, 0.4);
   }
 
   &.active {
-    border:        2px solid #5984ff;
-    box-shadow:    0 0 0 1px #5984ff;
+    border:        2px solid $scheme-color-2;
+    box-shadow:    0 0 0 1px $scheme-color-2;
   }
 }
 
-.btn-tag {
+.BZ {
+  top:             0;
+  transform:       translateY(0px);
   background:      rgba(51,54,56,0.04);
   border-radius:   4px;
   position:        relative;
@@ -123,10 +135,11 @@ button {
   }
 
   @media (min-width: $tablet-min) {
-    padding:       4px 6px 3px 5px;
+    padding:       4px 6px 4px 5px;
     font-size:     11px;
   }
 
+  &.A,
   &.active,
   &:hover {
     transition: 0.2s ease-in-out all;
@@ -135,18 +148,36 @@ button {
   }
 }
 
-.btn-datapoint {
-  background:      transparent;
-  font-size:       11px;
-  position:        relative;
+.BW {
+  margin:          0;
+  top:             0;
+  transform:       translate(20px,17px);
+  color:           #5984FF;
+  background:      rgba(56, 128, 255, 0.1);
+  border-radius:   4px;
+  position:        absolute;
   margin:          4px 3px;
-  line-height:     2.5;
-  color:           #878c8f;
   cursor:          pointer;
   white-space:     nowrap;
   margin-left:     0;
   font-family:     $base-font;
-  font-weight:     500;
+  font-weight:     600;
+
+  @media (max-width: $tablet-max) {
+    padding:       6px 9px 6px 9px;
+    font-size:     15px;
+    line-height:   2.4;
+  }
+
+  @media (min-width: $tablet-min) {
+    padding:       4px 6px 4px 5px;
+    font-size:     11px;
+  }
+
+  &.active,
+  &:hover {
+    transition: 0.2s ease-in-out all;
+  }
 }
 
 .btn-rating {
@@ -165,7 +196,7 @@ button {
   font-weight:     500;
 }
 
-#signuper,
+#signupeq,
 #btnSso {
   width:           100%;
   max-width:       none;
@@ -184,3 +215,41 @@ button {
   display:         block;
   font-weight:     500;
 }
+
+
+
+.dots {
+  width: 15px;
+  height: 38px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding: 0;
+  .d0,
+  .d1,
+  .d2 {
+    width: 3px;
+    height: 3px;
+    background: #878c8f;
+    position: absolute;
+    border-radius: 2px;
+    top: 19px;
+  }
+  .d0 {
+    left: 0px;
+  }
+  .d1 {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .d2 {
+    right: 0px;
+  }
+}
+
+.dts {
+  width: 30px;
+  height: 35.5px;
+  position: relative;
+}
+
