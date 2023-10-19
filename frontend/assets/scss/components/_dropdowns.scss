@@ -28,7 +28,7 @@
   }
 
   .dropHd {
-    opacity: 1;
+    opacity:     1;
     color:       black;
     text-align:  left;
     font-size:   13px;
@@ -37,6 +37,7 @@
     margin:      0;
     display:     block;
     margin-left: 13px;
+    line-height: 35px;
     font-weight: 600;
   }
 
@@ -108,11 +109,24 @@
 // Edit Profile Icon
 #dea,
 #dfa {
-  right: -20px;
-  transform: translate(0,40px);
+  border-radius: 0;
+  width: 50vw;
+  top: 82px;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: inset 1px 3px 4px -4px rgba(0, 2, 4, 0.14);
+}
+
+#dfa {
+  right: -51px;
+  background: blue;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
 }
 
 #dea {
-  width: 270px;
+  right: -85px;
 }
 

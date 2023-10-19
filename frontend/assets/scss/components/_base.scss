@@ -156,7 +156,7 @@ ul {
   display: none;
 }
 
-.drop-button {
+.db {
   position: relative;
   height: 18px;
   padding: 32px 0;
@@ -211,34 +211,9 @@ ul {
   box-shadow: inset -1px 0 rgb(235,238,241);
 }
 
-.BL {
-  box-shadow: inset 0 -1px rgb(235,238,241);
+.Bw {
+  box-shadow: inset 0 1px rgb(235,238,241);
 }
-
-.FL {
-  &:before,
-  &:after {
-    content: '';
-    display: block;
-    height: 2px;
-    background: #414552;
-    position: absolute;
-    right: 14px;
-    top: 0px;
-    border-radius: 1px;
-  }
-
-  &:before {
-    width: 14px;
-    transform: translateY(34px);
-  }
-
-  &:after {
-    width: 10px;
-    transform: translate(-2px, 40px);
-  }
-}
-
 
 
 .PT,

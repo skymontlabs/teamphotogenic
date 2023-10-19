@@ -7,6 +7,7 @@
 #Aa,
 #Ya,
 #Up,
+#Uz,
 #Xa {
 	width:              100%;
 	height:             0;
@@ -19,11 +20,18 @@
 	background: white;
 }
 
+#Ia,
+#Pa>*,
+#Pa{
+	display: none;
+	height: 0;
+}
 #Ga {
 	&.hideall>* {
 		display: none;
 
 	}
+	&>#Ia,
 	&>#Pa,
 	&>#Ta,
 	&>#taskID,
@@ -53,6 +61,17 @@
 			height: 100vh;
 			width: 100vw;
 			position: fixed;
+		}
+
+		#Na {
+			@media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {
+				width: 61.8%;
+				right: 0;
+			}
+			@media (min-width: $tablet-wide-min) {
+				width: 50%;
+				right: 0;
+			}
 		}
 
 		#Ra {
@@ -93,18 +112,22 @@
 	}
 
 	&.showImg {
-		overflow-y: hidden !important;
 		#Ia {
-			display: flex;
-			opacity: 1;
-			visibility: visible;
-		}
-		#ZZ {
-			visibility: visible;
-			opacity: 1;
-			height: 100vh;
 			display: block;
+			opacity: 1;
+			visibility: visible;
 		}
+		&.OV {
+			//overflow-y: hidden !important;
+
+			#ZZ {
+				visibility: visible;
+				opacity: 1;
+				height: 100vh;
+				display: block;
+			}	
+		}
+		/**/
 	}
 
 
@@ -115,6 +138,10 @@
 			height: 100vh;
 			display: block;
 		}
+		#Up {
+			visibility: visible;
+			opacity: 1;
+		}
 	}
 
 	&.showS,
@@ -123,7 +150,6 @@
 			height: auto;
 			visibility: visible
 		}
-		#tIdNav,
 		#TMta {
 			display: none;
 		}

@@ -1,20 +1,51 @@
-#Ia {
-  border-radius:   12px;
-  width:           calc(100% - 16px);
-  max-width:       940px;
-  box-shadow:      0 0 20px -1px rgba(0,0,0,0.2);
-  margin-bottom:   2em;
+.ImW {
+  width:           100%;
+  background:      #f7f8f9;
+  z-index:         9999;
   overflow:        hidden;
+  position:        relative;
+
+  @media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {
+    width:         38.2%;
+  }
+   
+  @media (min-width: $tablet-wide-min) {
+    width:         calc(100% - 522px);
+  }
+
+  @media (min-width: $tablet-min) {
+    border-radius: 9px;
+  }
+
+  img {
+    position:      relative;
+    max-width:     100%;
+    height:        auto;
+    display:       block;
+    margin:        0 auto;
+    width:         auto;
+
+    @media (max-width: $tablet-max) {
+      max-height:  600px;
+    }
+
+    @media (min-width: $tablet-min) {
+      //max-height:  520px;
+      top:         50%;
+      transform:   translateY(-50%);
+    }
+  }
+}
+
+
+
+#Ia {
+  width:           100%;
+  height:          100vh;
   visibility:      hidden;
   background:      white;
-  position:        fixed;
-  z-index:         199999999;
-  top:             50%;
-  left:            50%;
-  transform:       translate(-50%, -50%);
   opacity:         0;
   img {
-    width:         100%;
   }
   &.score {
     #taga,
@@ -23,7 +54,75 @@
       //visibility: hidden;
     }
   }
+
+  #tagaa .BZ {
+    @media (min-width: $tablet-min) {
+      padding-left:  3px;
+    }
+
+  }
+
+  .btn-ct {
+    background: blue;
+    padding: 2px 4px;
+    border-radius: 2px;
+    background: #40ef80;   
+    color: white;   
+  }
 }
+
+
+
+.OV #Ia {
+  border-radius:   12px;
+  width:           calc(100% - 16px);
+  max-width:       940px;
+  z-index:         199999999;
+  position:        fixed;
+  top:             50%;
+  left:            50%;
+  transform:       translate(-50%, -50%);
+  box-shadow:      0 0 20px -1px rgba(0,0,0,0.2);
+  overflow:        hidden;
+  margin-bottom:   2em;
+
+}
+
+
+
+.BZ {
+  top:             0;
+  transform:       translateY(0px);
+  background:      rgba(51,54,56,0.04);
+  border-radius:   4px;
+  position:        relative;
+  margin:          4px 3px;
+  color:           #878c8f;
+  cursor:          pointer;
+  white-space:     nowrap;
+  margin-left:     0;
+  font-family:     $base-font;
+
+  @media (max-width: $tablet-max) {
+    padding:       6px 9px 6px 9px;
+    font-size:     15px;
+    line-height:   2.4;
+  }
+
+  @media (min-width: $tablet-min) {
+    padding:       4px 6px 4px 5px;
+    font-size:     11px;
+  }
+
+  &.A,
+  &.active,
+  &:hover {
+    transition:    0.2s ease-in-out all;
+    color:         #5984FF;
+    background:    rgba(56, 128, 255, 0.1);
+  }
+}
+
 
 #indvNava {
   padding: 1em 0 2em;
@@ -54,22 +153,22 @@
 .rScore {
   .score-bar {
     margin-top:  auto;
-    width:        calc(100% - 120px);
+    width:        calc(100% - 70px);
     height:      8px;
     border-radius: 5px;
     background:  rgba(51,54,56,0.04);
     position:    absolute;
-    left: 120px;
+    left: 70px;
 
   }
   
   .score-tag {
-    width: calc(100% - 120px);
+    width: calc(100% - 70px);
     height: 8px;
     border-radius: 5px;
     background: rgb(0, 200, 255);
     position: absolute;
-    left: 120px;
+    left: 70px;
   }
 
   .E,

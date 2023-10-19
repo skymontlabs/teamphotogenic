@@ -29,7 +29,7 @@ function addNotifications() {
     lii.appendChild(link)
     lii.appendChild(del.cloneNode(true))
 
-    notifList.appendChild(lii)
+    nla.appendChild(lii)
   }
 }
 addNotifications()

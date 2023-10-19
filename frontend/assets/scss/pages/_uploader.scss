@@ -1,16 +1,4 @@
-#uploader {
-  padding:       2em 3em;
-  max-width:     600px;
-  margin:        0 auto;
-  border-radius: 8px;
-  box-shadow:    6px 6px 20px -1px rgba(0, 0, 0, 0.1);
-  padding:       56px 42px;
-  left:          50%;
-  top:           50%;
-  transform:     translate(-50%,-50%);
-  position:      absolute;
-  background:    white;
-  display:       none;
+#Up {
 }
 
 
@@ -27,4 +15,84 @@
   z-index:       997;
   transform:     translate(-50%,-50%);
   text-align:    center;
+}
+
+
+#dropArea {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 8px;
+  background: white;
+  overflow: hidden;
+
+  #upgal,
+  img {
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+  }
+  &.A {
+    #UpB {
+      display: none;
+    }
+
+    #upgal,
+    img {
+      visibility: visible;
+      opacity: 1;
+    }
+
+
+    #upgal,
+    #upgal img {
+      height: 90px;
+    }
+    #prvIm {
+      height: 500px;
+      background: #f6f9fc;
+    }
+
+  }
+
+}
+#drop-area.highlight {
+  border-color: purple;
+}
+p {
+  margin-top: 0;
+}
+.my-form {
+}
+.button {
+  display: inline-block;
+  padding: 10px;
+  background: #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.button:hover {
+  background: #ddd;
+}
+#fileElem {
+  display: none;
+}
+
+#prvIm {
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+}
+
+#ptxt {
+  padding: 1em;
+}
+
+#toInpudt {
+  font-size: 12px;
+  height: 19px;
+  width: 40px;
+  margin: 0;
 }

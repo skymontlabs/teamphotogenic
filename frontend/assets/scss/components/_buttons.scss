@@ -20,7 +20,6 @@ button {
   font-weight:     600;
   transition:      0.2s ease-in-out all;
   box-shadow:      1px 2px 5px 0 rgba(255, 255, 255, 0.01);
-  //margin-bottom:   16px;
   position:        relative;
   font-size:       13px;
   color:           #425466;
@@ -65,101 +64,17 @@ button {
     }
   }
 }
-
-.BR {
-  background:      rgba(51,54,56,0.04);
-  width:           calc(20% - 8px);
-  padding:         10px 0 7px;
-  border-radius:   5px;
-  border:          2px solid rgba(0, 0, 0, 0.0);
-  
-  &>.E {
-    display:       block;
-    font-size:     19px;
-    margin-bottom: 0;
-  }
-
-  &:hover {
-    border:        2px solid $scheme-color-2;
-    box-shadow:    0 0 0 3px rgba($scheme-color-2, 0.4);
-  }
-
-  &.A,
-  &.active {
-    border:        2px solid $scheme-color-2;
-    box-shadow:    0 0 0 1px $scheme-color-2;
-  }
-
-}
-
-.btn-demographics {
-  background:      rgba(51,54,56,0.04);
-  padding:         8px 0 8px;
-  border-radius:   5px;
-  border:          2px solid rgba(0, 0, 0, 0.0);
-  
-  &>.E {
-    font-size:     19px;
-    margin-bottom: 0;
-  }
-
-  &:hover {
-    border:        2px solid $scheme-color-2;
-    box-shadow:    0 0 0 3px rgba($scheme-color-2, 0.4);
-  }
-
-  &.active {
-    border:        2px solid $scheme-color-2;
-    box-shadow:    0 0 0 1px $scheme-color-2;
-  }
-}
-
-.BZ {
-  top:             0;
-  transform:       translateY(0px);
-  background:      rgba(51,54,56,0.04);
-  border-radius:   4px;
-  position:        relative;
-  margin:          4px 3px;
-  color:           #878c8f;
-  cursor:          pointer;
-  white-space:     nowrap;
-  margin-left:     0;
-  font-family:     $base-font;
-  font-weight:     600;
-
-  @media (max-width: $tablet-max) {
-    padding:       6px 9px 6px 9px;
-    font-size:     15px;
-    line-height:   2.4;
-  }
-
-  @media (min-width: $tablet-min) {
-    padding:       4px 6px 4px 5px;
-    font-size:     11px;
-  }
-
-  &.A,
-  &.active,
-  &:hover {
-    transition: 0.2s ease-in-out all;
-    color: #5984FF;
-    background: rgba(56, 128, 255, 0.1);
-  }
-}
-
 .BW {
-  margin:          0;
   top:             0;
   transform:       translate(20px,17px);
   color:           #5984FF;
   background:      rgba(56, 128, 255, 0.1);
   border-radius:   4px;
   position:        absolute;
-  margin:          4px 3px;
+  margin:          4px 3px 4px 0;
   cursor:          pointer;
   white-space:     nowrap;
-  margin-left:     0;
+  //margin-left:     0;
   font-family:     $base-font;
   font-weight:     600;
 
@@ -178,22 +93,6 @@ button {
   &:hover {
     transition: 0.2s ease-in-out all;
   }
-}
-
-.btn-rating {
-  font-size:       11px;
-  padding:         0;
-  border-radius:   4px;
-  position:        relative;
-  margin:          4px 3px;
-  line-height:     2.5;
-  font-weight:     700;
-  color:           #878c8f;
-  cursor:          pointer;
-  white-space:     nowrap;
-  margin-left:     0;
-  font-family:     $base-font;
-  font-weight:     500;
 }
 
 #signupeq,
@@ -215,8 +114,6 @@ button {
   display:         block;
   font-weight:     500;
 }
-
-
 
 .dots {
   width: 15px;

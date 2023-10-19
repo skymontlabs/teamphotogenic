@@ -25,20 +25,28 @@
     padding-top: 1.5em;
   }
    
-  @media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {
-    width:         61.8%;
-    padding-left:  25px;
+  @media (min-width: $tablet-min) {
+    height: 500px;
+    top: 50%;
+    position: absolute;
+    right: 3em;
+    transform: translateY(-50%);
+    padding: 0;
   }
-   
+
+
   @media (min-width: $tablet-wide-min) {
-    width:         522px;
-    padding-left:  35px;
+    width: calc(50% - 6em);
   }
   
+  @media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {
+    width: calc(61.8% - 6em);
+  }
+   
   .fwHeavy {
     font-weight:   600;
     font-size:     17px;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
     display:       block;
     font-family:   $base-font
   }
@@ -62,23 +70,34 @@
   }
 }
 
+.X #RDa {
+  @media (min-width: $tablet-min) {
+    transform: translateY(-20%);
+    transition: 0.2s ease-in transform;
+  }
+}
+
 #RIa {
-  width:           100%;
   background:      #f7f8f9;
   z-index:         9999;
   overflow:        hidden;
   position:        relative;
+
+
+  @media (max-width: $tablet-max) {
+    width:         100%
+  }
 
   @media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {
     width:         38.2%;
   }
    
   @media (min-width: $tablet-wide-min) {
-    width:         calc(100% - 522px);
+    width:         calc(50%);
   }
 
   @media (min-width: $tablet-min) {
-    border-radius: 9px;
+    height:        100vh;
   }
 
   img {
@@ -87,19 +106,21 @@
     height:        auto;
     display:       block;
     margin:        0 auto;
-    width:         auto;
+    width:         100%;
+    max-height:    100vh;
+    object-fit:    contain;
 
     @media (max-width: $tablet-max) {
-      max-height:  600px;
     }
 
     @media (min-width: $tablet-min) {
-      max-height:  520px;
       top:         50%;
       transform:   translateY(-50%);
     }
   }
 }
+
+
 
 #RBa {
   background-size:     cover;
@@ -112,7 +133,7 @@
   filter:              blur(20px);
 }
 
-#Xa, #Ra {
+#Xa {
   @media (min-width: $tablet-min) {
     top:           50%;
     transform:     translateY(-50%);
@@ -153,6 +174,17 @@
     font-size:   12px;
   }
 }
+#Ca {
+  margin-top: 4px;
+}
+#Ca,
+#Ua,
+#CMa {
+  @media (min-width: $tablet-wide-min) {
+    transform: translateY(-14px);
+  }
+}
+
 
 /*
 .data-grid {

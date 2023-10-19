@@ -1,9 +1,20 @@
 const DIV = document.createElement('div')
+
+const DIX = DIV.cloneNode(true)
+const DII = DIV.cloneNode(true)
+DII.className='x'
+DIX.appendChild(DII)
+
+const DYZ = DIV.cloneNode(true)
+DYZ.className='y z'
 const SPN = document.createElement('span')
 const BTN = document.createElement('button')
 const INP = document.createElement('input')
+const H2 = document.createElement('h2')
 const H4 = document.createElement('h4')
 const AX = document.createElement('a')
+const UL = document.createElement('ul')
+const LI = document.createElement('li')
 
 function cr8_dt() {
   let DT = BTN.cloneNode(true)
@@ -24,44 +35,72 @@ function cr8_dt() {
 
 let DZ = cr8_dt()
 
-/*
 
-<button id="dropdownDotsg" class="dots btn border"><span class="dlef" id="dd0X"></span>
-<span class="dmid" id="dd1X"></span><span class="drig" id="dd2X"></span></button>
-
-
-
-  const tagWrap = DIV.cloneNode(true)
-  for (var i = 0; i < 6; ++i) {
-    const tagElem = score.cloneNode(true)
-    tagElem.className='btn-tag'
-  }*/
-
+function filterStatus() {
   /*
-          <div class="taskItem">
-            <div class="y z">
-              <h6>Laurie in Italy69420</h6>
-              <time>3y</time>
-            </div>
-            <div class="imgWrap">
-              <img class="imgMat" src="img/laurie.jpg" alt="">
-              <img class="imgMat" src="img/laurie.jpg" alt="">
-              <img class="imgMat" src="img/laurie.jpg" alt="">
-              <img class="imgMat" src="img/laurie.jpg" alt="">
-              <img class="imgMat" src="img/laurie.jpg" alt="">
-              <img class="imgMat" src="img/laurie.jpg" alt="">
-            </div>
-            <div class="mtaWrap y z">
-              <span class="data-score">7.49</span>
-              <div style="margin-left:auto;">
-                <span class="btn-datapoint">🌄 13 images</span>
-                <span class="btn-datapoint">🏷️ 13 tags</span>
-                <span class="btn-datapoint">💬 13 comments</span>
-              </div>
-            </div>
-          </div>*/
+  <div id="tflta">
+    <button id="Bv0" class="btn A">
+      <span id="Bw0" class="F12 ST">All</span>
+      <h4 id="Bx0">12</h4>
+    </button>
+    <button id="Bv1" class="btn">
+      <span id="Bw1" class="F12 ST">Running</span>
+      <h4 id="Bx1">1</h4>
+    </button>
+    <button id="Bv2" class="btn">
+      <span id="Bw2" class="F12 ST">Paused</span>
+      <h4 id="Bx2">0</h4>
+    </button>
+    <button id="Bv3" class="btn">
+      <span id="Bw3" class="F12 ST">Finished</span>
+      <h4 id="Bx3">11</h4>
+    </button>
+  </div>
+  */
+  let Pr = DIV.cloneNode(true)
+  Pr.id='tflta'
+  let Bn = BTN.cloneNode(true)
+  let Sx = SPN.cloneNode(true)
+  let Zx = H4.cloneNode(true)
+  Bn.id='Bv0'
+  Bn.className='btn'
+  Sx.id='Bw0'
+  Sx.className='F12 ST'
+  Sx.innerText='All'
+  Zx.id='Bx0'
+  Zx.innerText='14'
+  Bn.appendChild(Sx)
+  Bn.appendChild(Zx)
+  let b1 = Bn.cloneNode(true)
+  b1.id='Bv1'
+  b1.children[0].id='Bw1'
+  b1.children[0].innerText='Running'
+  b1.children[1].id='Bx1'
+  b1.children[1].innerText='1'
+  let b2 = Bn.cloneNode(true)
+  b2.id='Bv2'
+  b2.children[0].id='Bw2'
+  b2.children[0].innerText='Paused'
+  b2.children[1].id='Bx2'
+  b2.children[1].innerText='12'
+  let b3 = Bn.cloneNode(true)
+  b3.id='Bv3'
+  b3.children[0].id='Bw3'
+  b3.children[0].innerText='Finished'
+  b3.children[1].id='Bx3'
+  b3.children[1].innerText='1'
+  Bn.className='btn A'
 
-/**/
+
+  Pr.appendChild(Bn)
+  Pr.appendChild(b1)
+  Pr.appendChild(b2)
+  Pr.appendChild(b3)
+
+  Ta.children[0].appendChild(Pr)
+  return Pr
+}
+
 
 function taskData() {
   const taskItem = DIV.cloneNode(true)
@@ -92,7 +131,8 @@ function taskData() {
   time.innerText = '5y'
   const dtv = DZ.cloneNode(true)
 
-  //<button id="dropdownDotsX" class="dots btn border"><span class="dlef" id="dd0X"></span><span class="dmid" id="dd1X"></span><span class="drig" id="dd2X"></span></button>
+  //<button id="dropdownDotsX" class="dots btn border"><span class="dlef" id="dd0X">
+  //</span><span class="dmid" id="dd1X"></span><span class="drig" id="dd2X"></span></button>
 
 
   txtWrap.appendChild(title)
@@ -105,52 +145,219 @@ function taskData() {
   taskItem.appendChild(imgWrap)
   taskItem.appendChild(txtWrap)
 
-  TLS.appendChild(taskItem)
+  return taskItem
 }
 
-function filterStatus() {
+
+
+function testidmta () {/*
+  var tmta = \
+   `<div id="TMta">
+      <div class="y z">
+        <span id="RQ">Rating Test</span>
+        <span id="RQ">ts_0123456789abcdef</span>
+      </div>
+      <div  class="rel y BB">
+        <h2 style="font-weight: 600;width: 100%;padding-bottom: 12px;" >Sarah Lasalle <span class="BW">Running</span></h2>
+        <button id="dtz" class="dots btn L16"><span class="d0" id="dd0X"></span><span class="d1" id="dd1X"></span><span class="d2" id="dd2X"></span></button>
+        <ul id="bblDropdown" class="dropsort">
+          <li><span id="editM">Restart test...</span></li>
+          <li><span id="editM">Resume test</span></li>
+          <li><span id="editM">Pause test</span></li>
+          <li><span id="editM">Edit test</span></li>
+          <li><span id="deleN">Delete test</span></li>
+        </ul>
+      </div>
+      <div class="y t16">
+        <div class="BY r16"><span class="F12 ST">total votes</span><span class="bl">45</span></div>
+        <div class="BY L16 r16"><span class="F12 ST">total votes</span><span class="bl">45</span></div>
+        <div class="L16"><span class="F12 ST">created</span><span class="bl">Jan 17, 2017</span></div>
+      </div>
+      <span style="font-size: 11px"></span>
+      <div class="y rel">
+      </div>
+    </div>`;*/
+
+  // Create the outermost div
+  let divTMta = document.createElement('div');
+  divTMta.id = 'TMta';
+
+  // First inner div with classes 'y' and 'z'
+  let divYz=DYZ.cloneNode(true);
+  let spanRQ=SPN.cloneNode(true);
+  spanRQ.id='RQ';
+  spanRQ.textContent='Rating Test';
+  let spanRQ2=SPN.cloneNode(true);
+  spanRQ2.id='RQ2';
+  spanRQ2.textContent='ts_0123456789abcdef';
+  divYz.appendChild(spanRQ);
+  divYz.appendChild(spanRQ2);
+
+  // Second inner div with classes 'rel', 'y', and 'BB'
+  let divRelYBB=DIV.cloneNode(true);
+  divRelYBB.className='rel y BB';
+
+  let h2 = H2.cloneNode(true);
+  h2.textContent='Sarah Lasalle';
+
+  let spanBW = SPN.cloneNode(true)
+  spanBW.className = 'BW';
+  spanBW.textContent = 'Running'; // status
+  h2.appendChild(spanBW);
+
+  //right one
+  let buttonDtz = DZ.cloneNode(true)
+  buttonDtz.id='dtz'
+  buttonDtz.className='dots btn L16'
+
+/*
+  let buttonDtz = document.createElement('button');
+  buttonDtz.id = 'dtz';
+  buttonDtz.className = 'dots btn L16';
+  ['d0', 'd1', 'd2'].forEach(cls => {
+      let span = SPN.cloneNode(true)
+      span.className = cls;
+      buttonDtz.appendChild(span);
+  });
+*/
+
+  let ulBblDropdown = UL.cloneNode(true)
+  ulBblDropdown.id = 'bblDropdown';
+  ulBblDropdown.className = 'dropsort';
+  ['Restart test','Resume test','Pause test','Edit test','Delete test'].forEach((text, index) => {
+      let li = document.createElement('li');
+      let span = SPN.cloneNode(true)
+      span.id = `edit${index}`;
+      span.textContent = text;
+      li.appendChild(span);
+      ulBblDropdown.appendChild(li);
+  });
+
+  divRelYBB.appendChild(h2)
+  divRelYBB.appendChild(buttonDtz)
+  divRelYBB.appendChild(ulBblDropdown)
+
+  // The third div with classes 'y' and 't16'
+  let divYT16=DIV.cloneNode(true)
+  divYT16.className = 'y t16';
+
+  ['total votes','total votes','created'].forEach((text, index) => {
+    let div = DIV.cloneNode(true)
+    div.className = (index === 0 ? 'BY r16' : (index === 1 ? 'BY L16 r16' : 'L16'));
+    
+    let spanST = SPN.cloneNode(true)
+    spanST.className = 'F12 ST';
+    spanST.textContent = text;
+    
+    let spanBl = SPN.cloneNode(true)
+    spanBl.className = 'bl';
+    spanBl.textContent = (index === 2 ? 'Jan 17, 2017' : '45');
+    
+    div.appendChild(spanST);
+    div.appendChild(spanBl);
+    divYT16.appendChild(div);
+  });
+
+  let spanFontSize = SPN.cloneNode(true)
+  spanFontSize.style.fontSize = '11px';
+
+  //let divYRel = DIV.cloneNode(true)
+  //divYRel.className = 'y rel';
+
+  divTMta.appendChild(divYz);
+  divTMta.appendChild(divRelYBB);
+  divTMta.appendChild(divYT16);
+  divTMta.appendChild(spanFontSize);
+  //divTMta.appendChild(divYRel);
+  return divTMta
+}
+
+
+function dropdownValue(ulid,chld,chldct,acv,baseval) {
   /*
-  <div id="tflta">
-    <button id="Bv0" class="btn A">
-      <span id="Bw0" class="F12 ST">All</span>
-      <h4 id="Bx0">12</h4>
-    </button>
-    <button id="Bv1" class="btn">
-      <span id="Bw1" class="F12 ST">Running</span>
-      <h4 id="Bx1">1</h4>
-    </button>
-    <button id="Bv2" class="btn">
-      <span id="Bw2" class="F12 ST">Paused</span>
-      <h4 id="Bx2">0</h4>
-    </button>
-    <button id="Bv3" class="btn">
-      <span id="Bw3" class="F12 ST">Finished</span>
-      <h4 id="Bx3">11</h4>
-    </button>
-  </div>
-  */
-  let Pr = DIV.cloneNode(true)
-  let Bn = BTN.cloneNode(true)
-  let Sx = SPN.cloneNode(true)
-  let Zx = H4.cloneNode(true)
-  Bn.id='Bv0'
-  Bn.className='btn A'
-  Sx.id='Bw0'
-  Sx.className='F12 ST'
-  Zx.id='Bx0'
-  Bn.appendChild(Sx)
-  Bn.appendChild(Zx)
-  let b1 = Bn.cloneNode(true)
-  let b2 = Bn.cloneNode(true)
-  let b3 = Bn.cloneNode(true)
+  <ul id="sortDropdown" class="dropsort show active A">
+    <li id="Sd0" class="noselect active">Average score</li>
+    <li id="Sd1" class="noselect">Median score</li>
+    <li id="Sd2" class="noselect">Date created</li>
+    <li id="Sd3" class="noselect">Date created</li>
+  </ul>
 
-  Pr.appendChild(bn)
-  Pr.appendChild(b1)
-  Pr.appendChild(b2)
-  Pr.appendChild(b3)
-  return Pr
+<div class="dropdownSelector">
+  <span id="sortMethodV" class="selClick crt">Average score</span>
+  <ul id="sortDropdown" class="dropsort">
+    <li id="Sd0" class="noselect active">Average score</li>
+    <li id="Sd1" class="noselect">Median score</li>
+    <li id="Sd2" class="noselect">Date created</li>
+    <li id="Sd3" class="noselect">Date created</li>
+  </ul>
+</div>
+
+  */
+
+  let DS=DIV.cloneNode(true)
+  DS.className='dropdownSelector'
+  
+  let SM=SPN.cloneNode(true)
+  SM.id='sortMethodV'
+  SM.className='selClick crt'
+  SM.innerText=chld[acv]
+
+  let U=UL.cloneNode(true)
+  U.id=ulid
+  U.className='dropsort'
+  for (var i = 0; i < chldct; i+=1) {
+    let L=LI.cloneNode(true)
+    L.id = 'Sd' + String.fromCharCode(baseval + i)
+    L.className = 'noselect'
+    L.innerText=chld[i]
+    U.appendChild(L)
+  }
+  U.children[acv].className='noselect active'
+
+  SM.innerText=chld[acv]
+
+  DS.appendChild(SM)
+  DS.appendChild(U)
+
+  return DS
 }
 
+
+
+function getTestNav() {
+  var testnav=DIV.cloneNode(true) 
+  var TsT=H2.cloneNode(true)
+  testnav.className='wrapsort y z rel BB'
+  TsT.id='Fa'
+  TsT.innerText='Tests'
+  testnav.appendChild(TsT)
+  //testnav.appendChild(dropdownValue('sortDropdown',['Average','Median','Created'],3,0,48))
+  /*
+  Ra.innerHTML = `
+  <div class="wrapsort y z rel">
+    <h2 id="Fa">Tests</h2>
+    <div class="dropdownSelector">
+      <span id="sortMethodV" class="selClick crt">Average score</span>
+      <ul id="sortDropdown" class="dropsort">
+        <li id="Sd0" class="noselect active">Average score</li>
+        <li id="Sd1" class="noselect">Median score</li>
+        <li id="Sd2" class="noselect">Date created</li>
+        <li id="Sd3" class="noselect">Date created</li>
+      </ul>
+    </div>
+  </div>`*/
+  return testnav
+}
+
+function getAllTests() {
+  Ta.children[0].appendChild(getTestNav())
+  Ta.children[0].appendChild(filterStatus())
+  var Tls=DIV.cloneNode(true)
+  Tls.id='TLS'
+  Tls.className='G'
+  Tls.appendChild(taskData())
+  Ta.children[0].appendChild(Tls)
+}
 
 function imageIndiv() {
   const imgItem = DIV.cloneNode(true)
@@ -168,7 +375,7 @@ function imageIndiv() {
   const mtaWrap = DIV.cloneNode(true)
   mtaWrap.className = 'W D imgData abs y z'
 
-  const score = document.createElement('span')
+  const score = SPN.cloneNode(true)
   
   const ctWrap = DIV.cloneNode(true)
   const comCt = score.cloneNode(true)
@@ -185,8 +392,90 @@ function imageIndiv() {
   imgItem.appendChild(imgWrap)
   imgItem.appendChild(mtaWrap)
 
-  TLS.appendChild(imgItem)
+  return imgItem
 }
+
+
+function getPaired() {
+  /*
+  <div id="Xa" class="">
+    <div class="x">
+      <div id="RSa">
+        <div id="IWa" class="PI">
+          <img id="IMa" src="img/laurie.jpg">
+        </div>
+        <div id="IWb" class="PI">
+          <img id="IMb" src="img/lake.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+  */
+  // Create the outermost div
+  let divXa=DIV.cloneNode(true);
+  divXa.id='Xa';
+
+  // Create the child div with class 'x'
+  let divX=DIV.cloneNode(true)
+  divX.className='x';
+
+  // Create the div with id 'RSa'
+  let divRSa=DIV.cloneNode(true)
+  divRSa.id='RSa';
+
+  // Create the first inner div with id 'IWa' and class 'PI'
+  let divIWa=DIV.cloneNode(true)
+  divIWa.id='IWa';
+  divIWa.className='PI';
+
+  // Create the img inside 'IWa'
+  let imgIMa=document.createElement('img');
+  imgIMa.id='IMa';
+  imgIMa.src='img/laurie.jpg';
+
+  // Append imgIMa to divIWa
+  divIWa.appendChild(imgIMa);
+
+  // Create the second inner div with id 'IWb' and class 'PI'
+  let divIWb = DIV.cloneNode(true)
+  divIWb.id = 'IWb';
+  divIWb.className = 'PI';
+
+  // Create the img inside 'IWb'
+  let imgIMb = document.createElement('img');
+  imgIMb.id = 'IMb';
+  imgIMb.src = 'img/lake.jpg';
+
+  // Append imgIMb to divIWb
+  divIWb.appendChild(imgIMb);
+
+  // Append divIWa and divIWb to divRSa
+  divRSa.appendChild(divIWa);
+  divRSa.appendChild(divIWb);
+
+  // Append divRSa to divX
+  divX.appendChild(divRSa);
+
+  // Append divX to divXa
+  divXa.appendChild(divX);
+
+  return divXa
+}
+
+
+
+function getTestID() {
+  Ta.children[0].appendChild(testidmta())
+  Ta.children[0].appendChild(filterStatus())
+  var Tls=DIV.cloneNode(true)
+  Tls.id='TLS'
+  Tls.className='G'
+  Tls.appendChild(imageIndiv())
+  Ta.children[0].appendChild(Tls)
+}
+
+
+
 
 
 function imageModal() {

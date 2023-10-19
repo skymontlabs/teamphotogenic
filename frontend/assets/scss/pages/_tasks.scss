@@ -59,6 +59,11 @@
 // task meta for task ID page
 #TMta {
   margin: 3em 0;
+  h2 {
+    width: 100%;
+    font-weight: 600;
+    padding-bottom: 12px;
+  }
 }
 
 .taskItem {
@@ -145,7 +150,8 @@
 }
 
 // rating or pairing type
-#RQ {
+#RQ,
+#RQ2 {
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
@@ -201,6 +207,44 @@
   font-family:     $base-font;
   font-weight:     500;
 }
+
+
+
+.BR {
+  background:      rgba(51,54,56,0.04);
+  width:           calc(20% - 8px);
+  padding:         7px 0 11px;
+  border-radius:   5px;
+  border:          2px solid rgba(0, 0, 0, 0.0);
+  font-size:       11px;
+  font-weight:     500;
+  
+  &::first-letter {
+    display:       block;
+    font-size:     22px;
+    line-height:   32px;
+
+  }
+
+  &>.E {
+    display:       block;
+    font-size:     19px;
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    border:        2px solid $scheme-color-2;
+    box-shadow:    0 0 0 3px rgba($scheme-color-2, 0.4);
+  }
+
+  &.A,
+  &.active {
+    color:         #424652;
+    border:        2px solid $scheme-color-2;
+    box-shadow:    0 0 0 1px $scheme-color-2;
+  }
+}
+
 
 
 /*
