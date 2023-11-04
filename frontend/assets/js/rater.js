@@ -6,6 +6,7 @@ function getRates() {
   btnBR.className='btn BR'
   btnBR.id='R0'
 
+//https://stackoverflow.com/questions/4212909/can-css-force-a-line-break-after-each-word-in-an-element
   let btnB1=btnBR.cloneNode(true)
   btnB1.id='R1'
   let btnB2=btnBR.cloneNode(true)
@@ -124,127 +125,145 @@ function getUa() {
   return divUa
 }
 
-function getImgsec() {
-  let divRIa = DIV.cloneNode(true)
-  divRIa.id = 'RIa';
-  let divRBa = DIV.cloneNode(true)
-  divRBa.id = 'RBa';
-  let imgRP = IMG.cloneNode(true)
-  imgRP.src='img/laurie.jpg'
-  imgRP.alt='Rating picture'
+function generateRatingBlock() {
+    // Main containers
+    const RIaDiv = document.createElement('div');
+    RIaDiv.id = 'RIa';
 
-  divRIa.appendChild(divRBa)
-  divRIa.appendChild(imgRP)
+    const RDaDiv = document.createElement('div');
+    RDaDiv.id = 'RDa';
+
+    // RIa child elements
+    const RBaDiv = document.createElement('div');
+    RBaDiv.id = 'RBa';
+    RBaDiv.style.backgroundImage = "url('img/laurie.jpg')";
+    RIaDiv.appendChild(RBaDiv);
+
+    const imgElement = document.createElement('img');
+    imgElement.src = "img/laurie.jpg";
+    imgElement.alt = "Rating picture";
+    RIaDiv.appendChild(imgElement);
+
+    // RDa child elements - Rating
+    const ratingSpan = document.createElement('span');
+    ratingSpan.className = 'fwHeavy';
+    ratingSpan.textContent = 'Rating*';
+    RDaDiv.appendChild(ratingSpan);
+
+/*
+    const CaDiv = document.createElement('div');
+    CaDiv.id = 'Ca';
+    CaDiv.className = 'y z';
+
+    const ratings = ['😒 Eh', '😐 Decent', '😃 Great', '🤩 Stunning', '🤑 Brilliant'];
+
+    ratings.forEach((rating, index) => {
+        const button = document.createElement('button');
+        button.id = `R${index}`;
+        button.className = 'btn BR';
+        button.innerHTML = rating.replace(' ', '<br>');
+        CaDiv.appendChild(button);
+    });
+*/
+    RDaDiv.appendChild(getRates());
+
+    // RDa child elements - Tags
+    const tagsSpan = document.createElement('span');
+    tagsSpan.className = 'fwHeavy';
+    tagsSpan.textContent = 'Tags';
+    RDaDiv.appendChild(tagsSpan);
+
+/*
+    const UaDiv = document.createElement('div');
+    UaDiv.id = 'Ua';
+
+    const tags = ['😓 awkward', '🫥 bad expression', '🖼 bad framing', '🍞 bland', '🏟 distracting', '💨 blurry',
+        '⚡️ bright', '🚊 busy', '🌈 colorful', '🕶 cool', '🌚 dark', '😬 forced smile', '🧂 grainy', '🚨 overedited',
+        '🚶 poor posture', '🔭 too far away', '🔎 too close up'];
+
+    tags.forEach((tag, index) => {
+        const span = document.createElement('span');
+        span.id = `Q${String.fromCharCode(97 + index)}`;
+        span.className = 'BZ';
+        span.textContent = tag;
+        UaDiv.appendChild(span);
+    });
+*/
+
+    RDaDiv.appendChild(getUa());
+
+    // Comment section
+    const commentSpan = document.createElement('span');
+    commentSpan.className = 'fwHeavy';
+    commentSpan.textContent = 'Comment';
+    RDaDiv.appendChild(commentSpan);
+
+    const textareaElement = document.createElement('textarea');
+    textareaElement.id = 'CMa';
+    textareaElement.placeholder = "This picture seems ...";
+    textareaElement.tabIndex = '-1';
+    textareaElement.maxLength = '255';
+    RDaDiv.appendChild(textareaElement);
+
+    const actionDiv = document.createElement('div');
+    actionDiv.className = 'y z rel';
+
+    const dotsBtn = document.createElement('button');
+    dotsBtn.id = 'Dmo';
+    dotsBtn.className = 'dots btn';
+    ['d0', 'd1', 'd2'].forEach(dotClass => {
+        const span = document.createElement('span');
+        span.className = dotClass;
+        dotsBtn.appendChild(span);
+    });
+
+    actionDiv.appendChild(dotsBtn);
+
+    const ulElement = document.createElement('ul');
+    ulElement.id = 'rMor';
+    ulElement.className = 'dropsort';
+    const liElement = document.createElement('li');
+    const reportSpan = document.createElement('span');
+    reportSpan.id = 'Rpt';
+    reportSpan.textContent = 'Report image';
+    liElement.appendChild(reportSpan);
+    ulElement.appendChild(liElement);
+    actionDiv.appendChild(ulElement);
+
+    const buttonsDiv = document.createElement('div');
+    buttonsDiv.className = 'y';
+
+    const skipBtn = document.createElement('button');
+    skipBtn.id = 'Sk';
+    skipBtn.className = 'pointer y btn';
+    const skipSpan = document.createElement('span');
+    skipSpan.className = 'f11';
+    skipSpan.textContent = 'Skip';
+    skipBtn.appendChild(skipSpan);
+    buttonsDiv.appendChild(skipBtn);
+
+    const submitBtn = document.createElement('button');
+    submitBtn.id = 'Sm';
+    submitBtn.className = 'pointer btn blue';
+    const submitSpan = document.createElement('span');
+    submitSpan.className = 'f11';
+    submitSpan.textContent = 'Submit';
+    submitBtn.appendChild(submitSpan);
+    buttonsDiv.appendChild(submitBtn);
+
+    actionDiv.appendChild(buttonsDiv);
+    RDaDiv.appendChild(actionDiv);
+
+    // Append the main containers to the body or any other parent element
+    Mn.appendChild(RIaDiv);
+    Mn.appendChild(RDaDiv);
 }
 
-function getButtons() {
-  /*
-    <div class="y z rel">
-      <button id="Dmo" class="dots btn"><span class="d0" id="dd0X"></span><span class="d1" id="dd1X"></span><span class="d2" id="dd2X"></span></button>
-      <ul id="rMor" class="dropsort">
-        <li><span id="Rpt">Report image</span></li>
-      </ul>
-      <div class="y">
-        <button id="Sk" class="pointer y btn"><span class="f11">Skip</span></button>
-        <button id="Sm" class="pointer btn blue"><span class="f11">Submit</span></button>
-      </div>
-    </div>
-  */
-}
 
 
-function getRDa() {
-  let divRDa = DIV.cloneNode(true)
-  divRDa.id = 'RDa';
-
-  let T0=SPN.cloneNode(true)
-  T0.className='fwHeavy'
-  T0.innerText='Rating*'
-
-  T1=SPN.cloneNode(true)
-  T1.className='fwHeavy'
-  T1.innerText='Tags'
-
-  T2=SPN.cloneNode(true)
-  T2.className='fwHeavy'
-  T2.innerText='Comment'
-
-  txtC=document.createElement('textarea')
-  txtC.id='CMa'
-  txtC.placeholder='This picture seems...'
-  txtC.tabindex='-1'
-  txtC.maxlength='255'
-
-  //<textarea id="CMa" placeholder="This picture seems ..." tabindex="-1" maxlength="255"></textarea>
-
-  divRDa.appendChild(T0)
-  divRDa.appendChild(getRates())
-  divRDa.appendChild(T1)
-  divRDa.appendChild(getUa())
-  divRDa.appendChild(T2)
-  divRDa.appendChild(txtC)
-  divRDa.appendChild(getButtons())
-}
-
-function getRSa() {
-  let Dx = DIV.cloneNode(true)
-  Dx.id = 'Ra'
-
-  let divRSa = DIV.cloneNode(true)
-  divRSa.id = 'RSa'
-
-}
 
 function getRater() {
-  let D2 = DIV.cloneNode(true)
-  D2.id = 'Ra'
-  D2.className = 'y'
-  D2.innerHTML = `
-  <div id="RIa">
-    <div id="RBa" style="background-image: url('img/laurie.jpg');"></div>
-    <img src="img/laurie.jpg" alt="Rating picture">
-  </div>
-  <div id="RDa">
-    <span class="fwHeavy">Rating*</span>
-    <div id="Ca" class="y z">
-      <button id="R0" class="btn BR">😒<br>Eh</button>
-      <button id="R1" class="btn BR">😐<br>Decent</button>
-      <button id="R2" class="btn BR">😃<br>Great</button>
-      <button id="R3" class="btn BR">🤩<br>Stunning</button>
-      <button id="R4" class="btn BR">🤑<br>Brilliant</button>
-    </div>
-    <span class="fwHeavy">Tags</span>
-    <div id="Ua">
-      <span id="Qa" class="BZ">😓 awkward</span>
-      <span id="Qb" class="BZ">🫥 bad expression</span>
-      <span id="Qc" class="BZ">🖼 bad framing</span>
-      <span id="Qd" class="BZ">🍞 bland</span>
-      <span id="Qe" class="BZ">🏟 distracting</span>
-      <span id="Qf" class="BZ">💨 blurry</span>
-      <span id="Qg" class="BZ">⚡️ bright</span>
-      <span id="Qh" class="BZ">🚊 busy</span>
-      <span id="Qi" class="BZ">🌈 colorful</span>
-      <span id="Qj" class="BZ">🕶 cool</span>
-      <span id="Qk" class="BZ">🌚 dark</span>
-      <span id="Ql" class="BZ">😬 forced smile</span>
-      <span id="Qm" class="BZ">🧂 grainy</span>
-      <span id="Qn" class="BZ">🚨 overedited</span>
-      <span id="Qo" class="BZ">🚶 poor posture</span>
-      <span id="Qp" class="BZ">🔭 too far away</span>
-      <span id="Qq" class="BZ">🔎 too close up</span>
-    </div>
-    <span class="fwHeavy">Comment</span>
-    <textarea id="CMa" placeholder="This picture seems ..." tabindex="-1" maxlength="255"></textarea>
-    <div class="y z rel">
-      <button id="Dmo" class="dots btn"><span class="d0" id="dd0X"></span><span class="d1" id="dd1X"></span><span class="d2" id="dd2X"></span></button>
-      <ul id="rMor" class="dropsort">
-        <li><span id="Rpt">Report image</span></li>
-      </ul>
-      <div class="y">
-        <button id="Sk" class="pointer y btn"><span class="f11">Skip</span></button>
-        <button id="Sm" class="pointer btn blue"><span class="f11">Submit</span></button>
-      </div>
-    </div>
-  </div>`
-  return D2
+  Mn.id = 'Ra'
+  Mn.className = 'y'
+  generateRatingBlock()
 }

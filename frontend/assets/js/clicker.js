@@ -1,16 +1,17 @@
+let Mn=DIV.cloneNode(true)
+Mn.id='Mn'
+let xblk=DIV.cloneNode(true)
+xblk.className='x'
+Mn.appendChild(xblk)
+Ga.appendChild(Mn)
 
-// dropdown for aux icons in nav
-let auxIconData = {
-	que: false,
-	nof: false,
-	prf: false,
-	pls: false
-};
+
 
 // hamburger for main menu in nav
 function s() {
 
 }
+let loaded=false
 var loggedIn = true
 let W=window
 let Pge=-1
@@ -31,71 +32,112 @@ function rte(url) {
 	let hh = window.location.hash
 
 	if (pg==='') {
+		if (Pge===1) {return}
 		Pge=1
 		if (loggedIn) {
 			Ga.className = 'showRate';
-			
-			let rtx = getRater()
-			document.body.insertBefore(rtx, document.body.firstChild);
+			clearMn(Mn)
+			getRater()
 		} else {
 			Ga.className = 'showLogin';
 		}
 	} else if (pg==='tasks') {
-		console.log('tasks yee')
+		if (Pge===2) {return}
+		
 		Ga.className = 'showTasks';
+		clearMn(Mn)
+		
 		let limit = 0
 		let offset = 0
+		
 		getAllTests()
 		Pge=2
-
-
 	} else if (pg==='taskID') {
+		if (Pge===3) {return}
+		clearMn(Mn)
+		
 		Ga.className = 'showTaskID';
 		let taskID = 1
 		Pge=3
 
 		getTestID()
 	} else if (pg==='imageID') {
+		if (Pge===4) {return}
+		clearMn(Mn)
+		
 		Ga.className = 'showTasks showImg';
 		let taskID = 1
 		Pge=4
-
-		for (let i = 0; i < 1; ++i) {
-			imageIndiv()
-		}
+		generateImage();
 	} else if (pg==='profile') {
+		if (Pge===5) {return}
+		clearMn(Mn)
+		
+		genPrf()
 		Pge=5
 		Ga.className = 'showProfile edit';
 	} else if (pg==='security') {
+		if (Pge===6) {return}
+		clearMn(Mn)
+		
 		Pge=6
 		Ga.className = 'showProfile sec';
 	} else if (pg==='alerts') {
+		if (Pge===7) {return}
+		clearMn(Mn)
+		
 		Pge=7
 		Ga.className = 'showProfile alr';
 	} else if (pg==='billing') {
+		if (Pge===8) {return}
+		clearMn(Mn)
+		
 		Pge=8
 		Ga.className = 'showProfile bil';
 	} else if (pg==='help') {
+		if (Pge===9) {return}
+		clearMn(Mn)
+		
 		Pge=9
 		Ga.className = 'showProfile hlp';
 	} else if (pg==='login') {
+		if (Pge===10) {return}
+		clearMn(Mn)
+		
 		Pge=10
 		Ga.className = 'showLogin';
+		genLogin()
 	} else if (pg==='signup') {
+		if (Pge===11) {return}
+		clearMn(Mn)
+		
 		Ga.className = 'showSignup';
 	} else if (pg==='statistics') {
+		if (Pge===19) {return}
+		clearMn(Mn)
+		
 		Ga.className = 'showTaskID';
 		let taskID = 1
 	} else if (pg==='notifications') {
-		Pge=11
+		if (Pge===23) {return}
+		clearMn(Mn)
+		
+		Pge=23
 		Ga.className = 'showNotifications';
 	} else if (pg==='paired') {
-		let Prd=getPaired()
+		if (Pge===12) {return}
+		clearMn(Mn)
+	
+		console.log(Mn)
 		Pge=12
-		document.body.insertBefore(Prd, document.body.firstChild);
+		getPaired()
 		Ga.className = 'showPaired';
 	} else if (pg==='premium') {
+		if (Pge===155) {return}
+		clearMn(Mn)
+		
 		Ga.className = 'showPremium';
+		Pge=155
 	} else if (pg==='r2') {
 		Ga.className = 'showR2';
 		Pge=33
@@ -205,12 +247,15 @@ document.onclick = (e) => {
 
 ////// DARK 
 	else if (tG == ZZ) {
-		Ga.className=Ga.className.substr(10)
-		
-		alert('dark')
-		Ga.className = 'showTasks'
-		rte('/taskID')
-		window.history.pushState({},'/taskID','/taskID')
+		// if this is, due to uploader, just simply remove it
+		if (!removeDropdowns(100)) {
+			Ga.className=Ga.className.substr(0, Ga.className.length - 8)
+		} else {
+			/*
+			Ga.className = 'showTasks'
+			rte('/taskID')
+			window.history.pushState({},'/taskID','/taskID')*/
+		}
 	}
 
 ////// navigation #Na
@@ -235,8 +280,25 @@ document.onclick = (e) => {
 
 	// new test upload modal
 	else if (tG===Pd) {
-		alert('seg')
-		if (removeDropdowns(-1)) {Ga.className+=' showUpl';OPN=100}
+		if (removeDropdowns(-1)) {
+			Ga.className+=' showUpl';
+
+			OPN=100;
+			dropArea.addEventListener('drop', handleDrop, false)
+
+			;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+			  dropArea.addEventListener(eventName, preventDefaults, false)
+			})
+
+			;['dragenter', 'dragover'].forEach(eventName => {
+			  dropArea.addEventListener(eventName, highlight, false)
+			})
+
+			;['dragleave', 'drop'].forEach(eventName => {
+			  dropArea.addEventListener(eventName, unhighlight, false)
+			})
+
+		}
 	}
 
 
@@ -283,14 +345,15 @@ document.onclick = (e) => {
 	}
 
 	else if (Pge===12) {
-
 	////// /paired page
 		if (IWa.contains(tG)) {
 			console.log('pic a')
+			IWa.className='PI A'
 		}
 
 		else if (IWb.contains(tG)) {
 			console.log('pic b')
+			IWb.className='PI A'
 		}
 	}
 
@@ -300,16 +363,13 @@ document.onclick = (e) => {
 	//// NEED TO DEAL WITH THIS IN CONTEXT OF ROUTING BEHAVIOR
 	else if (Pge===2) {
 
-		/*
 		if (tG === sortMethodV) {
 			if (removeDropdowns(8)) {sortDropdown.className='dropsort show active A';OPN=8}
 		}
 
 
 		// view all regardless of task status
-		else*/
-
-		if (tflta.contains(tG) && tG !== tflta) { //a === vAll
+		else if (tflta.contains(tG) && tG !== tflta) { //a === vAll
 			let aidx=key - '0'
 			// make sure this is not 0 samples!
 			if (cStatus!==aidx) {
@@ -394,6 +454,7 @@ document.onclick = (e) => {
 		}
 
 		// dropdown for language
+		/*
 		else if (lndr.contains(tG)) {
 			if (removeDropdowns(11)) {LNG.className='dropsort A';OPN=11}
 		}
@@ -401,7 +462,7 @@ document.onclick = (e) => {
 		// picked a language
 		else if (LNG.contains(tG)) {
 			console.log('picked language, same procedure as /rater tag, now remove dropdown and change language')
-		}
+		}*/
 	}
 
 	// sign up

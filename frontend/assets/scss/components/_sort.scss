@@ -119,13 +119,13 @@
     visibility: visible;
     opacity: 1;
     //transform: translate(8px, 10px);
-    &+.caret {
+    &+.crt {
       transform: rotate(180deg);
     }
   }
 }
 
-.caret {
+.crt {
   transition: 0.2s ease all;
 }
 

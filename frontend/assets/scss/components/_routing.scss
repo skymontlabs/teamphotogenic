@@ -20,10 +20,10 @@
 	background: white;
 }
 
+#Ra>.x{display: none;}
 #Ia,
-#Pa>*,
-#Pa{
-	display: none;
+#PFa>*{
+	visibility: hidden;
 	height: 0;
 }
 #Ga {
@@ -31,12 +31,15 @@
 		display: none;
 
 	}
-	&>#Ia,
 	&>#Pa,
 	&>#Ta,
 	&>#taskID,
 	&>#admin {
 		margin-top: 82px;
+	}
+	&>#Ia {
+		padding-top: 120px;
+		box-sizing: border-box;
 	}
 	&.showPaired {
 		#Xa {

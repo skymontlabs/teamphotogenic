@@ -4,6 +4,7 @@
   z-index:         9999;
   overflow:        hidden;
   position:        relative;
+  height: 400px;
 
   @media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {
     width:         38.2%;
@@ -20,10 +21,10 @@
   img {
     position:      relative;
     max-width:     100%;
-    height:        auto;
     display:       block;
     margin:        0 auto;
     width:         auto;
+    height:        100%;
 
     @media (max-width: $tablet-max) {
       max-height:  600px;
@@ -177,7 +178,13 @@
   }
 
   .TR {
+    width: 20px;
     margin-left: 6px;
+    background: blue;
+    color: white;
+    border-radius: 20px;
+    padding: 0 5px;
+    text-align: center;
   }
 
   .tag-name {

@@ -1,17 +1,35 @@
+const DIV = document.createElement('div')
 
-var Tlogo = 1 // question icon dropdown
-var Tqust = 2 // question icon dropdown
-var Tnotf = 3 // notification dropdown
-var Tprfl = 4 // profile dropdown
-var Tplus = 5 // plus dropdown
-var Tmdot = 6 // dots for edit/delete task in /taskID
-var Tgdot = 6 // dots for edit/delete task in grid /tasks
-var Tmenu = 7 // mobile hamburger menu for nav
-var Tfilt = 8 // filter dropdown for /tasks
-var Tsort = 9 // sort dropdown for /tasks
-var Tstat = 9 // status dropdown for /tasks
-var Tscor = 9 // avg score dropdown for /tasks
-var Tvots = 9 // # votes dropdown for /tasks
-var Tpics = 9 // # pics dropdown for /tasks
-var Tdate = 9 // date dropdown for /tasks
-var Tlang = 9 // language in /profile
+const DIX = DIV.cloneNode(true)
+const DII = DIV.cloneNode(true)
+DII.className='x'
+DIX.appendChild(DII)
+
+const DYZ = DIV.cloneNode(true)
+DYZ.className='y z'
+const SPN = document.createElement('span')
+const BTN = document.createElement('button')
+const INP = document.createElement('input')
+const H2 = document.createElement('h2')
+const H4 = document.createElement('h4')
+const AX = document.createElement('a')
+const UL = document.createElement('ul')
+const LI = document.createElement('li')
+
+
+
+//https://measurethat.net/Benchmarks/Show/10210/0/remove-all-children-from-dom-element
+function clearMn(nde) {
+	while (nde.lastChild && nde.lastChild.className.substr(0,1) != 'x') {
+	    nde.removeChild(nde.lastChild);
+	}
+
+	let Xo = nde.firstChild
+
+	if (Xo.hasChildNodes()) {
+		while (Xo.lastChild) {
+		    Xo.removeChild(Xo.lastChild);
+		}
+	}
+}
+

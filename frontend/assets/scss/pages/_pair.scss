@@ -33,9 +33,7 @@
     box-shadow:  0 0 0 1px rgba(0,0,0,0.0);
   }
 
-  &>input {
-    appearance:  none;
-    padding:     0;
-    z-index:     999999;
+  &.A {
+    box-shadow:  0 0 0 1px #5983FC;
   }
 }

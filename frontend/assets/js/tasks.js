@@ -1,20 +1,3 @@
-const DIV = document.createElement('div')
-
-const DIX = DIV.cloneNode(true)
-const DII = DIV.cloneNode(true)
-DII.className='x'
-DIX.appendChild(DII)
-
-const DYZ = DIV.cloneNode(true)
-DYZ.className='y z'
-const SPN = document.createElement('span')
-const BTN = document.createElement('button')
-const INP = document.createElement('input')
-const H2 = document.createElement('h2')
-const H4 = document.createElement('h4')
-const AX = document.createElement('a')
-const UL = document.createElement('ul')
-const LI = document.createElement('li')
 
 function cr8_dt() {
   let DT = BTN.cloneNode(true)
@@ -37,26 +20,6 @@ let DZ = cr8_dt()
 
 
 function filterStatus() {
-  /*
-  <div id="tflta">
-    <button id="Bv0" class="btn A">
-      <span id="Bw0" class="F12 ST">All</span>
-      <h4 id="Bx0">12</h4>
-    </button>
-    <button id="Bv1" class="btn">
-      <span id="Bw1" class="F12 ST">Running</span>
-      <h4 id="Bx1">1</h4>
-    </button>
-    <button id="Bv2" class="btn">
-      <span id="Bw2" class="F12 ST">Paused</span>
-      <h4 id="Bx2">0</h4>
-    </button>
-    <button id="Bv3" class="btn">
-      <span id="Bw3" class="F12 ST">Finished</span>
-      <h4 id="Bx3">11</h4>
-    </button>
-  </div>
-  */
   let Pr = DIV.cloneNode(true)
   Pr.id='tflta'
   let Bn = BTN.cloneNode(true)
@@ -97,7 +60,7 @@ function filterStatus() {
   Pr.appendChild(b2)
   Pr.appendChild(b3)
 
-  Ta.children[0].appendChild(Pr)
+  //Ta.children[0].appendChild(Pr)
   return Pr
 }
 
@@ -179,8 +142,8 @@ function testidmta () {/*
     </div>`;*/
 
   // Create the outermost div
-  let divTMta = document.createElement('div');
-  divTMta.id = 'TMta';
+  let divTMta=DIV.cloneNode(true)
+  divTMta.id='TMta';
 
   // First inner div with classes 'y' and 'z'
   let divYz=DYZ.cloneNode(true);
@@ -241,7 +204,7 @@ function testidmta () {/*
   let divYT16=DIV.cloneNode(true)
   divYT16.className = 'y t16';
 
-  ['total votes','total votes','created'].forEach((text, index) => {
+  ['total images','total votes','created'].forEach((text, index) => {
     let div = DIV.cloneNode(true)
     div.className = (index === 0 ? 'BY r16' : (index === 1 ? 'BY L16 r16' : 'L16'));
     
@@ -331,7 +294,7 @@ function getTestNav() {
   TsT.id='Fa'
   TsT.innerText='Tests'
   testnav.appendChild(TsT)
-  //testnav.appendChild(dropdownValue('sortDropdown',['Average','Median','Created'],3,0,48))
+  testnav.appendChild(dropdownValue('sortDropdown',['Date Added','Date Modified','Date '],3,0,48))
   /*
   Ra.innerHTML = `
   <div class="wrapsort y z rel">
@@ -350,13 +313,17 @@ function getTestNav() {
 }
 
 function getAllTests() {
-  Ta.children[0].appendChild(getTestNav())
-  Ta.children[0].appendChild(filterStatus())
+  Mn.id='Ta'
+
+  Mn.children[0].appendChild(getTestNav())
+  Mn.children[0].appendChild(filterStatus())
+  
   var Tls=DIV.cloneNode(true)
   Tls.id='TLS'
   Tls.className='G'
   Tls.appendChild(taskData())
-  Ta.children[0].appendChild(Tls)
+
+  Mn.children[0].appendChild(Tls)
 }
 
 function imageIndiv() {
@@ -383,7 +350,7 @@ function imageIndiv() {
   score.className = 'ascore'
   score.innerText = '5.69'
   ctWrap.className = 'mla'
-  comCt.innerText = '13 comments'
+  comCt.innerText = '13 votes'
 
   ctWrap.appendChild(comCt)
   mtaWrap.appendChild(score)
@@ -412,12 +379,11 @@ function getPaired() {
   </div>
   */
   // Create the outermost div
-  let divXa=DIV.cloneNode(true);
-  divXa.id='Xa';
+  //let divXa=DIV.cloneNode(true);
+  Mn.id='Xa';
 
   // Create the child div with class 'x'
-  let divX=DIV.cloneNode(true)
-  divX.className='x';
+  let divX=Mn.children[0]
 
   // Create the div with id 'RSa'
   let divRSa=DIV.cloneNode(true)
@@ -456,37 +422,23 @@ function getPaired() {
   // Append divRSa to divX
   divX.appendChild(divRSa);
 
-  // Append divX to divXa
-  divXa.appendChild(divX);
-
-  return divXa
 }
 
 
 
 function getTestID() {
-  Ta.children[0].appendChild(testidmta())
-  Ta.children[0].appendChild(filterStatus())
+  Mn.id='Ta';
+  Mn.className='oh';
+
+  Mn.children[0].appendChild(testidmta())
   var Tls=DIV.cloneNode(true)
   Tls.id='TLS'
   Tls.className='G'
   Tls.appendChild(imageIndiv())
-  Ta.children[0].appendChild(Tls)
-}
-
-
-
-
-
-function imageModal() {
+  Mn.children[0].appendChild(Tls)
 
 }
 
-
-
-function imageModal() {
-
-}
 
 
 

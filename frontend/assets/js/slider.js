@@ -75,12 +75,13 @@ function setToggleAccessible(currentTarget) {
   }
 }
 
+/*
 const fromSlider = document.querySelector('#fromSlider');
 const toSlider = document.querySelector('#toSlider');
 const fromInput = document.querySelector('#fromInput');
 const toInput = document.querySelector('#toInput');
 fillSlider(fromSlider, toSlider, '#C6C6C6', '#25daa5', toSlider);
-setToggleAccessible(toSlider);
+setToggleAccessible(toSlider);*/
 
 //fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
 //toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
