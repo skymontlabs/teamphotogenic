@@ -75,7 +75,7 @@ void execute_async_with_callback(CassSession* session, const std::string& query)
     cass_statement_free(statement);
 }
 
-void DatabaseConnector::executeQuery(const std::string& query, QueryResultCallback callback, void* callback_data) {
+void DatabaseConnector::execute_stmt_callback(CassStatement* statement, QueryResultCallback callback, void* callback_data) {
     CassStatement* statement = cass_statement_new(query.c_str(), 0);
     CassFuture* future = cass_session_execute(session_, statement); // Assume session_ is a member variable
 

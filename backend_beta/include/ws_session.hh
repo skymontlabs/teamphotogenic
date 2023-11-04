@@ -25,17 +25,9 @@ using tcp = boost::asio::ip::tcp;       // from <boost/asio/ip/tcp.hpp>
 
 //------------------------------------------------------------------------------
 
-// Report a failure
-void
-fail(beast::error_code ec, char const* what)
-{
-    std::cerr << what << ": " << ec.message() << "\n";
-}
-
 // Echoes back all received WebSocket messages
-class ws_session
-    : public boost::asio::coroutine
-    , public std::enable_shared_from_this<ws_session>
+class ws_session: public boost::asio::coroutine,
+                  public std::enable_shared_from_this<ws_session>
 {
     websocket::stream<beast::ssl_stream<beast::tcp_stream>> ws_;
     beast::flat_buffer buffer_;

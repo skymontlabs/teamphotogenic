@@ -8,9 +8,12 @@
 
 class image_dao
 {
-    DatabaseConnection* dbConnection; // Handle to the database connection
-    CacheConnector* cacheConnector; // Handle to the Redis cache connector
-    gdsf_cache* local_cache; // Local in-memory cache
+    database_connection* db_conn_; // Handle to the database connection
+    redis_connector* rs_conn_; // Handle to the Redis cache connector
+    gdsf_cache* lcache_; // Local in-memory cache
+
+
+    void* db_get_image_callback(const CassResult* result, CassError code, void* data);
 
     image_model* get_img_locally(const uint64_t image_id);
     image_model* get_img_redis(const uint64_t image_id);
@@ -20,11 +23,11 @@ class image_dao
     // Other cache-related methods...
 
 public:
-    image_dao(DatabaseConnection* dbConnection, CacheConnector* cacheConnector);
+    image_dao(database_connection* db_conn, redis_connector* rs_conn);
     ~image_dao();
 
-    image_model getImageById(const std::string& image_id);
-    vector<image_model> getImagesByUserId(const std::string& userId);
+    image_model getImageById(const uint64_t image_id);
+    vector<image_model> getImagesByUserId(const uint64_t userId);
 
     int deleteImage(const uint64_t image_id);
 };

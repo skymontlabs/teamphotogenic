@@ -5,15 +5,14 @@
 // Assume the existence of a Logger utility
 #include "Logger.hpp"
 
-
-
 // Constructor with initialization of members
-ImageService::ImageService() {
+ImageService::ImageService()
+{
     // Initialization of DAOs and connectors would go here
 }
 
 // Function to upload an image, including user data for authorization
-int ImageService::uploadImage(const ImageModel& image, const UserData& user) {
+int ImageService::uploadImage(const image_model& image, const UserData& user) {
     if (!hasPermission(user, "upload")) {
         Logger::log("User does not have permission to upload images.");
         return false;
@@ -30,9 +29,9 @@ int ImageService::uploadImage(const ImageModel& image, const UserData& user) {
 }
 
 // Function to retrieve an image, given an image ID
-ImageModel ImageService::getImage(const uint64_t image_id, const UserData& user) {
+image_model* ImageService::getImage(const uint64_t image_id, const UserData& user) {
     // Fetch the image from the database or cache
-    ImageModel image = image_dao::fetchImage(image_id);
+    image_model* image = image_dao::fetchImage(image_id);
 
     // Assuming there's some permission to check if a user can view an image
     if (image. || user.expanded_permissions()) {
@@ -55,12 +54,12 @@ int ImageService::deleteImage(const uint64_t image_id, const UserData& user) {
     // - Delete the image from persistent storage
     // - Update any necessary caches
     bool deletedSuccessfully = image_dao::deleteImage(image_id);
-    
+
     return deletedSuccessfully;
 }
 
 // Function to update an image's data
-bool ImageService::updateImage(const ImageModel& image, const UserData& user)
+bool ImageService::updateImage(const image_model& image, const UserData& user)
 {
     // Here you would have logic to update the image, such as:
     // - Validate the new image data

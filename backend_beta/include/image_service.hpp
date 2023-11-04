@@ -4,8 +4,8 @@
 #include <string>
 #include <vector>
 #include <optional>
-#include "ImageDAO.hpp"
-#include "ImageModel.hpp"
+#include "image_dao.hpp"
+#include "image_model.hpp"
 
 // Assume we have a user_data struct defined somewhere that contains user-related information
 struct user_data {
@@ -15,19 +15,18 @@ struct user_data {
 
 class image_service {
 public:
-    image_service(ImageDAO& imageDao);
+    image_service(image_dao& idao);
     ~image_service();
 
     image_model* retrieve_image(const uint64_t imageId, const user_data& user);
-    std::vector<ImageModel> retrieve_images_by_user(const uint64_t userId, const user_data& user);
-    bool uploadImage(const ImageModel& image, const user_data& user);
-    bool updateImage(const ImageModel& image, const user_data& user);
+    std::vector<image_model> retrieve_images_by_user(const uint64_t userId, const user_data& user);
+    bool uploadImage(const image_model& image, const user_data& user);
+    bool updateImage(const image_model& image, const user_data& user);
     bool deleteImage(const uint64_t imageId, const user_data& user);
 
 private:
-    ImageDAO& imageDao;
+    image_dao& idao_;
     bool hasPermission(const user_data& user, const uint64_t requiredPermission);
-
 };
 
 #endif // IMAGESERVICE_HPP
