@@ -6,21 +6,6 @@
 
 class snowflake
 {
-	uint64_t starting_unix;
-	uint64_t starting_sysclock;
-	uint32_t increment;
-
-public:
-	snowflake(): {}
-
-	inline void generate_sid()
-	{
-		return (current_unix << 12) | () | ();
-	}
-}
-
-class SnowflakeIdGenerator {
-private:
     std::mutex mutex_;
     int64_t last_timestamp_ = -1;
     int64_t sequence_ = 0;

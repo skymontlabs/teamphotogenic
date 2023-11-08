@@ -1,13 +1,15 @@
-enum class MessageType : int {
+enum class MessageType : int
+{
     // User authentication and management
     CreateUser = 1,
     UpdateUser = 2,
     DeleteUser = 3,
     GetUser = 4,
-    AuthenticateUser = 5,
+    LoginUser = 5,
 
     // User session management
     UserSessionStart = 10,
+    UserImageSessionStart = 11,
     UserSessionRenew = 11,
     UserSessionEnd = 12,
 

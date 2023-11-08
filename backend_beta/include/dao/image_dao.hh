@@ -8,11 +8,20 @@
 
 class image_dao
 {
-    database_connection* db_conn_; // Handle to the database connection
-    redis_connector* rs_conn_; // Handle to the Redis cache connector
-    gdsf_cache* lcache_; // Local in-memory cache
+    // Handle to the database connection
+    database_connection* db_conn_;
 
+    // Handle to the Redis cache connector
+    redis_connector* rs_conn_;
 
+    // Local in-memory cache
+    gdsf_cache* lcache_;
+
+    // Bloom filter
+    bloom_filter* bfilt_;
+
+    // Active (running) experiments
+    
     void* db_get_image_callback(const CassResult* result, CassError code, void* data);
 
     image_model* get_img_locally(const uint64_t image_id);
@@ -22,6 +31,7 @@ class image_dao
     void cache_img_redis(const uint64_t image_id, const image_model& image);
     // Other cache-related methods...
 
+    
 public:
     image_dao(database_connection* db_conn, redis_connector* rs_conn);
     ~image_dao();
@@ -30,6 +40,8 @@ public:
     vector<image_model> getImagesByUserId(const uint64_t userId);
 
     int deleteImage(const uint64_t image_id);
+
+    void update_elo();
 };
 
 #endif // IMAGEDAO_HPP

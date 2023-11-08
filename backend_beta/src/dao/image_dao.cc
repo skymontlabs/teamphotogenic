@@ -1,3 +1,5 @@
+#include "experiment_dao.hh"
+
 image_dao::image_dao(database_connection* db_conn, redis_connector* rs_conn):
 db_conn_(db_conn),
 rs_conn_(rs_conn)
@@ -32,6 +34,11 @@ image_dao::~image_dao()
 
 }
 
+struct cbk_data
+{
+  
+};
+
 // For functions that could depend upon futures,
 //  - Return 0 upon failure (not found or no permissions), won't have callback
 //  - Return 1 upon wait, will have callback
@@ -49,6 +56,12 @@ void* db_get_image_callback(CassFuture* future, void* data)
   }
 
   cbdata._dealloc(data);
+
+
+
+  auto cbk_ptr = static_cast<std::function<void(const uint8_t*)>*>(data);
+
+  cbk_ptr(output);
 
   return NULL;
 }

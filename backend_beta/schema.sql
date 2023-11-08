@@ -31,6 +31,7 @@ CREATE INDEX ON experiments (user_id);
 CREATE TABLE images (
   image_id bigint PRIMARY KEY,
   experiment_id bigint,
+  series_id tinyint,
   user_id bigint,
   image blob,
   tags int, -- Storing tags as a bitmask
@@ -75,3 +76,27 @@ CREATE TABLE user_sessions (
   client_info text
 );
 CREATE INDEX ON user_sessions (user_id);
+
+
+-- 
+CREATE TABLE surveys (
+  survey_id bigint PRIMARY KEY,
+  question text,
+  created_at timestamp
+);
+
+-- 
+CREATE TABLE survey_choicelist (
+  survey_id bigint PRIMARY KEY,
+  question text,
+  created_at timestamp
+);
+
+-- 
+CREATE TABLE survey_responses (
+  survey_id bigint PRIMARY KEY,
+  question text,
+  created_at timestamp
+);
+
+

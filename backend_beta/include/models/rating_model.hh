@@ -4,9 +4,14 @@
 
 #include <string>
 
-class RatingModel {
+class rating_model
+{
+    int image_id;
+    int user_id;
+    float rating;
+
 public:
-    RatingModel(int image_id, int user_id, float rating);
+    rating_model(int image_id, int user_id, float rating);
 
     int getImageId() const;
     int getUserId() const;
@@ -21,10 +26,7 @@ public:
     // - To calculate new ELO ratings after a comparison
     // - To serialize/deserialize the object for communication purposes
 
-private:
-    int image_id;
-    int user_id;
-    float rating; // Assuming a Likert scale rating; use an appropriate type for ELO or other systems
+    size_t serialize(uint8_t* out);
 };
 
 #endif // RATINGMODEL_HPP

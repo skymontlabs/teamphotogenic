@@ -97,11 +97,10 @@ void ws_session::loop(beast::error_code ec, std::size_t bytes_transferred)
                 shared_from_this(),
                 std::placeholders::_1,
                 0));
-        if(ec)
+        if (ec)
             return fail(ec, "accept");
 
-        for(;;)
-        {
+        for (;;) {
             // Read a message into our buffer
             yield ws_.async_read(
                 buffer_,
@@ -110,16 +109,17 @@ void ws_session::loop(beast::error_code ec, std::size_t bytes_transferred)
                     shared_from_this(),
                     std::placeholders::_1,
                     std::placeholders::_2));
-            if(ec == websocket::error::closed)
-            {
+            if (ec == websocket::error::closed) {
                 // This indicates that the ws_session was closed
                 return;
             }
-            if(ec)
-                fail(ec, "read");
+
+            if (ec) fail(ec, "read");
+
+            // call parser here
 
             // Echo the message
-            ws_.text(ws_.got_text());
+            ws_.text(false);
             yield ws_.async_write(
                 buffer_.data(),
                 std::bind(
