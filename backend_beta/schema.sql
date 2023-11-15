@@ -10,7 +10,8 @@ CREATE TABLE users (
   email text,
   phone text,
   username text,
-  hashed_password text,
+  totp_secret blob,
+  hashed_password blob,
   created_at timestamp,
   last_login timestamp
 );
@@ -41,6 +42,12 @@ CREATE INDEX ON images (user_id);
 CREATE INDEX ON images (tags);
 
 CREATE TABLE image_elo_scores (
+  feedback_id bigint PRIMARY KEY,
+  image_id bigint,
+  user_id bigint,
+  comment text,
+  created_at timestamp
+
   image_id bigint PRIMARY KEY,
   elo_score int,
   number_comparisons int
@@ -55,18 +62,6 @@ CREATE TABLE image_likert_scores (
 );
 CREATE INDEX ON image_likert_scores (score);
 
--- You might also want a table for user feedback/comments
--- should this be put as list in images instead of separate table?
-CREATE TABLE image_feedback (
-  feedback_id bigint PRIMARY KEY,
-  image_id bigint,
-  user_id bigint,
-  comment text,
-  created_at timestamp
-);
-CREATE INDEX ON image_feedback (image_id);
-CREATE INDEX ON image_feedback (user_id);
-
 -- For user sessions, to manage active logins and possibly for websocket connections
 CREATE TABLE user_sessions (
   session_id bigint PRIMARY KEY,
@@ -77,7 +72,6 @@ CREATE TABLE user_sessions (
 );
 CREATE INDEX ON user_sessions (user_id);
 
-
 -- 
 CREATE TABLE surveys (
   survey_id bigint PRIMARY KEY,
@@ -85,7 +79,7 @@ CREATE TABLE surveys (
   created_at timestamp
 );
 
--- 
+-- Survey Multiple Choice List
 CREATE TABLE survey_choicelist (
   survey_id bigint PRIMARY KEY,
   question text,

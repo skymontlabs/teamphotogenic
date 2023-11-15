@@ -17,11 +17,9 @@ class user_dao
     // Local in-memory cache
     gdsf_cache* lcache_;
 
-    image_model* get_usr_locally(const uint64_t image_id);
-    image_model* get_usr_redis(const uint64_t image_id);
-    
-    void set_usr_locally(const uint64_t image_id, const image_model& image);
-    void set_usr_redis(const uint64_t image_id, const image_model& image);
+    void set_usr_locally(const uint64_t user_id, const image_model& image);
+
+    void set_usr_redis(const uint64_t user_id, const image_model& image);
     // Other cache-related methods...
     
 public:
@@ -29,22 +27,25 @@ public:
 
     ~user_dao();
 
+    // Register user
+    int32_t register_user(uint8_t* username, uint8_t* password, int type);
+
+    // Create user (admin only)
+    int32_t create_user(uint8_t* username, uint8_t* password);
+
     // Read user
-    int32_t read_user(const uint64_t image_id);
+    int32_t read_user(const uint64_t user_id);
 
     // Read users (admin only)
     int32_t read_users(const uint64_t limit, const uint64_t offset);
 
-    // Register user
-    int32_t register_user(const uint64_t image_id);
-
-    // Create user (admin only)
-    int32_t register_user(const uint64_t image_id);
+    // Update user
+    int32_t update_user(const uint64_t user_id);
 
     // Delete user
-    int deleteImage(const uint64_t image_id);
+    int delete_user(const uint64_t user_id);
 
-    void update_elo();
+    void update_likert_biases();
 };
 
 #endif // IMAGEDAO_HPP

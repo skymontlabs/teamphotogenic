@@ -41,8 +41,11 @@ int32_t ExperimentService::create_experiment(const uint8_t* data, response_callb
     // Alert ratings?
 
     // Save in
+    edao_.create_exp(image_ct, image_list, wcb);
+    
+    idao_.insert_images();
 
-    return edao_.create_exp(image_ct, image_list, wcb);
+    return
 }
 
 // Modify experiment

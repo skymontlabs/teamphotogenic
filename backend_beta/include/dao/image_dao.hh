@@ -20,28 +20,27 @@ class image_dao
     // Bloom filter
     bloom_filter* bfilt_;
 
-    // Active (running) experiments
-    
-    void* db_get_image_callback(const CassResult* result, CassError code, void* data);
-
-    image_model* get_img_locally(const uint64_t image_id);
-    image_model* get_img_redis(const uint64_t image_id);
+    size_t get_img_locally(const uint64_t image_id);
+    size_t get_img_redis(const uint64_t image_id);
     
     void cache_img_locally(const uint64_t image_id, const image_model& image);
     void cache_img_redis(const uint64_t image_id, const image_model& image);
-    // Other cache-related methods...
-
     
 public:
     image_dao(database_connection* db_conn, redis_connector* rs_conn);
     ~image_dao();
 
-    image_model getImageById(const uint64_t image_id);
-    vector<image_model> getImagesByUserId(const uint64_t userId);
+    size_t create_images(uint64_t experiment_id, uint64_t user_id, uint32_t count);
 
-    int deleteImage(const uint64_t image_id);
+    image_model read_image_by_id(const uint64_t image_id, cbk_data& cbk);
 
-    void update_elo();
+    size_t add_likert_to_image(likert_model& lm);
+
+    size_t add_elo_to_image(elo_model& lm);
+
+    size_t delete_image(const uint64_t image_id, const uint64_t image_id);
+
+    size_t update_elo();
 };
 
 #endif // IMAGEDAO_HPP

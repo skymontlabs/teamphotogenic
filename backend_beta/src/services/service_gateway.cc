@@ -1,4 +1,4 @@
-void route_operation(uint8_t* in, ws_session* wss)
+void service_gateway::route_operation(uint8_t* in, ws_session* wss)
 {
     msg_type mt = *in++;
     db_cbk_data* cbk = cbk_allocator.alloc();
@@ -8,22 +8,39 @@ void route_operation(uint8_t* in, ws_session* wss)
 
         // User authentication and management
         case CreateUser:
+            usr_srv_.create_user(, cbk);
             break;
+
         case UpdateUser:
+            usr_srv_.update_user(, );
             break;
+
         case DeleteUser:
+            usr_srv_.delete_user(, );
             break;
+
         case GetUser:
+            usr_srv_.get_user(, );
             break;
+
         case AuthenticateUser:
+            usr_srv_.auth_user(, );
             break;
+
         case LoginUser:
+            usr_srv_.login_user(, );
             break;
 
 
         // User session management
         case UserSessionStart:
+        
+            break;
+
         case UserSessionRenew:
+        
+            break;
+
         case UserSessionEnd:
             break;
 
@@ -34,8 +51,15 @@ void route_operation(uint8_t* in, ws_session* wss)
             break;
 
         case UpdateImageDetails:
+        
+            break;
+
         case DeleteImage:
+            break;
+        
         case FetchImage:
+            break;
+
         case ListUserImages:
             break;
 
@@ -47,15 +71,15 @@ void route_operation(uint8_t* in, ws_session* wss)
 
         case UpdateRating:
             break;
-            
+
         case DeleteRating:
+            break;
+            
         case FetchRating:
+            break;
+            
         case ListImageRatings:
-        case SubmitCritique:
-        case UpdateCritique:
-        case DeleteCritique:
-        case FetchCritique:
-        case ListImageCritiques:
+            break;
 
 
     }

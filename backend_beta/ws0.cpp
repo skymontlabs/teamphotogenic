@@ -56,7 +56,20 @@ void setup_stream(websocket::stream<NextLayer>& ws)
     ws.read_message_max(256 * 1024 * 1024);
 }
 
+void get_ip_address()
+{
+    boost::asio::ip::tcp::endpoint remote_endpoint = ws_.next_layer().socket().remote_endpoint();
+    boost::asio::ip::address remote_ip_address = remote_endpoint.address();
 
+    if (remote_ip_address.is_v4()) {
+        // Convert the IP address to a uint32_t
+        uint32_t remote_ip_address_uint = htonl(remote_ip_address.to_v4().to_uint());
+        // Now you have the address as a uint32_t
+    } else {
+        // Handle the case where the address is not IPv4
+        throw std::runtime_error("Not an IPv4 address.");
+    }
+}
 
 // Echoes back all received WebSocket messages
 class session: public boost::asio::coroutine
@@ -91,6 +104,83 @@ public:
         });
     }
 
+    void send2(std::string message)
+    {
+        auto self = shared_from_this();
+        net::post(ws_.get_executor(),
+            [self, message = std::move(message)]() mutable {
+                self->buffer_.consume(self->buffer_.size()); // Clear the buffer
+                size_t n = net::buffer_copy(self->buffer_.prepare(message.size()), net::buffer(message));
+                self->buffer_.commit(n);
+
+                self->ws_.async_write(
+                    self->buffer_.data(),
+                    beast::bind_front_handler(
+                        &WebSocketSession::on_write,
+                        self
+                    )
+                );
+            }
+        );
+    }
+
+
+    // Send function
+    void send3(const std::string& data) {
+        // Post the write operation to the strand to ensure it's executed in a non-concurrent manner
+        net::post(strand_,
+            [this, data]() {
+                // Store the data to be sent in the buffer
+                std::size_t size = buffer_.size();
+                auto buff = boost::asio::buffer(data);
+                boost::asio::buffer_copy(buffer_.prepare(buff.size()), buff);
+                buffer_.commit(buff.size());
+
+                // Yield until the async_write operation is complete
+                reenter(*this) {
+                    yield ws_.async_write(
+                        buffer_.data(),
+                        [this](beast::error_code ec, std::size_t bytes_transferred) {
+                            // After write, consume the buffer
+                            buffer_.consume(bytes_transferred);
+                            if (ec) {
+                                fail(ec, "write");
+                            }
+                        }
+                    );
+                }
+            }
+        );
+    }
+
+
+    void send(const uint8_t* data, std::size_t length)
+    {
+        // Post the write operation to the strand to ensure it's executed in a non-concurrent manner
+        boost::asio::post(strand_,
+            [this, data, length] {
+                // Directly prepare the buffer with the data to be sent
+                std::memcpy(boost::asio::buffer_cast<uint8_t*>(buffer_.prepare(length)), data, length);
+                buffer_.commit(length);
+
+                // Yield until the async_write operation is complete
+                reenter(*this) {
+                    yield ws_.async_write(
+                        buffer_.data(),
+                        [this](beast::error_code ec, std::size_t bytes_transferred) {
+                            // After write, consume the buffer
+                            buffer_.consume(bytes_transferred);
+                            if (ec) {
+                                fail(ec, "write");
+                            }
+                        }
+                    );
+                }
+            }
+        );
+    }
+
+
     #include <boost/asio/yield.hpp>
 
     void loop(beast::error_code ec, std::size_t bytes_transferred)
@@ -110,8 +200,7 @@ public:
             if (it == all_sessions_.end()) {
                 all_sessions_.insert(this);
             } else {
-
-
+                
             }
 
 
@@ -135,18 +224,41 @@ public:
                 if (ec) fail(ec, "read");
 
                 // gateway
-                gwy_.handle_req();
+                ret = gwy_.handle_req( ,
+                [this, pa_](const uint8_t* response, const uint32_t size) {
+                    pool_allocator* pool = cbk->pool;
+
+                    cbk->gwy->send_response(out, length, cbk->wss,
+                    [](){
+                        if (cbk->close())
+                            pool->free(cbk->wss);
+                    });
+
+                    // free the memory for out after it is over also
+                    pool->free(out);
+                    pool->free(cbk);
 
 
-                ws_.text(false);
-                
-                yield ws_.async_write(buffer_.data(),
-                [this](beast::error_code ec, std::size_t bytes_transferred) {
-                    this->loop(ec, bytes_transferred);
+            
+                    if (str.is_short()) {
+                        this->send(response, size);
+                        &pa_->deallocate(response);
+                    } else {
+
+                    }
                 });
 
-                if (ec) return fail(ec, "write");
-                buffer_.consume(buffer_.size());
+                if (ret) {
+                    ws_.text(false);
+                    
+                    yield ws_.async_write(buffer_.data(),
+                    [this](beast::error_code ec, std::size_t bytes_transferred) {
+                        this->loop(ec, bytes_transferred);
+                    });
+
+                    if (ec) return fail(ec, "write");
+                    buffer_.consume(buffer_.size());
+                }
             }
         }
     }
@@ -288,12 +400,10 @@ int main(int argc, char* argv[])
     // Run the I/O service on the requested number of threads
     std::vector<std::thread> v;
     v.reserve(threads - 1);
-    for(auto i = threads - 1; i > 0; --i)
-        v.emplace_back(
-        [&ioc]
-        {
-            ioc.run();
-        });
+    
+    for (auto i = threads - 1; i > 0; --i)
+        v.emplace_back([&ioc]{ioc.run();});
+    
     ioc.run();
 
     free(lis);

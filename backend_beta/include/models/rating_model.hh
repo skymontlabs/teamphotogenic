@@ -6,15 +6,15 @@
 
 class rating_model
 {
-    int image_id;
-    int user_id;
-    float rating;
+    uint32_t image_id_;
+    uint32_t user_id_;
+    float rating_;
 
 public:
-    rating_model(int image_id, int user_id, float rating);
+    rating_model(uint32_t image_id, uint32_t user_id, float rating);
 
-    int getImageId() const;
-    int getUserId() const;
+    uint32_t getImageId() const;
+    uint32_t getUserId() const;
     float getRating() const;
 
     void setImageId(int id);
@@ -30,3 +30,39 @@ public:
 };
 
 #endif // RATINGMODEL_HPP
+
+
+RatingModel::RatingModel(int image_id, int user_id, float rating):
+image_id(image_id),
+user_id(user_id),
+rating(rating) {}
+
+int RatingModel::getImageId() const
+{
+    return image_id;
+}
+
+int RatingModel::getUserId() const
+{
+    return user_id;
+}
+
+float RatingModel::getRating() const
+{
+    return rating;
+}
+
+void RatingModel::setImageId(int id)
+{
+    image_id = id;
+}
+
+void RatingModel::setUserId(int id)
+{
+    user_id = id;
+}
+
+void RatingModel::setRating(float new_rating)
+{
+    rating = new_rating;
+}

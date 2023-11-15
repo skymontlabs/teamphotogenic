@@ -21,19 +21,19 @@ public:
     RatingService(RatingDAO& dao);
 
     // Add image paired compare (elo score)
-    bool add_elo(const Rating& rating);
+    bool add_elo(const uint8_t* in);
 
     // Add an instance of image singular rating (likert score)
-    bool add_likert(const Rating& rating);
+    bool add_likert(const uint8_t* in);
 
     // Skip
-    bool skip_elo(const Rating& rating);
+    bool skip_elo(const uint8_t* in);
 
     // Skip a 
-    bool skip_likert(const Rating& rating);
+    bool skip_likert(const uint8_t* in);
 
     // Report
-    bool report_likert(const Rating& rating);
+    bool report_likert(const uint8_t* in);
 
     // Report
     bool report_elo(uint32_t);

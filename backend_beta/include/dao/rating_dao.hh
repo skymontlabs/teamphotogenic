@@ -4,7 +4,7 @@
 #include <optional>
 #include <string>
 #include <vector>
-#include "RatingModel.hpp"
+#include "rating_model.hpp"
 #include "DatabaseConnector.hpp"
 
 class rating_dao
@@ -12,28 +12,36 @@ class rating_dao
     // Handle to the database connection
     database_connection* db_conn_;
 
-    // Handle to the Redis cache connector
-    //redis_connector* rs_conn_;
+    //pending_ratings
 
-    image_model* get_img_locally(const uint64_t image_id);
-    //image_model* get_img_redis(const uint64_t image_id);
-    
+    // Bloom filter
+    bloom_filter* bloom_;
+
+    // cache rating in server
     void cache_rtg_locally(const uint64_t image_id, const image_model& image);
-    //void cache_rtg_redis(const uint64_t image_id, const image_model& image);
 
 public:
-    rating_dao(DatabaseConnector& db);
-    
-    bool create_rating(const RatingModel& rating);
+    // Class is for database only
+    rating_dao(database_connection* db_conn);
 
-    bool read_rating(const RatingModel& rating);
+    // Give elo rating to image
+    int64_t create_elo_rating(const elo_model& rating, cbk_data& cbk);
 
-    bool report_rating(const RatingModel& rating);
-    
-    bool delete_rating(const uint64_t image_id, const RatingModel& rating);
+    // Give likert rating to image
+    int64_t create_likert_rating(const likert_model& rating, cbk_data& cbk);
 
-    vector<RatingModel> getRatingsByImageId(const std::string& imageId);
-    vector<RatingModel> getRatingsByUserId(const std::string& userId);
+    // Read ratings for image
+    int64_t read_ratings_by_image(uint8_t* out, const uint64_t image_id, cbk_data& cbk);
+
+    // Read rating by user
+    int64_t read_ratings_by_user(uint8_t* out, const uint64_t user_id, cbk_data& cbk);
+
+    // Reports comment, but puts whole rating into question
+    int64_t report_rating(const uint64_t rating_id, cbk_data& cbk);
+
+    // Deletes rating (admin only behavior)
+    int64_t delete_rating(const uint64_t rating_id, cbk_data& cbk);
+
 };
 
 #endif // RATINGDAO_HPP

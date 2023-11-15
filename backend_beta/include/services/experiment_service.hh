@@ -8,11 +8,11 @@
 
 typedef std::function<void(const uint8_t*, uint32_t)> response_callback;
 
-class ExperimentService
+class experiment_service
 {
     experiment_dao& edao_;
 public:
-    ExperimentService(experiment_dao& dao);
+    experiment_service(experiment_dao& dao);
 
     // Creates new experiment
     int32_t create_experiment(const uint8_t* data, user_data& ud, response_callback wcb);

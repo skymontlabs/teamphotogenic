@@ -83,7 +83,7 @@ class PoolAllocator
 public:
     PoolAllocator(size_t baseBlockSize)
     {
-        for (size_t size = baseBlockSize; size <= (baseBlockSize << 3); size <<= 1) {
+        for (size_t size = baseBlockSize; size <= (baseBlockSize << 6); size <<= 1) {
             pools.emplace_back(size);
         }
     }
