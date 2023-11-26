@@ -25,8 +25,11 @@ class experiment_model
     uint64_t experiment_id_;
     char experiment_name[24];
 
+    // 
     uint32_t total_images_;
+    // 
     uint32_t total_elos_;
+    // 
     uint32_t total_likerts_;
     // 
     uint32_t total_candidates_;
@@ -52,9 +55,7 @@ public:
     current_elo_(0),
     current_likert_(0),
     accuracy_(0),
-    {
-
-    }
+    {}
 
     // this assumes images is already allocated
     void reinit(pool_allocator& pa, uint8_t* data)

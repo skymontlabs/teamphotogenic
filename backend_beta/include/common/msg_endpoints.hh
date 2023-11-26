@@ -72,6 +72,7 @@ enum class MessageType : int
 
 enum class response_ode {
     OK = 1,
-    CREATED = 2,
+    CREATED_NO_BODY = 2,
+    CREATED_WITH_BODY = 2,
     NOT_FOUND = 100,
 }

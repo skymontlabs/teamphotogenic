@@ -56,20 +56,6 @@ void setup_stream(websocket::stream<NextLayer>& ws)
     ws.read_message_max(256 * 1024 * 1024);
 }
 
-void get_ip_address()
-{
-    boost::asio::ip::tcp::endpoint remote_endpoint = ws_.next_layer().socket().remote_endpoint();
-    boost::asio::ip::address remote_ip_address = remote_endpoint.address();
-
-    if (remote_ip_address.is_v4()) {
-        // Convert the IP address to a uint32_t
-        uint32_t remote_ip_address_uint = htonl(remote_ip_address.to_v4().to_uint());
-        // Now you have the address as a uint32_t
-    } else {
-        // Handle the case where the address is not IPv4
-        throw std::runtime_error("Not an IPv4 address.");
-    }
-}
 
 // Echoes back all received WebSocket messages
 class session: public boost::asio::coroutine
@@ -80,6 +66,21 @@ class session: public boost::asio::coroutine
 
     sess2user& s2u_;
     user2sess& u2s_;
+
+    void get_ip_address()
+    {
+        boost::asio::ip::tcp::endpoint remote_endpoint = ws_.next_layer().socket().remote_endpoint();
+        boost::asio::ip::address remote_ip_address = remote_endpoint.address();
+
+        if (remote_ip_address.is_v4()) {
+            // Convert the IP address to a uint32_t
+            uint32_t remote_ip_address_uint = htonl(remote_ip_address.to_v4().to_uint());
+            // Now you have the address as a uint32_t
+        } else {
+            // Handle the case where the address is not IPv4
+            throw std::runtime_error("Not an IPv4 address.");
+        }
+    }
 
 public:
     // Take ownership of the socket

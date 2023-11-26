@@ -15,22 +15,22 @@ public:
     experiment_service(experiment_dao& dao);
 
     // Creates new experiment
-    int32_t create_experiment(const uint8_t* data, user_data& ud, response_callback wcb);
+    var_string create_experiment(const uint8_t* data, user_data& ud, response_callback wcb);
 
     // Modify experiment
-    int32_t read_experiment(const uint8_t* data, user_data& ud, response_callback wcb);
+    var_string read_experiment(const uint8_t* data, user_data& ud, response_callback wcb);
 
     // Retrieve experiment data
-    int32_t read_all_experiments_by_user(const uint8_t* data, user_data& ud, response_callback wcb);
+    var_string read_all_experiments_by_user(const uint8_t* data, user_data& ud, response_callback wcb);
 
     // Change experiment
-    int32_t update_experiment(const uint8_t* data, user_data& ud, response_callback wcb);
+    var_string update_experiment(const uint8_t* data, user_data& ud, response_callback wcb);
     
     // Delete experiment data
-    int32_t delete_experiment(const uint8_t* data, user_data& ud, response_callback wcb);
+    var_string delete_experiment(const uint8_t* data, user_data& ud, response_callback wcb);
     
     // Delete all experiments by user
-    int32_t delete_experiments_by_user(const uint8_t* data, user_data& ud, response_callback wcb);
+    var_string delete_experiments_by_user(const uint8_t* data, user_data& ud, response_callback wcb);
 };
 
 #endif // EXPERIMENT_SERVICE_HPP

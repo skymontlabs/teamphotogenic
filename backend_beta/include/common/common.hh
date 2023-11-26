@@ -13,13 +13,17 @@ class pool_allocator;
 
 // Define the response callback type
 //using response_callback = std::function<void(const uint8_t*, uint32_t)>;
+using std::function<void(const uint8_t*, uint32_t)> response_callback;
+using std::function<void(const uint8_t*, uint32_t)> response_callback;
 
-struct varstr
+struct var_string
 {
     union {
-        uint8_t*
-        uint
+        uint8_t* str_ptr;
+        uint8_t str_data[8];
     };
+
+    uint64_t size;
 
 };
 
@@ -29,14 +33,15 @@ struct cbk_data
     gateway* gwy;
     ws_session* wss;
     pool_allocator* pal;
-
     query_result qs;
+    
+    uint8_t* data;
 
     int msg_type;
 
 
     // Constructor to initialize members
-    CassandraCallbackData(ws_session* session, response_callback callback, ImageModel* model):
+    cbk_data(ws_session* session, response_callback callback, ImageModel* model):
     wss(session),
     onResponse(callback),
     imageModel(model) {}

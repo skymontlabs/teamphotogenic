@@ -73,23 +73,29 @@
   } while (0)
 
 
-void on_result(CassFuture* future, void* data) {
-  /* This result will now return immediately */
+
+void db_ins_mod(CassFuture* future, void* data)
+{
   CassError rc = cass_future_error_code(future);
-  printf("%s\n", cass_error_desc(rc));
+ 	db_cbk_data d = ;
+
+ 	if (rc == CASS_OK) {
+ 		// OK_CREATED, CODE (9 bytes)
+ 		cbk(var_str(&p->id, 8), data);
+ 	} else {
+ 		cbk(var_str(RESPONSE::FAILED, 1), data);
+ 	}
 }
-
-
 
 
 void read_list_cbk(CassFuture* future, void* data)
 {
 	db_cbk_data* d = (db_cbk_data*)data;
-  	CassError rc = cass_future_error_code(future);
+	CassError rc = cass_future_error_code(future);
 
-  	uint8_t* buf = pal->alloc();
-  	uint8_t* ptr = buf;
-  	gateway* gwy = d->gwy;
+	uint8_t* buf = pal->alloc();
+	uint8_t* ptr = buf;
+	gateway* gwy = d->gwy;
 
  	if (rc == CASS_OK) {
 		const CassResult* result = cass_future_get_result(future);
@@ -121,10 +127,9 @@ void read_list_cbk(CassFuture* future, void* data)
 			/* Handle error */
 	  		// return 404
 		}
-
-  	} else {
-  		// return 404
-  	}
+	} else {
+		// return 404
+	}
 }
 
 // Since modifications are to be changed,

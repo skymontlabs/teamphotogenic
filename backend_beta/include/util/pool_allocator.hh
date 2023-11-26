@@ -4,7 +4,7 @@
 
 using std::vector;
 
-class PoolAllocator
+class pool_allocator
 {
     struct Block
     {
@@ -81,7 +81,7 @@ class PoolAllocator
     vector<Pool> pools;
 
 public:
-    PoolAllocator(size_t baseBlockSize)
+    pool_allocator(size_t baseBlockSize)
     {
         for (size_t size = baseBlockSize; size <= (baseBlockSize << 6); size <<= 1) {
             pools.emplace_back(size);
@@ -115,7 +115,7 @@ public:
 /*
 // Example usage:
 int main() {
-    PoolAllocator allocator(64); // Create a pool allocator with base block size of 64 bytes
+    pool_allocator allocator(64); // Create a pool allocator with base block size of 64 bytes
 
     void* block1 = allocator.allocate(64); // Allocates from 64-byte pool
     void* block2 = allocator.allocate(128); // Allocates from 128-byte pool

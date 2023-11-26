@@ -46,4 +46,34 @@ public:
         }
         return true; // If all bits are set, the item is possibly in the set.
     }
+
+    void save(const std::string& filename)
+    {
+        std::ofstream file(filename, std::ios::binary);
+        if (!file.is_open()) {
+            std::cerr << "Unable to open file: " << filename << std::endl;
+            return;
+        }
+
+        // Write the size of the array
+        file.write(reinterpret_cast<char*>(&arraySize), sizeof(arraySize));
+
+        // Write the bit array
+        file.write(reinterpret_cast<char*>(bitArray), arraySize * sizeof(uint64_t));
+
+        // Write the number of seeds
+        size_t numSeeds = seeds.size();
+        file.write(reinterpret_cast<char*>(&numSeeds), sizeof(numSeeds));
+
+        // Write the seeds
+        for (const auto& seed : seeds) {
+            file.write(reinterpret_cast<char*>(const_cast<uint64_t*>(&seed)), sizeof(seed));
+        }
+
+        // Optionally, you can also save the secrets if needed
+        // ...
+
+        file.close();
+    }
+
 };
