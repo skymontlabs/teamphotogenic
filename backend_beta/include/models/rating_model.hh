@@ -4,29 +4,60 @@
 
 #include <string>
 
-class rating_model
+class elo_rating_model
 {
-    uint32_t image_id_;
-    uint32_t user_id_;
+    uint32_t image_idx_;
+    uint64_t experiment_id_;
+    uint64_t user_id_;
+
+    uint8_t winner_idx_;
+    uint8_t loser_idx_;
+    int winner_elo_;
+    int loser_elo_;
+
+public:
+    elo_rating_model(uint32_t image_id, uint32_t user_id, float rating);
+
+    size_t elo_rating_model::serialize(uint8_t* out)
+    {
+        
+    }
+}
+
+class likert_rating_model
+{
+    uint64_t user_id;
+    uint64_t experiment_id;
+    uint32_t image_idx_;
     float rating_;
 
 public:
-    rating_model(uint32_t image_id, uint32_t user_id, float rating);
+    likert_rating_model(uint32_t image_id, uint32_t user_id, float rating);
 
-    uint32_t getImageId() const;
-    uint32_t getUserId() const;
-    float getRating() const;
+    uint32_t get_imageid() const
+    {
+        return image_id;
+    }
 
-    void setImageId(int id);
-    void setUserId(int id);
-    void setRating(float rating);
+    uint32_t get_userid() const
+    {
+        return user_id;
+    }
+
+    float get_rating() const
+    {
+        return rating_;
+    }
 
     // You might want to add more methods here, for example:
     // - To convert the object to a format suitable for database storage
     // - To calculate new ELO ratings after a comparison
     // - To serialize/deserialize the object for communication purposes
 
-    size_t serialize(uint8_t* out);
+    size_t likert_rating_model::serialize(uint8_t* out)
+    {
+
+    }
 };
 
 #endif // RATINGMODEL_HPP

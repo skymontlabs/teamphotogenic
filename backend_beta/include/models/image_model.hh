@@ -5,8 +5,6 @@
 #include <string>
 
 
-
-
 size_t get_allocsz(size_t N)
 {
     size_t result = 1;
@@ -105,6 +103,14 @@ public:
 		return elo_rating_;
 	}
 
+
+    size_t image_model::serialize(uint8_t* out)
+    {
+    	// copy out sector
+    	memcpy(out, &image_id_, 2000);
+
+    	// elo_rating_model 
+    }
 };
 
 int image_model::clear()

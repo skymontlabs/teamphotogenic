@@ -1,6 +1,6 @@
 // experiment_dao.hpp
-#ifndef EXPERIMENTDAO_HPP
-#define EXPERIMENTDAO_HPP
+#ifndef IMAGESET_DAO
+#define IMAGESET_DAO
 
 #include "ExperimentModel.hpp"
 #include "DatabaseConnector.hpp"
@@ -12,17 +12,12 @@ class experiment_dao
     // Handle to the database connection
     database_connection* db_conn_;
     
-    // Handle to the Redis cache connector
-    //redis_connector* rs_conn_;
-    
     // Local in-memory cache
     gdsf_cache* lcache_;
 
     // Bloom filter
     bloom_filter* bloom_;
 
-
-
     // Active (running) experiments
     vector<experiment_model> standard_elos_;
 
@@ -34,7 +29,6 @@ class experiment_dao
 
     // Priority users' experiments
     vector<experiment_model> priority_elos_;
-
 
     struct active_exp_value
     {
@@ -51,7 +45,8 @@ class experiment_dao
 
 private:
 
-    int64_t get_exp_active(uint8_t* out, const uint64_t experiment_id)
+    // Gets an experiment by id
+    inline int64_t get_exp_active(uint8_t* out, const uint64_t experiment_id)
     {
         auto it = active_map_.find(experiment_id);
         if (it != active_map_.end()) {
@@ -146,7 +141,7 @@ private:
 public:
     experiment_dao(database_connection& db_conn);
 
-    // Create experiment
+    // #1: Create experiment
     int64_t create_experiment(experiment_model& emod, uint64_t user_id, uint32_t img_count, cbk_data& cbk);
 
     // get 8 pairs of images, with each pair in same experiment
@@ -186,14 +181,12 @@ public:
 int64_t experiment_dao::create_experiment(experiment_model& emod, uint64_t user_id, uint32_t img_count, cbk_data& cbk)
 {
     // db insert
-    uint64_t experiment_id = read_exp_by_id();
+    uint64_t experiment_id = read_experiment_by_id();
 
     // set local
     set_exp_local(emod, user_id, img_count, );
-    
-    // asynchronously work with both redis and this.
-    set_exp_redis();
 
+    // create experiment
     create_exp_cassandra(experiment_id, img_count, cbk);
 
     return 0;

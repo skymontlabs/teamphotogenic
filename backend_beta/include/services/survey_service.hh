@@ -14,7 +14,15 @@ public:
     // Service operations
 
     // Authenticate survey through login
-    bool respond_survey(uint32_t response, uint32_t result);
+    bool respond_survey(const uint8_t* in, user_data ud, response_callback wcb);
 };
 
 #endif // survey_SERVICE_HPP
+
+
+bool survey_service::respond_survey(const uint8_t* in, user_data ud, response_callback wcb)
+{
+    uint64_t question_id = READ64(in)
+    uint64_t response_id = READ64(in)
+    
+}

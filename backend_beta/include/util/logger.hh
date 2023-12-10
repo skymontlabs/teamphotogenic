@@ -7,19 +7,23 @@
 
 class Logger {
 public:
-    Logger(const std::string& fileName) : logFile(fileName, std::ios::app) {
+    Logger(const std::string& fileName):
+    logFile(fileName, std::ios::app)
+    {
         if (!logFile.is_open()) {
             throw std::runtime_error("Unable to open log file: " + fileName);
         }
     }
 
-    ~Logger() {
+    ~Logger()
+    {
         if (logFile.is_open()) {
             logFile.close();
         }
     }
 
-    void Log(const std::string& message) {
+    void Log(const std::string& message)
+    {
         std::lock_guard<std::mutex> lock(mu);
         auto now = std::chrono::system_clock::now();
         std::time_t now_c = std::chrono::system_clock::to_time_t(now);

@@ -30,21 +30,40 @@ public:
     image_dao(database_connection* db_conn, redis_connector* rs_conn);
     ~image_dao();
 
+    // #1: Create image
     size_t create_images(uint64_t experiment_id, uint64_t user_id, uint32_t count)
     {
-        // cassandra insert
+        "INSERT INTO VALUES()";
+        "";
     }
 
-    image_model read_image_by_id(const uint64_t image_id, cbk_data& cbk);
+    // #2:
+    image_model read_image_by_id(const uint64_t image_id, cbk_data& cbk)
+    {
 
-    image_model read_images_by_id(const uint64_t image_id, cbk_data& cbk);
+    }
 
-    size_t add_likert_to_image(likert_model& lm);
+    // #3:
+    image_model read_images_by_id(const uint64_t image_id, cbk_data& cbk)
+    {
 
-    size_t add_elo_to_image(elo_model& lm);
+    }
 
+    // #4:
+    size_t add_likert_to_image(likert_model& lm)
+    {
+
+    }
+
+    // #5:
+    size_t add_elo_to_image(elo_model& lm)
+    {
+    }
+
+    // #6:
     size_t delete_image(const uint64_t image_id, const uint64_t image_id);
 
+    // #7:
     size_t update_elo();
 };
 

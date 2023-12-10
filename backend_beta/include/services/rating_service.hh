@@ -18,23 +18,22 @@ class rating_service
     rating_dao& rdao_;
     experiment_dao& edao_;
 
-
 public:
     rating_service(RatingDAO& dao);
 
-    // Add image paired compare (elo score)
+    // #1: Add image paired compare (elo score)
     void create_elo(const uint8_t* in);
 
-    // Add an instance of image singular rating (likert score)
+    // #2: Add an instance of image singular rating (likert score)
     void create_likert(const uint8_t* in);
 
-    // Read
+    // #3: Read likerts
     void read_likerts(const uint8_t* in);
 
-    // Report
+    // #4: Report
     void report_likert(const uint8_t* in);
 
-    // Delete likert (admin only)
+    // #5: Delete likert (admin only)
     bool delete_likert(const uint8_t* in);
 };
 

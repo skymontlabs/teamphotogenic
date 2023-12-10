@@ -5,36 +5,6 @@ CREATE KEYSPACE tpg WITH replication = {
 
 USE tpg;
 
-CREATE TABLE users (
-  user_id bigint PRIMARY KEY,
-  email text,
-  phone text,
-
-  credits int,
-  
-  # password [64 byte password + 16 byte seed]
-  pwd blob,
-
-  # totp [10 byte secret + 4 byte timestamp]
-  #totp blob,
-
-  # preferences
-  preferences bigint,
-  prms int,
-  
-  ---pref_gender tinyint,
-  ---pref_age_group tinyint,
-
-  # this user's demographics
-  ---gender tinyint,
-  ---age_grp tinyint,
-  ---habits tinyint,
-  ---language tinyint,
-);
-CREATE INDEX ON users (email);
-CREATE INDEX ON users (phone);
-CREATE INDEX ON users (username);
-
 ---
 ---create_user
 ---insert into users(user_id,email,phone,credits,pwd,totp,pref) values()
@@ -74,21 +44,6 @@ CREATE INDEX ON users (username);
 # login
 # 
 
-CREATE TABLE experiments (
-  experiment_id bigint PRIMARY KEY,
-  user_id bigint,
-  title text,
-
-  total_elos int,
-  total_likerts int,
-  total_pts int,
-
-  total_images int,
-
-  status tinyint,
-);
-CREATE INDEX ON experiments (user_id);
-
 ---create_experiment
 ---INSERT INTO experiments (experiment_id,title,total_elos,total_likerts,total_pts,total_images,status) 
 ---VALUES ();
@@ -106,6 +61,73 @@ CREATE INDEX ON experiments (user_id);
 ---delete_experiment
 ---delete from experiments where experiment_id=
 
+
+
+---read image
+---select * from images where image_id = uuid_here;
+---select * from elo_ratings where image_id = uuid_here;
+---select * from likert_ratings where image_id = uuid_here;
+
+---update_experiment
+---update experiments set title='tit' where experiment_id=EID
+
+---delete_image
+---delete from images where experiment_id=EID
+---update experiments set continuous=0 where experiment_id=EID
+
+CREATE TABLE skipped (
+  elo_id bigint PRIMARY KEY,
+
+  winner_elo int,
+  loser_elo int,
+
+  number_comparisons int,
+);
+
+
+CREATE TABLE users (
+  user_id bigint PRIMARY KEY,
+  email text,
+  phone text,
+
+  credits int,
+  
+  # password [64 byte password + 16 byte seed]
+  pwd blob,
+
+  # totp [10 byte secret + 4 byte timestamp]
+  #totp blob,
+
+  # preferences
+  preferences bigint,
+  prms int,
+  
+  ---pref_gender tinyint,
+  ---pref_age_group tinyint,
+
+  # this user's demographics
+  ---gender tinyint,
+  ---age_grp tinyint,
+  ---habits tinyint,
+  ---language tinyint,
+);
+CREATE INDEX ON users (email);
+CREATE INDEX ON users (phone);
+
+CREATE TABLE experiments (
+  experiment_id bigint PRIMARY KEY,
+  user_id bigint,
+  title text,
+
+  total_elos int,
+  total_likerts int,
+  total_pts int,
+
+  total_images int,
+
+  status tinyint,
+);
+CREATE INDEX ON experiments (user_id);
 
 CREATE TABLE images (
   image_id bigint PRIMARY KEY,
@@ -128,30 +150,6 @@ CREATE INDEX ON images (experiment_id);
 CREATE INDEX ON images (series_id);
 CREATE INDEX ON images (user_id);
 CREATE INDEX ON images (tags);
-
-
-
----read image
----select * from images where image_id = uuid_here;
----select * from elo_ratings where image_id = uuid_here;
----select * from likert_ratings where image_id = uuid_here;
-
----update_experiment
----update experiments set title='tit' where experiment_id=EID
-
----delete_image
----delete from images where experiment_id=EID
----update experiments set continuous=0 where experiment_id=EID
-
-
-CREATE TABLE skipped??? (
-  elo_id bigint PRIMARY KEY,
-
-  winner_elo int,
-  loser_elo int,
-
-  number_comparisons int,
-);
 
 
 CREATE TABLE elo_ratings (

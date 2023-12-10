@@ -41,54 +41,60 @@ class user_service
 public:
     user_service(user_dao& dao);
 
-    // Admin-only procedure to create new account
+    // #1: Admin-only procedure to create new account
     var_string create_user(const uint8_t* in, user_data ud, response_callback wcb);
 
-    // Standard proceedure to create new account
+    // #2: Standard proceedure to create new account
     var_string register_user(const uint8_t* in, uint32_t total_len);
 
-    // get seed
+    // #3: Read seed for given username
     var_string read_seed(const uint8_t* in, response_callback wcb);
 
-    // Authenticate user through login
-    // len must be 8 + 64 = 64
+    // #4: Authenticate user through password
     var_string submit_password(const uint8_t* in);
 
+    // #5: Authenticate user through one-time text/email code
     var_string submit_code(const uint8_t* in, response_callback wcb);
 
+    // #6: Authenticate user through one-time TOTP code
     var_string submit_totp(const uint8_t* in, response_callback wcb);
 
-    // Get user data
+    // #7: Read user with given ID
     var_string read_user(const uint8_t* in, user_data ud, response_callback wcb);
 
-    // Get user data
+    // #8: Read users
     var_string read_users(const uint8_t* in, user_data ud, response_callback wcb);
 
-    // update user
+    // #9: Update user with given ID
     var_string update_user(const uint8_t* in, user_data ud, response_callback wcb);
 
-    // Delete user
+    // #10: Delete self user
     var_string delete_user(const uint8_t* in, user_data ud, response_callback wcb);
     
-    // Delete user with user id (admin only)
+    // #11: Delete user with given ID (admin only)
     var_string delete_user(const uint8_t* in, user_data ud, response_callback wcb);
 
-    // update user
+    // #12: Read notifications
     var_string read_notifications(const uint8_t* in, user_data ud, response_callback wcb);
 
-    // create_reset
+    // #13: Create Reset Password Link
     var_string create_reset(const uint8_t* in, response_callback wcb);
 
-    // reset_password
+    // #14: Reset Password
     var_string reset_password(const uint8_t* in, response_callback wcb);
 
-    // logout
+    // #15: Logout
     var_string logout(const uint8_t* in, user_data ud, response_callback wcb);
 };
 
 
+#include "UserService.hpp"
 
-// Admin-only procedure to create new account
+UserService::UserService(UserDAO& dao) : userDAO(dao) {}
+
+
+
+// #1: Admin-only procedure to create new account
 var_string user_service::create_user(const uint8_t* in, user_data ud, response_callback wcb)
 {
     uint8_t type = READ8(in);
@@ -105,7 +111,7 @@ var_string user_service::create_user(const uint8_t* in, user_data ud, response_c
     var_string(RESPONSE_CODE::BAD_REQUEST, 1);
 }
 
-// Standard proceedure to create new account
+// #2: Standard proceedure to create new account
 var_string user_service::register_user(const uint8_t* in, uint32_t total_len)
 {
     //
@@ -122,7 +128,7 @@ var_string user_service::register_user(const uint8_t* in, uint32_t total_len)
     var_string(RESPONSE_CODE::BAD_REQUEST, 1);
 }
 
-// get seed
+    // #3: Read seed for given username
 var_string user_service::read_seed(const uint8_t* in, response_callback wcb)
 {
     uint8_t type = READ8(in);
