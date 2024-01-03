@@ -33,7 +33,14 @@ public:
     // #1: Create image
     size_t create_images(uint64_t experiment_id, uint64_t user_id, uint32_t count)
     {
-        "INSERT INTO VALUES()";
+        "INSERT INTO S() VALUES"
+            "()\n"
+            "()";
+
+        for (int i = 0; i < count; ++i) {
+            append_str(it, , );
+        }
+
         "";
     }
 
