@@ -1,10 +1,13 @@
+$pair-size: 600px;
+
 .PI {
-  height:        400px;
+  height:        $pair-size;
   background:    #f7f8f9;
   border-radius: 8px;
   cursor:        pointer;
   position:      relative;
   overflow:      hidden;
+  transition: 0.2s ease box-shadow;
 
   @media (max-width: $tablet-max) {
     width:       100%;
@@ -15,7 +18,7 @@
   }
 
   img {
-    max-height:  400px;
+    max-height:  $pair-size;
     position:    relative;
     max-width:   100%;
     height:      auto;
@@ -30,10 +33,10 @@
   }
 
   &:hover {
-    box-shadow:  0 0 0 1px rgba(0,0,0,0.0);
+    box-shadow:  0 0 0 2px rgba(0,0,0,0.0);
   }
 
   &.A {
-    box-shadow:  0 0 0 1px #5983FC;
+    box-shadow:  0 0 0 2px #5983FC;
   }
 }

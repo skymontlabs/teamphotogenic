@@ -4,12 +4,13 @@
   margin:        0;
   background:    #fff;
   border-radius: 8px;
-  padding:       9px 0 9px 0 !important;
+  padding:       9px 0 9px 0;
   position:      absolute;
   visibility:    hidden;
   top:           29px;
   opacity:       0;
   transform:     translate(2.25px, 30px);
+  padding: 8px;
 
 
 // original, make sure to keep for sort dropdown
@@ -67,66 +68,122 @@
     padding:     0;
   }
 
-  li {
-    text-align:  left;
-    font-family: $base-font;
-    list-style:  none;
 
-    a {
+  &.lk,
+  .lk {
+    padding: 8px !important;
+
+    &>a {
       box-sizing:  border-box;
       display:     block;
       width:       100%;
-      padding:     2px 13px;
+      list-style:  none;
     }
 
-    a, span {
-      line-height: 24px;
-      font-size:   11px;
+    &>a, &>span {
+      line-height: 18px;
+      text-align:  left !important;
+      font-family: $base-font;
+      padding:     8px;
+      font-size:   14px;
       color:       #424652;
+      display:     block;
+      color: #646768;
+      border-radius: 4px;
+      font-weight: 400;
+      &:hover {
+        background: rgba(0,5,8,0.09);
+        color: #2D3748;
+      }
     }
-  }
+    &>i {
+      line-height: 18px;
+      text-align:  left !important;
+      font-family: $base-font;
+      padding:     8px;
+      font-size:   14px;
+      color:       #424652;
+      display:     block;
+      color: #646768;
+      border-radius: 4px;
+      font-weight: 400;
+      text-transform: none;
+      font-style: normal;
+    }
 
-  hr {
-    border: none;
-    outline: none;
-    height: 1px;
-    display: block;
-    width: 100%;
-    background: rgba(0, 20, 30, 0.08);
-  }
+      
+    hr {
+      border: none;
+      outline: none;
+      height: 1px;
+      display: block;
+      width: 100%;
+      background: rgba(0, 20, 30, 0.08);
+    }
 
-  svg {
-    position:    absolute;
-    top:         -8px;
-    right:       24px;
+    svg {
+      position:    absolute;
+      top:         -8px;
+      right:       24px;
 
-    @media (max-width: $tablet-max) {
-      display: none;
+      @media (max-width: $tablet-max) {
+        display: none;
+      }
     }
   }
 }
+
 
 // Edit Profile Icon
+/*
+.showRate {
+  .dropdown .lk .nx {
+        border-top: 0.5px solid #CBD5E0;
+  }
+
+  #dea,
+  #dfa {
+    border-radius: 0;
+    width: calc(50vw - 7.5px);
+    top: 82px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: inset 0 -10px 10px -10px rgba(0,0,0,0.1)
+  }
+
+  #dfa {
+    right: -51px;
+    background: rgba(51, 54, 56, 0.03);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+    padding: 9px 3em !important;
+    border-top: 0.5px solid #CBD5E0;
+    border-bottom: 0.5px solid #CBD5E0;
+    border-right: none;
+    border-bottom: none;
+    i {
+      padding: 8px 0;
+    }
+  }
+
+  #dea {
+    right: -85px;
+  }
+}
+
+.bb {
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+*/
 #dea,
 #dfa {
-  border-radius: 0;
-  width: 50vw;
-  top: 82px;
-  padding: 10px;
+  width: 224px;
   box-sizing: border-box;
-  box-shadow: inset 1px 3px 4px -4px rgba(0, 2, 4, 0.14);
+  background: rgba(248,249,251,0.6);
+  backdrop-filter: blur(7px);
+  top: 67px;
+  border: 0.5px solid #CBD5E0;
+  padding: 0;
 }
-
-#dfa {
-  right: -51px;
-  background: blue;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 10px;
-}
-
-#dea {
-  right: -85px;
-}
-

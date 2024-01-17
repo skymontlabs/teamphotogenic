@@ -220,7 +220,7 @@
 
 // photogenic in teamphotogenic
 #Pb {
-  color: $scheme-color-3
+  color: $scheme-color-2
 }
 
 // when navigation is active, do X
@@ -263,6 +263,12 @@
 
 // main links part of nav
 #Da {
+  box-sizing: border-box;
+  background: rgba(248, 249, 251, 0.6);
+  backdrop-filter: blur(7px);
+  border: 0.5px solid #CBD5E0;
+  padding: 0;
+  
   @media (min-width: $tablet-min) {
     left: 0;
     transform: translateY(40px);
@@ -454,7 +460,7 @@
 
   &:before,
   &:after {
-    background:        #5984FF;
+    background:        $scheme-color-2;
     content:           '';
     display:           block;
     position:          absolute;

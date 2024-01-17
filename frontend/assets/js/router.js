@@ -1,7 +1,5 @@
-
 function rte(url) {
 	let pg = url.split('/').pop()
-	let hh = window.location.hash
 
 	if (pg==='') {
 		if (Pge===1) {return}
@@ -16,8 +14,8 @@ function rte(url) {
 	} else if (pg==='tasks') {
 		if (Pge===2) {return}
 		
+		clearMn(Mn, true)
 		Ga.className = 'showTasks';
-		clearMn(Mn)
 		
 		let limit = 0
 		let offset = 0

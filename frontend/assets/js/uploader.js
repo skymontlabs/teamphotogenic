@@ -1,10 +1,3 @@
-
-/*
-dropArea.addEventListener('dragenter', handlerFunction, false)
-dropArea.addEventListener('dragleave', handlerFunction, false)
-dropArea.addEventListener('dragover', handlerFunction, false)
-dropArea.addEventListener('drop', handlerFunction, false)
-*/
 function preventDefaults (e) {
   e.preventDefault()
   e.stopPropagation()
@@ -17,8 +10,6 @@ function highlight(e) {
 function unhighlight(e) {
   dropArea.classList.remove('highlight')
 }
-
-
 
 function handleDrop(e) {
   let dt = e.dataTransfer

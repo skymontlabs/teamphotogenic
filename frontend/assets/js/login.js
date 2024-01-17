@@ -2,8 +2,9 @@ function genLogin() {
     Mn.id = 'Ya';
     Mn.children[0].className='x'
 
-    const bgerDiv = document.createElement('div');
+    const bgerDiv = document.createElement('canvas');
     bgerDiv.id = 'bger';
+    bgerDiv.setAttribute('data-transition-in', '');
     Mn.appendChild(bgerDiv);
 
     const loginPanelDiv = document.createElement('div');

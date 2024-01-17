@@ -119,8 +119,8 @@
   &.active,
   &:hover {
     transition:    0.2s ease-in-out all;
-    color:         #5984FF;
-    background:    rgba(56, 128, 255, 0.1);
+    color:         $scheme-color-2;
+    background:    rgba($scheme-color-3, 0.1);
   }
 }
 

@@ -34,7 +34,6 @@
     padding: 0;
   }
 
-
   @media (min-width: $tablet-wide-min) {
     width: calc(50% - 6em);
   }
@@ -85,7 +84,9 @@
 
 
   @media (max-width: $tablet-max) {
-    width:         100%
+    width:         100%;
+    height:          420px;
+
   }
 
   @media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {

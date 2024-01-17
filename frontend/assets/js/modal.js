@@ -1,53 +1,54 @@
-function gTFA() {
-    // Create the main div
-    const panel2aDiv = DIV.cloneNode(true)
-    panel2aDiv.id = 'panel2a';
-    panel2aDiv.classList.add('dn');
+function gTFA()
+{
+  // Create the main div
+  const panel2aDiv = DIV.cloneNode(true)
+  panel2aDiv.id = 'panel2a';
+  panel2aDiv.classList.add('dn');
 
-    // Add the paragraphs
-    const p1 = document.createElement('p');
-    p1.textContent = 'Scan this QR code and copy down this';
-    panel2aDiv.appendChild(p1);
+  // Add the paragraphs
+  const p1 = document.createElement('p');
+  p1.textContent = 'Scan this QR code and copy down this';
+  panel2aDiv.appendChild(p1);
 
-    const p2 = document.createElement('p');
-    p2.textContent = 'If you lose this secret, you will need to contact support and pass more sophisticated authentication to regain access to your account.';
-    panel2aDiv.appendChild(p2);
+  const p2 = document.createElement('p');
+  p2.textContent = 'If you lose this secret, you will need to contact support and pass more sophisticated authentication to regain access to your account.';
+  panel2aDiv.appendChild(p2);
 
-    // Create and append the SVG
-    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svg.setAttribute('id', 'QRa');
-    svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-    svg.setAttribute('xml:space', 'preserve');
-    svg.setAttribute('viewBox', '0 0 33 33');
-    svg.setAttribute('style', 'width: 330px;');
+  // Create and append the SVG
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('id', 'QRa');
+  svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+  svg.setAttribute('xml:space', 'preserve');
+  svg.setAttribute('viewBox', '0 0 33 33');
+  svg.setAttribute('style', 'width: 330px;');
 
-    const rects = [
-        { x: '0.5', y: '0.5', width: '6', height: '6', fill: 'white', strokeWidth: '1', stroke: 'black', strokeAlign: 'outer' },
-        { x: '2', y: '2', width: '3', height: '3' },
-        { x: '26.5', y: '0.5', width: '6', height: '6', fill: 'white', strokeWidth: '1', stroke: 'black', strokeAlign: 'outer' },
-        { x: '28', y: '2', width: '3', height: '3' },
-        { x: '0.5', y: '26.5', width: '6', height: '6', fill: 'white', strokeWidth: '1', stroke: 'black', strokeAlign: 'outer' },
-        { x: '2', y: '28', width: '3', height: '3' },
-        { x: '26', y: '26', width: '7', height: '7' }
-    ];
+  const rects = [
+    { x: '0.5', y: '0.5', width: '6', height: '6', fill: 'white', strokeWidth: '1', stroke: 'black', strokeAlign: 'outer' },
+    { x: '2', y: '2', width: '3', height: '3' },
+    { x: '26.5', y: '0.5', width: '6', height: '6', fill: 'white', strokeWidth: '1', stroke: 'black', strokeAlign: 'outer' },
+    { x: '28', y: '2', width: '3', height: '3' },
+    { x: '0.5', y: '26.5', width: '6', height: '6', fill: 'white', strokeWidth: '1', stroke: 'black', strokeAlign: 'outer' },
+    { x: '2', y: '28', width: '3', height: '3' },
+    { x: '26', y: '26', width: '7', height: '7' }
+  ];
 
-    rects.forEach(rectData => {
-        const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-        for (let attr in rectData) {
-            rect.setAttribute(attr, rectData[attr]);
-        }
-        svg.appendChild(rect);
-    });
+  rects.forEach(rectData => {
+    const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    for (let attr in rectData) {
+        rect.setAttribute(attr, rectData[attr]);
+    }
+    svg.appendChild(rect);
+  });
 
-    panel2aDiv.appendChild(svg);
+  panel2aDiv.appendChild(svg);
 
-    // Add the button
-    const button = document.createElement('button');
-    button.textContent = 'Next';
-    panel2aDiv.appendChild(button);
+  // Add the button
+  const button = document.createElement('button');
+  button.textContent = 'Next';
+  panel2aDiv.appendChild(button);
 
-    // Return the main div
-    return panel2aDiv;
+  // Return the main div
+  return panel2aDiv;
 }
 
 function generateBuyCredDataDiv() {
@@ -357,9 +358,16 @@ function generateDark() {
       <div id="dropArea" class="y z">
         <div style="width: 500px;">
           <form class="my-form">
-            <p id="ptxt">Upload multiple files with the file dialog or by dragging and dropping images onto the dashed region</p>
-            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
-            <label id="UpB" class="button" for="fileElem">Select some files</label>
+            <p id="ptxt">Upload pictures</p>
+            <input type="file" id="fileElem" multiple accept=".jpg, .jpeg, .png, .webp, .heif" onchange="handleFiles(this.files)">
+            <label id="UpB" class="dashed-repeating-gradient button" for="fileElem">
+            <span>Drop your image here, or browse</span><span
+            style="
+                display: block;
+    font-size: 10px;
+    color: #999;
+    ">Supports JPG, JPEG, PNG, WEBP, HEIF</span></label>
+            
           </form>
           <p class="dn">Implement a dropdown function for the gallery that would include a caret. This is so we can hide the images if the user believes it to be annoying. Also allow for deletion and addition of images. No make this a gallery like instagram, but where you can go through a total filelevel view</p>
           <img id="prvIm" style="width:500px">

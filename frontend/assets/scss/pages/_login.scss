@@ -1,7 +1,6 @@
 #bger {
   width:         50%;
   height:        100vh;
-  background:    linear-gradient(#4030ff, #8090ff);
   position:      absolute;
   left:          0;
   top:           0;
@@ -16,7 +15,7 @@
   width: 350px;
   left: 50%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-55%);
   right: 0;
   position: absolute;
   h1 {
@@ -28,7 +27,6 @@
 #Ya {
   text-align:    center;
   display:       flex;
-  width:         100vw;
   opacity:       0;
   visibility:    hidden;
   background: white;

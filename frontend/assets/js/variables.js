@@ -17,19 +17,24 @@ const UL = document.createElement('ul')
 const LI = document.createElement('li')
 
 
-
 //https://measurethat.net/Benchmarks/Show/10210/0/remove-all-children-from-dom-element
-function clearMn(nde) {
-	while (nde.lastChild && nde.lastChild.className.substr(0,1) != 'x') {
-	    nde.removeChild(nde.lastChild);
+function clearMn(nde, cleanChild=false) {
+	//console.log(nde, cleanChild)
+	while (nde.lastElementChild && nde.lastElementChild.className.substr(0,1) != 'x') {
+		console.log(nde.lastElementChild)
+	    nde.removeChild(nde.lastElementChild);
 	}
 
-	let Xo = nde.firstChild
-
+	let Xo = nde.firstElementChild
+	//console.log(Xo)
 	if (Xo.hasChildNodes()) {
-		while (Xo.lastChild) {
-		    Xo.removeChild(Xo.lastChild);
+		while (Xo.lastElementChild) {
+		    Xo.removeChild(Xo.lastElementChild);
 		}
+	}
+
+	if (nde.firstElementChild.className != 'x' && cleanChild) {
+		nde.firstElementChild.className = 'x'
 	}
 }
 

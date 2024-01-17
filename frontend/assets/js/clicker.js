@@ -1,7 +1,9 @@
 let Mn=DIV.cloneNode(true)
 Mn.id='Mn'
+
 let xblk=DIV.cloneNode(true)
 xblk.className='x'
+
 Mn.appendChild(xblk)
 Ga.appendChild(Mn)
 
@@ -11,13 +13,13 @@ Ga.appendChild(Mn)
 function s() {
 
 }
+
 let loaded=false
 var loggedIn = true
 let W=window
 let Pge=-1
 
 window.onhashchange = function() {
- //blah blah blah
 	alert('hashchange')
 }
 
@@ -26,10 +28,8 @@ window.onpopstate = function(event) {
 	rte(event.target.location.pathname)
 }
 
-
 function rte(url) {
 	let pg = url.split('/').pop()
-	let hh = window.location.hash
 
 	if (pg==='') {
 		if (Pge===1) {return}
@@ -44,8 +44,8 @@ function rte(url) {
 	} else if (pg==='tasks') {
 		if (Pge===2) {return}
 		
+		clearMn(Mn, true)
 		Ga.className = 'showTasks';
-		clearMn(Mn)
 		
 		let limit = 0
 		let offset = 0
@@ -145,16 +145,16 @@ function rte(url) {
 		alert('phucc')
 	}
 
-	//window.history.pushState({},e.target.href,e.target.href)
 }
+
+
 
 function pth() {
-	
+	rte(window.location.pathname)
+	window.history.pushState({},window.location.pathname,window.location.pathname)
 }
 
-rte(window.location.pathname)
-window.history.pushState({},window.location.pathname,window.location.pathname)
-
+pth()
 
 var OPN = -1 // this represents the id that is opened
 var FIL = -1 // controls if filter is open
@@ -178,7 +178,7 @@ function removeDropdowns(idxv) {
 			Na.className=''
 		case 2: // logo dropdown
 			// previously had 'A'
-			Da.className='dropdown BlA'
+			Da.className='dropdown BlA lk'
 		case 3: // nav notification dropdown
 			// previously had 'A'
 			dea.className='dropdown'
@@ -193,23 +193,23 @@ function removeDropdowns(idxv) {
 			break
 		case 6: // dots for edit/delete task in /taskID
 			// previously had 'A'
-			Da.className='dropdown BlA'
+			Da.className='dropdown BlA lk'
 			break
 		case 7: // dots for edit/delete task in grid /tasks
 			// previously had 'A'
-			Da.className='dropdown BlA'
+			Da.className='dropdown BlA lk'
 			break
 		case 8: // sort dropdown for /tasks
 			sortDropdown.className='dropsort'
 			break
 		case 9: // filter dropdown for /tasks
-			Da.className='dropdown BlA'
+			Da.className='dropdown BlA lk'
 			break
 		case 10: // date dropdown in /profile
-			DAT.className='dropdown BlA'
+			DAT.className='dropdown BlA lk'
 			break
 		case 11: // language dropdown in /profile
-			LNG.className='dropdown BlA'
+			LNG.className='dropdown BlA lk'
 			break
 		case 100: // new test upload modal
 			// previously was 'U'
@@ -224,12 +224,66 @@ function removeDropdowns(idxv) {
 	return (idxv!==ov)
 }
 
+results = []
+
+
+function clearRater() {
+	if (cRate !== -1) {
+		Ca.children[cRate].className='btn BR';
+		cRate = -1
+	}
+
+	if (cTg) {
+		for (let i = 0; i < 17; ++i) {
+			Ua.children[i].className='BZ';
+		}
+		cTg = 0
+	}
+
+	CMa.value = ''
+	console.log('submit')
+}
+
+function storeResults() {
+
+	// rating
+	if (cRate !== -1) {
+		Ca.children[cRate].className='btn BR';
+		cRate = -1
+	} else {
+		// this is a must
+		return -1
+	}
+
+
+
+	// tag
+	if (cTg) {
+		for (let i = 0; i < 17; ++i) {
+			Ua.children[i].className='BZ';
+		}
+		cTg = 0
+	}
+	results.push(cTg)
+
+
+
+
+	CMa.value = ''
+	console.log('storeResults')
+	return 0
+}
+
 
 let cRate=-1
 let cTg=0
 let cLanguage=-1
 let cStatus=0
 let cSortVal=0
+
+let cPair=-1
+
+let signupStatus=0
 
 document.onclick = (e) => {
 	let tG=e.target
@@ -265,7 +319,7 @@ document.onclick = (e) => {
 
 	// logo dropdown
 	else if (Lb.contains(tG)) {
-		if (removeDropdowns(2)) {Da.className='dropdown BlA A';OPN=2}
+		if (removeDropdowns(2)) {Da.className='dropdown BlA A lk';OPN=2}
 	}
 
 	// bell/notification
@@ -323,7 +377,7 @@ document.onclick = (e) => {
 		
 		// dropdown
 		else if (Dmo.contains(tG)) {
-			console.log('69420')
+			console.log('dropdown report in rating')
 			if (removeDropdowns(5)) {rMor.className='dropsort A';OPN=5}
 		}
 
@@ -334,25 +388,43 @@ document.onclick = (e) => {
 
 		// skip
 		else if (Sk.contains(tG)) {
-			console.log('skip')
+			clearRater()
+			// check
 		}
 
 		// submit
 		else if (Sm.contains(tG)) {
-			console.log('submit')
+			//
+			storeResults()
+			//
+			clearRater()
+			//
+			checkSubmit()
+			//
 		}
-
 	}
 
 	else if (Pge===12) {
 	////// /paired page
 		if (IWa.contains(tG)) {
 			console.log('pic a')
+
+			if (cPair == 1) {
+				IWb.className='PI'
+			}
+
+			cPair = 0
 			IWa.className='PI A'
 		}
 
 		else if (IWb.contains(tG)) {
 			console.log('pic b')
+
+			if (cPair == 0) {
+				IWa.className='PI'
+			}
+
+			cPair = 1
 			IWb.className='PI A'
 		}
 	}
@@ -380,28 +452,6 @@ document.onclick = (e) => {
 				// refresh page
 			}
 		}
-/*
-		else if (sortDropdown.contains(tG) && tG !== sortDropdown) {
-			let aidx=key - '0'
-
-			sortMethodV.innerText = sortDropdown.children[aidx].innerText
-			
-			console.log('seg')
-		}*/
-
-	/*
-		// view tasks of current run status
-		else if (tG === vRun) {
-		}
-
-		// view tasks of paused status
-		else if (tG === vPau) {
-		}
-
-		// view tasks of finished status
-		else if (tG === vFin) {
-		}
-	*/
 	}
 
 	else if (Pge===3) {
@@ -454,7 +504,6 @@ document.onclick = (e) => {
 		}
 
 		// dropdown for language
-		/*
 		else if (lndr.contains(tG)) {
 			if (removeDropdowns(11)) {LNG.className='dropsort A';OPN=11}
 		}
@@ -462,13 +511,33 @@ document.onclick = (e) => {
 		// picked a language
 		else if (LNG.contains(tG)) {
 			console.log('picked language, same procedure as /rater tag, now remove dropdown and change language')
-		}*/
+		}
 	}
 
-	// sign up
-	else if (key == 'q') {
-		rte('/')
-		window.history.pushState({},'/','/')
+	// sign up (signupeq)
+	else if (Pge==10) {
+		if (signupeq.contains(tG)) {
+			// check verification
+			if (signupStatus == 0) {
+				// go put in password or code
+				// to get a seed
+				//sock.send();
+
+				// normally this is controlled elsewhere
+				signupStatus = 1
+			} else {
+				// actually try to submit
+				//sock.send()
+
+				// if this fails
+				if (1===0) {
+
+				} else {
+					rte('/')
+					window.history.pushState({},'/','/')
+				}
+			}
+		}
 	}
 
 	// sign out
@@ -488,7 +557,6 @@ document.onclick = (e) => {
 	// this is click outside
 	else {
 		console.log('remove dropdown')
-
 		removeDropdowns(999)
 	}
 	
@@ -510,12 +578,3 @@ document.onclick = (e) => {
 
 
 
-
-
-
-// oninputchange
-
-
-/*
-
-*/

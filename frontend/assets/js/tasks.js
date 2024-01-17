@@ -80,7 +80,7 @@ function taskData() {
     imgClone.style.height = '130px'
     imgWrap.appendChild(imgClone)
   }
-  imgMat.id = 'fillImg'
+  imgMat.className = 'fillImg'
 
 
   const txtWrap = DIV.cloneNode(true)
@@ -294,21 +294,8 @@ function getTestNav() {
   TsT.id='Fa'
   TsT.innerText='Tests'
   testnav.appendChild(TsT)
-  testnav.appendChild(dropdownValue('sortDropdown',['Date Added','Date Modified','Date '],3,0,48))
-  /*
-  Ra.innerHTML = `
-  <div class="wrapsort y z rel">
-    <h2 id="Fa">Tests</h2>
-    <div class="dropdownSelector">
-      <span id="sortMethodV" class="selClick crt">Average score</span>
-      <ul id="sortDropdown" class="dropsort">
-        <li id="Sd0" class="noselect active">Average score</li>
-        <li id="Sd1" class="noselect">Median score</li>
-        <li id="Sd2" class="noselect">Date created</li>
-        <li id="Sd3" class="noselect">Date created</li>
-      </ul>
-    </div>
-  </div>`*/
+  testnav.appendChild(dropdownValue('sortDropdown',['Date Added','Last Modified','# images'],3,0,48))
+
   return testnav
 }
 

@@ -1,4 +1,25 @@
+
+$border-color: #333;
 #Up {
+}
+
+#UpB {
+  width: calc(100% - 0px);
+  background: transparent;
+  border: none;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 2em 0;
+
+  background-image: repeating-linear-gradient(to right, $border-color 0%, $border-color 50%, transparent 50%, transparent 100%), repeating-linear-gradient(to right, $border-color 0%, $border-color 50%, transparent 50%, transparent 100%), repeating-linear-gradient(to bottom, $border-color 0%, $border-color 50%, transparent 50%, transparent 100%), repeating-linear-gradient(to bottom, $border-color 0%, $border-color 50%, transparent 50%, transparent 100%);
+  background-position: left top, left bottom, left top, right top;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 18px 3px, 18px 3px, 3px 18px, 3px 18px;
+  border-radius: 8px;
+}
+
+
+.dashed-repeating-gradient {
 }
 
 
@@ -26,6 +47,7 @@
   border-radius: 8px;
   background: white;
   overflow: hidden;
+  padding: 2em;
 
   #upgal,
   img {
@@ -87,7 +109,6 @@ p {
 }
 
 #ptxt {
-  padding: 1em;
 }
 
 #toInpudt {

@@ -190,12 +190,6 @@ public:
         reenter(*this) {
             ws_.set_option(websocket::stream_base::timeout::suggested(beast::role_type::server));
 
-            /*
-            ws_.set_option(websocket::stream_base::decorator(
-            [](websocket::response_type& res) {
-                res.set(http::field::server, "websocket-server-stackless");
-            }));*/
-
             // import new sessions
             auto it = all_sessions_.find(this);
             if (it == all_sessions_.end()) {

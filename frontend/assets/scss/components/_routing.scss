@@ -80,6 +80,9 @@
 		#Ra {
 			height: auto;
 			visibility: visible;
+			@media (max-width: $tablet-wide-max) {
+				flex-direction: column;
+			}
 		}
 		#Pa,
 		#Ta,

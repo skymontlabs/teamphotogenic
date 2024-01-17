@@ -1,6 +1,6 @@
 
 .notifItem {
-  width: 180px;
+  width: 223px;
   height: 40px;
   position: relative;
 
@@ -10,6 +10,8 @@
     line-height: 20px;
     display: flex;
     position: relative;
+    padding: 0 1em;
+    height: 40px;
 
     &>span {
       font-size: 10px !important;

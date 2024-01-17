@@ -45,6 +45,17 @@
     margin: 0;
   }
 
+  .fillImg {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 10px;
+    display: block;
+    height: 290px;
+    background: url(img/laurie.jpg) 0% 18% / cover;
+    margin-bottom: 4px;
+    border-radius: 6px 6px 0px 0px;
+  }
   .imgWrp {
     width: 100%;
     display: grid;
@@ -67,7 +78,6 @@
 }
 
 .taskItem {
-  border-radius: 8px;
   overflow: hidden;
   .dtpt {
     margin-left: auto;
@@ -97,7 +107,7 @@
     }
   }
   .active {
-    border-bottom: 1px solid blue;
+    border-bottom: 0.5px solid blue;
     &:hover {
       color: #0d0c22;
     }
@@ -112,7 +122,7 @@
   padding-top: 1em;
 
   &>button {
-    border: 1px solid rgb(235,238,241);
+    border: 0.5px solid rgb(235,238,241);
     box-sizing: border-box;
     border-radius: 8px;
     padding: 1em 1em 1em;
@@ -123,20 +133,6 @@
   }
 }
 
-
-#fillImg {
-  width: 100%;
-  object-fit: cover;
-  overflow: hidden;
-  border-radius: 10px;
-  display: block;
-
-
-  height: 290px;
-  background: url(img/laurie.jpg) 0% 18% / cover;
-  margin-bottom: 4px;
-  border-radius: 6px 6px 0px 0px;
-}
 
 #taskLs {
   padding: 7em 0
@@ -240,8 +236,7 @@
   &.A,
   &.active {
     color:         #424652;
-    border:        2px solid $scheme-color-2;
-    box-shadow:    0 0 0 1px $scheme-color-2;
+    border:        2px solid $scheme-color-2 !important;
   }
 }
 
@@ -283,7 +278,7 @@ for gearagora
   }
 
   .radio:checked {
-    border-bottom: 1px solid #5984ff;
+    border-bottom: 0.5px solid #5984ff;
   }
 
   .radio:checked+svg rect {
