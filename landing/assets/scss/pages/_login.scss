@@ -24,27 +24,6 @@
   }
 }
 
-#signupeq,
-#btnSso {
-  width:           100%;
-  max-width:       none;
-  height:          40px;
-  display:         flex;
-  background:      $scheme-color-2;
-  margin:          1em auto;
-  border-width:    1px;
-  border-radius:   3px;
-  color:           white;
-  line-height:     36px;
-  font-size:       12px;
-  box-shadow:      0 3px 6px 0 rgba(36, 129, 215, 0.04),
-                   0 2px 3px 0 rgba(36, 129, 215, 0.04);
-  text-align:      center;
-  display:         block;
-  border:          1px solid $scheme-color-1;
-  font-weight:     600;
-}
-
 #Ya {
   text-align:    center;
   display:       flex;

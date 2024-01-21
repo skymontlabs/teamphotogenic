@@ -325,25 +325,6 @@ button {
   transition: 0.2s ease-in-out all;
 }
 
-#signupeq,
-#btnSso {
-  width: 100%;
-  max-width: none;
-  height: 36px;
-  display: flex;
-  background: #4285F4;
-  margin: 1em auto;
-  border-width: 1px;
-  border-radius: 3px;
-  color: white;
-  line-height: 36px;
-  font-size: 12px;
-  box-shadow: 0 3px 6px 0 rgba(36, 129, 215, 0.04), 0 2px 3px 0 rgba(36, 129, 215, 0.04);
-  text-align: center;
-  display: block;
-  font-weight: 500;
-}
-
 .dots {
   width: 15px;
   height: 38px;
@@ -1257,9 +1238,6 @@ a:hover, a:active, a:focus, a:visited {
 
 /*
 .showRate {
-  .dropdown .lk .nx {
-        border-top: 0.5px solid #CBD5E0;
-  }
 
   #dea,
   #dfa {
@@ -1297,6 +1275,10 @@ a:hover, a:active, a:focus, a:visited {
   border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 */
+.dropdown .lk.nx {
+  border-top: 0.5px solid #CBD5E0;
+}
+
 #dea,
 #dfa {
   width: 224px;
@@ -1860,6 +1842,26 @@ input:checked + .dropsort {
 #loginpanel h1 {
   text-align: left;
   margin-bottom: 1em;
+}
+
+#signupeq,
+#btnSso {
+  width: 100%;
+  max-width: none;
+  height: 40px;
+  display: flex;
+  background: #5984FF;
+  margin: 1em auto;
+  border-width: 1px;
+  border-radius: 3px;
+  color: white;
+  line-height: 36px;
+  font-size: 12px;
+  box-shadow: 0 3px 6px 0 rgba(36, 129, 215, 0.04), 0 2px 3px 0 rgba(36, 129, 215, 0.04);
+  text-align: center;
+  display: block;
+  border: 1px solid #4E72C3;
+  font-weight: 600;
 }
 
 #Ya {
@@ -2537,7 +2539,7 @@ for gearagora
   background-image: repeating-linear-gradient(to right, #333 0%, #333 50%, transparent 50%, transparent 100%), repeating-linear-gradient(to right, #333 0%, #333 50%, transparent 50%, transparent 100%), repeating-linear-gradient(to bottom, #333 0%, #333 50%, transparent 50%, transparent 100%), repeating-linear-gradient(to bottom, #333 0%, #333 50%, transparent 50%, transparent 100%);
   background-position: left top, left bottom, left top, right top;
   background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-  background-size: 18px 3px, 18px 3px, 3px 18px, 3px 18px;
+  background-size: 27.14px 3px, 27.14px 3px, 3px 31.25px, 3px 31.25px;
   border-radius: 8px;
 }
 
@@ -2571,6 +2573,7 @@ for gearagora
   visibility: hidden;
   height: 0;
   opacity: 0;
+  margin: 0 !important;
 }
 #dropArea.A #UpB {
   display: none;

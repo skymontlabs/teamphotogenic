@@ -1,3 +1,7 @@
+var PAGES = {
+
+};
+
 var CONFIG = {
     // rater
     rNum: -1

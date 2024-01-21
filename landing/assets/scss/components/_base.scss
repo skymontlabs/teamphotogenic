@@ -1,0 +1,240 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-smooth: never;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $base-font;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.618;
+  background: white;
+  color: $base-color;
+  overflow-x: hidden;
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 10px 0;
+  font-family: $base-font;
+}
+
+h1 {
+  font-size: 32px;
+  letter-spacing: 0.1px;
+}
+
+h2 {
+  font-size: 30px;
+  letter-spacing: 0.1px;
+}
+
+h3 {
+  font-size: 28px;
+  letter-spacing: 0.1px;
+}
+
+h4 {
+  font-size: 17px;
+  letter-spacing: 0.1px;
+}
+
+h5 {
+  font-size: 15px;
+  letter-spacing: 0.1px;
+}
+
+p {
+  font-size: 17px;
+  font-family: $base-font;
+}
+
+.x {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: 3em;
+  padding-right: 3em;
+  max-width: 1368px;
+
+  @media (max-width: $tablet-max) {
+    padding-left: 1em;
+    padding-right: 1em
+  }
+
+  &.tablet-max {
+    @media (max-width: $tablet-max) {
+      padding-left: 0;
+      padding-right: 0
+    }
+  }
+
+  &.narrow {
+    max-width: 900px;
+  }
+
+  &.nomax {
+    max-width: 999999px;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.abs {
+  position: absolute;
+}
+
+.rel {
+  position: relative;
+}
+
+.T16 {
+  margin-top: 16px;
+}
+.R16 {
+  margin-right: 16px;
+}
+.B16 {
+  margin-bottom: 16px;
+}
+.L16 {
+  margin-left: 16px;
+}
+
+.t16 {
+  padding-top: 16px;
+}
+.r16 {
+  padding-right: 16px;
+}
+.b16 {
+  padding-bottom: 16px;
+}
+.l16 {
+  padding-left: 16px;
+}
+
+.F12 {
+  font-size: 12px;
+}
+
+.bl {
+  display: block;
+}
+
+.r {
+  display: flex;
+  justify-content: space-between;
+}
+
+.y {
+  display: flex;
+}
+
+.z {
+  justify-content: space-between;
+}
+
+.T {
+  text-align:    center;
+}
+
+.dn {
+  display: none;
+}
+
+.db {
+  position: relative;
+  height: 18px;
+  padding: 32px 0;
+}
+
+.IC {
+  &:before,
+  &:after {
+  }
+}
+
+.D {
+  box-sizing: border-box;
+}
+
+.W {
+  width: 100%;
+}
+
+.G {
+  display: grid;
+}
+
+.crt {
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    width: 9px;
+    height: 2px;
+    background: #414552;
+    position: absolute;
+    right: 1px;
+    border-radius: 4px;
+    top: 42px;
+  }
+
+  &:before {
+    transform: translateX(-5px) rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+.BB {
+  box-shadow: inset 0 -1px rgb(235,238,241);
+}
+
+.BY {
+  box-shadow: inset -1px 0 rgb(235,238,241);
+}
+
+.Bw {
+  box-shadow: inset 0 1px rgb(235,238,241);
+}
+
+
+.PT,
+.pointer {
+  cursor: pointer;
+}
+
+.mla {
+  margin-left: auto;
+}
+
+// for nav in place of ul li a
+// makes all a elements that are
+// descendants display block
+.BlA>span,
+.BlA>a {
+  padding-left: 1em;
+  display: block;
+  text-align: left;
+  color: #424652;
+  font-weight: 500;
+  line-height: 26px;
+  font-size: 13px;
+}

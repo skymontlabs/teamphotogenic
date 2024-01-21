@@ -1,0 +1,42 @@
+$pair-size: 600px;
+
+.PI {
+  height:        $pair-size;
+  background:    #f7f8f9;
+  border-radius: 8px;
+  cursor:        pointer;
+  position:      relative;
+  overflow:      hidden;
+  transition: 0.2s ease box-shadow;
+
+  @media (max-width: $tablet-max) {
+    width:       100%;
+  }
+   
+  @media (min-width: $tablet-min) {
+    width:       calc(50% - 8px);
+  }
+
+  img {
+    max-height:  $pair-size;
+    position:    relative;
+    max-width:   100%;
+    height:      auto;
+    display:     block;
+    margin:      0 auto;
+    width:       auto;
+
+    @media (min-width: $tablet-min) {
+      top:       50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &:hover {
+    box-shadow:  0 0 0 2px rgba(0,0,0,0.0);
+  }
+
+  &.A {
+    box-shadow:  0 0 0 2px #5983FC;
+  }
+}

@@ -1,0 +1,131 @@
+.dropfilt {
+  min-width: 180px;
+  /* right: 0; */
+  padding: 0;
+  list-style: none;
+  border: 1px solid rgba(0, 0, 0, 0);
+  /* z-index: 999; */
+  background: white;
+  margin: 0;
+  /* top: 54px; */
+  cursor: pointer;
+  /* box-shadow: 0px 15px 50px 0px rgba(27, 32, 50, 0.1); */
+  border-radius: 24px;
+  padding: 0;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease all;
+}
+
+
+#stusDrop {
+  transform: translate(0, 10px);
+  left: 0;
+  &.show {
+	  visibility: visible;
+	  opacity: 1;
+  }
+}
+
+#filtDropdown {
+	visibility: hidden;
+	box-sizing: border-box;
+	font-size: 14px;
+	opacity: 0;
+	height: 0;
+	transition: 0.2s ease all;
+
+	&.show {
+		visibility: visible;
+		opacity: 1;
+		height: 76px;
+	}
+}
+
+#scoreRang,
+#scoreRangex {
+	box-sizing: border-box;
+  	
+  	.range_container {
+	    display: flex;
+	    width: 100%;
+	    margin: 0 auto;
+      &.col {
+      flex-direction: column;
+
+      }
+	}
+
+  .sliders_control {
+    position: relative;
+    min-height: 26px;
+    width: 100%;
+  }
+
+  .form_control {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    color: #635a5a;
+  }
+
+  input[type=range]::-moz-range-thumb,
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    pointer-events: all;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #C6C6C6;
+    cursor: pointer;
+  }
+
+  input[type=range]::-webkit-slider-thumb:hover {
+    background: #f7f7f7;
+  }
+
+  input[type=range]::-webkit-slider-thumb:active {
+    box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+    -webkit-box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+  }
+
+  input[type="number"] {
+    color: #8a8383;
+    width: 40px;
+    height: 26px;
+    font-size: 12px;
+    border: none;
+  }
+
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button {  
+     opacity: 1;
+  }
+
+  input[type="range"] {
+    height: 2px;
+    width: 100%;
+    margin: 12px 0;
+    box-sizing: border-box;
+    -webkit-appearance: none; 
+    appearance: none;
+    position: absolute;
+    background-color: #C6C6C6;
+    pointer-events: none;
+    padding: 0;
+  }
+
+  #fromSlider {
+    height: 0;
+    z-index: 1;
+    background: transparent;
+  }
+
+  #toSlider {
+  	z-index: 0;
+  }
+}
+

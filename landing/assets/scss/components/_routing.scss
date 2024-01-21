@@ -1,0 +1,286 @@
+/*position: absolute; visibility: hidden;*/
+#Pa,
+#Ta,
+#taskID,
+#ZZ,
+#Ra,
+#Aa,
+#Ya,
+#Up,
+#Uz,
+#Xa {
+	width:              100%;
+	height:             0;
+	visibility:         hidden;
+	position:           absolute;
+}
+
+// login panel
+#Ya {
+	background: white;
+}
+
+#Ra>.x{display: none;}
+#Ia,
+#PFa>*{
+	visibility: hidden;
+	height: 0;
+}
+#Ga {
+	&.hideall>* {
+		display: none;
+
+	}
+	&>#Pa,
+	&>#Ta,
+	&>#taskID,
+	&>#admin {
+		margin-top: 82px;
+	}
+	&>#Ia {
+		padding-top: 120px;
+		box-sizing: border-box;
+	}
+	&.showPaired {
+		#Xa {
+			display: block;
+			height: auto;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	&.showPremium {
+		#Aa {
+			display: block;
+			height: auto;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	&.showRate {
+		@media (max-width: $tablet-max) {
+			overflow: hidden;
+			height: 100vh;
+			width: 100vw;
+			position: fixed;
+		}
+
+		#Na {
+			@media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {
+				width: 61.8%;
+				right: 0;
+			}
+			@media (min-width: $tablet-wide-min) {
+				width: 50%;
+				right: 0;
+			}
+		}
+
+		#Ra {
+			height: auto;
+			visibility: visible;
+			@media (max-width: $tablet-wide-max) {
+				flex-direction: column;
+			}
+		}
+		#Pa,
+		#Ta,
+		#Xa {
+		}
+
+		#Bc {
+			border: 1px solid rgba(0,0,0,0.0);
+
+			&:before,
+			&:after {
+				background: white !important;
+			}
+		}
+
+		.active #Bc {
+			width: 50px;
+			height: 50px;
+			//border: 1px solid rgba(0,0,0,0.5);
+
+			&:before,
+			&:after {
+				background: $nav-bars-color !important;
+				left: 15px;
+			}
+			&:before {
+				top: 23px;
+			}
+			&:after {
+				bottom: 23px;
+			}
+		}
+	}
+
+	&.showImg {
+		#Ia {
+			display: block;
+			opacity: 1;
+			visibility: visible;
+		}
+		&.OV {
+			//overflow-y: hidden !important;
+
+			#ZZ {
+				visibility: visible;
+				opacity: 1;
+				height: 100vh;
+				display: block;
+			}	
+		}
+		/**/
+	}
+
+
+	&.showUpl {
+		#ZZ {
+			visibility: visible;
+			opacity: 1;
+			height: 100vh;
+			display: block;
+		}
+		#Up {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	&.showS,
+	&.showTasks {
+		#Ta {
+			height: auto;
+			visibility: visible
+		}
+		#TMta {
+			display: none;
+		}
+		.wrapsort {
+			width: 100%;
+		}
+		#Pa,
+		#Ra,
+		#Xa {
+		}
+	}
+
+	&.showTaskID {
+		#Fa {
+			display: none;
+		}
+		#tflta {
+			visibility: hidden;
+			height: 0;
+			opacity: 0;
+			padding: 0;
+			margin: 0;
+		}
+		#Ta {
+			height: auto;
+			visibility: visible
+		}
+		#Pa,
+		#Ra,
+		#Xa {
+		}
+	}
+
+	&.showProfile {
+		#Pa {
+			height: auto;
+			visibility: visible;
+			
+			.profilePage.A {
+				visibility: visible;
+			}
+		}
+		#Ta,
+		#Ra,
+		#Xa {
+		}
+	}
+	&.edit {
+		#EPa {
+			height: auto;
+			visibility: visible;
+
+		}
+	}
+	&.sec {
+		#SCa {
+			height: auto;
+			visibility: visible;
+		}
+	}
+
+	&.alr {
+		#Alr {
+			height: auto;
+			visibility: visible;
+		}
+	}
+
+	&.bil {
+		#Bil {
+			height: auto;
+			visibility: visible;
+		}
+	}
+
+	&.hlp {
+		#Hlp {
+			height: auto;
+			visibility: visible;
+		}
+	}
+
+
+	&.showSignup,
+	&.showLogin {
+		#Na {
+			opacity: 0;
+			z-index: 1;
+			visibility: visible;
+			transform: translate(0,-82px);
+		}
+		#Ya {
+			display: block;
+			visibility: visible;
+			opacity: 1;
+			  height:        100vh;
+		}
+	}
+
+	&.showSignup {
+		#loginTitle {
+			display: none;
+		}
+		#loginpanel {
+			margin-left: 250px;
+		}
+	}
+
+	&.showLogin {
+		#signupTitle {
+			display: none;
+		}
+	}
+
+	
+
+	&.showNotifications {
+		#Xa {
+			height: auto;
+			visibility: visible
+		}
+		#Pa,
+		#Ta,
+		#Ra {
+		}
+	}
+	
+}

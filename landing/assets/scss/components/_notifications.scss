@@ -1,0 +1,51 @@
+
+.notifItem {
+  width: 223px;
+  height: 40px;
+  position: relative;
+
+  &>a {
+    text-transform: none;
+    text-align: left;
+    line-height: 20px;
+    display: flex;
+    position: relative;
+    padding: 0 1em;
+    height: 40px;
+
+    &>span {
+      font-size: 10px !important;
+      line-height: 14px !important;
+      display: block;
+      margin: 7px 0 0px 42px !important;
+    } 
+  }
+
+  img {
+    width: 32px;
+    height: 32px;
+    border-radius: 1px;
+    margin: 4px 0;
+    position: absolute;
+  }
+
+  .delete-elem:before,
+  .delete-elem:after {
+    content: '';
+    position: absolute;
+    right: 14px;
+    top: 20px;
+    height: 1px;
+    width: 9px;
+    border-radius: 4px;
+    background: #555;
+  }
+
+  .delete-elem:before {
+    transform: rotate(-45deg)
+  }
+
+  .delete-elem:after {
+    transform: rotate(45deg)
+  }
+}

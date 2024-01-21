@@ -13,11 +13,13 @@
     </div>
 
 
-    <script src="node_modules/argon2-browser/dist/argon2-bundled.min.js"></script>
+<!--
+    <script src="node_modules/argon2-browser/dist/argon2-bundled.min.js"></script>-->
+    <script src="assets/js/argon/argon2-bundled.min.js"></script>
     <script type="text/javascript">
       const uint8 = new Uint8Array(16);
       argon2.hash({ pass: 'ava', salt: uint8,
-        time: 64, // the number of iterations
+        time: 32, // the number of iterations
         mem: 32768, // used memory, in KiB
         hashLen: 64, // desired hash length
         type: argon2.ArgonType.Argon2d

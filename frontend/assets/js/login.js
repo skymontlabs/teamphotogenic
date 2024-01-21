@@ -1,3 +1,10 @@
+function genPhrase2(p2type) {
+    pwdwrp.style.marginTop = '8px';
+    pwdwrp.style.height = '56px';
+    pwdwrp.style.opacity = '1';
+    pwdwrp.style.visibility = 'visible';
+}
+
 function genLogin() {
     Mn.id = 'Ya';
     Mn.children[0].className='x'
@@ -27,6 +34,7 @@ function genLogin() {
     loginPanelDiv.appendChild(h1);
 
     const form = document.createElement('form');
+    form.id = 'loginForm'
     loginPanelDiv.appendChild(form);
 
     const orDiv = document.createElement('div');
@@ -51,9 +59,15 @@ function genLogin() {
     emailInput.style.boxSizing = 'border-box';
     emailDiv.appendChild(emailInput);
 
-/*
+
+//
     const passwordDivWrapper = document.createElement('div');
-    passwordDivWrapper.style.marginTop = '1em';
+    passwordDivWrapper.id = 'pwdwrp'
+    passwordDivWrapper.style.margin = '8px 0 16px';
+    passwordDivWrapper.style.height = '0';
+    passwordDivWrapper.style.transition = '0.25s 0s ease height, 0.25s 0.2s ease opacity';
+    passwordDivWrapper.style.opacity = '0';
+    passwordDivWrapper.style.visibility = 'hidden';
     form.appendChild(passwordDivWrapper);
 
     const passwordLabel = document.createElement('label');
@@ -64,15 +78,22 @@ function genLogin() {
     passwordDiv.className = 'iS';
     passwordDivWrapper.appendChild(passwordDiv);
 
-    const passwordInput = document.createElement('input');
-    passwordInput.id = 'passwordSignup';
-    passwordInput.name = 'password';
-    passwordInput.type = 'password';
-    passwordInput.placeholder = 'Password';
-    passwordInput.style.width = '100%';
-    passwordInput.style.boxSizing = 'border-box';
-    passwordDiv.appendChild(passwordInput);
-*/
+    const phrase2input = document.createElement('input');
+
+    phrase2input.id = 'passwordSignup';
+    phrase2input.name = 'password';
+    phrase2input.type = 'password';
+    phrase2input.placeholder = 'Password';
+    phrase2input.style.width = '100%';
+    phrase2input.style.boxSizing = 'border-box';
+    passwordDiv.appendChild(phrase2input);
+
+
+    ///
+    //signupeq.innerText = 'Sign in'
+//
+
+
 
     const signupButton = document.createElement('button');
     signupButton.id = 'signupeq';

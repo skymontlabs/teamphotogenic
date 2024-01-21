@@ -1,0 +1,482 @@
+// navigation
+#Na {
+  width:               100%;
+  height:              82px;
+  z-index:             99;
+  transition:          0.1s ease-out padding;
+  position:            absolute;
+  z-index:             9999999;
+
+  #Lb {
+    @media (max-width: $tablet-max) {
+      opacity:         0;
+      visibility:      hidden;
+    }
+    @media (min-width: $tablet-min) {
+      width:           148px;
+      line-height:     82px;
+      cursor:          pointer;
+    }
+  }
+
+  button {
+    svg {
+      @media (max-width: $tablet-max) {
+        opacity: 0;
+      }
+    }
+  }
+
+  #links li {
+    font-size:         15px;
+    font-weight:       500;
+    display:           block;
+
+    p {
+      font-size:       12px;
+      @media (min-width: $tablet-min) {
+        visibility:    hidden;
+        position:      absolute;
+      }
+    }
+
+    &>a,
+    &>span {
+      font-size:       13px;
+      background:      transparent;
+      cursor:          pointer;
+      text-align:      left;
+      line-height:     82px;
+      color:           #333;
+      font-weight:     600;
+      display:         flex;
+      text-decoration: none;
+      transition:      color 120ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+
+    a {
+      color:           #424652;
+    }
+
+    .btnwrap {
+      margin:          44px 0;
+    }
+
+    .big.btn {
+      line-height:     18px !important
+    }    
+
+    .tp {
+      background:      transparent;
+      position:        absolute;
+      border:          none;
+      box-shadow:      none;
+    }
+    
+    .btn {
+      display:         inline;
+      color:           #424652;
+      box-sizing:      border-box;
+      background:      rgba(255, 255, 255, 0.2);
+    }
+
+    .btn:before {
+      opacity:         0
+    }
+
+    path.alt {
+      fill:            white
+    }
+
+    .arrow svg {
+      top:             3px
+    }
+  }
+
+  .dropdown.active {
+    @media (max-width: $tablet-max) {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &.A,
+  &.active {
+    #logo {
+      @media (max-width: $tablet-max) {
+        //position:      absolute;
+        //opacity:       1;
+        //visibility:    visible;
+        line-height:   60px;
+        top:           16px;
+        box-sizing:    border-box;
+        padding:       0 0 0 20px;
+        cursor:        pointer;
+        display:       block;
+        width:         100%;
+        position:      relative;
+        z-index:       9;
+      }
+    }
+
+    span,
+    a,
+    h6 {
+      @media (max-width: $tablet-max) {
+        font-size: 22px !important;
+        line-height: 48px !important;
+        font-weight: 500;
+      }
+    }
+
+    #infTogS,
+    #prfTogU,
+    #notBtnT {
+      @media (max-width: $tablet-max) {
+        visibility: hidden;
+      }
+    }
+
+    .dropdown {
+      background: transparent;
+
+      @media (max-width: $tablet-max) {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      a, span {
+        @media (max-width: $tablet-max) {
+          padding-left: 16px;
+        }
+      }
+
+      li a span {
+        @media (max-width: $tablet-max) {
+          font-size: 22px !important;
+          line-height: 48px !important;
+        }
+      }
+
+      svg {
+        @media (max-width: $tablet-max) {
+          opacity: 0;
+        }
+      }
+    }
+
+    #dropi {
+      @media (max-width: $tablet-max) {
+        z-index: 2147482977;
+        position: absolute;
+        top: 0;
+        padding: 0 !important;
+        transform: translate(0,120px);
+      }
+    }
+
+    #dropc {
+      @media (max-width: $tablet-max) {
+        transform: translate(0,246px);
+        padding: 0 !important;
+      }
+    }
+
+    #dropp {
+      @media (max-width: $tablet-max) {
+        margin: 0;
+        padding: 0 !important;
+        transform: translate(0,405px);
+      }
+    }
+
+    #dropn {
+      @media (max-width: $tablet-max) {
+        position: absolute;
+        top: 0;
+        transform: translate(0,0);
+        opacity: 0 !important;
+        visibility: hidden !important;
+      }
+    }
+
+    .email,
+    hr {
+      display: none;
+    }
+  }
+}
+
+// logo section
+#La {
+  width: 100%;
+  position: relative;
+}
+
+// team in teamphotogenic
+#Tb {
+  color: #414552
+}
+
+// photogenic in teamphotogenic
+#Pb {
+  color: $scheme-color-2
+}
+
+// when navigation is active, do X
+.active {
+}
+
+// main links part of nav
+#Ja {
+  @media (max-width: $tablet-max) {
+    width: calc(100% - 32px);
+    height: 600px;
+    position: absolute;
+    box-sizing: border-box;
+    left: 16px;
+    top: 16px;
+    border-radius: 8px;
+    display: block;
+    visibility: hidden;
+    box-shadow: 0px 8px 25px -1px rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(5px);
+  }
+  @media (max-width: $tablet-max) {
+    flex-direction:    column;
+  }
+  &>button {
+    @media (max-width: $tablet-max) {
+      padding:         0;
+      margin:          0;
+      height:          0;
+    }
+
+    &:not(:first-child) {
+      @media (min-width: $tablet-min) {
+        margin-left:   18px
+      }
+    }
+  }
+}
+
+// main links part of nav
+#Da {
+  box-sizing: border-box;
+  background: rgba(248, 249, 251, 0.6);
+  backdrop-filter: blur(7px);
+  border: 0.5px solid #CBD5E0;
+  padding: 0;
+  
+  @media (min-width: $tablet-min) {
+    left: 0;
+    transform: translateY(40px);
+  }
+}
+
+.A,
+.active {
+  #Bc {
+    z-index: 999999999999;
+    right: 16px;
+    background: transparent;
+    backdrop-filter: none;
+    &:before,
+    &:after {
+      width: 18px;
+      height: 2px;
+      background: black;
+    }
+    &:before {
+      transform: rotate(45deg);
+      top: 24px;
+    }
+    &:after {
+      transform: rotate(-45deg);
+      bottom: 24px;
+    }
+  }
+  #Ja {
+    visibility: visible;
+  }
+  .spaced-list {
+    &>li>a {
+      @media (max-width: $tablet-max) {
+        line-height: 60px !important;
+      }
+    }
+  }
+  #links {
+    @media (max-width: $tablet-max) {
+      margin-top: 120px;
+    }
+  }
+  /*
+  #ratePgs li {
+    @media (max-width: $tablet-max) {
+      padding-left: 16px;
+      line-height: 80px;
+    }
+  }*/
+  #Da {
+    /*
+    @media (min-width: $tablet-max) {
+      width: 120px;
+    }*/
+    @media (max-width: $tablet-max) {
+      width: 100%;
+      padding: 0 !important;
+      top: 16px;
+      box-sizing: border-box;
+      cursor: pointer;
+      display: block;
+      position: relative;
+      z-index: 99999999999999;
+      background: transparent;
+      left: 0;
+      position: absolute;
+      transform: translate(0,24px);
+
+    }
+    h6 {
+      margin-top: 0;
+      margin-bottom: 0
+    }
+
+    p {
+
+      font-size: 16px;
+      line-height: 28px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+#links {
+  width: 100%;
+
+  @media (max-width: $tablet-max) {
+    flex-direction:    column;
+  }
+
+
+  &>ul {
+    margin: 0;
+    padding-left: 20px;
+    box-sizing: border-box;
+    @media (max-width: $tablet-max) {
+      padding-left: 16px;
+    }
+  }
+
+}
+
+.spaced-list {
+  width: 100%;
+  padding-right: 1em;
+  
+  @media (max-width: $tablet-max) {
+    flex-direction:    column;
+  }
+  &>*:not(:first-child) {
+    @media (max-width: $tablet-max) {
+      margin-top:      24px
+    }
+    @media (min-width: $tablet-min) {
+      margin-left:     24px
+    }
+  }
+}
+
+#Ma {
+}
+
+// Hamburger Bars Icon
+#Bc {
+  width:               60px;
+  height:              50px;
+  backdrop-filter:     blur(40px);
+  //box-shadow:          4px 5px 10px -3px rgba(0, 0, 0, 0.2);
+  border-radius:       30px;
+  display:             block;
+  position:            absolute;
+  top:                 20px;
+  background:          rgba(255, 255, 255, 0.2);
+  border:              1px solid rgba(0,0,0,0.1);
+
+  @media (max-width: $tablet-max) {
+    opacity:           1;
+  }
+  
+  @media (min-width: $tablet-min) {
+    opacity:           0;
+    visibility:        hidden;
+  }
+
+
+  &:before,
+  &:after {
+    width:             22px;
+    height:            2px;
+    content:           '';
+    display:           block;
+    background:        black;
+
+    position:          absolute;
+    border-radius:     3px;
+    left:              18px;
+
+  }
+
+  &:before {
+    top:               18px;
+  }
+
+  &:after {
+    bottom:            18px;
+  }
+}
+
+#Pd {
+  top:                 0;
+  width:               140px;
+  padding-left:        40px;
+  line-height:         12px;
+  margin:              0;
+  padding:             0 20px 0 35px;
+  height:              auto;
+  font-weight:         600;
+
+  @media (min-width: $tablet-min) {
+    display:           block;
+  }
+
+  @media (max-width: $tablet-max) {
+    display:           none;
+  }
+
+  &:before,
+  &:after {
+    background:        $scheme-color-2;
+    content:           '';
+    display:           block;
+    position:          absolute;
+    border-radius:     0.5px
+  }
+
+  &:before {
+    width:             11px;
+    height:            2px;
+    transform:         translate(-13.5px, 4.5px);
+
+  }
+
+  &:after {
+    width:             2px;
+    height:            11px;
+    transform:         translate(-9px, -12px);
+  }
+}

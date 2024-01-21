@@ -525,6 +525,8 @@ document.onclick = (e) => {
 
 				// normally this is controlled elsewhere
 				signupStatus = 1
+
+				genPhrase2()
 			} else {
 				// actually try to submit
 				//sock.send()
