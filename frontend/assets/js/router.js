@@ -1,126 +1,157 @@
+function cleared() {
+}
+
+const authFunctions = [
+    getRater,
+    getRater,
+    getPaired,
+    getAllTests,
+    getTestID,
+    getImageID,
+    getPrf,
+    /*
+    getSecurity,
+    getAlerts,
+    getBilling,
+    getStatistics,
+    getPremium,*/
+]
+
+const nonAuthFunctions = [
+    genLogin,
+    /*
+    getSignup,
+    getForgotPassword,
+    getResetPassword,*/
+]
+
+
 function rte(url) {
 	let pg = url.split('/').pop()
+	if (SESSION.currentPageStr === pg) {return}
 
-	if (pg==='') {
-		if (Pge===1) {return}
-		Pge=1
-		if (loggedIn) {
-			Ga.className = 'showRate';
-			clearMn(Mn)
-			getRater()
-		} else {
-			Ga.className = 'showLogin';
+	// path name
+	let pid = pathnames[pg]
+	SESSION.currentPageStr = pg
+
+	const params = new Proxy(new URLSearchParams(window.location.search),
+	{
+	  get: (searchParams, prop) => searchParams.get(prop),
+	});
+
+	console.log(pg)
+	// CURRENT FUCKING PAGE
+
+
+	if (SESSION.loggedIn === false) {
+		if (pid<12) {
+			
 		}
-	} else if (pg==='tasks') {
-		if (Pge===2) {return}
+		clearMn(Mn)
+		nonAuthFunctions[pid - 12]()
+	} else {
+		clearMn(Mn)
+		console.log(authFunctions[pid])
+		console.log(pid)
+		authFunctions[pid]()
+	}
+
+	Ga.className = showClass[pid]
+	SESSION.currentPage = pid
+}
+
+/*
+else if (pg === '') {
+		SESSION.currentPage = PAGES.RATER
+
+		//Ga.className = 'showRate';
+		clearMn(Mn)
+		getRater()
+	} else if (pg === 'paired') {
+		SESSION.currentPage = PAGES.PAIRED
+		clearMn(Mn)
+	
+
+		//Ga.className = 'showPaired';
+		clearMn(Mn)
+		getRater()
+	} else if (pg === 'imagesets') {
+		SESSION.currentPage = PAGES.IMAGESETS
 		
 		clearMn(Mn, true)
-		Ga.className = 'showTasks';
+		//Ga.className = 'showTasks';
 		
-		let limit = 0
-		let offset = 0
+		let limit = params.limit
+		let offset = params.offset
 		
+		// in real life do callback mode...
 		getAllTests()
-		Pge=2
-	} else if (pg==='taskID') {
-		if (Pge===3) {return}
+	} else if (pg === 'imagesetid') {
+		SESSION.currentPage = PAGES.IMAGESET_ID
 		clearMn(Mn)
 		
-		Ga.className = 'showTaskID';
-		let taskID = 1
-		Pge=3
-
-		getTestID()
-	} else if (pg==='imageID') {
-		if (Pge===4) {return}
+		//Ga.className = 'showTaskID';
+		getTestID(params.iid)
+	} else if (pg === 'imageID') {
+		SESSION.currentPage = PAGES.IMAGE_ID
 		clearMn(Mn)
 		
-		Ga.className = 'showTasks showImg';
-		let taskID = 1
-		Pge=4
-		generateImage();
-	} else if (pg==='profile') {
-		if (Pge===5) {return}
+		//Ga.className = 'showTasks showImg';
+		generateImage(params.iid);
+	} else if (pg === 'profile') {
+		SESSION.currentPage = PAGES.PROFILE
 		clearMn(Mn)
 		
 		genPrf()
-		Pge=5
-		Ga.className = 'showProfile edit';
-	} else if (pg==='security') {
-		if (Pge===6) {return}
+		//Ga.className = 'showProfile edit';
+	} else if (pg === 'security') {
+		SESSION.currentPage = PAGES.PROFILE_SECURITY
 		clearMn(Mn)
 		
-		Pge=6
-		Ga.className = 'showProfile sec';
-	} else if (pg==='alerts') {
-		if (Pge===7) {return}
+		//Ga.className = 'showProfile sec';
+	} else if (pg === 'alerts') {
+		SESSION.currentPage = PAGES.PROFILE_ALERTS
 		clearMn(Mn)
 		
-		Pge=7
-		Ga.className = 'showProfile alr';
-	} else if (pg==='billing') {
-		if (Pge===8) {return}
+		//Ga.className = 'showProfile alr';
+	} else if (pg === 'billing') {
+		SESSION.currentPage = PAGES.PROFILE_BILLING
 		clearMn(Mn)
 		
-		Pge=8
-		Ga.className = 'showProfile bil';
-	} else if (pg==='help') {
-		if (Pge===9) {return}
+		//Ga.className = 'showProfile bil';
+	} else if (pg === 'help') {
+		SESSION.currentPage = PAGES.PROFILE_BILLING
 		clearMn(Mn)
 		
-		Pge=9
-		Ga.className = 'showProfile hlp';
-	} else if (pg==='login') {
-		if (Pge===10) {return}
+		//Ga.className = 'showProfile hlp';
+	} else if (pg === 'statistics') {
+		SESSION.currentPage = PAGES.STATISTICS
 		clearMn(Mn)
 		
-		Pge=10
-		Ga.className = 'showLogin';
-		genLogin()
-	} else if (pg==='signup') {
-		if (Pge===11) {return}
+		//Ga.className = 'showTaskID';
+		let iid = 1
+	} else if (pg === 'notifications') {
+		SESSION.currentPage = PAGES.NOTIFICATIONS
 		clearMn(Mn)
 		
-		Ga.className = 'showSignup';
-	} else if (pg==='statistics') {
-		if (Pge===19) {return}
+		//Ga.className = 'showNotifications';
+	} else if (pg === 'premium') {
+		SESSION.currentPage = PAGES.PREMIUM
 		clearMn(Mn)
 		
-		Ga.className = 'showTaskID';
-		let taskID = 1
-	} else if (pg==='notifications') {
-		if (Pge===23) {return}
-		clearMn(Mn)
-		
-		Pge=23
-		Ga.className = 'showNotifications';
-	} else if (pg==='paired') {
-		if (Pge===12) {return}
-		clearMn(Mn)
-	
-		console.log(Mn)
-		Pge=12
-		getPaired()
-		Ga.className = 'showPaired';
-	} else if (pg==='premium') {
-		if (Pge===155) {return}
-		clearMn(Mn)
-		
-		Ga.className = 'showPremium';
-		Pge=155
-	} else if (pg==='r2') {
-		Ga.className = 'showR2';
-		Pge=33
+		//Ga.className = 'showPremium';
+	} else if (pg === 'r2') {
+		SESSION.currentPage = PAGES.STATISTICS
+		//Ga.className = 'showR2';
 	} else {
 		alert('phucc')
 	}
-
-}
-
-
+	*/
 
 function pth() {
 	rte(window.location.pathname)
 	window.history.pushState({},window.location.pathname,window.location.pathname)
 }
+
+pth()
 

@@ -5,6 +5,79 @@ function genPhrase2(p2type) {
     pwdwrp.style.visibility = 'visible';
 }
 
+function secondField() 
+{
+    const passwordDivWrapper = document.createElement('div');
+    passwordDivWrapper.id = 'pwdwrp'
+    passwordDivWrapper.style.margin = '8px 0 16px';
+    passwordDivWrapper.style.height = '0';
+    passwordDivWrapper.style.transition = '0.25s 0s ease height, 0.25s 0.2s ease opacity';
+    passwordDivWrapper.style.opacity = '0';
+    passwordDivWrapper.style.visibility = 'hidden';
+    form.appendChild(passwordDivWrapper);
+
+    const passwordLabel = document.createElement('label');
+    passwordLabel.textContent = 'Password';
+    passwordDivWrapper.appendChild(passwordLabel);
+
+    const passwordDiv = document.createElement('div');
+    passwordDiv.className = 'iS';
+    passwordDivWrapper.appendChild(passwordDiv);
+
+    const phrase2input = document.createElement('input');
+
+    phrase2input.id = 'passwordSignup';
+    phrase2input.name = 'password';
+    phrase2input.type = 'password';
+    phrase2input.placeholder = 'Password';
+    phrase2input.style.width = '100%';
+    phrase2input.style.boxSizing = 'border-box';
+    passwordDiv.appendChild(phrase2input);
+}
+
+function showPassword() {
+    passwordDivWrapper.className = 'show'
+}
+
+function showCode() {
+    passwordDivWrapper.className = 'show'
+    passwordLabel.textContent = 'Code'
+}
+
+function hideSecondField() {
+    passwordDivWrapper.className = 'hidden'
+}
+
+function displayLoginError(txtLabel) {
+    errorLabel.className = 'meta red show'
+    errorLabel.textContent = txtLabel
+}
+
+function hideLoginError() {
+    errorLabel.className = 'meta red'
+    errorLabel.textContent = ''
+}
+
+function displayGenericErrorLogin() {
+    displayLoginError('Server had an error')
+}
+
+function displayIncorrectPassword() {
+    displayLoginError('Password is incorrect')
+}
+
+function displayIncorrectCode() {
+    displayLoginError('Code is incorrect')
+}
+
+function switchTOTP()
+{
+    hideSecondField()
+
+    emailLabel.textContent = 'Authenticator Code'
+    emailSignup.type = 'number'
+}
+
 function genLogin() {
     Mn.id = 'Ya';
     Mn.children[0].className='x'
@@ -23,12 +96,12 @@ function genLogin() {
 
     const signupTitleSpan = document.createElement('span');
     signupTitleSpan.id = 'signupTitle';
-    signupTitleSpan.innerText = 'Sign up to get started';
+    signupTitleSpan.textContent = 'Sign up to get started';
     h1.appendChild(signupTitleSpan);
 
     const loginTitleSpan = document.createElement('span');
     loginTitleSpan.id = 'loginTitle';
-    loginTitleSpan.innerText = 'Log in';
+    loginTitleSpan.textContent = 'Log in';
     h1.appendChild(loginTitleSpan);
 
     loginPanelDiv.appendChild(h1);
@@ -41,7 +114,8 @@ function genLogin() {
     form.appendChild(orDiv);
 
     const emailLabel = document.createElement('label');
-    emailLabel.innerText = 'Phone or Email';
+    emailLabel.id = 'emailLabel'
+    emailLabel.textContent = 'Phone or Email';
     form.appendChild(emailLabel);
 
     const emailDiv = document.createElement('div');
@@ -52,7 +126,6 @@ function genLogin() {
     const emailInput = document.createElement('input');
     emailInput.id = 'emailSignup';
     emailInput.setAttribute('autocomplete', 'email');
-    emailInput.name = 'email';
     emailInput.type = 'email';
     emailInput.placeholder = 'user@example.com';
     emailInput.style.width = '100%';
@@ -71,7 +144,7 @@ function genLogin() {
     form.appendChild(passwordDivWrapper);
 
     const passwordLabel = document.createElement('label');
-    passwordLabel.innerText = 'Password';
+    passwordLabel.textContent = 'Password';
     passwordDivWrapper.appendChild(passwordLabel);
 
     const passwordDiv = document.createElement('div');
@@ -87,28 +160,23 @@ function genLogin() {
     phrase2input.style.width = '100%';
     phrase2input.style.boxSizing = 'border-box';
     passwordDiv.appendChild(phrase2input);
+// ends
 
-
-    ///
-    //signupeq.innerText = 'Sign in'
 //
-
-
 
     const signupButton = document.createElement('button');
     signupButton.id = 'signupeq';
-    signupButton.innerText = 'Next';
+    signupButton.textContent = 'Next';
     loginPanelDiv.appendChild(signupButton);
 
     const footerDiv = document.createElement('div');
     footerDiv.style.width = '100%';
     loginPanelDiv.appendChild(footerDiv);
 
-    const errorP = document.createElement('p');
-    errorP.id = 'WrPa';
-    errorP.className = 'meta red';
-    errorP.innerText = 'Wrong password';
-    footerDiv.appendChild(errorP);
+    const errorLabel = document.createElement('label');
+    errorLabel.className = 'meta red'
+    errorLabel.id = 'errorLabel'
+    footerDiv.appendChild(errorLabel);
 
     const termsDiv = document.createElement('div');
     termsDiv.className = 'PrPa';

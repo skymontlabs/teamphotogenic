@@ -198,6 +198,35 @@ class MiniGl {
                       }), _miniGl.meshes.push(mesh), _miniGl.debug("Mesh.constructor", {
                           mesh: mesh
                       })
+                      /*
+
+                      mesh.geometry = geometry
+                      mesh.material = material
+                      mesh.wireframe = !1
+                      mesh.attributeInstances = []
+
+                      Object.entries(mesh.geometry.attributes).forEach(([e, attribute]) => {
+                          mesh.attributeInstances.push({
+                              attribute: attribute,
+                              location: attribute.attach(e, mesh.material.program)
+                          })
+                      }), _miniGl.meshes.push(mesh), _miniGl.debug("Mesh.constructor", {
+                          mesh: mesh
+                      })
+
+                      let len = mesh.geometry.attributes.length
+                      for (let i = 0; i < len; ++i) {
+                        [e, attribute] = mesh.geometry.attributes[i]
+                        mesh.attributeInstances.push({
+                            attribute: attribute,
+                            location: attribute.attach(e, mesh.material.program)
+                        })
+                      }
+                      _miniGl.meshes.push(mesh)
+                      _miniGl.debug("Mesh.constructor", {
+                          mesh: mesh
+                      })
+                      */
                   }
                   draw() {
                     context.useProgram(this.material.program), this.material.uniformInstances.forEach(({

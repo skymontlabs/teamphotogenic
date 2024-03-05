@@ -248,7 +248,7 @@ function generateImageBl() {
 }
 
 
-function generateImage() {
+function getImageID() {
   Mn.id='Ia'
   let divX=Mn.children[0]
   let divYz=DYZ.cloneNode(true)

@@ -35,6 +35,7 @@ function rte(url) {
 		if (Pge===1) {return}
 		Pge=1
 		if (loggedIn) {
+			
 			Ga.className = 'showRate';
 			clearMn(Mn)
 			getRater()
@@ -144,7 +145,6 @@ function rte(url) {
 	} else {
 		alert('phucc')
 	}
-
 }
 
 
@@ -367,7 +367,7 @@ document.onclick = (e) => {
 			cRate = aidx
 		}
 
-		// tag 
+		// tag
 		else if (Ua.contains(tG) && tG !== Ua) {
 			let aidx=key.charCodeAt(0) - 97
 			//console.log(aidx)
@@ -544,7 +544,7 @@ document.onclick = (e) => {
 
 	// sign out
 	else if (key == 'r') {
-		console.log('seggs')
+		console.log('signed out')
 		rte('/login')
 		window.history.pushState({},'/login','/login')
 	}

@@ -7,7 +7,7 @@
     grid-gap: 36px;
   }
 
-  @media (min-width: $tablet-max) and (max-width: $tablet-wide-max) {
+  @media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {
     grid-template-columns:  1fr 1fr;
     grid-gap: 20px;
   }
@@ -78,9 +78,11 @@
 }
 
 .taskItem {
-  overflow: hidden;
   .dtpt {
     margin-left: auto;
+  }
+  .dropsort {
+    top: 20px;
   }
 }
 
@@ -118,8 +120,26 @@
   display: grid;
   column-gap: 8px;
   overflow: hidden;
-  grid-template-columns:  1fr 1fr 1fr 1fr;
   padding-top: 1em;
+
+
+  @media (min-width: $tablet-wide-min) {
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+  }
+
+  @media (min-width: $phone-min) and (max-width: $tablet-wide-max) {
+    grid-template-columns:  1fr 1fr;
+    grid-template-rows:  1fr 1fr;
+    row-gap: 8px;
+  }
+
+  @media (max-width: $phone-max) {
+    grid-template-columns:  1fr;
+    grid-template-rows:  1fr  1fr  1fr 1fr;
+    row-gap: 8px;
+  }
+
+
 
   &>button {
     border: 0.5px solid rgb(235,238,241);
@@ -127,6 +147,9 @@
     border-radius: 8px;
     padding: 1em 1em 1em;
     text-align: left;
+    &:hover {
+      border: 0.5px solid rgba(#5984FF, 0.4) !important;
+    }
     h4 {
       margin: 8px 0 0;
     }
@@ -204,8 +227,6 @@
   font-weight:     500;
 }
 
-
-
 .BR {
   background:      rgba(51,54,56,0.04);
   width:           calc(20% - 8px);
@@ -217,9 +238,9 @@
   
   &::first-letter {
     display:       block;
-    font-size:     22px;
+    font-size:     20px;
     line-height:   32px;
-
+    padding: 0 47% 0 40%;
   }
 
   &>.E {
@@ -239,49 +260,3 @@
     border:        2px solid $scheme-color-2 !important;
   }
 }
-
-
-
-/*
-
-for gearagora
-
-.structure {
-  position: relative;
-  width: 20px;
-  margin-left: 12px;
-  padding: 0;
-
-  svg {
-    width: 20px;
-    height: 24px;
-    margin-right: 0;
-    display: block;
-  }
-
-  rect {
-    fill: #9a9b9f;
-  }
-
-  .radio {
-    width: 20px;
-    height: 32px;
-    position: absolute;
-    left: 0;
-    border:none;
-    background: transparent;
-    transform: translateY(-5px);
-    cursor: pointer;
-    top: 7px;
-    border-radius: 0;
-    padding: 0;
-  }
-
-  .radio:checked {
-    border-bottom: 0.5px solid #5984ff;
-  }
-
-  .radio:checked+svg rect {
-    fill:#5984ff;
-  }
-}*/

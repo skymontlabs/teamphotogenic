@@ -16,6 +16,35 @@ const AX = document.createElement('a')
 const UL = document.createElement('ul')
 const LI = document.createElement('li')
 
+function cr8_dt() {
+  let DT = BTN.cloneNode(true)
+  DT.className = 'dots btn L16'
+  let D0 = SPN.cloneNode(true)
+  D0.className = 'd0'
+  let D1 = SPN.cloneNode(true)
+  D1.className = 'd1'
+  let D2 = SPN.cloneNode(true)
+  D2.className = 'd2'
+
+  DT.appendChild(D0)
+  DT.appendChild(D1)
+  DT.appendChild(D2)
+
+  return DT
+}
+
+// hamburger
+let HMB = cr8_dt()
+
+
+let Mn = DIV.cloneNode(true)
+Mn.id = 'Mn'
+let xblk = DIV.cloneNode(true)
+xblk.className='x'
+
+Mn.appendChild(xblk)
+Ga.appendChild(Mn)
+
 
 //https://measurethat.net/Benchmarks/Show/10210/0/remove-all-children-from-dom-element
 function clearMn(nde, cleanChild=false) {
@@ -38,3 +67,8 @@ function clearMn(nde, cleanChild=false) {
 	}
 }
 
+
+
+function cleared() {
+	
+}

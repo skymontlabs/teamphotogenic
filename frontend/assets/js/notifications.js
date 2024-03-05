@@ -22,7 +22,7 @@ function addNotifications() {
     link.className='y pl f13 lh20 w5'
     link.href='/profile'
     img.src='img/square.jpg'
-    txt.innerText='Your text has sexmaster69420'
+    txt.firstChild.nodeValue='Your '
 
     link.appendChild(img)
     link.appendChild(txt)
@@ -32,4 +32,4 @@ function addNotifications() {
     nla.appendChild(lii)
   }
 }
-addNotifications()
+//addNotifications()

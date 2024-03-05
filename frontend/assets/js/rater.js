@@ -1,130 +1,3 @@
-function getRates() {
-  let divCa = DYZ.cloneNode(true)
-  divCa.id = 'Ca';
-
-  let btnBR = BTN.cloneNode(true)
-  btnBR.className='btn BR'
-  btnBR.id='R0'
-
-//https://stackoverflow.com/questions/4212909/can-css-force-a-line-break-after-each-word-in-an-element
-  let btnB1=btnBR.cloneNode(true)
-  btnB1.id='R1'
-  let btnB2=btnBR.cloneNode(true)
-  btnB2.id='R2'
-  let btnB3=btnBR.cloneNode(true)
-  btnB3.id='R3'
-  let btnB4=btnBR.cloneNode(true)
-  btnB4.id='R4'
-
-  btnBR.innerHTML='😒<br>Eh'
-  btnB1.innerHTML='😐<br>Decent'
-  btnB2.innerHTML='😃<br>Great'
-  btnB3.innerHTML='🤩<br>Stunning'
-  btnB4.innerHTML='🤑<br>Brilliant'
-
-  divCa.appendChild(btnBR)
-  divCa.appendChild(btnB1)
-  divCa.appendChild(btnB2)
-  divCa.appendChild(btnB3)
-  divCa.appendChild(btnB4)
-  return divCa
-}
-
-
-function getUa() {
-  let divUa = DIV.cloneNode(true)
-  divUa.id = 'Ua';
-
-  // Manually create and append each span
-  let spanQa = SPN.cloneNode(true)
-  spanQa.id = 'Qa';
-  spanQa.className = 'BZ';
-  spanQa.textContent = '😓 awkward';
-  divUa.appendChild(spanQa);
-
-  let spanQb = spanQa.cloneNode(true)
-  spanQb.id = 'Qb';
-  spanQb.textContent = '🫥 bad expression';
-  divUa.appendChild(spanQb);
-
-  let spanQc = spanQa.cloneNode(true)
-  spanQc.id = 'Qc';
-  spanQc.textContent = '🖼 bad framing';
-  divUa.appendChild(spanQc);
-
-  let spanQd = spanQa.cloneNode(true)
-  spanQd.id = 'Qd';
-  spanQd.textContent = '🍞 bland';
-  divUa.appendChild(spanQd);
-
-  let spanQe = spanQa.cloneNode(true)
-  spanQe.id = 'Qe';
-  spanQe.textContent = '🏟 distracting';
-  divUa.appendChild(spanQe);
-
-  let spanQf = spanQa.cloneNode(true)
-  spanQf.id = 'Qf';
-  spanQf.textContent = '💨 blurry';
-  divUa.appendChild(spanQf);
-
-  let spanQg = spanQa.cloneNode(true)
-  spanQg.id = 'Qg';
-  spanQg.textContent = '⚡️ bright';
-  divUa.appendChild(spanQg);
-
-  let spanQh = spanQa.cloneNode(true)
-  spanQh.id = 'Qh';
-  spanQh.textContent = '🚊 busy';
-  divUa.appendChild(spanQh);
-
-  let spanQi = spanQa.cloneNode(true)
-  spanQi.id = 'Qi';
-  spanQi.textContent = '🌈 colorful';
-  divUa.appendChild(spanQi);
-
-  let spanQj = spanQa.cloneNode(true)
-  spanQj.id = 'Qj';
-  spanQj.textContent = '🕶 cool';
-  divUa.appendChild(spanQj);
-
-  let spanQk = spanQa.cloneNode(true)
-  spanQk.id = 'Qk';
-  spanQk.textContent = '🌚 dark';
-  divUa.appendChild(spanQk);
-
-  let spanQl = spanQa.cloneNode(true)
-  spanQl.id = 'Ql';
-  spanQl.textContent = '😬 forced smile';
-  divUa.appendChild(spanQl);
-
-  let spanQm = spanQa.cloneNode(true)
-  spanQm.id = 'Qm';
-  spanQm.textContent = '🧂 grainy';
-  divUa.appendChild(spanQm);
-
-  let spanQn = spanQa.cloneNode(true)
-  spanQn.id = 'Qn';
-  spanQn.textContent = '🚨 overedited';
-  divUa.appendChild(spanQn);
-
-  let spanQo = spanQa.cloneNode(true)
-  spanQo.id = 'Qo';
-  spanQo.textContent = '🚶 poor posture';
-  divUa.appendChild(spanQo);
-
-  let spanQp = spanQa.cloneNode(true)
-  spanQp.id = 'Qp';
-  spanQp.textContent = '🔭 too far away';
-  divUa.appendChild(spanQp);
-
-  let spanQq = spanQa.cloneNode(true)
-  spanQq.id = 'Qq';
-  spanQq.textContent = '🔎 too close up';
-  divUa.appendChild(spanQq);
-
-  return divUa
-}
-
 function generateRatingBlock() {
     // Main containers
     const RIaDiv = document.createElement('div');
@@ -140,9 +13,13 @@ function generateRatingBlock() {
     RIaDiv.appendChild(RBaDiv);
 
     const imgElement = document.createElement('img');
+    imgElement.id = 'RIm'
     imgElement.src = "img/laurie.jpg";
     imgElement.alt = "Rating picture";
     RIaDiv.appendChild(imgElement);
+
+
+
 
     // RDa child elements - Rating
     const ratingSpan = document.createElement('span');
@@ -150,22 +27,31 @@ function generateRatingBlock() {
     ratingSpan.textContent = 'Rating*';
     RDaDiv.appendChild(ratingSpan);
 
-/*
+
+    // ratings
     const CaDiv = document.createElement('div');
     CaDiv.id = 'Ca';
     CaDiv.className = 'y z';
 
     const ratings = ['😒 Eh', '😐 Decent', '😃 Great', '🤩 Stunning', '🤑 Brilliant'];
-
+    let ratingBtns = {}
     ratings.forEach((rating, index) => {
         const button = document.createElement('button');
-        button.id = `R${index}`;
+        let bid = `Rt${index}`
+        button.id = bid;
         button.className = 'btn BR';
-        button.innerHTML = rating.replace(' ', '<br>');
+        button.textContent = rating;
+        ratingBtns[button] = index
         CaDiv.appendChild(button);
     });
-*/
-    RDaDiv.appendChild(getRates());
+
+
+    BUTTONS.HOME_RATES = ratingBtns
+    RDaDiv.appendChild(CaDiv);
+
+
+
+
 
     // RDa child elements - Tags
     const tagsSpan = document.createElement('span');
@@ -173,7 +59,10 @@ function generateRatingBlock() {
     tagsSpan.textContent = 'Tags';
     RDaDiv.appendChild(tagsSpan);
 
-/*
+
+
+
+//// prefer inline loops
     const UaDiv = document.createElement('div');
     UaDiv.id = 'Ua';
 
@@ -188,9 +77,11 @@ function generateRatingBlock() {
         span.textContent = tag;
         UaDiv.appendChild(span);
     });
-*/
+    BUTTONS.HOME_TAGS = UaDiv
 
-    RDaDiv.appendChild(getUa());
+    RDaDiv.appendChild(UaDiv);
+
+////
 
     // Comment section
     const commentSpan = document.createElement('span');
@@ -232,6 +123,7 @@ function generateRatingBlock() {
 
     const buttonsDiv = document.createElement('div');
     buttonsDiv.className = 'y';
+    buttonsDiv.id = 'prcd';
 
     const skipBtn = document.createElement('button');
     skipBtn.id = 'Sk';
@@ -240,6 +132,7 @@ function generateRatingBlock() {
     skipSpan.className = 'f11';
     skipSpan.textContent = 'Skip';
     skipBtn.appendChild(skipSpan);
+    BUTTONS.HOME_SKIP = skipBtn
     buttonsDiv.appendChild(skipBtn);
 
     const submitBtn = document.createElement('button');
@@ -250,6 +143,8 @@ function generateRatingBlock() {
     submitSpan.textContent = 'Submit';
     submitBtn.appendChild(submitSpan);
     buttonsDiv.appendChild(submitBtn);
+    BUTTONS.HOME_SUBMIT = submitBtn
+    BUTTONS.HOME_PROCEED = buttonsDiv
 
     actionDiv.appendChild(buttonsDiv);
     RDaDiv.appendChild(actionDiv);

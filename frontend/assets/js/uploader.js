@@ -20,6 +20,7 @@ function handleDrop(e) {
 }
 
 
+
 function uploadFile(file) {
   var url = 'YOUR URL HERE'
   var xhr = new XMLHttpRequest()
@@ -54,6 +55,9 @@ function previewFile(file) {
     dropArea.className='A y z'
   }
 }
+
+
+
 
 
 function handleFiles(files) {

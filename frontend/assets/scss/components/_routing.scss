@@ -78,7 +78,7 @@
 		}
 
 		#Ra {
-			height: auto;
+			height: 100%;
 			visibility: visible;
 			@media (max-width: $tablet-wide-max) {
 				flex-direction: column;

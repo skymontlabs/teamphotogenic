@@ -1,4 +1,4 @@
-function gTFA()
+function getTFA()
 {
   // Create the main div
   const panel2aDiv = DIV.cloneNode(true)
@@ -51,201 +51,104 @@ function gTFA()
   return panel2aDiv;
 }
 
-function generateBuyCredDataDiv() {
-    const buyCredDataDiv = DIV.cloneNode(true)
-    buyCredDataDiv.id = 'buyCredData';
-    buyCredDataDiv.className = 'box-layout abs';
-    buyCredDataDiv.style.display = 'none';
+function generateBuyCredDataDiv()
+{
+  const buyCredDataDiv = DIV.cloneNode(true)
+  buyCredDataDiv.id = 'buyCredData';
+  buyCredDataDiv.className = 'box-layout abs';
+  buyCredDataDiv.style.display = 'none';
 
-    const creditData = [
-        { id: 'z40c', price: '$5', quantity: '50 Credits', discount: null },
-        { id: 'z100c', price: '$9', quantity: '100 Credits', discount: '10% discount' },
-        { id: 'z250c', price: '$13', quantity: '150 Credits', discount: '13% discount' },
-        { id: 'z500c', price: '$16', quantity: '200 Credits', discount: '20% discount' }
-    ];
+  const creditData = [
+      { id: 'z40c', price: '$5', quantity: '50 Credits', discount: null },
+      { id: 'z100c', price: '$9', quantity: '100 Credits', discount: '10% discount' },
+      { id: 'z250c', price: '$13', quantity: '150 Credits', discount: '13% discount' },
+      { id: 'z500c', price: '$16', quantity: '200 Credits', discount: '20% discount' }
+  ];
 
-    creditData.forEach(data => {
-        const div = DIV.cloneNode(true)
-        div.id = data.id;
-        div.className = 'mt11 pt11 buy-button';
+  creditData.forEach(data => {
+      const div = DIV.cloneNode(true)
+      div.id = data.id;
+      div.className = 'mt11 pt11 buy-button';
 
-        const creditBuyDiv = DIV.cloneNode(true)
-        creditBuyDiv.className = 'credit-buy';
+      const creditBuyDiv = DIV.cloneNode(true)
+      creditBuyDiv.className = 'credit-buy';
 
-        const a = document.createElement('a');
-        a.href = '/';
-        a.target = '_blank';
-        a.className = 'w48p price v mat buy w5 tr btn-primary f17';
-        const span = document.createElement('span');
-        span.textContent = data.price;
-        a.appendChild(span);
-        creditBuyDiv.appendChild(a);
+      const a = document.createElement('a');
+      a.href = '/';
+      a.target = '_blank';
+      a.className = 'w48p price v mat buy w5 tr btn-primary f17';
+      const span = document.createElement('span');
+      span.textContent = data.price;
+      a.appendChild(span);
+      creditBuyDiv.appendChild(a);
 
-        const quantityDiv = DIV.cloneNode(true)
-        quantityDiv.className = 'quantity v w120p w6';
-        quantityDiv.textContent = data.quantity;
-        creditBuyDiv.appendChild(quantityDiv);
+      const quantityDiv = DIV.cloneNode(true)
+      quantityDiv.className = 'quantity v w120p w6';
+      quantityDiv.textContent = data.quantity;
+      creditBuyDiv.appendChild(quantityDiv);
 
-        if (data.discount) {
-            const discDiv = DIV.cloneNode(true)
-            discDiv.className = 'disc';
-            discDiv.textContent = data.discount;
-            creditBuyDiv.appendChild(discDiv);
-        }
+      if (data.discount) {
+          const discDiv = DIV.cloneNode(true)
+          discDiv.className = 'disc';
+          discDiv.textContent = data.discount;
+          creditBuyDiv.appendChild(discDiv);
+      }
 
-        div.appendChild(creditBuyDiv);
-        buyCredDataDiv.appendChild(div);
-    });
+      div.appendChild(creditBuyDiv);
+      buyCredDataDiv.appendChild(div);
+  });
 
-    const dnDiv = DIV.cloneNode(true)
-    dnDiv.className = 'dn';
+  const dnDiv = DIV.cloneNode(true)
+  dnDiv.className = 'dn';
 
-    const h2 = document.createElement('h2');
-    h2.textContent = 'Checkout';
-    dnDiv.appendChild(h2);
+  const h2 = document.createElement('h2');
+  h2.textContent = 'Checkout';
+  dnDiv.appendChild(h2);
 
-    const inputWrapper = DIV.cloneNode(true)
-    ['CCcodea', 'CCexpa', 'CCcvva'].forEach((id, index) => {
-        const input = document.createElement('input');
-        input.id = id;
-        input.type = index === 2 ? 'number' : 'text';
-        inputWrapper.appendChild(input);
-    });
+  const inputWrapper = DIV.cloneNode(true)
+  ['CCcodea', 'CCexpa', 'CCcvva'].forEach((id, index) => {
+      const input = document.createElement('input');
+      input.id = id;
+      input.type = index === 2 ? 'number' : 'text';
+      inputWrapper.appendChild(input);
+  });
 
-    dnDiv.appendChild(inputWrapper);
-    buyCredDataDiv.appendChild(dnDiv);
+  dnDiv.appendChild(inputWrapper);
+  buyCredDataDiv.appendChild(dnDiv);
 
-    return buyCredDataDiv;
+  return buyCredDataDiv;
 }
 
 
 
-function gReport() {
-    // Create the main div
-    const repaDiv = DIV.cloneNode(true)
-    repaDiv.className = 'abs dn';
-    repaDiv.style.background = 'white';
-    repaDiv.style.width = '700px';
-    repaDiv.style.display = 'none';
-    repaDiv.id = 'REPa';
+function getReport()
+{
+  // Create the main div
+  const repaDiv = DIV.cloneNode(true)
+  repaDiv.className = 'abs dn';
+  repaDiv.style.background = 'white';
+  repaDiv.style.width = '700px';
+  repaDiv.style.display = 'none';
+  repaDiv.id = 'REPa';
 
-    // Add the header
-    const h3 = document.createElement('h3');
-    h3.textContent = 'Are you sure you want to report this image?';
-    repaDiv.appendChild(h3);
+  // Add the header
+  const h3 = document.createElement('h3');
+  h3.textContent = 'Are you sure you want to report this image?';
+  repaDiv.appendChild(h3);
 
-    // Add the paragraph
-    const p = document.createElement('p');
-    p.textContent = 'Images can be reported for being spammy, pornographic, or harassing.';
-    repaDiv.appendChild(p);
+  // Add the paragraph
+  const p = document.createElement('p');
+  p.textContent = 'Images can be reported for being spammy, explicit, or harassing.';
+  repaDiv.appendChild(p);
 
-    // Add the button
-    const button = document.createElement('button');
-    button.className = 'btn alt';
-    button.textContent = 'Submit';
-    repaDiv.appendChild(button);
+  // Add the button
+  const button = document.createElement('button');
+  button.className = 'btn alt';
+  button.textContent = 'Submit';
+  repaDiv.appendChild(button);
 
-    // Return the main div
-    return repaDiv;
-}
-
-function createDropAreaDiv() {
-    const dropAreaDiv = DIV.cloneNode(true)
-    dropAreaDiv.id = 'dropArea';
-    dropAreaDiv.classList.add('y', 'z');
-
-    const innerDiv1 = DIV.cloneNode(true)
-    innerDiv1.style.width = '500px';
-
-    const form = document.createElement('form');
-    form.classList.add('my-form');
-
-    const ptxt = document.createElement('p');
-    ptxt.id = 'ptxt';
-    ptxt.textContent = 'Upload multiple files with the file dialog or by dragging and dropping images onto the dashed region';
-    form.appendChild(ptxt);
-
-    const fileInput = document.createElement('input');
-    fileInput.type = 'file';
-    fileInput.id = 'fileElem';
-    fileInput.multiple = true;
-    fileInput.accept = 'image/*';
-    fileInput.setAttribute('onchange', 'handleFiles(this.files)');
-    form.appendChild(fileInput);
-
-    const label = document.createElement('label');
-    label.id = 'UpB';
-    label.classList.add('button');
-    label.setAttribute('for', 'fileElem');
-    label.textContent = 'Select some files';
-    form.appendChild(label);
-
-    innerDiv1.appendChild(form);
-
-    const instructionP = document.createElement('p');
-    instructionP.classList.add('dn');
-    instructionP.textContent = 'Implement a dropdown function for the gallery that would include a caret. This is so we can hide the images if the user believes it to be annoying. Also allow for deletion and addition of images. No make this a gallery like instagram, but where you can go through a total filelevel view';
-    innerDiv1.appendChild(instructionP);
-
-    const img = document.createElement('img');
-    img.id = 'prvIm';
-    img.style.width = '500px';
-    innerDiv1.appendChild(img);
-
-    const upgalDiv = DIV.cloneNode(true)
-    upgalDiv.id = 'upgal';
-    upgalDiv.classList.add('GaL', 'y');
-    innerDiv1.appendChild(upgalDiv);
-
-    dropAreaDiv.appendChild(innerDiv1);
-
-    // Task preferences
-    const updDiv = DIV.cloneNode(true)
-    updDiv.id = 'Upd';
-    updDiv.classList.add('dn');
-    updDiv.style.width = '400px';
-    updDiv.style.padding = '0 24px';
-    updDiv.style.boxSizing = 'border-box';
-
-    const h4 = document.createElement('h4');
-    h4.style.margin = '0';
-    h4.style.padding = '24px 0 12px';
-    h4.textContent = 'Task preferences';
-    updDiv.appendChild(h4);
-
-    // Age section
-    const ageSection = cre8slider('Age', 'scoreRangex', 10, 40, null, null);
-    updDiv.appendChild(ageSection);
-
-    // Gender section
-    const genderDiv = createGenderSection();
-    updDiv.appendChild(genderDiv);
-
-    // Votes per image section
-    const votesSection = cre8slider('# votes / image', 'scoreRang', 25, null, 1, 10000);
-    updDiv.appendChild(votesSection);
-
-    const creditSpan1 = document.createElement('span');
-    creditSpan1.classList.add('F12', 'T16');
-    creditSpan1.textContent = 'Credits needed';
-    updDiv.appendChild(creditSpan1);
-
-    updDiv.appendChild(document.createElement('br'));
-
-    const creditSpan2 = document.createElement('span');
-    creditSpan2.textContent = '10 images x 10 votes/image = 100 credits';
-    updDiv.appendChild(creditSpan2);
-
-    const submitButton = document.createElement('button');
-    submitButton.style.width = '100%';
-    submitButton.style.margin = '2em 0 0';
-    submitButton.classList.add('btn', 'blue');
-    submitButton.textContent = 'Submit task';
-    updDiv.appendChild(submitButton);
-
-    dropAreaDiv.appendChild(updDiv);
-
-    return dropAreaDiv;
+  // Return the main div
+  return repaDiv;
 }
 
 function cre8slider(titleText, id, fromValue, toValue, min, max) {
@@ -337,9 +240,120 @@ function createGenderSection() {
 
 
 
+
+function createDropAreaDiv() {
+    const dropAreaDiv = DIV.cloneNode(true)
+    dropAreaDiv.id = 'dropArea';
+    dropAreaDiv.classList.add('y', 'z');
+
+    const innerDiv1 = DIV.cloneNode(true)
+    innerDiv1.style.width = '500px';
+
+    const form = document.createElement('form');
+    form.classList.add('my-form');
+
+    const ptxt = document.createElement('p');
+    ptxt.id = 'ptxt';
+    ptxt.textContent = 'Upload multiple files with the file dialog or by dragging and dropping images onto the dashed region';
+    form.appendChild(ptxt);
+
+    var fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.id = 'fileElem';
+    fileInput.setAttribute('multiple', ''); // Allows multiple file selection
+    fileInput.setAttribute('accept', '.jpg, .jpeg, .png, .webp, .heif'); // Sets accepted file types
+
+    // Add an event listener for the 'change' event
+    fileInput.addEventListener('change', function() {
+        alert('change/upload')
+        handleFiles(this.files);
+    });
+
+
+    form.appendChild(fileInput);
+
+    const label = document.createElement('label');
+    label.id = 'UpB';
+    label.classList.add('button');
+    label.setAttribute('for', 'fileElem');
+    label.textContent = 'Select some files';
+    form.appendChild(label);
+
+    innerDiv1.appendChild(form);
+
+    const instructionP = document.createElement('p');
+    instructionP.classList.add('dn');
+    instructionP.textContent = 'Implement a dropdown function for the gallery that would include a caret. This is so we can hide the images if the user believes it to be annoying. Also allow for deletion and addition of images. No make this a gallery like instagram, but where you can go through a total filelevel view';
+    innerDiv1.appendChild(instructionP);
+
+    const img = document.createElement('img');
+    img.id = 'prvIm';
+    img.style.width = '500px';
+    innerDiv1.appendChild(img);
+
+    const upgalDiv = DIV.cloneNode(true)
+    upgalDiv.id = 'upgal';
+    upgalDiv.classList.add('GaL', 'y');
+    innerDiv1.appendChild(upgalDiv);
+
+    dropAreaDiv.appendChild(innerDiv1);
+
+    // Task preferences
+    const updDiv = DIV.cloneNode(true)
+    updDiv.id = 'Upd';
+    updDiv.classList.add('dn');
+    updDiv.style.width = '400px';
+    updDiv.style.padding = '0 24px';
+    updDiv.style.boxSizing = 'border-box';
+
+    const h4 = document.createElement('h4');
+    h4.style.margin = '0';
+    h4.style.padding = '24px 0 12px';
+    h4.textContent = 'Task prefersences';
+    updDiv.appendChild(h4);
+
+    // Age section
+    const ageSection = cre8slider('Age', 'scoreRangex', 10, 40, null, null);
+    updDiv.appendChild(ageSection);
+
+    // Gender section
+    const genderDiv = createGenderSection();
+    genderDiv.style.display='none'
+    updDiv.appendChild(genderDiv);
+
+    // Votes per image section
+    const votesSection = cre8slider('# votes / image', 'scoreRang', 25, null, 1, 10000);
+    votesSection.style.display='none'
+    updDiv.appendChild(votesSection);
+
+    const creditSpan1 = document.createElement('span');
+    creditSpan1.classList.add('F12', 'T16');
+    creditSpan1.textContent = 'Credits needed';
+    creditSpan1.style.display='none'
+    updDiv.appendChild(creditSpan1);
+
+    updDiv.appendChild(document.createElement('br'));
+
+    const creditSpan2 = document.createElement('span');
+    creditSpan2.style.display='none'
+    creditSpan2.textContent = '10 images x 10 votes/image = 100 credits';
+    updDiv.appendChild(creditSpan2);
+
+    const submitButton = document.createElement('button');
+    submitButton.style.width = '100%';
+    submitButton.style.margin = '2em 0 0';
+    submitButton.classList.add('btn', 'blue');
+    submitButton.textContent = 'Submit task';
+    updDiv.appendChild(submitButton);
+
+    dropAreaDiv.appendChild(updDiv);
+
+    return dropAreaDiv;
+}
+
 function generateDark() {
 	let divZZ = DIV.cloneNode(true)
-	divZZ.id='ZZ'
+  /*
 	divZZ.innerHTML=
 	`<div id="panel2a" class="dn">
         <p>Scan this QR code and copy down this</p>
@@ -460,7 +474,11 @@ function generateDark() {
             <input id="CCcvva" type="number">
           </div>
         </div>
-      </div>`
+      </div>`*/
+
+    divZZ.appendChild(createDropAreaDiv())
+
+  divZZ.id='ZZ'
     return divZZ
 }
 

@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: $base-font;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.618;
   background: white;
@@ -63,13 +63,13 @@ p {
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding-left: 48px;
+  padding-right: 48px;
   max-width: 1368px;
 
   @media (max-width: $tablet-max) {
-    padding-left: 1em;
-    padding-right: 1em
+    padding-left: 16px;
+    padding-right: 16px
   }
 
   &.tablet-max {
@@ -230,7 +230,7 @@ ul {
 // descendants display block
 .BlA>span,
 .BlA>a {
-  padding-left: 1em;
+  padding-left: 16px;
   display: block;
   text-align: left;
   color: #424652;

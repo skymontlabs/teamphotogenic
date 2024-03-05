@@ -20,7 +20,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.618;
   background: white;
@@ -71,14 +71,14 @@ p {
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding-left: 48px;
+  padding-right: 48px;
   max-width: 1368px;
 }
 @media (max-width: 768px) {
   .x {
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 @media (max-width: 768px) {
@@ -227,7 +227,7 @@ ul {
 
 .BlA > span,
 .BlA > a {
-  padding-left: 1em;
+  padding-left: 16px;
   display: block;
   text-align: left;
   color: #424652;
@@ -1370,7 +1370,7 @@ a:hover, a:active, a:focus, a:visited {
   }
 }
 #Ga.showRate #Ra {
-  height: auto;
+  height: 100%;
   visibility: visible;
 }
 @media (max-width: 1024px) {
@@ -1579,7 +1579,6 @@ a:hover, a:active, a:focus, a:visited {
   background: white;
   margin: 0;
   top: 54px;
-  cursor: pointer;
   box-shadow: 0px 15px 50px 0px rgba(27, 32, 50, 0.1);
   border-radius: 8px;
   padding: 8px;
@@ -1593,6 +1592,7 @@ a:hover, a:active, a:focus, a:visited {
   padding: 2px 8px 2px 15px;
   transition: 0.4s ease all;
   border-radius: 6px;
+  cursor: pointer;
 }
 .dropsort > li:hover {
   background: rgba(242, 242, 244, 0.4);
@@ -2071,15 +2071,8 @@ input[type=checkbox] {
   border: none;
 }
 
-#RDa {
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 @media (max-width: 768px) {
-  #RDa:after {
+  #Ra:after {
     content: "";
     height: 120px;
     width: 100%;
@@ -2090,11 +2083,22 @@ input[type=checkbox] {
     left: 0;
   }
 }
+
+#RDa {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 @media (max-width: 768px) {
   #RDa {
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 1.5em;
+    height: 280px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 0;
+    position: absolute;
+    bottom: 0;
   }
 }
 @media (min-width: 769px) {
@@ -2102,22 +2106,26 @@ input[type=checkbox] {
     height: 500px;
     top: 50%;
     position: absolute;
-    right: 3em;
+    right: 48px;
     transform: translateY(-50%);
     padding: 0;
   }
 }
 @media (min-width: 1025px) {
   #RDa {
-    width: calc(50% - 6em);
+    width: calc(50% - 96px);
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   #RDa {
-    width: calc(61.8% - 6em);
+    width: calc(61.8% - 96px);
   }
 }
+#RDa.one {
+  transform: translateY(-150px);
+}
 #RDa .fwHeavy {
+  margin-top: 40px;
   font-weight: 600;
   font-size: 17px;
   margin-bottom: 0px;
@@ -2126,6 +2134,7 @@ input[type=checkbox] {
 }
 #RDa textarea {
   width: 100%;
+  margin-bottom: 1em;
 }
 #RDa.tagsLevel {
   transition: 0.5s ease all;
@@ -2160,7 +2169,7 @@ input[type=checkbox] {
 @media (max-width: 768px) {
   #RIa {
     width: 100%;
-    height: 420px;
+    height: calc(100vh - 280px);
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -2187,6 +2196,18 @@ input[type=checkbox] {
   width: 100%;
   max-height: 100vh;
   object-fit: contain;
+}
+@media (max-width: 768px) {
+  #RIa img {
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: calc(100vh - 280px);
+    object-fit: contain;
+  }
 }
 @media (min-width: 769px) {
   #RIa img {
@@ -2251,14 +2272,6 @@ input[type=checkbox] {
   margin-top: 4px;
 }
 
-@media (min-width: 1025px) {
-  #Ca,
-  #Ua,
-  #CMa {
-    transform: translateY(-14px);
-  }
-}
-
 /*
 .data-grid {
   grid-template-columns:  1fr 1fr;
@@ -2275,7 +2288,7 @@ input[type=checkbox] {
     grid-gap: 36px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   #TLS {
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
@@ -2341,11 +2354,11 @@ input[type=checkbox] {
   padding-bottom: 12px;
 }
 
-.taskItem {
-  overflow: hidden;
-}
 .taskItem .dtpt {
   margin-left: auto;
+}
+.taskItem .dropsort {
+  top: 20px;
 }
 
 .imgData {
@@ -2378,8 +2391,26 @@ input[type=checkbox] {
   display: grid;
   column-gap: 8px;
   overflow: hidden;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   padding-top: 1em;
+}
+@media (min-width: 1025px) {
+  #tflta {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 401px) and (max-width: 1024px) {
+  #tflta {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 8px;
+  }
+}
+@media (max-width: 400px) {
+  #tflta {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 8px;
+  }
 }
 #tflta > button {
   border: 0.5px solid rgb(235, 238, 241);
@@ -2387,6 +2418,9 @@ input[type=checkbox] {
   border-radius: 8px;
   padding: 1em 1em 1em;
   text-align: left;
+}
+#tflta > button:hover {
+  border: 0.5px solid rgba(89, 132, 255, 0.4) !important;
 }
 #tflta > button h4 {
   margin: 8px 0 0;
@@ -2469,8 +2503,9 @@ input[type=checkbox] {
 }
 .BR::first-letter {
   display: block;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 32px;
+  padding: 0 47% 0 40%;
 }
 .BR > .E {
   display: block;
@@ -2486,49 +2521,6 @@ input[type=checkbox] {
   border: 2px solid #5984FF !important;
 }
 
-/*
-
-for gearagora
-
-.structure {
-  position: relative;
-  width: 20px;
-  margin-left: 12px;
-  padding: 0;
-
-  svg {
-    width: 20px;
-    height: 24px;
-    margin-right: 0;
-    display: block;
-  }
-
-  rect {
-    fill: #9a9b9f;
-  }
-
-  .radio {
-    width: 20px;
-    height: 32px;
-    position: absolute;
-    left: 0;
-    border:none;
-    background: transparent;
-    transform: translateY(-5px);
-    cursor: pointer;
-    top: 7px;
-    border-radius: 0;
-    padding: 0;
-  }
-
-  .radio:checked {
-    border-bottom: 0.5px solid #5984ff;
-  }
-
-  .radio:checked+svg rect {
-    fill:#5984ff;
-  }
-}*/
 #UpB {
   width: calc(100% - 0px);
   background: transparent;
@@ -2536,10 +2528,7 @@ for gearagora
   box-sizing: border-box;
   text-align: center;
   padding: 2em 0;
-  background-image: repeating-linear-gradient(to right, #333 0%, #333 50%, transparent 50%, transparent 100%), repeating-linear-gradient(to right, #333 0%, #333 50%, transparent 50%, transparent 100%), repeating-linear-gradient(to bottom, #333 0%, #333 50%, transparent 50%, transparent 100%), repeating-linear-gradient(to bottom, #333 0%, #333 50%, transparent 50%, transparent 100%);
-  background-position: left top, left bottom, left top, right top;
-  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-  background-size: 27.14px 3px, 27.14px 3px, 3px 31.25px, 3px 31.25px;
+  border: 1px dashed;
   border-radius: 8px;
 }
 
@@ -2566,7 +2555,13 @@ for gearagora
   border-radius: 8px;
   background: white;
   overflow: hidden;
+  padding: 0;
+}
+#dropArea .my-form {
   padding: 2em;
+}
+#dropArea.A .my-form {
+  padding: 0;
 }
 #dropArea #upgal,
 #dropArea img {

@@ -4,7 +4,191 @@ let languages =
 	'Spanish'
 ]
 
-function genPrf() {
+function getProfileNav() {
+  var divElement = document.createElement('div');
+  divElement.id = 'SBa';
+  divElement.className = 'BlA';
+
+  // Define the links and their IDs
+  var links = [
+    { id: 'P_', href: '/profile', text: 'Profile' },
+    { id: 'S_', href: '/security', text: 'Security' },
+    { id: 'A_', href: '/alerts', text: 'Alerts' },
+    { id: 'R_', href: '/billing', text: 'Billing' },
+    { id: 'H_', href: '/help', text: 'Help' }
+  ];
+
+  // Use an old-style for loop to iterate over each link
+  for (var i = 0; i < links.length; i++) {
+    var link = links[i];
+    var aElement = document.createElement('a');
+    aElement.id = link.id;
+    aElement.href = link.href;
+    aElement.textContent = link.text;
+    
+    // Append the anchor element to the div
+    divElement.appendChild(aElement);
+  }
+}
+
+
+// Function to simplify element creation and property setting remains the same
+function createElement(type, properties = {}) {
+  const element = document.createElement(type);
+  for (const prop in properties) {
+    if (prop === 'textContent') element.textContent = properties[prop];
+    else if (prop === 'className') element.className = properties[prop];
+    else element.setAttribute(prop, properties[prop]);
+  }
+  return element;
+}
+
+
+
+function getEditProfile()
+{
+  // Create the main div element
+  var mainDiv = document.createElement('div');
+  mainDiv.id = 'EPa';
+  mainDiv.className = 'profilePage';
+
+  // Add H2 title
+  var titleH2 = document.createElement('h2');
+  titleH2.textContent = 'Edit Profile';
+  mainDiv.appendChild(titleH2);
+
+  // Nested divs for Email and Phone
+  var divClasses = ['y', 'z'];
+  var divClassRel = 'rel';
+  var inputClasses = '';
+  var svgClass = 'editSvg';
+
+  // Email and Phone container
+  var containerDiv = document.createElement('div');
+  divClasses.forEach(c => containerDiv.classList.add(c));
+
+  // Email section
+  var emailDiv = document.createElement('div');
+  emailDiv.className = divClassRel;
+  emailDiv.style.cssText = 'width: calc(50% - 10px);';
+
+  // Email title
+  var emailTitle = document.createElement('h5');
+  emailTitle.textContent = 'Email';
+  emailDiv.appendChild(emailTitle);
+
+  // Email input container
+  var emailInputContainer = document.createElement('div');
+  emailInputContainer.className = divClassRel;
+
+  // Email input
+  var emailInput = document.createElement('input');
+  emailInput.id = 'EMLa';
+  emailInput.className = inputClasses;
+  emailInput.placeholder = 'Email';
+  emailInput.type = 'email';
+  emailInput.disabled = true;
+
+  // Email SVG icon
+  var emailSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  emailSvg.setAttributeNS(null, 'width', '24');
+  emailSvg.setAttributeNS(null, 'height', '24');
+  emailSvg.setAttributeNS(null, 'viewBox', '0 0 528.899 528.899');
+  emailSvg.classList.add(svgClass);
+  emailSvg.id = 'EiEml';
+
+  var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  path.setAttributeNS(null, 'fill', '#999');
+  path.setAttributeNS(null, 'd', 'm328.883 89.125 107.59 107.589-272.34 272.34L56.604 361.465l272.279-272.34zm189.23-25.948-47.981-47.981c-18.543-18.543-48.653-18.543-67.259 0l-45.961 45.961 107.59 107.59 53.611-53.611c14.382-14.383 14.382-37.577 0-51.959zM.3 512.69c-1.958 8.812 5.998 16.708 14.811 14.565l119.891-29.069L27.473 390.597.3 512.69z');
+  emailSvg.appendChild(path);
+
+  emailInputContainer.appendChild(emailInput);
+  emailInputContainer.appendChild(emailSvg);
+  emailDiv.appendChild(emailInputContainer);
+  containerDiv.appendChild(emailDiv);
+
+  // Phone section (similar structure to email, without the SVG)
+  var phoneDiv = document.createElement('div');
+  phoneDiv.className = divClassRel;
+  phoneDiv.style.cssText = 'width: calc(50% - 10px);';
+
+  // Phone title
+  var phoneTitle = document.createElement('h5');
+  phoneTitle.textContent = 'Phone';
+  phoneDiv.appendChild(phoneTitle);
+
+  // Phone input container
+  var phoneInputContainer = document.createElement('div');
+
+  // Phone input
+  var phoneInput = document.createElement('input');
+  phoneInput.id = 'PHNn';
+  phoneInput.className = inputClasses;
+  phoneInput.placeholder = 'Phone';
+  phoneInput.type = 'text';
+
+  phoneInputContainer.appendChild(phoneInput);
+  phoneDiv.appendChild(phoneInputContainer);
+  containerDiv.appendChild(phoneDiv);
+
+
+  // Sections data
+  const sections = [
+    { title: 'Gender*', id: 'pGda', items: ['Female', 'Male'] },
+    { title: 'Age Range*', id: 'pAge', items: ['18-24', '25-29', '30-39', '40-49', '50+'] },
+    { title: 'Online Habits*', id: 'pHbt', items: ['Rarely', 'Weekly', 'Daily', 'Hourly'] }
+  ];
+
+  // Loop through sections
+  for (let i = 0; i < sections.length; i++) {
+    const section = sections[i];
+    
+    // Section Div
+    const sectionDiv = document.createElement('div');
+    
+    // Title
+    const titleH5 = document.createElement('h5');
+    titleH5.className = 'fwHeavy';
+    titleH5.textContent = section.title;
+    sectionDiv.appendChild(titleH5); // Append title to section div
+    
+    // Pills Wrapper
+    const pillsWrapper = document.createElement('div');
+    pillsWrapper.id = section.id;
+    pillsWrapper.className = 'pilWr y';
+    sectionDiv.appendChild(pillsWrapper); // Append pills wrapper to section div
+    
+    // Loop through items in each section
+    for (let j = 0; j < section.items.length; j++) {
+      const item = section.items[j];
+      
+      // Pill Item
+      const pillItem = document.createElement('div');
+      pillItem.className = 'pilIt pointer';
+      pillItem.textContent = item;
+      pillsWrapper.appendChild(pillItem); // Append pill item to pills wrapper
+    }
+
+    mainDiv.appendChild(sectionDiv); // Append section div to main div
+  }
+
+  // Save changes button
+  const saveButton = document.createElement('button');
+  saveButton.id = 'savz';
+  saveButton.className = 'btn blue';
+  saveButton.textContent = 'Save changes';
+
+  mainDiv.appendChild(saveButton); // Append save button to main div
+}
+
+function getProfileSecurity()
+{
+  
+}
+
+
+
+function getPrf() {
 	Mn.id='Pa'
 	Mn.className='oh'
 	Mn.innerHTML=`
