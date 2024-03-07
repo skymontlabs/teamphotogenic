@@ -1,33 +1,3 @@
-// Assuming `ws` is your WebSocket object
-var ws = new WebSocket('ws://your-websocket-url');
-
-// Set the binary data type to arraybuffer for easier handling
-ws.binaryType = 'arraybuffer';
-
-// Define the onmessage event handler
-ws.onmessage = function(event) {
-    // Check if the received data is binary
-    if (event.data instanceof ArrayBuffer) {
-        // Create a new DataView for the ArrayBuffer
-        const uint8Array = new Uint8Array(event.data);
-
-        readMessage(event)
-    } else {
-        // Handle non-binary message (optional)
-        console.log("Received non-binary message:", event.data);
-    }
-};
-
-// Error handling
-ws.onerror = function(error) {
-    console.error("WebSocket Error:", error);
-};
-
-// Open the WebSocket connection
-ws.onopen = function(event) {
-    console.log("WebSocket connection established");
-};
-
 // Function to read a 
 function readInt48LE(bytes, offset) {
     return (bytes[offset] | (bytes[offset + 1] << 8) | (bytes[offset + 2] << 16) | (bytes[offset + 3] << 24) | (bytes[offset + 4] << 32) | (bytes[offset + 5] << 40)) >>> 0;

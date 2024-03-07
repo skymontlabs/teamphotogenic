@@ -303,7 +303,6 @@ button {
   border-radius: 4px;
   position: absolute;
   margin: 4px 3px 4px 0;
-  cursor: pointer;
   white-space: nowrap;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 600;
@@ -2308,7 +2307,7 @@ input[type=checkbox] {
   margin-left: 16px;
   font-weight: 400;
 }
-#TLS h6 {
+#TLS a {
   line-height: 38px;
   font-size: 12px;
   margin-top: 0;

@@ -120,9 +120,15 @@ var SESSION = {
 
 var DATAV = {
     iImagesetList: [
-        [1293, ['laurie.jpg','laurie.jpg','laurie.jpg','laurie.jpg','laurie.jpg'], 'joebidengaysex', 13, 1490453218],
-        [1932, ['laurie.jpg','laurie.jpg','laurie.jpg','laurie.jpg','laurie.jpg'], 'joebidengaysex', 13, 1490453218],
-        [6969, ['laurie.jpg','laurie.jpg','laurie.jpg','laurie.jpg','laurie.jpg'], 'joebidengaysex', 13, 1490453218],
+        [1293, ['square.jpg','lake.jpg','square.jpg','lake.jpg','laurie.jpg'], 'joebidengaysex', 13, 1490453218],
+        [1932, ['laurie.jpg','square.jpg','square.jpg','laurie.jpg','lake.jpg'], 'joebidengaysex', 13, 1490453218],
+        [6969, ['laurie.jpg','square.jpg','laurie.jpg','square.jpg','laurie.jpg'], 'joebidengaysex', 13, 1490453218],
+    ],
+
+    iImagesetIDData: [
+        [0, 'laurie.jpg', 5.69, 13],
+        [1, 'laurie.jpg', 5.69, 13],
+        [2, 'laurie.jpg', 5.69, 13],
     ]
 };
 

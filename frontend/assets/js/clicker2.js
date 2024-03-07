@@ -284,48 +284,34 @@ document.onclick = (e) =>
 
 	else if (SESSION.currentPage === PAGES.IMAGESETS) {
 		const imsTypeFilter = {
-			'Bv0': [7,0],
-			'Bw0': [7,0],
-			'Bv1': [1,1],
-			'Bw1': [1,1],
-			'Bv2': [2,2],
-			'Bw2': [2,2],
-			'Bv3': [4,3],
-			'Bw3': [4,3],
+			0: 7,
+			1: 1,
+			2: 2,
+			3: 4
 		};
 
 
 		let sortElems = [Bv0, Bv1, Bv2, Bv3]
-		let flt = imsTypeFilter[tg.id]
+		let flt = key == 0 ? 7 : (1 << (key - 1))
+		let nflt = (CONFIG.iFilter === 7 || CONFIG.iFilter === flt) ? (flt) : (CONFIG.iFilter ^ flt)
 
-		if (flt) {
-			CONFIG.iFilter ^= flt
-
- 			if (CONFIG.iFilter == 0) {
-				// set all to be the case
-				CONFIG.iFilter = 7
-			}
-
-			if (CONFIG.iFilter == 7) {
-				// 
+		if (tflta.contains(tg) && tg !== tflta && flt) {
+			if (nflt == 7) {
 				Bv0.className = 'btn A'
 				for (let i = 1; i < 4; ++i) {
 					sortElems[i].className = 'btn'
 				}
 			} else {
-				for (let i = 0; i < 4; ++i) {
-					if (CONFIG.iFilter & (1 << i)) {
-						sortElems[i].className = 'btn A'
-					} else {
-						sortElems[i].className = 'btn'
-					}
+				Bv0.className = 'btn'
+				for (let i = 1; i < 4; ++i) {
+					sortElems[i].className = (nflt & (1 << (i - 1))) ? 'btn A' : 'btn'
 				}
 			}
+
+			CONFIG.iFilter = nflt
 		}
 
 		// dropdown sort open
-		// OK, SO THIS SHOULD NOT OPEN AGAIN IF IT WAS PREVIOUSLY OPEN
-
 		else if (sortMethodV.contains(tg)) {
 			sortDropdown.className+=' A';
 			SESSION.dropdownOpen=sortDropdown
@@ -334,13 +320,11 @@ document.onclick = (e) =>
 
 		// dropdown values
 		else if (sortDropdown.contains(tg) && tg != sortDropdown) {
-			alert(key)
-			CONFIG.iFilter = key
-
-			sortMethodV.textContent = IMAGESET_SORT_FUNCTIONS[key]
+			sortMethodV.textContent=IMAGESET_SORT_FUNCTIONS[key]
+			sortDropdown.children[CONFIG.iSort].classList.remove('active')
 
 			tg.className+=' active'
-			//.classList.remove('active')
+			CONFIG.iSort=key
 
 			SESSION.dropdownOpen.classList.remove('A')
 			SESSION.dropdownOpen=null
@@ -359,7 +343,6 @@ document.onclick = (e) =>
 		// delete test
 		else if (tg.id.charAt(0)=='Q') {
 			tg.parentNode.classList.remove('A')
-
 			SESSION.dropdownOpen=null
 			SESSION.dropdownOwner=null
 		}
@@ -367,11 +350,15 @@ document.onclick = (e) =>
 		// pause test
 		else if (tg.id.charAt(0)=='K') {
 			tg.parentNode.classList.remove('A')
+			SESSION.dropdownOpen=null
+			SESSION.dropdownOwner=null
 		}
 
 		// resume test
 		else if (tg.id.charAt(0)=='J') {
 			tg.parentNode.classList.remove('A')
+			SESSION.dropdownOpen=null
+			SESSION.dropdownOwner=null
 		}
 		
 	}
@@ -401,10 +388,7 @@ document.onclick = (e) =>
 					window.history.pushState({},'/','/')
 				}
 			}
-
-
 		}
-
 	}
 
 	else if (SESSION.currentPage === PAGES.SIGNUP) {
