@@ -1,51 +1,9 @@
-function getImageView() {
-    let rootDiv = DIV.cloneNode(true);
-    rootDiv.id = "Ia";
-
-    let xDiv = DIV.cloneNode(true);
-    xDiv.className = "x";
-
-    let yzDiv = DIV.cloneNode(true);
-    yzDiv.className = "y z";
-
-    let ImWDiv = DIV.cloneNode(true);
-    ImWDiv.className = "ImW";
-    ImWDiv.style.width = "calc(50% - 20px)";
-
-    let img = document.createElement('img');
-    img.src = "img/laurie.jpg";
-    img.alt = "Rating picture";
-    ImWDiv.appendChild(img);
-    yzDiv.appendChild(ImWDiv);
-
-    // Add more elements as per the given structure...
-    // Due to space limitations, I'm skipping to the end.
-
-    let IcnRwDiv = DIV.cloneNode(true);
-    IcnRwDiv.id = "IcnRw";
-    IcnRwDiv.className = "T16 t16 y z Bw";
-    IcnRwDiv.style.marginTop = "2em";
-
-    for (let i = 0; i < 7; i++) {
-        let imgElm = document.createElement('img');
-        imgElm.className = "IElm";
-        imgElm.src = "img/square.jpg";
-        IcnRwDiv.appendChild(imgElm);
-    }
-
-    xDiv.appendChild(IcnRwDiv);
-    yzDiv.appendChild(xDiv);
-    rootDiv.appendChild(yzDiv);
-
-    return rootDiv
-}
 
 function generateIconRow() {
     // Create the main div
     const containerDiv = DIV.cloneNode(true);
     containerDiv.id = 'IcnRw';
-    containerDiv.className = 'T16 t16 y z Bw';
-    containerDiv.style.marginTop = '2em';
+    containerDiv.className = 'T16 t16 y z Bw oxh';
 
     // Create and append the images
     for (let i = 0; i < 7; i++) {
@@ -162,7 +120,6 @@ function generateScoringaDiv() {
 function generateRUa() {
     const containerDiv = DIV.cloneNode(true);
     containerDiv.className = 'RUa';
-    containerDiv.style.cssText = 'width: calc(60% - 20px);box-sizing: border-box;';
 
     const navigationDiv = DIV.cloneNode(true);
     navigationDiv.id = 'tIdNav';
@@ -234,8 +191,7 @@ function generateRUa() {
 function generateImageBl() {
     // Create the main div
     const containerDiv = DIV.cloneNode(true);
-    containerDiv.className = 'ImW';
-    containerDiv.style.width = 'calc(40% - 20px)';
+    containerDiv.className = 'ImU';
 
     // Create the image element
     const img = document.createElement('img');
@@ -250,8 +206,10 @@ function generateImageBl() {
 
 function getImageID() {
   Mn.id='Ia'
+  Mn.className='y z'
   let divX=Mn.children[0]
-  let divYz=DYZ.cloneNode(true)
+  divX.id = 'IIg'
+  divX.className = ''
   
   /*
     <div class="ImW" style="width: calc(50% - 20px)">
@@ -259,11 +217,11 @@ function getImageID() {
       <img src="img/laurie.jpg" alt="Rating picture">
     </div>
   */
-  divYz.appendChild(generateImageBl())
-  divYz.appendChild(generateRUa())
+// Example usage
+  divX.appendChild(generateImageBl())
+  divX.appendChild( generateIconRow())
 
-  divX.appendChild(divYz)
-  divX.appendChild(generateIconRow())
+  Mn.appendChild(generateRUa())
 }
 
 /*

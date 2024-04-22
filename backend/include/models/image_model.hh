@@ -4,7 +4,6 @@
 
 #include <string>
 
-
 size_t get_allocsz(size_t N)
 {
     size_t result = 1;
@@ -17,47 +16,38 @@ size_t get_allocsz(size_t N)
     return result;
 }
 
-
-
 class image_model
 {
-	// ID for image in database
-	uint64_t image_id_;
-
-	// ID for experiment
-	uint64_t experiment_id_;
-
-	// The rank of this image in the experiment
-	//uint32_t ranking_;
+	// total # of paired (elo) results (len for e_outcomes_)
+	uint32_t total_elo_ : 15;
+	// total # of singular (likert) results (len for e_outcomes_)
+	uint32_t total_likert_ : 17;
 
 	// Total # of wins for paired tests
-	uint32_t wins_ : 24;
+	uint32_t total_wins_ : 22;
 	// 0 = elo, 1 = likert, 2 = done
-	uint32_t status_ : 8;
+	uint32_t status_ : 2;
+	// The rank of this image in the experiment
+	uint32_t ranking_ : 8;
 
 	// Elo rating
 	uint32_t elo_rating_;
 	// Elo change accumulator, important for variability
 	uint32_t elo_change_;
 
-	// total # of paired (elo) results (len for e_outcomes_)
-	uint32_t total_elo_;
-	// total # of singular (likert) results (len for e_outcomes_)
-	uint32_t total_likert_;
 	// total # of comments
-	uint32_t total_comments_;
+	uint32_t total_comments_ : 15; 
 	// total length of comments in bytes
-	uint32_t total_comments_len_;
+	uint32_t total_comments_len_ : 17;
 
-	// outcomes for paired
-	uint8_t* e_outcomes_;
+	// outcomes for paired [this is preallocated elsewhere ]
+	// elo_model* e_outcomes_;
 
 	// outcomes for likert with tags in bitmap fashion
-	uint32_t* l_outcomes_;
+	likert_model* l_outcomes_;
 
 	// list of all comments
 	uint8_t* comments_;
-
 
 	inline double rating_variability()
 	{
@@ -69,26 +59,6 @@ class image_model
 		return (rating_variability() / sqrt(total_elo_));
 	}
 
-	void add_comment(uint8_t rating_idx, uint8_t* comment, uint8_t comment_len)
-	{
-		// copy variables
-
-		uint8_t* p = comments_;
-		//
-		total_comments_len_ += (comment_len + 2);
-		++total_comments_;
-
-		p += total_len;
-
-		//
-		WRITE8(p, rating_idx)
-
-		//
-		WRITE8(p, comment_len)
-
-		//
-		COPY_INC(p, comments, comment_len)
-	}
 
 public:
 	image_model(uint64_t id, uint64_t user_id, uint32_t tags);
@@ -98,20 +68,32 @@ public:
 	int get_user_id() const;
 	unsigned int getTagsBitmap() const;
 
-	inline int elo() const
-	{
-		return elo_rating_;
-	}
 
-
-    size_t image_model::serialize(uint8_t* out)
-    {
-    	// copy out sector
-    	memcpy(out, &image_id_, 2000);
-
-    	// elo_rating_model 
-    }
+    size_t image_model::serialize(uint8_t* out);
 };
+
+
+void image_model::add_comment(uint8_t rating_idx, uint8_t* comment, uint8_t comment_len)
+{
+	// copy variables
+
+	uint8_t* p = comments_;
+	//
+	total_comments_len_ += (comment_len + 2);
+	++total_comments_;
+
+	p += total_len;
+
+	//
+	WRITE8(p, rating_idx)
+
+	//
+	WRITE8(p, comment_len)
+
+	//
+	COPY_INC(p, comments, comment_len)
+}
+
 
 int image_model::clear()
 {
@@ -130,10 +112,10 @@ int image_model::clear()
 	total_comments_ = 0;
 
 	// outcomes for paired
-	e_outcomes_;
+	dealloc(e_outcomes_);
 
 	// outcomes for singular
-	l_outcomes_;
+	dealloc(l_outcomes_);
 }
 
 int image_model::update_elo(uint8_t other, uint8_t win, uint32_t change, pool_alloc& pa)
@@ -163,7 +145,6 @@ int image_model::update_elo(uint8_t other, uint8_t win, uint32_t change, pool_al
 	++total_elo_;
 }
 
-
 int image_model::update_likert(uint8_t rating, uint32_t tags, const char* comment, uint32_t comment_len, pool_alloc& pa)
 {
 	l_outcomes_[total_likert_] = (uint32_t(rating) << 24) | tags;
@@ -172,6 +153,10 @@ int image_model::update_likert(uint8_t rating, uint32_t tags, const char* commen
 		add_comment(comment, comment_len);
 }
 
+/*
+** Returns whether or not the image should be moved from elo state to
+** likert state, or from likert state to finished state
+*/
 bool image_model::should_change_state(int rounds, double threshold)
 {
     if (total_elo_ < rounds + 1)
@@ -184,6 +169,11 @@ bool image_model::should_change_state(int rounds, double threshold)
     return (totalChange / rounds) < threshold;
 }
 
+
+
+size_t image_model::serialize(uint8_t* out)
+{
+}
 
 
 #endif // IMAGE_MODEL_HPP

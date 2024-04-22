@@ -1,4 +1,5 @@
-function filterStatus() {
+function filterStatus()
+{
   let Bn = BTN.cloneNode(true)
   Bn.id='Bv0'
   Bn.className='btn'
@@ -36,7 +37,7 @@ function filterStatus() {
 
 
   let Pr = DIV.cloneNode(true)
-  Pr.id='tflta'
+  Pr.id='imagesetFilterbar'
   Pr.appendChild(Bn)
   Pr.appendChild(b1)
   Pr.appendChild(b2)
@@ -133,26 +134,8 @@ function taskData(id, title, imgs, age)
 }
 
 
-function dropdownValue(ulid,chld,chldct,acv,baseval) {
-  /*
-  <ul id="sortDropdown" class="dropsort show active A">
-    <li id="Sd0" class="noselect active">Average score</li>
-    <li id="Sd1" class="noselect">Median score</li>
-    <li id="Sd2" class="noselect">Date created</li>
-    <li id="Sd3" class="noselect">Date created</li>
-  </ul>
-
-  <div class="dropdownSelector">
-    <span id="sortMethodV" class="selClick crt">Average score</span>
-    <ul id="sortDropdown" class="dropsort">
-      <li id="Sd0" class="noselect active">Average score</li>
-      <li id="Sd1" class="noselect">Median score</li>
-      <li id="Sd2" class="noselect">Date created</li>
-      <li id="Sd3" class="noselect">Date created</li>
-    </ul>
-  </div>
-  */
-
+function dropdownValue(ulid,chld,chldct,acv,baseval)
+{
   let DS=DIV.cloneNode(true)
   DS.className='dropdownSelector'
   
@@ -217,19 +200,13 @@ function getAllImagesets(imagesetCt)
 }
 
 
-
-
-
-
-
-
-
-
-
-
 function getAllTests() {
   getAllImagesets(1)
 }
+
+
+
+
 
 function imageIndiv(imgSrc, scorePt, votesCt) {
   const imgItem = DIV.cloneNode(true)
@@ -269,20 +246,6 @@ function imageIndiv(imgSrc, scorePt, votesCt) {
 
 
 function getPaired() {
-  /*
-  <div id="Xa" class="">
-    <div class="x">
-      <div id="RSa">
-        <div id="IWa" class="PI">
-          <img id="IMa" src="img/laurie.jpg">
-        </div>
-        <div id="IWb" class="PI">
-          <img id="IMb" src="img/lake.jpg">
-        </div>
-      </div>
-    </div>
-  </div>
-  */
   // Create the outermost div
   //let divXa=DIV.cloneNode(true);
   Mn.id='Xa';
@@ -350,138 +313,295 @@ function cr8_dt()
 
 let DZ = cr8_dt()
 
+function formatTime(date) {
+    const hours = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    return `${hours}:${minutes}`;
+}
 
-function testidmta ()
-{/*
-  var tmta = \
-   `<div id="TMta">
-      <div class="y z">
-        <span id="RQ">Rating Test</span>
-        <span id="RQ">ts_0123456789abcdef</span>
-      </div>
-      <div  class="rel y BB">
-        <h2 style="font-weight: 600;width: 100%;padding-bottom: 12px;" >Sarah Lasalle <span class="BW">Running</span></h2>
-        <button id="dtz" class="dots btn L16"><span class="d0" id="dd0X"></span><span class="d1" id="dd1X"></span><span class="d2" id="dd2X"></span></button>
-        <ul id="bblDropdown" class="dropsort">
-          <li><span id="editM">Restart test...</span></li>
-          <li><span id="editM">Resume test</span></li>
-          <li><span id="editM">Pause test</span></li>
-          <li><span id="editM">Edit test</span></li>
-          <li><span id="deleN">Delete test</span></li>
-        </ul>
-      </div>
-      <div class="y t16">
-        <div class="BY r16"><span class="F12 ST">total votes</span><span class="bl">45</span></div>
-        <div class="BY L16 r16"><span class="F12 ST">total votes</span><span class="bl">45</span></div>
-        <div class="L16"><span class="F12 ST">created</span><span class="bl">Jan 17, 2017</span></div>
-      </div>
-      <span style="font-size: 11px"></span>
-      <div class="y rel">
-      </div>
-    </div>`;*/
+function formatDate(date) {
+    const dateString = date.toLocaleDateString();
+    const timeString = formatTime(date);
+    return `${dateString}, ${timeString}`;
+}
 
-  // Create the outermost div
-  let divTMta=DIV.cloneNode(true)
-  divTMta.id='TMta';
+// Example usage:
 
+
+function date2str(unix_timestamp) {
+  // Create a new Date object from the Unix timestamp.
+  var currentDate = new Date(unix_timestamp * 1000);
+
+
+const formattedDate = formatDate(currentDate);
+console.log();
+return formattedDate
+
+
+}
+
+
+function s()
+{
+
+
+
+  const masonrySVG = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  masonrySVG.setAttribute("width", "24");
+  masonrySVG.setAttribute("height", "24");
+  masonrySVG.setAttribute("viewBox", "0 0 24 24");
+
+
+
+  const hotdogSVG = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  hotdogSVG.setAttribute("width", "24");
+  hotdogSVG.setAttribute("height", "24");
+  hotdogSVG.setAttribute("viewBox", "0 0 24 24");
+
+  const path3 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  path3.setAttribute("d", "M4 7v10h16V7H4zm2 2h12v6H6V9z");
+
+  hotdogSVG.appendChild(path3);
+}
+
+function generateImagesetMetadata(title, imageId, statusInt, imageCt, voteCt, unix)
+{
   // First inner div with classes 'y' and 'z'
-  let divYz=DYZ.cloneNode(true);
   let spanRQ=SPN.cloneNode(true);
   spanRQ.id='RQ';
   spanRQ.textContent='Rating Test';
+
   let spanRQ2=SPN.cloneNode(true);
   spanRQ2.id='RQ2';
-  spanRQ2.textContent='ts_0123456789abcdef';
+  spanRQ2.textContent='ts_' + (imageId);
+
+  let divYz=DYZ.cloneNode(true);
   divYz.appendChild(spanRQ);
   divYz.appendChild(spanRQ2);
 
-  // Second inner div with classes 'rel', 'y', and 'BB'
+  let spanBW=SPN.cloneNode(true)
+  spanBW.className = 'BW';
+  spanBW.textContent = [statusInt];//'Running'; // STATUS[]
+
+  let imagesetTitle = H2.cloneNode(true);
+  imagesetTitle.id = 'imagesetTitle'
+  imagesetTitle.textContent=title; // title
+  imagesetTitle.appendChild(spanBW);
+
+  // hamburger
+  let hamburgerCtrl = HMB.cloneNode(true)
+  hamburgerCtrl.id='dtz'
+  hamburgerCtrl.className='dots btn L16'
+
+  let dropdownPanel = UL.cloneNode(true)
+  dropdownPanel.id = 'bblDropdown';
+  dropdownPanel.className = 'dropsort';
+
+  ////
+  const cmds = ['Restart test','Resume test','Pause test','Edit test','Delete test']
+  for (let i = 0; i < 5; ++i) {
+    let li = LI.cloneNode(true)
+    let span = SPN.cloneNode(true)
+    span.id = `edit${i}`;
+    span.textContent = cmds[i];
+    li.appendChild(span);
+    dropdownPanel.appendChild(li);
+  }
+  ////
+
   let divRelYBB=DIV.cloneNode(true);
   divRelYBB.className='rel y BB';
+  divRelYBB.appendChild(imagesetTitle)
+  divRelYBB.appendChild(hamburgerCtrl)
+  divRelYBB.appendChild(dropdownPanel)
 
-  let h2 = H2.cloneNode(true);
-  h2.textContent='Sarah Lasalle';
+  let ctrlBar=DIV.cloneNode(true)
+  ctrlBar.className = 'y z t16';
+  let stats=DIV.cloneNode(true)
+  stats.className = 'y';
+  let viewToggler=DIV.cloneNode(true)
+  viewToggler.className = 'y';
 
-  let spanBW = SPN.cloneNode(true)
-  spanBW.className = 'BW';
-  spanBW.textContent = 'Running'; // status
-  h2.appendChild(spanBW);
 
-  //right one
-  let buttonDtz = DZ.cloneNode(true)
-  buttonDtz.id='dtz'
-  buttonDtz.className='dots btn L16'
-
-/*
-  let buttonDtz = document.createElement('button');
-  buttonDtz.id = 'dtz';
-  buttonDtz.className = 'dots btn L16';
-  ['d0', 'd1', 'd2'].forEach(cls => {
-      let span = SPN.cloneNode(true)
-      span.className = cls;
-      buttonDtz.appendChild(span);
-  });
-*/
-
-  let ulBblDropdown = UL.cloneNode(true)
-  ulBblDropdown.id = 'bblDropdown';
-  ulBblDropdown.className = 'dropsort';
-  ['Restart test','Resume test','Pause test','Edit test','Delete test'].forEach((text, index) => {
-      let li = document.createElement('li');
-      let span = SPN.cloneNode(true)
-      span.id = `edit${index}`;
-      span.textContent = text;
-      li.appendChild(span);
-      ulBblDropdown.appendChild(li);
-  });
-
-  divRelYBB.appendChild(h2)
-  divRelYBB.appendChild(buttonDtz)
-  divRelYBB.appendChild(ulBblDropdown)
-
-  // The third div with classes 'y' and 't16'
-  let divYT16=DIV.cloneNode(true)
-  divYT16.className = 'y t16';
-
-  ['total images','total votes','created'].forEach((text, index) => {
+  const deet = ['total images','total votes','created']
+  const clsn = ['BY r16','BY L16 r16','L16']
+  const txtc = [imageCt,voteCt,date2str(unix)]
+  for (let i = 0; i < 3; ++i) {
     let div = DIV.cloneNode(true)
-    div.className = (index === 0 ? 'BY r16' : (index === 1 ? 'BY L16 r16' : 'L16'));
+    div.className = clsn[i]
     
     let spanST = SPN.cloneNode(true)
     spanST.className = 'F12 ST';
-    spanST.textContent = text;
+    spanST.textContent = deet[i];
     
     let spanBl = SPN.cloneNode(true)
     spanBl.className = 'bl';
-    spanBl.textContent = (index === 2 ? 'Jan 17, 2017' : '45');
+    spanBl.textContent = txtc[i]
     
     div.appendChild(spanST);
     div.appendChild(spanBl);
-    divYT16.appendChild(div);
-  });
+    stats.appendChild(div);
+    //viewToggler.appendChild()
+  }
+
+
+  const squareGridSVG = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  squareGridSVG.setAttribute("width", "24");
+  squareGridSVG.setAttribute("height", "24");
+  squareGridSVG.setAttribute("viewBox", "0 0 24 24");
+
+  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  path.setAttribute("d", "M4 5v14h14V5H4zm2 2h10v10H6V7zm2 2v2h2V9H8zm4 0v2h2V9h-2zm-4 4v2h2v-2H8zm4 0v2h2v-2h-2zm-4 4v2h2v-2H8zm4 0v2h2v-2h-2z");
+  squareGridSVG.appendChild(path);
+
+  const masonrySVG = squareGridSVG.cloneNode(true)
+  masonrySVG.children[0].setAttribute("d", "M4 5v14h14V5H4zm2 2h10v4H6V7zm0 6h4v6H6v-6zm6 0h6v6h-6v-6zm0 8h6v2h-6v-2z");
+
+  const hotdogSVG = squareGridSVG.cloneNode(true)
+  hotdogSVG.children[0].setAttribute("d", "M4 7v10h16V7H4zm2 2h12v6H6V9z");
+
+  viewToggler.appendChild(squareGridSVG)
+  viewToggler.appendChild(masonrySVG)
+  viewToggler.appendChild(hotdogSVG)
+
+  ctrlBar.appendChild(stats)
+  ctrlBar.appendChild(viewToggler)
 
   let spanFontSize = SPN.cloneNode(true)
   spanFontSize.style.fontSize = '11px';
 
-  //let divYRel = DIV.cloneNode(true)
-  //divYRel.className = 'y rel';
-
+  let divTMta=DIV.cloneNode(true)
+  divTMta.id='TMta';
   divTMta.appendChild(divYz);
   divTMta.appendChild(divRelYBB);
-  divTMta.appendChild(divYT16);
+  divTMta.appendChild(ctrlBar);
   divTMta.appendChild(spanFontSize);
-  //divTMta.appendChild(divYRel);
+
+  DOMSHORTCUTS.imagesetTitle = imagesetTitle
+
   return divTMta
+}
+
+
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+
+function generateRowsz() {
+  let dataArray = [
+    {
+      imageUrl: '/img/square.jpg',
+      votes: [4,5,9,11,17], // Percentages
+      totalVotes: 100,
+      score: 0.4
+    },
+    {
+      imageUrl: '/img/laurie.jpg',
+      votes: [11,5,3,2,17], // Percentages
+      totalVotes: 100,
+      score: 0.4
+    },
+    {
+      imageUrl: '/img/laurie.jpg',
+      votes: [9,5,2,20,17], // Percentages
+      totalVotes: 100,
+      score: 0.4
+    },
+    {
+      imageUrl: '/img/laurie.jpg',
+      votes: [4,8,9,11,22], // Percentages
+      totalVotes: 100,
+      score: 0.4
+    },
+  ];
+    let colors = ['#A0B8FF', '#89A3FF', '#5984FF', '#4E62E3', '#293556']
+    let options = ['distributions', 'adj. distributions', 'intervals']
+
+    let parentStatTypes = DIV.cloneNode(true)
+    for (let i = 0; i < 3; ++i) {
+      let z = SPN.cloneNode(true)
+      z.textContent = options[i]
+      parentStatTypes.appendChild(z)
+    }
+
+
+    let container = Mn.children[0]
+
+    container.appendChild(parentStatTypes)
+
+
+
+
+    dataArray.forEach((data, index) => {
+      const row = document.createElement('div');
+      row.id = `Q${index}`;
+      row.className = `imgrw`;
+
+      // Image
+      const img = document.createElement('img');
+      img.src = data.imageUrl;
+      img.className = 'imgStat'
+
+      // Bar chart (Likert scale representation)
+      const chartWrap = document.createElement('div');
+      const chart = document.createElement('div');
+      chartWrap.className = 'chartWrap'
+      chart.className = 'chartParent'
+
+      let sum = 0
+      for (let i = 0; i < 5; ++i) {
+        sum += data.votes[i]
+      }
+
+      for (let i = 0; i < 5; ++i) {
+        const v = data.votes[i]
+        const bar = document.createElement('div');
+        bar.style.width = `${v/sum * 50}%`;
+        bar.style.height = '40px';
+        bar.style.backgroundColor = colors[i]
+        chart.appendChild(bar);
+      }
+
+      let sub = (data.votes[0] / sum) * 50
+      sub += (data.votes[1] / sum) * 50
+      sub += (data.votes[2] / sum) * 25
+
+      chart.style.left = `calc(${50 - sub}%)`;
+
+      const rating = document.createElement('div');
+      rating.innerText = `${data.score}`;
+      rating.style.flexShrink = '0';
+      rating.style.marginRight = '20px';
+
+      const voteCount = document.createElement('div');
+      voteCount.innerText = `${data.totalVotes} votes`;
+      voteCount.style.flexShrink = '0';
+
+      chartWrap.appendChild(chart)
+      row.appendChild(img);
+      row.appendChild(chartWrap);
+      row.appendChild(rating);
+      row.appendChild(voteCount);
+
+      container.appendChild(row);
+   });
+
 }
 
 
 
 
-function getTestID() {
+function getTestID()
+{
   Mn.id='Ta';
   Mn.className='oh';
-
-  Mn.children[0].appendChild(testidmta())
+  Mn.children[0].appendChild( generateImagesetMetadata('TAYLOR', 4, 2, 2, 200, 102040))
   var Tls=DIV.cloneNode(true)
   Tls.id='TLS'
   Tls.className='G'
@@ -491,6 +611,7 @@ function getTestID() {
   }
 
   Mn.children[0].appendChild(Tls)
+  generateRowsz()
 
 }
 

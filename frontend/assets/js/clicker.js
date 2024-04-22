@@ -441,12 +441,12 @@ document.onclick = (e) => {
 
 
 		// view all regardless of task status
-		else if (tflta.contains(tG) && tG !== tflta) { //a === vAll
+		else if (imagesetFilterbar.contains(tG) && tG !== imagesetFilterbar) { //a === vAll
 			let aidx=key - '0'
 			// make sure this is not 0 samples!
 			if (cStatus!==aidx) {
-				tflta.children[cStatus].className='btn'
-				tflta.children[aidx].className='btn A'
+				imagesetFilterbar.children[cStatus].className='btn'
+				imagesetFilterbar.children[aidx].className='btn A'
 				cStatus=aidx
 
 				// refresh page

@@ -1,7 +1,7 @@
 function generateRatingBlock() {
     // Main containers
     const RIaDiv = document.createElement('div');
-    RIaDiv.id = 'RIa';
+    RIaDiv.className = 'RIa';
 
     const RDaDiv = document.createElement('div');
     RDaDiv.id = 'RDa';

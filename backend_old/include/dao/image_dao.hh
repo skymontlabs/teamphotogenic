@@ -1,31 +1,77 @@
-#include "experiment_dao.hh"
+#ifndef IMAGEDAO_HPP
+#define IMAGEDAO_HPP
+
+#include <unordered_map>
+#include <optional>
+#include <string>
+#include <vector>
+
+class image_dao
+{
+    // Handle to the database connection
+    database_connection* db_conn_;
+
+    // Handle to the Redis cache connector
+    redis_connector* rs_conn_;
+
+    // Local in-memory cache
+    gdsf_cache* lcache_;
+
+    // Bloom filter
+    bloom_filter* bfilt_;
+
+    size_t get_img_locally(const uint64_t image_id);
+    size_t get_img_redis(const uint64_t image_id);
+    
+    void cache_img_locally(const uint64_t image_id, const image_model& image);
+    void cache_img_redis(const uint64_t image_id, const image_model& image);
+    
+public:
+    image_dao(database_connection* db_conn, redis_connector* rs_conn);
+    
+    ~image_dao();
+
+    // #1: Create image
+    size_t create_images(uint64_t experiment_id, uint64_t user_id, uint32_t count)
+    {
+        "INSERT INTO S() VALUES"
+            "()\n"
+            "()";
+
+        for (int i = 0; i < count; ++i) {
+            append_str(it, , );
+        }
+
+        "";
+    }
+
+    // #2:
+    image_model read_image_by_id(const uint64_t image_id, cbk_data& cbk);
+
+    // #3:
+    image_model read_images_by_id(const uint64_t image_id, cbk_data& cbk);
+
+    // #4:
+    size_t add_likerts_to_images(likert_model* lm, uint32_t image_ct);
+
+    // #5:
+    size_t add_elos_to_images(elo_model* lm, uint32_t image_ct);
+
+    // #6:
+    size_t delete_image(const uint64_t image_id, const uint64_t image_id);
+
+    // #7:
+    size_t update_elo();
+};
+
+#endif // IMAGEDAO_HPP
+
+
 
 image_dao::image_dao(database_connection* db_conn, redis_connector* rs_conn):
 db_conn_(db_conn),
 rs_conn_(rs_conn)
 {
-    // Assuming you have a function to get the Cassandra session
-    CassSession* session = getSession(); // Your mechanism to get a session
-
-
-    //
-    CassFuture* prepare_future = cass_session_prepare_n(session, "SELECT * FROM images WHERE experiment_id=?", );
-    // 
-    cass_future_wait(prepare_future);
-    // Check for preparation errors
-    prepared_exid = cass_future_get_prepared(prepare_future);
-    if (prepared == NULL) {
-
-    }
-
-    CassFuture* prepare_future = cass_session_prepare_n(session, "SELECT * FROM images WHERE image_id=?", );
-    cass_future_wait(prepare_future);
-    prepared_imid = cass_future_get_prepared(prepare_future);
-
-
-    CassFuture* prepare_future = cass_session_prepare_n(session, "SELECT * FROM images WHERE user_id=? AND image_id=?", );
-    cass_future_wait(prepare_future);
-    prepared_usid_imid = cass_future_get_prepared(prepare_future);
 
 }
 
@@ -173,3 +219,5 @@ int image_dao::db_get_image_by_user_and_id(const uint64_t user_id, const uint64_
 void execute_prepared_statement_with_callback(CassSession* session, const CassPrepared* prepared, const char* param)
 {
 }
+
+

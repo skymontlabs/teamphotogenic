@@ -1,11 +1,9 @@
-/*
-
-$scheme-color-0:    $scales-color-0;
-$scheme-color-1:    $scales-color-1;
-$scheme-color-2:    $scales-color-2;
-$scheme-color-3:    $scales-color-3;
-
-*/
+@font-face {
+  font-family: "ff";
+  src: url("scandia/f965fdf4.woff2") format("woff"); /* Safari, Android, iOS */
+  font-weight: 400;
+  font-style: normal;
+}
 html {
   margin: 0;
   padding: 0;
@@ -19,7 +17,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "ff", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   font-weight: 400;
   line-height: 1.618;
@@ -34,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
   font-weight: 600;
   margin: 10px 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "ff", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 h1 {
@@ -64,7 +62,7 @@ h5 {
 
 p {
   font-size: 17px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "ff", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .x {
@@ -216,6 +214,10 @@ ul {
   box-shadow: inset 0 1px rgb(235, 238, 241);
 }
 
+.oxh {
+  overflow-x: hidden;
+}
+
 .PT,
 .pointer {
   cursor: pointer;
@@ -304,7 +306,7 @@ button {
   position: absolute;
   margin: 4px 3px 4px 0;
   white-space: nowrap;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "ff", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 600;
 }
 @media (max-width: 768px) {
@@ -509,7 +511,7 @@ textarea {
   transition: 0.2s ease-out border;
   border: 1px solid rgba(0, 0, 0, 0.09);
   border-radius: 4px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "ff", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   display: block;
 }
 
@@ -1183,7 +1185,7 @@ a:hover, a:active, a:focus, a:visited {
 .dropdown .lk > span {
   line-height: 18px;
   text-align: left !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "ff", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   padding: 8px;
   font-size: 14px;
   color: #424652;
@@ -1202,7 +1204,7 @@ a:hover, a:active, a:focus, a:visited {
 .dropdown .lk > i {
   line-height: 18px;
   text-align: left !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "ff", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   padding: 8px;
   font-size: 14px;
   color: #424652;
@@ -1332,10 +1334,6 @@ a:hover, a:active, a:focus, a:visited {
 #Ga > #Pa, #Ga > #Ta, #Ga > #taskID, #Ga > #admin {
   margin-top: 82px;
 }
-#Ga > #Ia {
-  padding-top: 120px;
-  box-sizing: border-box;
-}
 #Ga.showPaired #Xa {
   display: block;
   height: auto;
@@ -1348,24 +1346,24 @@ a:hover, a:active, a:focus, a:visited {
   visibility: visible;
   opacity: 1;
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  #Ga.showRate #Na, #Ga.showImg #Na {
+    width: 61.8%;
+    right: 0;
+  }
+}
+@media (min-width: 1025px) {
+  #Ga.showRate #Na, #Ga.showImg #Na {
+    width: 50%;
+    right: 0;
+  }
+}
 @media (max-width: 768px) {
   #Ga.showRate {
     overflow: hidden;
     height: 100vh;
     width: 100vw;
     position: fixed;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  #Ga.showRate #Na {
-    width: 61.8%;
-    right: 0;
-  }
-}
-@media (min-width: 1025px) {
-  #Ga.showRate #Na {
-    width: 50%;
-    right: 0;
   }
 }
 #Ga.showRate #Ra {
@@ -1401,7 +1399,6 @@ a:hover, a:active, a:focus, a:visited {
   /**/
 }
 #Ga.showImg #Ia {
-  display: block;
   opacity: 1;
   visibility: visible;
 }
@@ -1434,7 +1431,7 @@ a:hover, a:active, a:focus, a:visited {
 #Ga.showTaskID #Fa {
   display: none;
 }
-#Ga.showTaskID #tflta {
+#Ga.showTaskID #imagesetFilterbar {
   visibility: hidden;
   height: 0;
   opacity: 0;
@@ -1658,6 +1655,94 @@ input:checked + .dropsort {
   }
 }
 
+.ImU {
+  width: 100%;
+  background: #f7f8f9;
+  z-index: 9999;
+  overflow: hidden;
+  position: relative;
+  height: calc(100% - 200px);
+}
+.ImU img {
+  position: relative;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .ImU img {
+    max-height: 600px;
+  }
+}
+@media (min-width: 769px) {
+  .ImU img {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.RUa {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .RUa {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 0;
+    position: absolute;
+    bottom: 0;
+  }
+}
+@media (min-width: 769px) {
+  .RUa {
+    top: 50%;
+    position: absolute;
+    right: 48px;
+    transform: translateY(-50%);
+    padding: 0;
+  }
+}
+@media (min-width: 1025px) {
+  .RUa {
+    width: calc(50% - 96px);
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .RUa {
+    width: calc(61.8% - 96px);
+  }
+}
+
+#IIg {
+  width: 50%;
+}
+@media (max-width: 768px) {
+  #IIg {
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  #IIg {
+    width: 38.2%;
+  }
+}
+@media (min-width: 1025px) {
+  #IIg {
+    width: 50%;
+  }
+}
+@media (min-width: 769px) {
+  #IIg {
+    height: 100vh;
+  }
+}
+
 #Ia {
   width: 100%;
   height: 100vh;
@@ -1703,7 +1788,7 @@ input:checked + .dropsort {
   cursor: pointer;
   white-space: nowrap;
   margin-left: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "ff", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 @media (max-width: 768px) {
   .BZ {
@@ -1788,7 +1873,7 @@ input:checked + .dropsort {
   width: auto;
   margin-top: auto;
   position: absolute;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "ff", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-align: center;
   display: block;
 }
@@ -1859,7 +1944,7 @@ input:checked + .dropsort {
   box-shadow: 0 3px 6px 0 rgba(36, 129, 215, 0.04), 0 2px 3px 0 rgba(36, 129, 215, 0.04);
   text-align: center;
   display: block;
-  border: 1px solid #4E72C3;
+  border: 1px solid #4E62E3;
   font-weight: 600;
 }
 
@@ -2129,7 +2214,7 @@ input[type=checkbox] {
   font-size: 17px;
   margin-bottom: 0px;
   display: block;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "ff", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 #RDa textarea {
   width: 100%;
@@ -2159,34 +2244,33 @@ input[type=checkbox] {
   }
 }
 
-#RIa {
-  background: #f7f8f9;
+.RIa {
   z-index: 9999;
   overflow: hidden;
   position: relative;
 }
 @media (max-width: 768px) {
-  #RIa {
+  .RIa {
     width: 100%;
     height: calc(100vh - 280px);
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  #RIa {
+  .RIa {
     width: 38.2%;
   }
 }
 @media (min-width: 1025px) {
-  #RIa {
+  .RIa {
     width: 50%;
   }
 }
 @media (min-width: 769px) {
-  #RIa {
+  .RIa {
     height: 100vh;
   }
 }
-#RIa img {
+.RIa img {
   position: relative;
   max-width: 100%;
   height: auto;
@@ -2197,7 +2281,7 @@ input[type=checkbox] {
   object-fit: contain;
 }
 @media (max-width: 768px) {
-  #RIa img {
+  .RIa img {
     position: relative;
     max-width: 100%;
     height: 100%;
@@ -2209,7 +2293,7 @@ input[type=checkbox] {
   }
 }
 @media (min-width: 769px) {
-  #RIa img {
+  .RIa img {
     top: 50%;
     transform: translateY(-50%);
   }
@@ -2254,7 +2338,7 @@ input[type=checkbox] {
   line-height: 24px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.8);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "ff", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 @media (max-width: 768px) {
   .TR {
@@ -2278,7 +2362,7 @@ input[type=checkbox] {
 }
 */
 #TLS {
-  padding-top: 3em;
+  padding-top: 0;
   padding-bottom: 4em;
 }
 @media (min-width: 1025px) {
@@ -2353,6 +2437,10 @@ input[type=checkbox] {
   padding-bottom: 12px;
 }
 
+.taskItem {
+  border-radius: 8px;
+  overflow: hidden;
+}
 .taskItem .dtpt {
   margin-left: auto;
 }
@@ -2365,6 +2453,7 @@ input[type=checkbox] {
   padding: 0 24px 24px;
   padding-top: 84px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.35) 64%, rgba(0, 0, 0, 0));
+  cursor: pointer;
 }
 .imgData span {
   color: white;
@@ -2386,42 +2475,42 @@ input[type=checkbox] {
   color: #0d0c22;
 }
 
-#tflta {
+#imagesetFilterbar {
   display: grid;
   column-gap: 8px;
   overflow: hidden;
-  padding-top: 1em;
+  padding: 1em 0 2em;
 }
 @media (min-width: 1025px) {
-  #tflta {
+  #imagesetFilterbar {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 @media (min-width: 401px) and (max-width: 1024px) {
-  #tflta {
+  #imagesetFilterbar {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     row-gap: 8px;
   }
 }
 @media (max-width: 400px) {
-  #tflta {
+  #imagesetFilterbar {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     row-gap: 8px;
   }
 }
-#tflta > button {
+#imagesetFilterbar > button {
   border: 0.5px solid rgb(235, 238, 241);
   box-sizing: border-box;
   border-radius: 8px;
   padding: 1em 1em 1em;
   text-align: left;
 }
-#tflta > button:hover {
+#imagesetFilterbar > button:hover {
   border: 0.5px solid rgba(89, 132, 255, 0.4) !important;
 }
-#tflta > button h4 {
+#imagesetFilterbar > button h4 {
   margin: 8px 0 0;
 }
 
@@ -2458,13 +2547,13 @@ input[type=checkbox] {
 .data-score {
   font-size: 13px;
   font-weight: 500;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "ff", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 32px;
   margin-right: 16px;
 }
 
 .ascore {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "ff", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 32px;
   margin-right: 16px;
   font-size: 26px;
@@ -2477,6 +2566,25 @@ input[type=checkbox] {
   font-weight: 300;
 }
 
+.imgStat {
+  width: 80px;
+  height: 80px;
+  margin-right: 30px;
+  border-radius: 4px;
+}
+
+.chartWrap {
+  width: calc(100% - 200px);
+}
+
+.chartParent {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+}
+
 .dtpt {
   background: transparent;
   font-size: 11px;
@@ -2487,7 +2595,7 @@ input[type=checkbox] {
   cursor: pointer;
   white-space: nowrap;
   margin-left: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "ff", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 500;
 }
 
@@ -2624,8 +2732,16 @@ p {
   margin: 0;
 }
 
+.imgrw {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  position: relative;
+}
+
 #IcnRw .IElm {
-  width: calc(14% - 10px);
+  width: calc(24% - 10px);
   height: auto;
   background-size: cover;
   background-position: center;

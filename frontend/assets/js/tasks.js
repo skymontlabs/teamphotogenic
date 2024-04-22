@@ -21,7 +21,7 @@ let DZ = cr8_dt()
 
 function filterStatus() {
   let Pr = DIV.cloneNode(true)
-  Pr.id='tflta'
+  Pr.id='imagesetFilterbar'
   let Bn = BTN.cloneNode(true)
   let Sx = SPN.cloneNode(true)
   let Zx = H4.cloneNode(true)
@@ -313,7 +313,8 @@ function getAllTests() {
   Mn.children[0].appendChild(Tls)
 }
 
-function imageIndiv() {
+function imageIndiv()
+{
   const imgItem = DIV.cloneNode(true)
   imgItem.className = 'taskItem rel'
 

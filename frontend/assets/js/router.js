@@ -9,6 +9,7 @@ const authFunctions = [
     getTestID,
     getImageID,
     getPrf,
+    generateRowsz,
     /*
     getSecurity,
     getAlerts,

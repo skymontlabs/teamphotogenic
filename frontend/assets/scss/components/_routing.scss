@@ -37,10 +37,7 @@
 	&>#admin {
 		margin-top: 82px;
 	}
-	&>#Ia {
-		padding-top: 120px;
-		box-sizing: border-box;
-	}
+
 	&.showPaired {
 		#Xa {
 			display: block;
@@ -58,14 +55,8 @@
 		}
 	}
 
-	&.showRate {
-		@media (max-width: $tablet-max) {
-			overflow: hidden;
-			height: 100vh;
-			width: 100vw;
-			position: fixed;
-		}
-
+	&.showRate,
+	&.showImg {
 		#Na {
 			@media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {
 				width: 61.8%;
@@ -75,6 +66,16 @@
 				width: 50%;
 				right: 0;
 			}
+		}
+
+	}
+
+	&.showRate {
+		@media (max-width: $tablet-max) {
+			overflow: hidden;
+			height: 100vh;
+			width: 100vw;
+			position: fixed;
 		}
 
 		#Ra {
@@ -119,7 +120,6 @@
 
 	&.showImg {
 		#Ia {
-			display: block;
 			opacity: 1;
 			visibility: visible;
 		}
@@ -172,7 +172,7 @@
 		#Fa {
 			display: none;
 		}
-		#tflta {
+		#imagesetFilterbar {
 			visibility: hidden;
 			height: 0;
 			opacity: 0;

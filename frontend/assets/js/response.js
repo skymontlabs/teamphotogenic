@@ -271,6 +271,46 @@ function readImagesetIDCPP() // serialize()
 
 
 // END CPP
+async function convertBlobToUint8Array(blob) {
+  try {
+    // Read the blob as an ArrayBuffer
+    const arrayBuffer = await blob.arrayBuffer();
+    // Create a Uint8Array view on the ArrayBuffer
+    const uint8Array = new Uint8Array(arrayBuffer);
+    return uint8Array;
+  } catch (error) {
+    console.error('Error converting blob to Uint8Array:', error);
+    return null; // or handle the error as you see fit
+  }
+}
+
+// Example usage with a fetch request that gets a blob
+async function fetchBinaryDataAndConvert(url, accessToken) {
+  try {
+    const response = await fetch(url, {
+      headers: {
+        'Authorization': `Bearer ${accessToken}` // Assuming you're using Bearer token authentication
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const binaryData = await response.blob(); // Get binary data as a Blob
+    const uint8Array = await convertBlobToUint8Array(binaryData); // Convert the blob to Uint8Array
+    console.log(uint8Array); // Now you have the data as a Uint8Array
+    // Further processing...
+  } catch (error) {
+    console.error('Failed to fetch and convert binary data:', error);
+  }
+}
+
+// Example usage: Ensure you replace 'your-binary-data-url' and 'your_access_token' with actual values
+fetchBinaryDataAndConvert('your-binary-data-url', 'your_access_token');
+
+
+
 
 function readMessage(bytes) {
     let type   = readInt32LE(bytes, 0); // 

@@ -295,7 +295,7 @@ document.onclick = (e) =>
 		let flt = key == 0 ? 7 : (1 << (key - 1))
 		let nflt = (CONFIG.iFilter === 7 || CONFIG.iFilter === flt) ? (flt) : (CONFIG.iFilter ^ flt)
 
-		if (tflta.contains(tg) && tg !== tflta && flt) {
+		if (imagesetFilterbar.contains(tg) && tg !== imagesetFilterbar && flt) {
 			if (nflt == 7) {
 				Bv0.className = 'btn A'
 				for (let i = 1; i < 4; ++i) {

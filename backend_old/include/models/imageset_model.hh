@@ -22,22 +22,29 @@ struct likert_candidate
 
 class experiment_model
 {
+    // id of experiment
     uint64_t experiment_id_;
-    char experiment_name[24];
 
-    // 
-    uint32_t total_images_;
-    // 
-    uint32_t total_elos_;
-    // 
-    uint32_t total_likerts_;
-    // 
-    uint32_t total_candidates_;
+    // name of experiment
+    char experiment_name[21];
 
     // 0=paused 1=elo 2=likert
     uint8_t status_;
+
     // Accuracy level
     uint8_t accuracy_;
+
+    // limit is 255 images
+    uint8_t total_images_;
+    
+    // how many images still running
+    uint8_t total_candidates_;
+
+    // cached # of elos
+    uint32_t total_elos_;
+    
+    // 
+    uint32_t total_likerts_;
 
     // image list
     image_model* images_;

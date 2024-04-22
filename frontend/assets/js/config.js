@@ -7,7 +7,7 @@ const showClass = [
     'showTaskID',
     'showImg',
     'showProfile',
-    'showLogin',
+    'showStatistics',
     'showLogin',
     'showLogin',
     'showLogin',
@@ -25,6 +25,7 @@ var PAGES = {
     IMAGESETID: 4,
     IMAGEIDX: 5,
     PROFILE: 6,
+    STATISTICS: 7,
     LOGIN: 12,
     SIGNUP: 13
 };
@@ -37,6 +38,7 @@ const pathnames = {
     'taskID': 4,
     'imageID': 5,
     'profile': 6,
+    'statistics': 7,
     'login': 12,
     'signup': 8
 }
@@ -122,6 +124,7 @@ var DATAV = {
     iImagesetList: [
         [1293, ['square.jpg','lake.jpg','square.jpg','lake.jpg','laurie.jpg'], 'joebidengaysex', 13, 1490453218],
         [1932, ['laurie.jpg','square.jpg','square.jpg','laurie.jpg','lake.jpg'], 'joebidengaysex', 13, 1490453218],
+        [6969, ['laurie.jpg','square.jpg','laurie.jpg','square.jpg','laurie.jpg'], 'joebidengaysex', 13, 1490453218],
         [6969, ['laurie.jpg','square.jpg','laurie.jpg','square.jpg','laurie.jpg'], 'joebidengaysex', 13, 1490453218],
     ],
 

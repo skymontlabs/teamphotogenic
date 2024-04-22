@@ -4,7 +4,7 @@
   z-index:         9999;
   overflow:        hidden;
   position:        relative;
-  height: 400px;
+  height:          400px;
 
   @media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {
     width:         38.2%;
@@ -38,6 +38,85 @@
   }
 }
 
+.ImU {
+  width:           100%;
+  background:      #f7f8f9;
+  z-index:         9999;
+  overflow:        hidden;
+  position:        relative;
+  height: calc(100% - 200px);
+  img {
+    position:      relative;
+    max-width:     100%;
+    display:       block;
+    margin:        0 auto;
+    width:         auto;
+    height:        100%;
+
+    @media (max-width: $tablet-max) {
+      max-height:  600px;
+    }
+
+    @media (min-width: $tablet-min) {
+      top:         50%;
+      transform:   translateY(-50%);
+    }
+  }
+}
+
+.RUa {
+  width:           100%;
+  box-sizing:      border-box;
+  display:         flex;
+  flex-direction:  column;
+  justify-content: space-between;
+
+  @media (max-width: $tablet-max) {
+    padding-left:    32px;
+    padding-right:   32px;
+    padding-top:   0;
+    position: absolute;
+    bottom: 0;
+  }
+   
+  @media (min-width: $tablet-min) {
+    top: 50%;
+    position: absolute;
+    right: 48px;
+    transform: translateY(-50%);
+    padding: 0;
+  }
+
+  @media (min-width: $tablet-wide-min) {
+    width: calc(50% - 96px);
+  }
+  
+  @media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {
+    width: calc(61.8% - 96px);
+  }
+
+}
+
+
+#IIg {
+  width: 50%;
+  @media (max-width: $tablet-max) {
+    width:         100%;
+
+  }
+
+  @media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {
+    width:         38.2%;
+  }
+   
+  @media (min-width: $tablet-wide-min) {
+    width:         calc(50%);
+  }
+
+  @media (min-width: $tablet-min) {
+    height:        100vh;
+  }
+}
 
 
 #Ia {

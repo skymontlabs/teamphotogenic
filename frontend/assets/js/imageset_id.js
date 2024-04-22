@@ -1,33 +1,6 @@
 
 
-function generateImagesetMetadata(title, imageId, statusInt) {/*
-  var tmta = \
-   `<div id="TMta">
-      <div class="y z">
-        <span id="RQ">Rating Test</span>
-        <span id="RQ">ts_0123456789abcdef</span>
-      </div>
-      <div  class="rel y BB">
-        <h2 style="font-weight: 600;width: 100%;padding-bottom: 12px;" >Sarah Lasalle <span class="BW">Running</span></h2>
-        <button id="dtz" class="dots btn L16"><span class="d0" id="dd0X"></span><span class="d1" id="dd1X"></span><span class="d2" id="dd2X"></span></button>
-        <ul id="bblDropdown" class="dropsort">
-          <li><span id="editM">Restart test...</span></li>
-          <li><span id="editM">Resume test</span></li>
-          <li><span id="editM">Pause test</span></li>
-          <li><span id="editM">Edit test</span></li>
-          <li><span id="deleN">Delete test</span></li>
-        </ul>
-      </div>
-      <div class="y t16">
-        <div class="BY r16"><span class="F12 ST">total votes</span><span class="bl">45</span></div>
-        <div class="BY L16 r16"><span class="F12 ST">total votes</span><span class="bl">45</span></div>
-        <div class="L16"><span class="F12 ST">created</span><span class="bl">Jan 17, 2017</span></div>
-      </div>
-      <span style="font-size: 11px"></span>
-      <div class="y rel">
-      </div>
-    </div>`;*/
-
+function generateImagesetMetadata(title, imageId, statusInt) {
   // Create the outermost div
 
   // First inner div with classes 'y' and 'z'
@@ -176,6 +149,7 @@ function updateImageIndiv(array, idx, title, totalImages, totalVotes, created)
 }
 
 
+
 function getImagesetId()
 {
   Mn.id='Ta';
@@ -192,4 +166,5 @@ function getImagesetId()
   }
 
   Mn.children[0].appendChild(Tls)
+  generateRowsz()
 }
