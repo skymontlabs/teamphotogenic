@@ -3,7 +3,7 @@ function generateIconRow() {
     // Create the main div
     const containerDiv = DIV.cloneNode(true);
     containerDiv.id = 'IcnRw';
-    containerDiv.className = 'T16 t16 y z Bw oxh';
+    containerDiv.className = 'T16 t16 y z  oxh';
 
     // Create and append the images
     for (let i = 0; i < 7; i++) {

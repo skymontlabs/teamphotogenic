@@ -59,7 +59,7 @@
 	&.showImg {
 		#Na {
 			@media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {
-				width: 61.8%;
+				width: 50%;
 				right: 0;
 			}
 			@media (min-width: $tablet-wide-min) {
@@ -190,7 +190,8 @@
 	}
 
 	&.showProfile {
-		#Pa {
+		#Pa,
+		#EPa {
 			height: auto;
 			visibility: visible;
 			

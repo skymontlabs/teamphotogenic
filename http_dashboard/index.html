@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>blockcascade-vue</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <div id="cVr" style="width: 100vw;height: 100vh;background: #000;opacity: 0;position: absolute;top: 0;z-index: 9999999;display: none;"></div>
+    <div id="bckgd"></div>
+  	<div id="logn">
+		  <section id="sGx" class="signin-frame">
+        <div>
+          <a href="" id="ss4" class="b8 b9">Sign up</a>
+        </div>
+		    <div id="s0k" class="description" style="position: relative;">
+          <h2 id="sTx" class="tL login-title">Welcome back</h2>
+          <h2 id="sGp" class="tL login-title hidden">Sign up</h2>
+          <h2 id="sGq" class="tL login-title hidden">Forgot password</h2>
+          <h2 id="sG0" class="tL login-title hidden">Reset password</h2>
+          <p id="sGr" class="lD sZ">It's great to see you again.</p>
+          <p id="sGs" class="lD sZ" style="display:none">Send a password reset link to your email.</p>
+	        <form role="form" id="cc9" novalidate="true">
+	          <div class="iS">
+              <label class="input-title ">Email</label>
+                <input type="text" class="" id="sma" placeholder="admin@example.io" autofocus="true">
+              <label class="verify" id="em9">Your email address is invalid</label>
+              <span class="ssM"></span>
+	          </div>
+            <div id="pSwD" class="iS" style="margin-top: 0">
+              <label class="input-title ">Password</label>
+              <div style="display: flex;justify-content: space-between;">
+                <span id="fGt">Forgot password?</span>
+              </div>
+              <input id="pW" type="password" placeholder="••••••••">
+              <label id="smw" class="verify" style="opacity: 0; height: 0;margin: 0;">Your password must be longer than 16 characters</label>
+              <span class="ssM"></span>
+            </div>
+            <div class="spread">
+            <label for="remember-input" class="toggle y">
+              <input id="remember-input" type="checkbox" checked="true">
+              <div class="indicator"></div><span class="sZ">Remember me</span>
+            </label><a href="/auth/reset-password">Forgot password?</a>
+          </div>
+          <div id="msl">
+            <button id="proceed" class="button fullwidth" type="button">Let's go</button>
+          </div>
+	      </form>
+        <label id="s99" class="sZ s98">By signing up, you agree to the <a target="_blank" href="https://blockcascade.com/terms" class="sZ">Terms and Conditions</a></label>
+        <label id="s97" class="sZ s98">Don't need to reset your password? <span id="fG8" class="sZ">Back to sign in</span></label>
+		  </div>
+      <div id="dSb">
+        <ul class="L">
+          <li class="Av">
+            <svg viewBox="0 0 64 64"><radialGradient id="aT5" cx="41.726" cy="24.855" r="28.792" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3c9bd3"/><stop offset="1" stop-color="#0070a3"/></radialGradient><circle fill="url(#aT5)" cx="50" cy="37.35" r="14"/><path fill="#FFF" d="M57.87 29.47c-3.17 2.63-7.81 6.42-8.46 7.05a.996.996 0 1 0 1.41 1.41c.63-.65 4.43-5.29 7.05-8.46z"/><radialGradient id="bT5" cx="6.15" cy="25.026" r="29.188" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#97dcff"/><stop offset="1" stop-color="#23b5ef"/></radialGradient><circle fill="url(#bT5)" cx="14" cy="37.35" r="14"/><path fill="#FFF" d="M6.13 45.22c3.17-2.63 7.81-6.42 8.46-7.05a.996.996 0 1 0-1.41-1.41c-.63.65-4.43 5.29-7.05 8.46z"/><radialGradient id="cT5" cx="20.097" cy="12.21" r="34.341" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e1ffff"/><stop offset="1" stop-color="#b1e1fb"/></radialGradient><circle fill="url(#cT5)" cx="32" cy="26.65" r="18"/><path fill="#FFF" d="M21.88 16.53c3.38 4.07 8.26 10.04 9.06 10.87a1.28 1.28 0 1 0 1.81-1.81c-.83-.8-6.8-5.69-10.87-9.06z"/></svg>
+            <span>Overview</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 64 64"><radialGradient id="mra" cx="12.507" cy="27.169" r="55.184" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#72dcff"/><stop offset="1" stop-color="#0091e8"/></radialGradient><path fill="url(#mra)" d="M22.65 27.32L3.95 41.35v4.68c0 5.14 4.21 9.35 9.35 9.35h37.4c5.14 0 9.35-4.21 9.35-9.35V22.65l-18.7 14.03-18.7-9.36z"/><radialGradient id="mrb" cx="4.738" cy="10.718" r="58.651" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c5f4ff"/><stop offset="1" stop-color="#72c8f3"/></radialGradient><path fill="url(#mrb)" d="M50.7 8.62H13.3c-5.14 0-9.35 4.21-9.35 9.35v23.38l18.7-14.03 18.7 9.35 18.7-14.03v-4.68c0-5.13-4.2-9.34-9.35-9.34z"/><path fill="none" stroke="#FFF" stroke-width="2.8" stroke-miterlimit="10" d="M22.65 27.32L3.95 41.35M22.65 27.32l18.7 9.36M60.05 22.65l-18.7 14.03"/><radialGradient id="mrc" cx="1.793" cy="37.078" r="8.943" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1b8dcd"/><stop offset=".999" stop-color="#004e9f"/></radialGradient><circle fill="url(#mrc)" cx="3.95" cy="41.35" r="3.95"/><radialGradient id="mrd" cx="20.365" cy="25.084" r="7.778" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1b8dcd"/><stop offset=".999" stop-color="#004e9f"/></radialGradient><circle fill="url(#mrd)" cx="22.65" cy="27.32" r="3.95"/><radialGradient id="mre" cx="39.066" cy="32.951" r="8.517" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1b8dcd"/><stop offset=".999" stop-color="#004e9f"/></radialGradient><circle fill="url(#mre)" cx="41.35" cy="36.68" r="3.95"/><radialGradient id="mrf" cx="57.252" cy="19.151" r="8.505" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1b8dcd"/><stop offset=".999" stop-color="#004e9f"/></radialGradient><circle fill="url(#mrf)" cx="60.05" cy="22.65" r="3.95"/></svg>
+            <span>Reports</span>
+          </li>
+        </ul>
+        <ul class="L">
+          <li>
+            <svg viewBox="0 0 64 64"><radialGradient id="a_" cx="18.113" cy="4.777" r="42.365" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3c9bd3"/><stop offset="1" stop-color="#0070a3"/></radialGradient><path fill="url(#a_)" d="M28.79 3.7c-11.02 0-19.95 8.93-19.95 19.95S17.77 43.6 28.79 43.6s19.95-8.93 19.95-19.95S39.81 3.7 28.79 3.7zm6.65 23.28c0 1.83-1.5 3.33-3.33 3.33h-6.65c-1.83 0-3.33-1.5-3.33-3.33v-6.65c0-1.83 1.5-3.33 3.33-3.33h6.65c1.83 0 3.33 1.5 3.33 3.33v6.65z"/><radialGradient id="b_" cx="32.557" cy="14.706" r="41.279" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#97dcff"/><stop offset="1" stop-color="#23b5ef"/></radialGradient><path fill="url(#b_)" d="M44.05 12.74c-11.02 0-19.95 8.93-19.95 19.95s8.93 19.95 19.95 19.95S64 43.72 64 32.7s-8.93-19.96-19.95-19.96zm6.65 23.28c0 1.83-1.5 3.33-3.33 3.33h-6.65c-1.83 0-3.33-1.5-3.33-3.33v-6.65c0-1.83 1.5-3.33 3.33-3.33h6.65c1.83 0 3.33 1.5 3.33 3.33v6.65z"/><radialGradient id="c_" cx="8.254" cy="22.02" r="42.715" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e1ffff"/><stop offset="1" stop-color="#b1e1fb"/></radialGradient><path fill="url(#c_)" d="M19.95 20.39C8.93 20.39 0 29.32 0 40.34S8.93 60.3 19.95 60.3 39.9 51.37 39.9 40.35s-8.92-19.96-19.95-19.96zm6.66 23.28c0 1.83-1.5 3.33-3.33 3.33h-6.65c-1.83 0-3.33-1.5-3.33-3.33v-6.65c0-1.83 1.5-3.33 3.33-3.33h6.65c1.83 0 3.33 1.5 3.33 3.33v6.65z"/></svg>
+            <span>Payments</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 64 64"><radialGradient id="0-a" cx="32.484" cy="3.928" r="25.437" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1b8dcd"/><stop offset=".999" stop-color="#004e9f"/></radialGradient><circle fill="url(#0-a)" cx="39.06" cy="15.44" r="12.35"/><radialGradient id="0-b" cx="12.866" cy="7.085" r="25.573" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#97dcff"/><stop offset="1" stop-color="#0083e8"/></radialGradient><circle fill="url(#0-b)" cx="19.65" cy="18.97" r="12.35"/><radialGradient id="0-c" cx="4.977" cy="12.616" r="68.025" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d8f5ff"/><stop offset="1" stop-color="#69cafb"/></radialGradient><path fill="url(#0-c)" d="M53.18 14.56H3.76c-.97 0-1.76.79-1.76 1.76v35.29c0 2.91 2.38 5.29 5.29 5.29h45.88c2.91 0 5.29-2.38 5.29-5.29V19.85c.01-2.91-2.37-5.29-5.28-5.29z"/><radialGradient id="0-d" cx="39.622" cy="27.081" r="26.553" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3c9bd3"/><stop offset="1" stop-color="#004b91"/></radialGradient><path fill="url(#0-d)" d="M57.88 43.68H44.95c-2.27 0-4.12-1.86-4.12-4.12v-7.64c0-2.27 1.86-4.12 4.12-4.12h12.93c2.27 0 4.12 1.86 4.12 4.12v7.64c0 2.26-1.86 4.12-4.12 4.12z"/><circle fill="#FFF" cx="47.88" cy="35.74" r="3.53"/></svg>
+            <span>Wallets</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 64 64"><radialGradient id="kma" cx="2.466" cy=".964" r="50.064" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3c9bd3"/><stop offset="1" stop-color="#0070a3"/></radialGradient><path fill="url(#kma)" d="M12.8 44.8c1.13 0 2.2.21 3.2.57V18.61c3.72-1.32 6.4-4.84 6.4-9.01 0-5.3-4.3-9.6-9.6-9.6S3.2 4.3 3.2 9.6c0 4.17 2.68 7.69 6.4 9.01v26.78c1.01-.36 2.07-.59 3.2-.59z"/><radialGradient id="kmb" cx="4.26" cy="34.589" r="39.336" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d2f6fe"/><stop offset="1" stop-color="#b1e1fb"/></radialGradient><path fill="url(#kmb)" d="M22.4 54.4c0-.67-.07-1.33-.2-1.96L45 39.27c-1.64-1.4-2.82-3.32-3.22-5.53L18.84 46.99c-1.65-1.35-3.74-2.19-6.04-2.19-5.3 0-9.6 4.3-9.6 9.6S7.5 64 12.8 64s9.6-4.3 9.6-9.6z"/><radialGradient id="kmc" cx="23.538" cy=".515" r="52.605" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#97dcff"/><stop offset="1" stop-color="#23b5ef"/></radialGradient><path fill="url(#kmc)" d="M60.8 32c0-5.3-4.3-9.6-9.6-9.6-2.3 0-4.38.84-6.04 2.19L22.22 11.35c-.41 2.21-1.59 4.13-3.24 5.52L41.8 30.04c-.13.63-.2 1.29-.2 1.96 0 5.3 4.3 9.6 9.6 9.6s9.6-4.3 9.6-9.6"/><path fill="#FFF" d="M55.2 32c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4"/><circle fill="#FFF" cx="12.8" cy="9.6" r="4"/><circle fill="#FFF" cx="12.8" cy="54.4" r="4"/></svg>
+            <span>Webhooks</span>
+          </li>
+        </ul>
+        <ul class="L">
+          <li>
+            <svg viewBox="0 0 64 64"><radialGradient id="M_a" cx="32" cy="30.222" r="26.683" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c9ebff"/><stop offset="1" stop-color="#94defb"/></radialGradient><path fill="url(#M_a)" d="M53.7 27.48c0-.04.01-.08.01-.11 0-9.47-7.68-17.14-17.14-17.14-6.38 0-11.87 3.52-14.83 8.69a9.05 9.05 0 0 0-3.46-.69c-5.05 0-9.14 4.09-9.14 9.14 0 .08.02.15.02.23C3.94 28.64 0 33.26 0 38.79c0 6.31 5.12 11.43 11.43 11.43h41.14C58.88 50.22 64 45.1 64 38.79c0-5.92-4.52-10.73-10.3-11.31z"/><radialGradient id="M_b" cx="46.493" cy="28.273" r="23.98" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#97dcff"/><stop offset="1" stop-color="#23b5ef"/></radialGradient><circle opacity=".6" fill="url(#M_b)" cx="52.57" cy="38.79" r="11.43"/><radialGradient id="M_c" cx="25.703" cy="10.849" r="36.245" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1b8dcd"/><stop offset=".999" stop-color="#004e9f"/></radialGradient><circle opacity=".8" fill="url(#M_c)" cx="36.57" cy="27.37" r="17.14"/><radialGradient id="M_d" cx="13.218" cy="18.872" r="18.887" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b4f0ff"/><stop offset="1" stop-color="#0ec4ff"/></radialGradient><circle opacity=".6" fill="url(#M_d)" cx="18.29" cy="27.37" r="9.14"/><radialGradient id="M_e" cx="5.012" cy="28.498" r="24.414" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4dd4ff"/><stop offset="1" stop-color="#1089ba"/></radialGradient><circle opacity=".6" fill="url(#M_e)" cx="11.43" cy="38.79" r="11.43"/></svg>
+            <span>API</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 64 64"><radialGradient id="mr-a" cx="39.328" cy="9.747" r="36.263" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3cd1ff"/><stop offset=".999" stop-color="#0074c6"/></radialGradient><circle fill="url(#mr-a)" cx="47.94" cy="17.79" r="9.05"/><radialGradient id="mr-b" cx="39.328" cy="9.747" r="36.263" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3cd1ff"/><stop offset=".999" stop-color="#0074c6"/></radialGradient><path fill="url(#mr-b)" d="M47.94 29.05c-7.78 0-14.06 4.77-14.06 12.12 0 3.67 6.48 4.62 14.06 4.62S62 44.66 62 41.17c0-7.39-6.33-12.12-14.06-12.12z"/><g><radialGradient id="mr-c" cx="8.456" cy="9.871" r="35.819" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#aeebff"/><stop offset="1" stop-color="#13bcef"/></radialGradient><circle fill="url(#mr-c)" cx="16.06" cy="17.83" r="9.01"/><radialGradient id="mr-d" cx="8.456" cy="9.871" r="35.819" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#aeebff"/><stop offset="1" stop-color="#13bcef"/></radialGradient><path fill="url(#mr-d)" d="M16.06 29.04c-7.74 0-14 4.75-14 12.06 0 3.65 6.45 4.6 14 4.6s14-1.13 14-4.6c0-7.35-6.3-12.06-14-12.06z"/></g><g><radialGradient id="mr-e" cx="18.78" cy="14.795" r="52.713" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c5f4ff"/><stop offset="1" stop-color="#72c8f3"/></radialGradient><circle fill="url(#mr-e)" cx="32" cy="22.79" r="11.46"/><radialGradient id="mr-f" cx="18.78" cy="14.795" r="52.713" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c5f4ff"/><stop offset="1" stop-color="#72c8f3"/></radialGradient><path fill="url(#mr-f)" d="M32 37.05c-9.85 0-17.81 6.05-17.81 15.35 0 4.65 8.2 5.86 17.81 5.86s17.81-1.44 17.81-5.86c0-9.36-8.02-15.35-17.81-15.35z"/></g></svg>
+            <span>Teams</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 64 64"><radialGradient id="m-a" cx="15.848" cy="21.456" r="44.329" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#97dcff"/><stop offset="1" stop-color="#23b5ef"/></radialGradient><path fill="url(#m-a)" d="M46.24 43.07v-5.55l-5.03-1.85c-.44-1.69-1.03-3.29-1.9-4.76l.05-.01 2.4-4.99-3.91-3.92-4.98 2.37v.01c-1.47-.87-3.07-1.42-4.76-1.86l-1.85-5.08h-5.55l-1.85 5.08c-1.69.44-3.29 1.05-4.76 1.92l-.01-.04-4.99-2.38-3.92 3.91 2.37 4.99.01.01c-.87 1.47-1.73 3.07-2.17 4.76L0 37.52v5.55l5.39 1.85c.44 1.69 1.21 3.29 2.08 4.76l.04.01-2.35 4.99 3.93 3.92 4.99-2.37.01-.01c1.47.87 3.07 1.68 4.76 2.12l1.85 5.34h5.55l1.85-5.34c1.69-.44 3.29-1.18 4.76-2.05l.01-.03 4.99 2.36 3.92-3.93-2.37-4.99-.01-.01c.87-1.47 1.37-3.07 1.81-4.76l5.03-1.86zm-22.76 6.47c-5.11 0-9.24-4.14-9.24-9.24 0-5.1 4.14-9.24 9.24-9.24 5.11 0 9.24 4.14 9.24 9.24.01 5.1-4.13 9.24-9.24 9.24z"/><radialGradient id="m-b" cx="40.196" cy=".937" r="26.721" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e1ffff"/><stop offset="1" stop-color="#b1e1fb"/></radialGradient><path fill="url(#m-b)" d="M63.97 9.55l-1.21-2.93-3.14.16c-.6-.8-1.3-1.5-2.08-2.08l.01-.01.16-3.15L54.78.33l-2.12 2.34c-.97-.14-1.96-.14-2.95 0L47.6.33l-2.93 1.21.16 3.15c-.8.6-1.49 1.31-2.08 2.09h-.01l-3.14-.17-1.21 2.93 2.34 2.11h.01c-.11.91-.16 1.96-.02 2.95l-2.36 2.12 1.21 2.93 3.17-.17c.6.8 1.31 1.49 2.09 2.08l-.16 3.15 3.21 1.21 2.4-2.34v-.01c.62.11 1.68.15 2.67.01l1.98 2.35 2.86-1.21-.2-3.15c.8-.6 1.48-1.31 2.06-2.09l3.15.16 1.2-2.92-2.35-2.11h-.01c.14-.97.13-1.95-.01-2.94l2.34-2.12zm-10.76 8.46c-2.69 1.12-5.78-.16-6.9-2.86-1.12-2.69.16-5.78 2.86-6.9 2.7-1.12 5.78.16 6.9 2.86 1.12 2.7-.16 5.78-2.86 6.9z"/></svg>
+            <span>Settings</span>
+          </li>
+        </ul>
+      </div>
+	  </section>
+	  <div id="sGw">
+      <main id="Me">
+        <header id="He">
+          <div class="x">
+            <div style="display: flex">
+              <span class="TextInput__InputContainer-eyrJvj hVocjw" style="padding: 15px 0;position: relative;width: 13em">
+                <input class="Search__SearchInput-fPGEDZ dDlDOV TextInput-caeofa kMbEXN TextInput__Input-dYZOmi jkkKem" type="text" placeholder="Search web pages" style="padding:8px 8px 8px 32px;border: none;font-size: 12px;box-shadow:  0 1px 3px 0 rgba(96, 107, 128, 0.05); background: transparent;">
+                <svg style="position: absolute;top: 24px;left: 9px" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path class="m009" d="M6.448 12.897A6.448 6.448 0 1 1 6.448 0a6.448 6.448 0 0 1 0 12.897zm0-1.549a4.9 4.9 0 1 0 0-9.8 4.9 4.9 0 0 0 0 9.8zm3.875.122a.811.811 0 1 1 1.147-1.147l4.292 4.292a.811.811 0 0 1-1.147 1.147l-4.292-4.292z" id="ic-search-glass-16px-a"></path></svg>
+              </span>
+              <ul id="sn" class="L y z" style="margin: 0 0 0 auto; display: flex;padding: 16px 0">
+                <li id="sms">
+                  Plans
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#fff" d="M10.944 16.916c-.918 0-.938-1.025-.936-1.246.002-.221.038-.995.115-1.41a5.061 5.061 0 0 1 1.017-2.263c.273-.35.617-.72 1.033-1.114l1.476-1.41a6.09 6.09 0 0 0 1.065-1.246c.296-.459.443-1.017.443-1.672 0-.853-.268-1.569-.803-2.148-.536-.579-1.295-.869-2.279-.869a3.199 3.199 0 0 0-2.409 1.033c-.296.316-.52.683-.672 1.098-.155.415-.254 1.281-.826 1.229-.572-.051-.761-.041-1.55-.223-1.123-.259-1.956-.895-1.085-2.891a6.77 6.77 0 0 1 1.656-2.083A7.135 7.135 0 0 1 9.517.407a8.735 8.735 0 0 1 2.82-.443c.939 0 1.83.136 2.672.41a6.706 6.706 0 0 1 2.229 1.213 5.731 5.731 0 0 1 1.525 1.984c.371.787.557 1.694.557 2.722 0 .7-.077 1.311-.229 1.836a5.444 5.444 0 0 1-.656 1.444 7.716 7.716 0 0 1-1.033 1.262 27.47 27.47 0 0 1-1.361 1.262c-.438.372-.792.699-1.066.983a4.403 4.403 0 0 0-.656.853 3.044 3.044 0 0 0-.344.918c-.065.328-.098.908-.098 1.214 0 .306-.233.853-1.086.853l-1.847-.002zm-1.591 4.557c0-.699.257-1.301.77-1.804a2.55 2.55 0 0 1 1.852-.754c.699 0 1.311.24 1.836.72.524.482.786 1.071.786 1.772 0 .699-.257 1.301-.77 1.802a2.552 2.552 0 0 1-1.852.754c-.35 0-.683-.065-1-.196s-.596-.306-.836-.524a2.423 2.423 0 0 1-.574-.787 2.315 2.315 0 0 1-.212-.983z"/></svg>
+                  <div id="aww" class="sdsd" style="left: -150px;width: 12em;padding: 0;display: none;">
+                   <svg style="top: -12px;right: 2px;width: 48px;height: 20px;"  xmlns="http://www.w3.org/2000/svg" width="48" height="26.4"><path fill="#FFF" d="M48 26.386L32.608 8.34h-.012l-6.071-7.118c-1.389-1.628-3.661-1.628-5.05 0l-6.07 7.118h-.013L0 26.386h19.493c.053.001.102.014.156.014h8.702c.054 0 .103-.013.156-.014H48z"/></svg>
+                    <div style="
+      padding: 19px 21px 11px;
+    border-bottom: 1px solid #f1f6f9;">
+                      <span class="s5">Resources</span>
+                      <ul class="L">
+                        <li><a href="">Docs</a></li>
+                        <li><a href="">Getting Started</a></li>
+                        <li><a href="">API Reference</a></li>
+                      </ul>
+                    </div>
+                    <div style="
+      padding: 15px 21px 11px;">
+                      <span class="s5">Legal</span>
+                      <ul class="L">
+                        <li><a href="">Terms</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <svg id="tDm1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#fff" d="M15.531 19.858c-6.29 0-11.39-5.099-11.39-11.39 0-3.367 1.47-6.384 3.793-8.469C3.295 1.802 0 6.299 0 11.575 0 18.437 5.563 24 12.425 24c5.277 0 9.773-3.295 11.575-7.934-2.085 2.323-5.102 3.792-8.469 3.792z"/><path fill="#fff" d="M12.425 7.433s0-2.071 2.071-2.071c0 0-2.071 0-2.071-2.071 0 0 0 2.071-2.071 2.071 0 .001 2.071.001 2.071 2.071zM16.567 10.54s0-1.035 1.035-1.035c0 0-1.035 0-1.035-1.035 0 0 0 1.035-1.035 1.035-.001-.001 1.035-.001 1.035 1.035zM18.637 6.398s0-3.106 3.106-3.106c0 0-3.106 0-3.106-3.106 0 0 0 3.106-3.106 3.106 0 0 3.106 0 3.106 3.106z"/></svg>
+                  <svg id="tDm2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="opacity: 0;width: 18px;height: 18px;margin: -2px"><circle fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="12" r="5"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                </li>
+                <li style="padding: 8px">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 16px;height: 16px"><path fill="#fff" d="M18.095.051L5.892 11.147a.19.19 0 0 0 .072.323l4.724 1.465a.19.19 0 0 1 .114.266L5.606 23.724c-.093.188.143.366.299.225l12.203-11.096a.19.19 0 0 0-.072-.323l-4.724-1.465a.19.19 0 0 1-.114-.266L18.394.275c.093-.187-.143-.365-.299-.224z"/></svg>
+                  <div id="axx" class="sdsd" style="left: -70px;">
+                    <ul class="L">
+                      <li><span>Settings</span></li>
+                      <li><span>Logout</span></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" onclick="_ayy()"><g fill="#FFF"><circle cx="12" cy="5.86" r="5.86"/><path d="M12 13.16c-5.04 0-9.11 3.09-9.11 7.85C2.89 23.38 7.09 24 12 24s9.11-.73 9.11-2.99c0-4.79-4.1-7.85-9.11-7.85z"/></g></svg>
+                  <div id="ayy" class="sdsd" style="left: -150px;width: 12em;padding: 0">
+                   <svg style="top: -12px;right: 2px;width: 48px;height: 20px;"  xmlns="http://www.w3.org/2000/svg" width="48" height="26.4"><path fill="#FFF" d="M48 26.386L32.608 8.34h-.012l-6.071-7.118c-1.389-1.628-3.661-1.628-5.05 0l-6.07 7.118h-.013L0 26.386h19.493c.053.001.102.014.156.014h8.702c.054 0 .103-.013.156-.014H48z"/></svg>
+                    <div style="
+    padding: 14px 21px;
+    border-bottom: 1px solid #f1f6f9;">
+                      <div class="sc-gqjmRU jCJQNy">
+                        <div class="sc-bYSBpT fBCkBC" size="32">
+                        </div>
+                      </div>
+                      <div>
+                        <span class="s3">sdl0@icloud.com</span>
+                        <span class="s4">Your Profile</span>
+                      </div>
+                    </div>
+                    <ul class="L" style="
+    padding: 9px 21px;
+    border-bottom: 1px solid #f1f6f9;">
+                      <li><span>Settings</span></li>
+                      <li><span>Billing</span></li>
+                    </ul>
+                    <ul class="L" style="
+    padding: 11px 21px;">
+                      <li><span>Sign out</span></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="y z" style="margin:">
+              <div id="tZml" style="display: flex;position: relative;">
+                <svg class="oVR" viewBox="0 0 64 64"><radialGradient id="aT5" cx="41.726" cy="24.855" r="28.792" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3c9bd3"></stop><stop offset="1" stop-color="#0070a3"></stop></radialGradient><circle fill="url(#aT5)" cx="50" cy="37.35" r="14"></circle><path fill="#FFF" d="M57.87 29.47c-3.17 2.63-7.81 6.42-8.46 7.05a.996.996 0 1 0 1.41 1.41c.63-.65 4.43-5.29 7.05-8.46z"></path><radialGradient id="bT5" cx="6.15" cy="25.026" r="29.188" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#97dcff"></stop><stop offset="1" stop-color="#23b5ef"></stop></radialGradient><circle fill="url(#bT5)" cx="14" cy="37.35" r="14"></circle><path fill="#FFF" d="M6.13 45.22c3.17-2.63 7.81-6.42 8.46-7.05a.996.996 0 1 0-1.41-1.41c-.63.65-4.43 5.29-7.05 8.46z"></path><radialGradient id="cT5" cx="20.097" cy="12.21" r="34.341" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e1ffff"></stop><stop offset="1" stop-color="#b1e1fb"></stop></radialGradient><circle fill="url(#cT5)" cx="32" cy="26.65" r="18"></circle><path fill="#FFF" d="M21.88 16.53c3.38 4.07 8.26 10.04 9.06 10.87a1.28 1.28 0 1 0 1.81-1.81c-.83-.8-6.8-5.69-10.87-9.06z"></path></svg>
+                <svg class="rEP" style="opacity: 0" viewBox="0 0 64 64"><radialGradient id="mra" cx="12.507" cy="27.169" r="55.184" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#72dcff"/><stop offset="1" stop-color="#0091e8"/></radialGradient><path fill="url(#mra)" d="M22.65 27.32L3.95 41.35v4.68c0 5.14 4.21 9.35 9.35 9.35h37.4c5.14 0 9.35-4.21 9.35-9.35V22.65l-18.7 14.03-18.7-9.36z"/><radialGradient id="mrb" cx="4.738" cy="10.718" r="58.651" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c5f4ff"/><stop offset="1" stop-color="#72c8f3"/></radialGradient><path fill="url(#mrb)" d="M50.7 8.62H13.3c-5.14 0-9.35 4.21-9.35 9.35v23.38l18.7-14.03 18.7 9.35 18.7-14.03v-4.68c0-5.13-4.2-9.34-9.35-9.34z"/><path fill="none" stroke="#FFF" stroke-width="2.8" stroke-miterlimit="10" d="M22.65 27.32L3.95 41.35M22.65 27.32l18.7 9.36M60.05 22.65l-18.7 14.03"/><radialGradient id="mrc" cx="1.793" cy="37.078" r="8.943" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1b8dcd"/><stop offset=".999" stop-color="#004e9f"/></radialGradient><circle fill="url(#mrc)" cx="3.95" cy="41.35" r="3.95"/><radialGradient id="mrd" cx="20.365" cy="25.084" r="7.778" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1b8dcd"/><stop offset=".999" stop-color="#004e9f"/></radialGradient><circle fill="url(#mrd)" cx="22.65" cy="27.32" r="3.95"/><radialGradient id="mre" cx="39.066" cy="32.951" r="8.517" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1b8dcd"/><stop offset=".999" stop-color="#004e9f"/></radialGradient><circle fill="url(#mre)" cx="41.35" cy="36.68" r="3.95"/><radialGradient id="mrf" cx="57.252" cy="19.151" r="8.505" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1b8dcd"/><stop offset=".999" stop-color="#004e9f"/></radialGradient><circle fill="url(#mrf)" cx="60.05" cy="22.65" r="3.95"/></svg>
+                <svg class="pAY" style="opacity: 0" viewBox="0 0 64 64"><radialGradient id="a_" cx="18.113" cy="4.777" r="42.365" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3c9bd3"/><stop offset="1" stop-color="#0070a3"/></radialGradient><path fill="url(#a_)" d="M28.79 3.7c-11.02 0-19.95 8.93-19.95 19.95S17.77 43.6 28.79 43.6s19.95-8.93 19.95-19.95S39.81 3.7 28.79 3.7zm6.65 23.28c0 1.83-1.5 3.33-3.33 3.33h-6.65c-1.83 0-3.33-1.5-3.33-3.33v-6.65c0-1.83 1.5-3.33 3.33-3.33h6.65c1.83 0 3.33 1.5 3.33 3.33v6.65z"/><radialGradient id="b_" cx="32.557" cy="14.706" r="41.279" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#97dcff"/><stop offset="1" stop-color="#23b5ef"/></radialGradient><path fill="url(#b_)" d="M44.05 12.74c-11.02 0-19.95 8.93-19.95 19.95s8.93 19.95 19.95 19.95S64 43.72 64 32.7s-8.93-19.96-19.95-19.96zm6.65 23.28c0 1.83-1.5 3.33-3.33 3.33h-6.65c-1.83 0-3.33-1.5-3.33-3.33v-6.65c0-1.83 1.5-3.33 3.33-3.33h6.65c1.83 0 3.33 1.5 3.33 3.33v6.65z"/><radialGradient id="c_" cx="8.254" cy="22.02" r="42.715" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e1ffff"/><stop offset="1" stop-color="#b1e1fb"/></radialGradient><path fill="url(#c_)" d="M19.95 20.39C8.93 20.39 0 29.32 0 40.34S8.93 60.3 19.95 60.3 39.9 51.37 39.9 40.35s-8.92-19.96-19.95-19.96zm6.66 23.28c0 1.83-1.5 3.33-3.33 3.33h-6.65c-1.83 0-3.33-1.5-3.33-3.33v-6.65c0-1.83 1.5-3.33 3.33-3.33h6.65c1.83 0 3.33 1.5 3.33 3.33v6.65z"/></svg>
+                <svg class="wAL" style="opacity: 0" viewBox="0 0 64 64"><radialGradient id="0-a" cx="32.484" cy="3.928" r="25.437" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1b8dcd"/><stop offset=".999" stop-color="#004e9f"/></radialGradient><circle fill="url(#0-a)" cx="39.06" cy="15.44" r="12.35"/><radialGradient id="0-b" cx="12.866" cy="7.085" r="25.573" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#97dcff"/><stop offset="1" stop-color="#0083e8"/></radialGradient><circle fill="url(#0-b)" cx="19.65" cy="18.97" r="12.35"/><radialGradient id="0-c" cx="4.977" cy="12.616" r="68.025" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d8f5ff"/><stop offset="1" stop-color="#69cafb"/></radialGradient><path fill="url(#0-c)" d="M53.18 14.56H3.76c-.97 0-1.76.79-1.76 1.76v35.29c0 2.91 2.38 5.29 5.29 5.29h45.88c2.91 0 5.29-2.38 5.29-5.29V19.85c.01-2.91-2.37-5.29-5.28-5.29z"/><radialGradient id="0-d" cx="39.622" cy="27.081" r="26.553" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3c9bd3"/><stop offset="1" stop-color="#004b91"/></radialGradient><path fill="url(#0-d)" d="M57.88 43.68H44.95c-2.27 0-4.12-1.86-4.12-4.12v-7.64c0-2.27 1.86-4.12 4.12-4.12h12.93c2.27 0 4.12 1.86 4.12 4.12v7.64c0 2.26-1.86 4.12-4.12 4.12z"/><circle fill="#FFF" cx="47.88" cy="35.74" r="3.53"/></svg>
+                <svg class="wEB" style="opacity: 0" viewBox="0 0 64 64"><radialGradient id="kma" cx="2.466" cy=".964" r="50.064" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3c9bd3"/><stop offset="1" stop-color="#0070a3"/></radialGradient><path fill="url(#kma)" d="M12.8 44.8c1.13 0 2.2.21 3.2.57V18.61c3.72-1.32 6.4-4.84 6.4-9.01 0-5.3-4.3-9.6-9.6-9.6S3.2 4.3 3.2 9.6c0 4.17 2.68 7.69 6.4 9.01v26.78c1.01-.36 2.07-.59 3.2-.59z"/><radialGradient id="kmb" cx="4.26" cy="34.589" r="39.336" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d2f6fe"/><stop offset="1" stop-color="#b1e1fb"/></radialGradient><path fill="url(#kmb)" d="M22.4 54.4c0-.67-.07-1.33-.2-1.96L45 39.27c-1.64-1.4-2.82-3.32-3.22-5.53L18.84 46.99c-1.65-1.35-3.74-2.19-6.04-2.19-5.3 0-9.6 4.3-9.6 9.6S7.5 64 12.8 64s9.6-4.3 9.6-9.6z"/><radialGradient id="kmc" cx="23.538" cy=".515" r="52.605" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#97dcff"/><stop offset="1" stop-color="#23b5ef"/></radialGradient><path fill="url(#kmc)" d="M60.8 32c0-5.3-4.3-9.6-9.6-9.6-2.3 0-4.38.84-6.04 2.19L22.22 11.35c-.41 2.21-1.59 4.13-3.24 5.52L41.8 30.04c-.13.63-.2 1.29-.2 1.96 0 5.3 4.3 9.6 9.6 9.6s9.6-4.3 9.6-9.6"/><path fill="#FFF" d="M55.2 32c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4"/><circle fill="#FFF" cx="12.8" cy="9.6" r="4"/><circle fill="#FFF" cx="12.8" cy="54.4" r="4"/></svg>
+                <svg class="aPI" style="opacity: 0" viewBox="0 0 64 64"><radialGradient id="M_a" cx="32" cy="30.222" r="26.683" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c9ebff"/><stop offset="1" stop-color="#94defb"/></radialGradient><path fill="url(#M_a)" d="M53.7 27.48c0-.04.01-.08.01-.11 0-9.47-7.68-17.14-17.14-17.14-6.38 0-11.87 3.52-14.83 8.69a9.05 9.05 0 0 0-3.46-.69c-5.05 0-9.14 4.09-9.14 9.14 0 .08.02.15.02.23C3.94 28.64 0 33.26 0 38.79c0 6.31 5.12 11.43 11.43 11.43h41.14C58.88 50.22 64 45.1 64 38.79c0-5.92-4.52-10.73-10.3-11.31z"/><radialGradient id="M_b" cx="46.493" cy="28.273" r="23.98" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#97dcff"/><stop offset="1" stop-color="#23b5ef"/></radialGradient><circle opacity=".6" fill="url(#M_b)" cx="52.57" cy="38.79" r="11.43"/><radialGradient id="M_c" cx="25.703" cy="10.849" r="36.245" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1b8dcd"/><stop offset=".999" stop-color="#004e9f"/></radialGradient><circle opacity=".8" fill="url(#M_c)" cx="36.57" cy="27.37" r="17.14"/><radialGradient id="M_d" cx="13.218" cy="18.872" r="18.887" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b4f0ff"/><stop offset="1" stop-color="#0ec4ff"/></radialGradient><circle opacity=".6" fill="url(#M_d)" cx="18.29" cy="27.37" r="9.14"/><radialGradient id="M_e" cx="5.012" cy="28.498" r="24.414" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4dd4ff"/><stop offset="1" stop-color="#1089ba"/></radialGradient><circle opacity=".6" fill="url(#M_e)" cx="11.43" cy="38.79" r="11.43"/></svg>
+                <svg class="tEA" style="opacity: 0" viewBox="0 0 64 64"><radialGradient id="mr-a" cx="39.328" cy="9.747" r="36.263" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3cd1ff"/><stop offset=".999" stop-color="#0074c6"/></radialGradient><circle fill="url(#mr-a)" cx="47.94" cy="17.79" r="9.05"/><radialGradient id="mr-b" cx="39.328" cy="9.747" r="36.263" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3cd1ff"/><stop offset=".999" stop-color="#0074c6"/></radialGradient><path fill="url(#mr-b)" d="M47.94 29.05c-7.78 0-14.06 4.77-14.06 12.12 0 3.67 6.48 4.62 14.06 4.62S62 44.66 62 41.17c0-7.39-6.33-12.12-14.06-12.12z"/><g><radialGradient id="mr-c" cx="8.456" cy="9.871" r="35.819" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#aeebff"/><stop offset="1" stop-color="#13bcef"/></radialGradient><circle fill="url(#mr-c)" cx="16.06" cy="17.83" r="9.01"/><radialGradient id="mr-d" cx="8.456" cy="9.871" r="35.819" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#aeebff"/><stop offset="1" stop-color="#13bcef"/></radialGradient><path fill="url(#mr-d)" d="M16.06 29.04c-7.74 0-14 4.75-14 12.06 0 3.65 6.45 4.6 14 4.6s14-1.13 14-4.6c0-7.35-6.3-12.06-14-12.06z"/></g><g><radialGradient id="mr-e" cx="18.78" cy="14.795" r="52.713" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c5f4ff"/><stop offset="1" stop-color="#72c8f3"/></radialGradient><circle fill="url(#mr-e)" cx="32" cy="22.79" r="11.46"/><radialGradient id="mr-f" cx="18.78" cy="14.795" r="52.713" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c5f4ff"/><stop offset="1" stop-color="#72c8f3"/></radialGradient><path fill="url(#mr-f)" d="M32 37.05c-9.85 0-17.81 6.05-17.81 15.35 0 4.65 8.2 5.86 17.81 5.86s17.81-1.44 17.81-5.86c0-9.36-8.02-15.35-17.81-15.35z"/></g></svg>
+                <svg class="sET" style="opacity: 0" viewBox="0 0 64 64"><radialGradient id="m-a" cx="15.848" cy="21.456" r="44.329" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#97dcff"/><stop offset="1" stop-color="#23b5ef"/></radialGradient><path fill="url(#m-a)" d="M46.24 43.07v-5.55l-5.03-1.85c-.44-1.69-1.03-3.29-1.9-4.76l.05-.01 2.4-4.99-3.91-3.92-4.98 2.37v.01c-1.47-.87-3.07-1.42-4.76-1.86l-1.85-5.08h-5.55l-1.85 5.08c-1.69.44-3.29 1.05-4.76 1.92l-.01-.04-4.99-2.38-3.92 3.91 2.37 4.99.01.01c-.87 1.47-1.73 3.07-2.17 4.76L0 37.52v5.55l5.39 1.85c.44 1.69 1.21 3.29 2.08 4.76l.04.01-2.35 4.99 3.93 3.92 4.99-2.37.01-.01c1.47.87 3.07 1.68 4.76 2.12l1.85 5.34h5.55l1.85-5.34c1.69-.44 3.29-1.18 4.76-2.05l.01-.03 4.99 2.36 3.92-3.93-2.37-4.99-.01-.01c.87-1.47 1.37-3.07 1.81-4.76l5.03-1.86zm-22.76 6.47c-5.11 0-9.24-4.14-9.24-9.24 0-5.1 4.14-9.24 9.24-9.24 5.11 0 9.24 4.14 9.24 9.24.01 5.1-4.13 9.24-9.24 9.24z"/><radialGradient id="m-b" cx="40.196" cy=".937" r="26.721" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e1ffff"/><stop offset="1" stop-color="#b1e1fb"/></radialGradient><path fill="url(#m-b)" d="M63.97 9.55l-1.21-2.93-3.14.16c-.6-.8-1.3-1.5-2.08-2.08l.01-.01.16-3.15L54.78.33l-2.12 2.34c-.97-.14-1.96-.14-2.95 0L47.6.33l-2.93 1.21.16 3.15c-.8.6-1.49 1.31-2.08 2.09h-.01l-3.14-.17-1.21 2.93 2.34 2.11h.01c-.11.91-.16 1.96-.02 2.95l-2.36 2.12 1.21 2.93 3.17-.17c.6.8 1.31 1.49 2.09 2.08l-.16 3.15 3.21 1.21 2.4-2.34v-.01c.62.11 1.68.15 2.67.01l1.98 2.35 2.86-1.21-.2-3.15c.8-.6 1.48-1.31 2.06-2.09l3.15.16 1.2-2.92-2.35-2.11h-.01c.14-.97.13-1.95-.01-2.94l2.34-2.12zm-10.76 8.46c-2.69 1.12-5.78-.16-6.9-2.86-1.12-2.69.16-5.78 2.86-6.9 2.7-1.12 5.78.16 6.9 2.86 1.12 2.7-.16 5.78-2.86 6.9z"/></svg>
+                <h2 class="tL" style="margin-left: 68px;font-size: 20px;margin-top: 20px">Overview</h2>
+              </div>
+              <div style="position: relative;">
+                <div style="margin: 19px 0 0; display: flex;justify-content: space-between;position: absolute;right: 0;">
+                  <a href="/" class="button" style="padding-left: 1em;padding-right: 1em">Payments</a>
+                  <a href="/" class="button b8 alt" style="    width: 86px;
+  margin-left: 12px;
+  padding-left: 1em;
+  padding-right: 1em;">Reports</a>
+                </div>
+              </div>
+            </div>
+            <div style="position: relative;">
+              <div style="height: 49px">
+                <ul class="oVR stB L y">
+                  <li class="Av">General</li>
+                  <li>Graphs</li>
+                </ul>
+                <ul class="stB L y" style="opacity: 0">
+                  <li class="Av">General</li>
+                  <li>Benchmarks</li>
+                </ul>
+                <ul class="stB L y" style="opacity: 0">
+                  <li class="Av">General</li>
+                  <li>Graphs</li>
+                </ul>
+                <ul class="stB L y" style="opacity: 0">
+                  <li class="Av">General</li>
+                  <li>Graphs</li>
+                </ul>
+                <svg style="position: absolute;top: 47.2px;" class="absolute w-100 h-100"><line stroke-linecap="round" x1="1" y1="1" x2="50.6" y2="1" stroke="#23b5ef" stroke-width="2"></line></svg>
+              </div>
+              <div class="flex-citwDR kOlCok" style="transition: opacity 300ms ease-in-out 0ms; opacity: 1; position: absolute; bottom: 0px;right: 0; display: flex;">
+                <p class="lD" style="font-size: 12px;margin: 15px 0">35 items, 8.41 GB</p>
+                <button class="Button-hYXUXp bTFHth">Date uploaded<svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="DropdownButton__DropArrow-iFehUz xcpzv" width="18" height="18"><defs><path d="M11.01 5a1 1 0 0 1 .99.99v4.02c0 .546-.444.99-1 .99a1 1 0 0 1-1-.99V7H6.99A.993.993 0 0 1 6 6a1 1 0 0 1 .99-1h4.02z" id="caron_svg__a"></path></defs><use fill="currentColor" transform="rotate(135 9 8)" xlink:href="#caron_svg__a" fill-rule="evenodd"></use></svg></button>
+                <button class="Button-hYXUXp dRVVvM" icon="true" data-test-id="view-type"><svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" height="18" width="18"><path d="M6.25 2h10.5c.414 0 .75.448.75 1s-.336 1-.75 1H6.25c-.414 0-.75-.448-.75-1s.336-1 .75-1zm0 6h10.5c.414 0 .75.448.75 1s-.336 1-.75 1H6.25c-.414 0-.75-.448-.75-1s.336-1 .75-1zm0 6h10.5c.414 0 .75.448.75 1s-.336 1-.75 1H6.25c-.414 0-.75-.448-.75-1s.336-1 .75-1zM2 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="currentColor"></path></svg></button>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div id="rSg">
+          <div class="x y z">
+            <div class="y z" style="width: calc(67% - 1em)">
+              <div class="fsg" style="border-radius: 6px;">
+                <h3 class="tL CtL">0%</h3>
+                <div class="Cyyy">
+                  <h2 class="tL">0.00/2<span>GB</span></h2>
+                  <span>Storage Used</span>
+                </div>
+              </div>
+            </div>
+            <div class="y z" style="width: calc(33% - 1em)">
+              <div class="fsg" style="border-radius: 6px;">
+                <h3 class="tL CtL">0%</h3>
+                <div class="Cyyy">
+                  <h2 class="tL">0.00/2<span>GB</span></h2>
+                  <span>Storage Used</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+		  </div>
+  	</div>
+  	<script>
+      logn.onclick = function(e){
+        console.log(e.target)
+
+        if (e.target.className === 'indicator') {
+          console.log('sex')
+          e.target.className = 'indicator active'
+        }
+
+        else if (e.target.id === 'proceed') {
+          console.log(e)
+          dSb.className = 'active'
+        }
+
+      };
+  	</script>
+  </body>
+</html>

@@ -2,7 +2,6 @@ $pair-size: 600px;
 
 .PI {
   height:        $pair-size;
-  background:    #f7f8f9;
   border-radius: 8px;
   cursor:        pointer;
   position:      relative;
@@ -25,6 +24,7 @@ $pair-size: 600px;
     display:     block;
     margin:      0 auto;
     width:       auto;
+    border-radius: 9px;
 
     @media (min-width: $tablet-min) {
       top:       50%;

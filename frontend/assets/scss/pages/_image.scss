@@ -1,6 +1,5 @@
 .ImW {
   width:           100%;
-  background:      #f7f8f9;
   z-index:         9999;
   overflow:        hidden;
   position:        relative;
@@ -40,7 +39,6 @@
 
 .ImU {
   width:           100%;
-  background:      #f7f8f9;
   z-index:         9999;
   overflow:        hidden;
   position:        relative;
@@ -92,7 +90,7 @@
   }
   
   @media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {
-    width: calc(61.8% - 96px);
+    width: calc(50% - 96px);
   }
 
 }
@@ -106,7 +104,7 @@
   }
 
   @media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {
-    width:         38.2%;
+    width:         50%;
   }
    
   @media (min-width: $tablet-wide-min) {
@@ -233,33 +231,33 @@
 .rScore {
   .score-bar {
     margin-top:  auto;
-    width:        calc(100% - 70px);
-    height:      8px;
+    width:        calc(100% - 30px);
+    height:      28px;
     border-radius: 5px;
     background:  rgba(51,54,56,0.04);
     position:    absolute;
-    left: 70px;
+    left: 30px;
 
   }
   
   .score-tag {
-    width: calc(100% - 70px);
-    height: 8px;
+    width: calc(100% - 30px);
+    height: 28px;
     border-radius: 5px;
     background: rgb(0, 200, 255);
     position: absolute;
-    left: 70px;
+    left: 30px;
   }
 
   .E,
   .TR {
-    line-height: 24px;
+    line-height: 44px;
+    font-size: 15px
   }
 
   .TR {
     width: 20px;
-    margin-left: 6px;
-    background: blue;
+    margin-left: 16px;
     color: white;
     border-radius: 20px;
     padding: 0 5px;

@@ -7,14 +7,9 @@ function generateRatingBlock() {
     RDaDiv.id = 'RDa';
 
     // RIa child elements
-    const RBaDiv = document.createElement('div');
-    RBaDiv.id = 'RBa';
-    RBaDiv.style.backgroundImage = "url('img/laurie.jpg')";
-    RIaDiv.appendChild(RBaDiv);
-
     const imgElement = document.createElement('img');
     imgElement.id = 'RIm'
-    imgElement.src = "img/laurie.jpg";
+    imgElement.src = "img/nirzu.jpg";
     imgElement.alt = "Rating picture";
     RIaDiv.appendChild(imgElement);
 
@@ -33,17 +28,29 @@ function generateRatingBlock() {
     CaDiv.id = 'Ca';
     CaDiv.className = 'y z';
 
-    const ratings = ['😒 Eh', '😐 Decent', '😃 Great', '🤩 Stunning', '🤑 Brilliant'];
+    const emojis = ['😒', '😐', '😃', '🤩', '🤑'];
+    const ratings = ['Eh', 'Decent', 'Great', 'Stunning', 'Brilliant'];
     let ratingBtns = {}
-    ratings.forEach((rating, index) => {
+    for (let index = 0; index < 5; ++index) {
         const button = document.createElement('button');
         let bid = `Rt${index}`
         button.id = bid;
         button.className = 'btn BR';
-        button.textContent = rating;
+
+
+        const btnE = document.createElement('span');
+        btnE.className = 'E'
+        btnE.textContent = emojis[index];
+
+        const btnT = document.createElement('span');
+        btnT.textContent = ratings[index];
+
+        button.appendChild(btnE);
+        button.appendChild(btnT);
         ratingBtns[button] = index
+
         CaDiv.appendChild(button);
-    });
+    }
 
 
     BUTTONS.HOME_RATES = ratingBtns

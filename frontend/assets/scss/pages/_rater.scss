@@ -1,5 +1,5 @@
 $rater-height-mobile: 280px;
-$rater-height-desktop: 500px;
+$rater-height-desktop: 600px;
 
 #Ra {
   &:after {
@@ -41,13 +41,10 @@ $rater-height-desktop: 500px;
     padding: 0;
   }
 
-  @media (min-width: $tablet-wide-min) {
+  @media (min-width: $tablet-min) {
     width: calc(50% - 96px);
   }
   
-  @media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {
-    width: calc(61.8% - 96px);
-  }
 
   &.one {
     transform: translateY(-150px);
@@ -91,18 +88,30 @@ $rater-height-desktop: 500px;
 
 .RIa {
   z-index:         9999;
-  overflow:        hidden;
+  //overflow:        hidden;
   position:        relative;
 
 
+  justify-items: center;
+  align-items: center;
+  display: flex;
+
+  //border-right: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   @media (max-width: $tablet-max) {
     width:         100%;
-    height:          calc(100vh - $rater-height-mobile);
-
+    height:        calc(100vh - $rater-height-mobile);
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09)
   }
 
   @media (min-width: $tablet-min) and (max-width: $tablet-wide-max) {
-    width:         38.2%;
+    width:         50%;
   }
    
   @media (min-width: $tablet-wide-min) {
@@ -110,33 +119,38 @@ $rater-height-desktop: 500px;
   }
 
   @media (min-width: $tablet-min) {
-    height:        100vh;
+    height:        calc(100% - 40px);
+    margin: auto 0 auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    border-right: 1px solid rgba(0, 0, 0, 0.09)
   }
 
   img {
-    position:      relative;
-    max-width:     100%;
-    height:        auto;
-    display:       block;
-    margin:        0 auto;
-    width:         100%;
-    max-height:    100vh;
-    object-fit:    contain;
+        position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    /* margin: 24px 0 24px auto; */
+    /* padding: 1em 0; */
+    border-radius: 9px;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%);*/
 
     @media (max-width: $tablet-max) {
-    position: relative;
-    max-width: 100%;
-    height: 100%;
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: calc(100vh - 280px);
-    object-fit: contain;
+      position: relative;
+      display: block;
+      margin: 0 auto;
     }
 
     @media (min-width: $tablet-min) {
-      top:         50%;
-      transform:   translateY(-50%);
+
     }
   }
 }
@@ -147,11 +161,7 @@ $rater-height-desktop: 500px;
   background-size:     cover;
   background-position: center;
   position:            absolute;
-  width:               120%;
-  left:                -10%;
-  top:                 -10%;
-  height:              120%;
-  filter:              blur(20px);
+  opacity:             0;
 }
 
 #Xa {
