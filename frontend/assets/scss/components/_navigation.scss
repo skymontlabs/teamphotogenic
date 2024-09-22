@@ -9,8 +9,10 @@
 
   #Lb {
     @media (max-width: $tablet-max) {
-      opacity:         0;
-      visibility:      hidden;
+      width: 150px;
+      line-height: 82px;
+      //opacity:         0;
+      //visibility:      hidden;
     }
     @media (min-width: $tablet-min) {
       width:           148px;
@@ -406,6 +408,7 @@
   top:                 20px;
   background:          rgba(255, 255, 255, 0.2);
   border:              1px solid rgba(0,0,0,0.1);
+  right:               13px;
 
   @media (max-width: $tablet-max) {
     opacity:           1;
@@ -428,6 +431,8 @@
     position:          absolute;
     border-radius:     3px;
     left:              18px;
+    background: #414552;
+
 
   }
 

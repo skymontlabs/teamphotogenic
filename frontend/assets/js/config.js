@@ -105,7 +105,7 @@ var SESSION = {
     modalOpen: false,
 
     nextQueue: [
-        [1,20,'img/laurie.jpg'],
+        [1,20,'img/kailey.jpg'],
         [1,20,'img/lake.jpg'],
         [1,20,'img/square.jpg'],
         [1,20,'img/lake.jpg'],
@@ -122,16 +122,16 @@ var SESSION = {
 
 var DATAV = {
     iImagesetList: [
-        [1293, ['square.jpg','lake.jpg','square.jpg','lake.jpg','laurie.jpg'], 'joebidengaysex', 13, 1490453218],
-        [1932, ['laurie.jpg','square.jpg','square.jpg','laurie.jpg','lake.jpg'], 'joebidengaysex', 13, 1490453218],
-        [6969, ['laurie.jpg','square.jpg','laurie.jpg','square.jpg','laurie.jpg'], 'joebidengaysex', 13, 1490453218],
-        [6969, ['laurie.jpg','square.jpg','laurie.jpg','square.jpg','laurie.jpg'], 'joebidengaysex', 13, 1490453218],
+        [1293, ['square.jpg','lake.jpg','square.jpg','lake.jpg','kailey.jpg'], 'joebidengaysex', 13, 1490453218],
+        [1932, ['kailey.jpg','square.jpg','square.jpg','kailey.jpg','lake.jpg'], 'joebidengaysex', 13, 1490453218],
+        [6969, ['kailey.jpg','square.jpg','kailey.jpg','square.jpg','kailey.jpg'], 'joebidengaysex', 13, 1490453218],
+        [6969, ['kailey.jpg','square.jpg','kailey.jpg','square.jpg','kailey.jpg'], 'joebidengaysex', 13, 1490453218],
     ],
 
     iImagesetIDData: [
-        [0, 'laurie.jpg', 5.69, 13],
-        [1, 'laurie.jpg', 5.69, 13],
-        [2, 'laurie.jpg', 5.69, 13],
+        [0, 'kailey.jpg', 5.69, 13],
+        [1, 'kailey.jpg', 5.69, 13],
+        [2, 'kailey.jpg', 5.69, 13],
     ]
 };
 

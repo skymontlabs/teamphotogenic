@@ -72,7 +72,7 @@ function taskData() {
   const imgWrap = DIV.cloneNode(true)
   imgWrap.className = 'imgWrp'
   const imgMat = AX.cloneNode(true)
-  imgMat.style.background = 'url("img/laurie.jpg")'
+  imgMat.style.background = 'url("img/kailey.jpg")'
   imgMat.style.backgroundSize = 'cover'
   imgMat.href = '/imageID'
   for (var i = 0; i < 3; ++i) {
@@ -322,7 +322,7 @@ function imageIndiv()
   imgWrap.className = ''
   imgWrap.href = '/imageID'
   const imgMat = document.createElement('img')
-  imgMat.src = 'img/laurie.jpg'
+  imgMat.src = 'img/kailey.jpg'
   imgMat.alt = 'Sample image'
   imgWrap.appendChild(imgMat)
 
@@ -357,7 +357,7 @@ function getPaired() {
     <div class="x">
       <div id="RSa">
         <div id="IWa" class="PI">
-          <img id="IMa" src="img/laurie.jpg">
+          <img id="IMa" src="img/kailey.jpg">
         </div>
         <div id="IWb" class="PI">
           <img id="IMb" src="img/lake.jpg">
@@ -385,7 +385,7 @@ function getPaired() {
   // Create the img inside 'IWa'
   let imgIMa=document.createElement('img');
   imgIMa.id='IMa';
-  imgIMa.src='img/laurie.jpg';
+  imgIMa.src='img/kailey.jpg';
 
   // Append imgIMa to divIWa
   divIWa.appendChild(imgIMa);

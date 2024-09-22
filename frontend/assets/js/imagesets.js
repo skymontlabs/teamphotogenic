@@ -265,7 +265,7 @@ function getPaired() {
   // Create the img inside 'IWa'
   let imgIMa=document.createElement('img');
   imgIMa.id='IMa';
-  imgIMa.src='img/laurie.jpg';
+  imgIMa.src='img/kailey.jpg';
 
   // Append imgIMa to divIWa
   divIWa.appendChild(imgIMa);
@@ -502,19 +502,19 @@ function generateRowsz() {
       score: 0.4
     },
     {
-      imageUrl: '/img/laurie.jpg',
+      imageUrl: '/img/kailey.jpg',
       votes: [11,5,3,2,17], // Percentages
       totalVotes: 100,
       score: 0.4
     },
     {
-      imageUrl: '/img/laurie.jpg',
+      imageUrl: '/img/kailey.jpg',
       votes: [9,5,2,20,17], // Percentages
       totalVotes: 100,
       score: 0.4
     },
     {
-      imageUrl: '/img/laurie.jpg',
+      imageUrl: '/img/kailey.jpg',
       votes: [4,8,9,11,22], // Percentages
       totalVotes: 100,
       score: 0.4

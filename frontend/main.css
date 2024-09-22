@@ -74,8 +74,8 @@ p {
 }
 @media (max-width: 768px) {
   .x {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 @media (max-width: 768px) {
@@ -620,8 +620,8 @@ a:hover, a:active, a:focus, a:visited {
 }
 @media (max-width: 768px) {
   #Na #Lb {
-    opacity: 0;
-    visibility: hidden;
+    width: 150px;
+    line-height: 82px;
   }
 }
 @media (min-width: 769px) {
@@ -990,6 +990,7 @@ a:hover, a:active, a:focus, a:visited {
   top: 20px;
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  right: 13px;
 }
 @media (max-width: 768px) {
   #Bc {
@@ -1011,6 +1012,7 @@ a:hover, a:active, a:focus, a:visited {
   position: absolute;
   border-radius: 3px;
   left: 18px;
+  background: #414552;
 }
 #Bc:before {
   top: 18px;
@@ -1376,9 +1378,6 @@ a:hover, a:active, a:focus, a:visited {
 }
 #Ga.showRate #Bc {
   border: 1px solid rgba(0, 0, 0, 0);
-}
-#Ga.showRate #Bc:before, #Ga.showRate #Bc:after {
-  background: white !important;
 }
 #Ga.showRate .active #Bc {
   width: 50px;
@@ -2252,8 +2251,8 @@ input[type=checkbox] {
   .RIa {
     width: 100%;
     height: calc(100vh - 280px);
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 32px;
+    padding-right: 32px;
     box-sizing: border-box;
     border-bottom: 1px solid rgba(0, 0, 0, 0.09);
   }
@@ -2365,13 +2364,13 @@ input[type=checkbox] {
 @media (min-width: 1025px) {
   #TLS {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 36px;
+    grid-gap: 28px;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   #TLS {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 28px;
   }
 }
 @media (max-width: 768px) {

@@ -195,7 +195,7 @@ function generateImageBl() {
 
     // Create the image element
     const img = document.createElement('img');
-    img.src = 'img/laurie.jpg';
+    img.src = 'img/kailey.jpg';
     img.alt = 'Rating picture';
     containerDiv.appendChild(img);
 
@@ -213,8 +213,8 @@ function getImageID() {
   
   /*
     <div class="ImW" style="width: calc(50% - 20px)">
-      <!--<div id="RBa" style="background-image: url('img/laurie.jpg');"></div>-->
-      <img src="img/laurie.jpg" alt="Rating picture">
+      <!--<div id="RBa" style="background-image: url('img/kailey.jpg');"></div>-->
+      <img src="img/kailey.jpg" alt="Rating picture">
     </div>
   */
 // Example usage
@@ -229,8 +229,8 @@ function getImageID() {
       <div class="x">
         <div class="y z">
           <div class="ImW" style="width: calc(50% - 20px)">
-            <!--<div id="RBa" style="background-image: url('img/laurie.jpg');"></div>-->
-            <img src="img/laurie.jpg" alt="Rating picture">
+            <!--<div id="RBa" style="background-image: url('img/kailey.jpg');"></div>-->
+            <img src="img/kailey.jpg" alt="Rating picture">
           </div>
 
           <div class="RUa" style="width: calc(50% - 20px);box-sizing: border-box;"> 

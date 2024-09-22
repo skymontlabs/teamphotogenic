@@ -67,8 +67,8 @@ p {
   max-width: 1368px;
 
   @media (max-width: $tablet-max) {
-    padding-left: 16px;
-    padding-right: 16px
+    padding-left: 32px;
+    padding-right: 32px
   }
 
   &.tablet-max {

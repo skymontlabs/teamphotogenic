@@ -37,12 +37,13 @@ function generateRatingBlock() {
         button.id = bid;
         button.className = 'btn BR';
 
-
         const btnE = document.createElement('span');
+        btnE.id = `Rte${index}`
         btnE.className = 'E'
         btnE.textContent = emojis[index];
 
         const btnT = document.createElement('span');
+        btnT.id = `Rtt${index}`
         btnT.textContent = ratings[index];
 
         button.appendChild(btnE);
@@ -76,15 +77,18 @@ function generateRatingBlock() {
     const tags = ['😓 awkward', '🫥 bad expression', '🖼 bad framing', '🍞 bland', '🏟 distracting', '💨 blurry',
         '⚡️ bright', '🚊 busy', '🌈 colorful', '🕶 cool', '🌚 dark', '😬 forced smile', '🧂 grainy', '🚨 overedited',
         '🚶 poor posture', '🔭 too far away', '🔎 too close up'];
+    let tagids = []
 
     tags.forEach((tag, index) => {
         const span = document.createElement('span');
-        span.id = `Q${String.fromCharCode(97 + index)}`;
+        let idname = `Q${String.fromCharCode(97 + index)}`;
+        span.id = idname
         span.className = 'BZ';
         span.textContent = tag;
         UaDiv.appendChild(span);
+        tagids.push(idname)
     });
-    BUTTONS.HOME_TAGS = UaDiv
+    BUTTONS.HOME_TAGS = tagids
 
     RDaDiv.appendChild(UaDiv);
 

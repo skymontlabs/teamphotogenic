@@ -19,6 +19,13 @@ body {
   text-align: left;
   background-color: #fff; }
 
+.rel {
+  position: relative;
+}
+.abs {
+  position: absolute;
+}
+
 #bckgd {
   width: 100vw;
   height: 3px;
@@ -253,7 +260,7 @@ color: #a3a6a8;    box-shadow: 0 2px 9px 0 rgba(41, 41, 64, 0.05);
 .stB li:not(:first-child) {
   margin-left: 2em;
 }
-.ssM {
+.input-bottom {
   display: block;
   width: 100%;
   height: 1px;
@@ -262,6 +269,11 @@ color: #a3a6a8;    box-shadow: 0 2px 9px 0 rgba(41, 41, 64, 0.05);
   position: absolute;
   bottom: 0;
 }
+
+.wrong .input-bottom {
+  background: #ff003f;
+}
+
 .iS {
   margin: 12px 0;
   position: relative;
@@ -329,12 +341,13 @@ button {
     border-radius: 50%;
 }
 #em9{opacity: 0;height: 0}
-#cc9{    position: relative;
-    top: 7em;
-    width: 23em;
-    left: 50%;
-    transform: translate(-50%);
 
+#cc9 {
+  position: relative;
+  top: 7em;
+  width: 421px;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .spread label, .spread a {
@@ -593,22 +606,24 @@ meter::-webkit-meter-optimum-value {
     right: 0;
     height: 100vh;
 }
-   #s0k{
-    width: 23em;
-   }
+#s0k{
+  width: 421px;
+}
+
 @media (max-width: 780px) {
-   #s0k{
-    width: 100%;
-   }
+
 #sGw {
   height: 20px;
   top: 0;
   position: absolute;
 }
+
 #sGx {
   width: 100% !important;
 }
+
 }
+
 #sGx>.description {
 	height: 386px;
     top: 50%;
@@ -616,6 +631,7 @@ meter::-webkit-meter-optimum-value {
     text-align: left;
     transform: translate(-50%,-64%);
 }
+
 #sGx>.description>.lD {
   margin: 0;
   position: absolute;
@@ -624,8 +640,10 @@ meter::-webkit-meter-optimum-value {
   width: 100%;
   transform: translateX(-50%);
 }
+
 #sGx>.description>.tL {
 }
+
 .Ss {overflow: hidden;}
 
 .t3 {
@@ -1221,12 +1239,12 @@ form select {
 }
 
 label.verify {
-    margin:50px 0 6px;
+  margin:50px 0 6px;
   color: #ff003f;
   font-size: 12px;
-    position: absolute;
-
-  line-height: 18px; }
+  position: absolute;
+  line-height: 18px;
+}
 
 .input-group {
   position: relative;

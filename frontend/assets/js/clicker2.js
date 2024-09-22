@@ -157,6 +157,7 @@ document.onclick = (e) =>
 
 	// pages
 	if (SESSION.currentPage === PAGES.RATER) {
+		let aidx=key.charCodeAt(0) - 97
 		console.log(tg)
 		// fix, what if the click was outside a small box
 		if (tg.id.substr(0,2) === 'Rt') {
@@ -168,11 +169,12 @@ document.onclick = (e) =>
 
 			SESSION.rating = (key)
 		}
-		else if (BUTTONS.HOME_TAGS.contains(tg)) {
-			let aidx=key.charCodeAt(0) - 97
+
+		else if (tg.id.substr(0,1) === 'Q' && tg.id.length === 2) {
+			console.log(aidx)
 
 			if (CONFIG.rTag&(1<<aidx)){Ua.children[aidx].className='BZ';CONFIG.rTag ^= (1<<aidx);}
-			else{Ua.children[aidx].className='BZ A';CONFIG.rTag |= (1<<aidx);}
+			else {Ua.children[aidx].className='BZ A';CONFIG.rTag |= (1<<aidx);}
 
 			SESSION.tag |= (1 << (key))
 		}
@@ -199,7 +201,6 @@ document.onclick = (e) =>
 
 			CMa.textContent = ''
 			// END REMOVE
-
 
 			let toAdd = SESSION.nextQueue.shift()
 			setRater(toAdd)
@@ -283,18 +284,11 @@ document.onclick = (e) =>
 	}
 
 	else if (SESSION.currentPage === PAGES.IMAGESETS) {
-		const imsTypeFilter = {
-			0: 7,
-			1: 1,
-			2: 2,
-			3: 4
-		};
-
-
 		let sortElems = [Bv0, Bv1, Bv2, Bv3]
 		let flt = key == 0 ? 7 : (1 << (key - 1))
 		let nflt = (CONFIG.iFilter === 7 || CONFIG.iFilter === flt) ? (flt) : (CONFIG.iFilter ^ flt)
 
+		// imagesetFilterbar
 		if (imagesetFilterbar.contains(tg) && tg !== imagesetFilterbar && flt) {
 			if (nflt == 7) {
 				Bv0.className = 'btn A'
